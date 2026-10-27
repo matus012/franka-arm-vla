@@ -1,0 +1,3 @@
+# 009 3A fix instruments IT / I4 on /runs/s3a1pf_VT vs its init (the 3A pick 035508); 17,754 steps = 1 (partial) epoch of 17,756; seed-1 mutant must differ
+python scripts/s1_tools.py a1post --u-run /runs/s3a1pf_VT --dataset /data/datasets/0c_s3a1_pair_s2a_rl224_y15 --sampler-epochs 1 --check-steps 1 8877 17754 --expect-trainable vision+text --ref-init /runs/s3a1p_VT/checkpoints/035508/pretrained_model --out /runs/s3a1pf_post/arms_post.json --device cpu
+-python scripts/s1_tools.py a1post --u-run /runs/s3a1pf_VT --dataset /data/datasets/0c_s3a1_pair_s2a_rl224_y15 --sampler-epochs 1 --sampler-seed 1 --check-steps 1 --expect-trainable vision+text --ref-init /runs/s3a1p_VT/checkpoints/035508/pretrained_model --out /runs/s3a1pf_post/iii_mutant_seed1.json --device cpu

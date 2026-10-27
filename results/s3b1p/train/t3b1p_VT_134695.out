@@ -1,0 +1,85 @@
+=== t3b1p_VT on <node> NVIDIA H200 start 2026-10-27T05:13:43+01:00
+NET_PROBE huggingface.co http_code=200
+CUDA OK NVIDIA H200
+[train] device=cuda cuda_available=True NVIDIA H200
+[train] contrastive lambda=1.0 margin=2.98284275502845 share_vision=True layouts=3052 episodes_in_table=8000
+[train] dataset /data/datasets/0c_s3b1_pair_s2a_rl224_y15 episodes=8000 (train 7598, val 402 never sampled) rows=3600000 samples/epoch=1135834 steps/epoch=17748 total_steps=35508
+[train] init_sha256=e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64 (/runs/s2m_VT/checkpoints/068880/pretrained_model)
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[train] policy on cuda:0; {'params_total': 450046176, 'params_trainable': 392904096, 'vision_params_trainable': 86433024, 'by_dtype': {'trainable_float32': 392904096, 'frozen_bfloat16': 57142080}}; freeze_vision_encoder=False train_expert_only=False; trainable_parts={'vision': 86433024, 'text_model': 194793600, 'connector': 11796480, 'expert': 98245840, 'other': 1635152, 'frozen_names_prefixes': {'model.vlm_with_expert.vlm.model.text_model.layers.15': 9832320, 'model.vlm_with_expert.vlm.model.text_model.norm': 960, 'model.vlm_with_expert.vlm.lm_head': 47308800}}
+[train] step 50/35508 epoch 0 loss 2.9618 lr 2.15e-06 gn 26.90 update 0.599s data 0.000s total 4.5580 hinge 1.5961 gap 12.3130 active 0.375
+[train] step 100/35508 epoch 0 loss 1.6403 lr 4.27e-06 gn 8.75 update 0.602s data 0.000s total 2.9591 hinge 1.3188 gap 9.0120 active 0.484
+[train] step 150/35508 epoch 0 loss 1.1799 lr 6.38e-06 gn 4.14 update 0.592s data 0.000s total 2.5876 hinge 1.4077 gap 7.1975 active 0.500
+[train] step 200/35508 epoch 0 loss 1.0438 lr 8.49e-06 gn 6.62 update 0.593s data 0.000s total 2.2828 hinge 1.2391 gap 9.8183 active 0.422
+[train] step 250/35508 epoch 0 loss 0.6282 lr 1.06e-05 gn 3.05 update 0.600s data 0.000s total 1.1501 hinge 0.5219 gap 11.7400 active 0.203
+[train] step 300/35508 epoch 0 loss 0.4913 lr 1.27e-05 gn 6.80 update 0.600s data 0.000s total 0.7619 hinge 0.2707 gap 13.6164 active 0.078
+[train] step 350/35508 epoch 0 loss 0.3389 lr 1.48e-05 gn 5.92 update 0.599s data 0.000s total 0.9778 hinge 0.6389 gap 11.0446 active 0.297
+[train] step 400/35508 epoch 0 loss 0.5170 lr 1.69e-05 gn 2.56 update 0.596s data 0.000s total 1.0845 hinge 0.5676 gap 11.0014 active 0.203
+[train] step 450/35508 epoch 0 loss 0.5542 lr 1.90e-05 gn 3.02 update 0.604s data 0.000s total 1.2329 hinge 0.6787 gap 12.8491 active 0.234
+[train] step 500/35508 epoch 0 loss 0.1550 lr 2.12e-05 gn 1.69 update 0.596s data 0.000s total 0.3435 hinge 0.1885 gap 17.4791 active 0.062
+[train] step 550/35508 epoch 0 loss 0.2118 lr 2.33e-05 gn 2.91 update 0.597s data 0.000s total 0.6612 hinge 0.4494 gap 13.8312 active 0.172
+[train] step 600/35508 epoch 0 loss 0.2099 lr 2.54e-05 gn 1.08 update 0.597s data 0.000s total 0.8044 hinge 0.5945 gap 14.9766 active 0.203
+[train] step 650/35508 epoch 0 loss 0.2119 lr 2.75e-05 gn 1.20 update 0.599s data 0.000s total 0.7197 hinge 0.5078 gap 14.7810 active 0.172
+[train] step 700/35508 epoch 0 loss 0.1937 lr 2.96e-05 gn 3.90 update 0.596s data 0.000s total 0.5653 hinge 0.3716 gap 18.8578 active 0.125
+[train] step 750/35508 epoch 0 loss 0.2490 lr 3.17e-05 gn 3.46 update 0.598s data 0.000s total 0.5746 hinge 0.3256 gap 19.8460 active 0.141
+[train] step 800/35508 epoch 0 loss 0.1359 lr 3.38e-05 gn 0.61 update 0.602s data 0.000s total 0.6462 hinge 0.5104 gap 18.2496 active 0.172
+[train] step 850/35508 epoch 0 loss 0.2002 lr 3.59e-05 gn 3.85 update 0.598s data 0.000s total 0.7104 hinge 0.5102 gap 17.3711 active 0.156
+[train] step 900/35508 epoch 0 loss 0.1713 lr 3.80e-05 gn 1.93 update 0.599s data 0.000s total 0.9421 hinge 0.7709 gap 13.8949 active 0.250
+[train] step 950/35508 epoch 0 loss 0.1281 lr 4.02e-05 gn 0.72 update 0.601s data 0.000s total 0.7348 hinge 0.6067 gap 17.8758 active 0.203
+[train] step 1000/35508 epoch 0 loss 0.1059 lr 4.23e-05 gn 1.03 update 0.598s data 0.000s total 0.3722 hinge 0.2663 gap 22.7261 active 0.094
+[train] step 1050/35508 epoch 0 loss 0.0836 lr 4.44e-05 gn 3.99 update 0.594s data 0.000s total 0.4552 hinge 0.3716 gap 18.0881 active 0.172
+[train] step 1100/35508 epoch 0 loss 0.1774 lr 4.65e-05 gn 1.36 update 0.595s data 0.000s total 0.5274 hinge 0.3500 gap 19.2931 active 0.125
+[train] step 1150/35508 epoch 0 loss 0.1315 lr 4.86e-05 gn 1.40 update 0.596s data 0.000s total 0.3721 hinge 0.2406 gap 19.2623 active 0.094
+[train] step 1200/35508 epoch 0 loss 0.1308 lr 4.99e-05 gn 3.22 update 0.597s data 0.000s total 0.5192 hinge 0.3884 gap 17.3509 active 0.141
+[train] step 1250/35508 epoch 0 loss 0.0943 lr 4.99e-05 gn 0.61 update 0.597s data 0.000s total 0.4137 hinge 0.3194 gap 20.2310 active 0.109
+[train] step 1300/35508 epoch 0 loss 0.1252 lr 4.98e-05 gn 2.01 update 0.600s data 0.000s total 0.4540 hinge 0.3287 gap 20.5437 active 0.125
+[train] step 1350/35508 epoch 0 loss 0.1644 lr 4.98e-05 gn 1.88 update 0.595s data 0.000s total 0.5959 hinge 0.4316 gap 18.7529 active 0.156
+[train] step 1400/35508 epoch 0 loss 0.1419 lr 4.98e-05 gn 1.08 update 0.597s data 0.000s total 0.8408 hinge 0.6989 gap 16.6464 active 0.234
+[train] step 1450/35508 epoch 0 loss 0.0545 lr 4.98e-05 gn 0.47 update 0.597s data 0.000s total 0.4263 hinge 0.3718 gap 20.2530 active 0.125
+[train] step 1500/35508 epoch 0 loss 0.1501 lr 4.98e-05 gn 3.17 update 0.597s data 0.000s total 0.5376 hinge 0.3875 gap 21.9962 active 0.141
+[train] step 1550/35508 epoch 0 loss 0.0720 lr 4.98e-05 gn 4.01 update 0.597s data 0.000s total 0.6347 hinge 0.5627 gap 19.3236 active 0.203
+[train] step 1600/35508 epoch 0 loss 0.1119 lr 4.98e-05 gn 0.95 update 0.598s data 0.000s total 0.3457 hinge 0.2338 gap 22.9588 active 0.078
+[train] step 1650/35508 epoch 0 loss 0.0664 lr 4.97e-05 gn 0.74 update 0.596s data 0.000s total 0.4849 hinge 0.4185 gap 18.1502 active 0.141
+[train] step 1700/35508 epoch 0 loss 0.0761 lr 4.97e-05 gn 0.61 update 0.598s data 0.000s total 0.4025 hinge 0.3263 gap 20.4940 active 0.109
+[train] step 1750/35508 epoch 0 loss 0.0549 lr 4.97e-05 gn 1.69 update 0.601s data 0.000s total 0.4446 hinge 0.3897 gap 16.8720 active 0.156
+[train] step 1800/35508 epoch 0 loss 0.0834 lr 4.97e-05 gn 0.52 update 0.595s data 0.000s total 0.5963 hinge 0.5129 gap 16.9343 active 0.172
+[train] step 1850/35508 epoch 0 loss 0.0804 lr 4.97e-05 gn 0.61 update 0.601s data 0.000s total 0.6396 hinge 0.5593 gap 17.8703 active 0.188
+[train] step 1900/35508 epoch 0 loss 0.1438 lr 4.97e-05 gn 1.34 update 0.597s data 0.000s total 0.2835 hinge 0.1398 gap 19.5674 active 0.047
+[train] step 1950/35508 epoch 0 loss 0.0713 lr 4.96e-05 gn 0.60 update 0.596s data 0.000s total 0.4905 hinge 0.4192 gap 18.1553 active 0.141
+[train] step 2000/35508 epoch 0 loss 0.0970 lr 4.96e-05 gn 0.60 update 0.596s data 0.000s total 0.4230 hinge 0.3260 gap 18.1262 active 0.109
+[train] step 2050/35508 epoch 0 loss 0.1865 lr 4.96e-05 gn 2.84 update 0.599s data 0.000s total 0.4583 hinge 0.2717 gap 19.2345 active 0.078
+[train] step 2100/35508 epoch 0 loss 0.0378 lr 4.96e-05 gn 0.74 update 0.594s data 0.000s total 0.5019 hinge 0.4641 gap 15.8889 active 0.156
+[train] step 2150/35508 epoch 0 loss 0.0622 lr 4.96e-05 gn 0.63 update 0.595s data 0.000s total 0.6725 hinge 0.6103 gap 16.7971 active 0.219
+[train] step 2200/35508 epoch 0 loss 0.0490 lr 4.96e-05 gn 1.93 update 0.597s data 0.000s total 0.2091 hinge 0.1601 gap 19.8495 active 0.062
+[train] step 2250/35508 epoch 0 loss 0.0659 lr 4.95e-05 gn 0.96 update 0.596s data 0.000s total 0.6255 hinge 0.5596 gap 16.0626 active 0.188
+[train] step 2300/35508 epoch 0 loss 0.0527 lr 4.95e-05 gn 1.00 update 0.596s data 0.000s total 0.4289 hinge 0.3762 gap 18.1994 active 0.141
+[train] step 2350/35508 epoch 0 loss 0.0572 lr 4.95e-05 gn 0.83 update 0.596s data 0.000s total 0.4732 hinge 0.4161 gap 17.0593 active 0.141
+[train] step 2400/35508 epoch 0 loss 0.0359 lr 4.95e-05 gn 0.72 update 0.596s data 0.000s total 0.2202 hinge 0.1842 gap 20.1558 active 0.062
+[train] step 2450/35508 epoch 0 loss 0.1358 lr 4.94e-05 gn 1.97 update 0.600s data 0.000s total 0.6016 hinge 0.4657 gap 18.0927 active 0.156
+[train] step 2500/35508 epoch 0 loss 0.0717 lr 4.94e-05 gn 1.63 update 0.602s data 0.000s total 0.3350 hinge 0.2633 gap 20.3501 active 0.094
+[train] step 2550/35508 epoch 0 loss 0.0293 lr 4.94e-05 gn 0.44 update 0.597s data 0.000s total 0.2156 hinge 0.1862 gap 18.3344 active 0.062
+[train] step 2600/35508 epoch 0 loss 0.0667 lr 4.94e-05 gn 3.41 update 0.597s data 0.000s total 0.3904 hinge 0.3236 gap 15.9575 active 0.125
+[train] step 2650/35508 epoch 0 loss 0.0499 lr 4.94e-05 gn 0.32 update 0.599s data 0.000s total 0.3749 hinge 0.3251 gap 17.7995 active 0.109
+[train] step 2700/35508 epoch 0 loss 0.0520 lr 4.93e-05 gn 0.45 update 0.597s data 0.000s total 0.3792 hinge 0.3272 gap 16.1478 active 0.109
+[train] step 2750/35508 epoch 0 loss 0.0923 lr 4.93e-05 gn 1.33 update 0.596s data 0.000s total 0.4489 hinge 0.3566 gap 16.9829 active 0.141
+[train] step 2800/35508 epoch 0 loss 0.0941 lr 4.93e-05 gn 0.72 update 0.596s data 0.000s total 0.3724 hinge 0.2782 gap 17.2805 active 0.094
+[train] step 2850/35508 epoch 0 loss 0.0701 lr 4.92e-05 gn 1.44 update 0.601s data 0.000s total 0.3030 hinge 0.2329 gap 18.9537 active 0.078
+[train] step 2900/35508 epoch 0 loss 0.0405 lr 4.92e-05 gn 0.58 update 0.597s data 0.000s total 0.2732 hinge 0.2327 gap 18.5062 active 0.078
+[train] step 2950/35508 epoch 0 loss 0.1267 lr 4.92e-05 gn 1.51 update 0.597s data 0.000s total 0.5938 hinge 0.4671 gap 19.4580 active 0.156
+[train] step 3000/35508 epoch 0 loss 0.0500 lr 4.92e-05 gn 0.92 update 0.597s data 0.000s total 0.3895 hinge 0.3395 gap 18.6768 active 0.125
+[train] step 3050/35508 epoch 0 loss 0.1382 lr 4.91e-05 gn 1.88 update 0.596s data 0.000s total 0.4170 hinge 0.2788 gap 16.9379 active 0.094
+[train] step 3100/35508 epoch 0 loss 0.0670 lr 4.91e-05 gn 0.48 update 0.598s data 0.000s total 0.4385 hinge 0.3715 gap 16.2402 active 0.125
+[train] step 3150/35508 epoch 0 loss 0.0987 lr 4.91e-05 gn 1.21 update 0.597s data 0.000s total 0.6093 hinge 0.5105 gap 16.6718 active 0.172
+[train] step 3200/35508 epoch 0 loss 0.2380 lr 4.91e-05 gn 1.77 update 0.599s data 0.000s total 0.6826 hinge 0.4446 gap 14.8898 active 0.156
+[train] step 3250/35508 epoch 0 loss 0.0638 lr 4.90e-05 gn 0.62 update 0.600s data 0.000s total 0.4439 hinge 0.3801 gap 16.7742 active 0.141
+[train] step 3300/35508 epoch 0 loss 0.0751 lr 4.90e-05 gn 1.79 update 0.602s data 0.000s total 0.6194 hinge 0.5444 gap 14.8551 active 0.188
+[train] step 3350/35508 epoch 0 loss 0.0479 lr 4.90e-05 gn 0.39 update 0.597s data 0.000s total 0.2332 hinge 0.1854 gap 15.3409 active 0.062
+[train] step 3400/35508 epoch 0 loss 0.0732 lr 4.89e-05 gn 2.34 update 0.597s data 0.000s total 0.4072 hinge 0.3340 gap 18.1356 active 0.125
+[train] step 3450/35508 epoch 0 loss 0.1171 lr 4.89e-05 gn 2.96 update 0.599s data 0.000s total 0.3969 hinge 0.2799 gap 19.3672 active 0.094
+[train] step 3500/35508 epoch 0 loss 0.0310 lr 4.89e-05 gn 0.29 update 0.597s data 0.000s total 0.2170 hinge 0.1860 gap 18.4128 active 0.062
+[train] step 3550/35508 epoch 0 loss 0.0262 lr 4.88e-05 gn 0.38 update 0.600s data 0.000s total 0.2126 hinge 0.1864 gap 18.7475 active 0.062
+[train] step 3600/35508 epoch 0 loss 0.0659 lr 4.88e-05 gn 1.73 update 0.596s data 0.000s total 0.4210 hinge 0.3550 gap 18.8842 active 0.125
+[train] step 3650/35508 epoch 0 loss 0.0848 lr 4.88e-05 gn 1.11 update 0.599s data 0.000s total 0.4101 hinge 0.3253 gap 17.5742 active 0.109
+[train] step 3700/35508 epoch 0 loss 0.0676 lr 4.87e-05 gn 1.10 update 0.594s data 0.000s total 0.3076 hinge 0.2401 gap 17.7769 active 0.094

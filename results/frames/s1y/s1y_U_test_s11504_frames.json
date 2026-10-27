@@ -1,0 +1,203 @@
+{
+ "source": "/runs/e1y_test/s1y_U_test_s11504.json",
+ "chosen": [
+  0,
+  1,
+  2,
+  20,
+  22,
+  41,
+  43,
+  60,
+  67,
+  127,
+  152,
+  171,
+  172,
+  520
+ ],
+ "rounds": 3,
+ "wall_s": 303.1,
+ "git_sha": "0938f83",
+ "frames": [
+  {
+   "index": 0,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep0_pick_success.png"
+  },
+  {
+   "index": 1,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep1_pick_success.png"
+  },
+  {
+   "index": 2,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep2_pick_success.png"
+  },
+  {
+   "index": 20,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep20_pick_drop_early_close.png",
+   "video": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep20.mp4"
+  },
+  {
+   "index": 22,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep22_pick_drop_early_close.png",
+   "video": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep22.mp4"
+  },
+  {
+   "index": 41,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep41_pick_drop_early_close.png",
+   "video": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep41.mp4"
+  },
+  {
+   "index": 43,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep43_pick_drop_early_close.png",
+   "video": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep43.mp4"
+  },
+  {
+   "index": 60,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep60_pick_drop_early_close.png",
+   "video": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep60.mp4"
+  },
+  {
+   "index": 67,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep67_pick_drop_early_close.png",
+   "video": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep67.mp4"
+  },
+  {
+   "index": 127,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep127_pick_drop_early_close.png",
+   "video": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep127.mp4"
+  },
+  {
+   "index": 152,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep152_pick_drop_early_close.png",
+   "video": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep152.mp4"
+  },
+  {
+   "index": 171,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep171_pick_drop_early_close.png",
+   "video": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep171.mp4"
+  },
+  {
+   "index": 172,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep172_pick_drop_early_close.png",
+   "video": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep172.mp4"
+  },
+  {
+   "index": 520,
+   "types_recorded": [
+    "fail_other"
+   ],
+   "types_replay": [
+    "fail_other"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1y_test/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep520_pick_fail_other.png"
+  }
+ ]
+}

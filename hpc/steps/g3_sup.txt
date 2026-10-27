@@ -1,0 +1,3 @@
+# GATES 003 "Supplementary step 2 view" (reported only, not a reading): step 2 re-run with every chunk saved (normalized + un-normalized)
+pol scripts/g3_probe.py divonly --ckpt /runs/s2a1_VT/checkpoints/034440/pretrained_model --dumps /runs/g3_diag/t0_p21645.npz /runs/g3_diag/t0_u21640.npz --out /runs/g3_sup/c034440
+pol scripts/g3_probe.py divonly --ckpt /runs/s1y15_U/checkpoints/041328/pretrained_model --dumps /runs/g3_diag/t0_p21645.npz /runs/g3_diag/t0_u21640.npz --out /runs/g3_sup/c041328

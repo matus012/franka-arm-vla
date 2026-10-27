@@ -1,0 +1,2 @@
+# GATES Stage 2R (684251b, reported): paired-target probe on the picked checkpoint 034440, validation probe stream 21645 (s2a, paired, m 15), 100 layouts; reference 2a attempt 1 results/s2a_probe_a1.json
+sim scripts/eval_policy.py --policy smolvla --ckpt /runs/s2r_VT/checkpoints/034440/pretrained_model --stage s2a --split train --visual nominal --paired-targets --groups 100 --seed 21645 --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --out /runs/e2r_probe/s2r_probe_s21645.json

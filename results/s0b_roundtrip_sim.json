@@ -1,0 +1,12 @@
+{
+ "episodes": 4,
+ "rows": 2000,
+ "column_mismatch": [],
+ "rows_per_episode_mismatch": [],
+ "chunk_mismatch": 0,
+ "pad_mismatch": 0,
+ "identity_fail": 8,
+ "psnr_min": 38.17433385438343,
+ "psnr_mean": 42.98170347749132,
+ "dataset_episodes": 4
+}

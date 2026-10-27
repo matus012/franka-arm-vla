@@ -1,0 +1,56 @@
+{
+ "steps_jsonl": "/runs/s2r_smoke/contrast/steps.jsonl",
+ "steps": 150,
+ "last_step": 150,
+ "i2": {
+  "mean_loss_steps_1_50": 0.03959759092889726,
+  "max": 0.1,
+  "pass": true
+ },
+ "contrastive_steps": 150,
+ "windows": [
+  {
+   "steps": [
+    1,
+    150
+   ],
+   "loss": 0.030195112510118634,
+   "l_other": 0.028544076775045446,
+   "gap": 2.980877793258211e-05,
+   "hinge": 4.2102386728922525,
+   "hinge_active": 1.0,
+   "loss_total": 4.240433785402371
+  }
+ ],
+ "first50": {
+  "steps": [
+   1,
+   50
+  ],
+  "loss": 0.03959759092889726,
+  "l_other": 0.03739558378234506,
+  "gap": 9.15151224762667e-05,
+  "hinge": 4.210176963806152,
+  "hinge_active": 1.0,
+  "loss_total": 4.249774554735049
+ },
+ "last50": {
+  "steps": [
+   101,
+   150
+  ],
+  "loss": 0.02387492500944063,
+  "l_other": 0.022045444010291248,
+  "gap": -0.0003958364951540716,
+  "hinge": 4.2106642913818355,
+  "hinge_active": 1.0,
+  "loss_total": 4.234539216391276
+ },
+ "void": {
+  "steps": 150,
+  "gap_mean": 2.980877793258211e-05,
+  "hinge_mean": 4.2102386728922525,
+  "void_contrast_flag": false
+ },
+ "ok": true
+}

@@ -1,0 +1,85 @@
+{
+ "prefix": "s3b_train_s32000",
+ "config": {
+  "stage": "s3b",
+  "split": "train",
+  "seed": 32000,
+  "envs": 128,
+  "noise_sigma": 0.1,
+  "image_size": 128,
+  "visual": "nominal",
+  "mix": "1,1,1",
+  "start": 1152,
+  "episodes": 1152,
+  "period": 3,
+  "latency": 1,
+  "n_action_steps": 20,
+  "part_bytes": 157286400,
+  "git_sha": "288e660",
+  "expert_version": "113-expert-v1",
+  "detector_version": "113-detectors-v1 (GATES.md conventions 2026-10-01)"
+ },
+ "chunks": 9,
+ "attempted": 1152,
+ "kept": 1087,
+ "expert_success": 0.9435763888888888,
+ "ci95": [
+  0.9287183792838217,
+  0.9554858230913134
+ ],
+ "per_task": {
+  "stack": {
+   "attempted": 1152,
+   "kept": 1087,
+   "rate": 0.9435763888888888,
+   "ci95": [
+    0.9287183792838217,
+    0.9554858230913134
+   ],
+   "failures": {
+    "wrong_object": 0,
+    "wrong_grasp": 0,
+    "wrong_dest": 0,
+    "slam": 0,
+    "jam": 0,
+    "drop": 60,
+    "early_close": 0,
+    "release_failure": 62,
+    "invalid": 0
+   },
+   "failed_unflagged": 0
+  }
+ },
+ "files": [
+  "s3b_train_s32000_stack_e001152_p0.h5",
+  "s3b_train_s32000_stack_e001152_p1.h5",
+  "s3b_train_s32000_stack_e001280_p0.h5",
+  "s3b_train_s32000_stack_e001280_p1.h5",
+  "s3b_train_s32000_stack_e001408_p0.h5",
+  "s3b_train_s32000_stack_e001408_p1.h5",
+  "s3b_train_s32000_stack_e001536_p0.h5",
+  "s3b_train_s32000_stack_e001536_p1.h5",
+  "s3b_train_s32000_stack_e001664_p0.h5",
+  "s3b_train_s32000_stack_e001664_p1.h5",
+  "s3b_train_s32000_stack_e001792_p0.h5",
+  "s3b_train_s32000_stack_e001792_p1.h5",
+  "s3b_train_s32000_stack_e001920_p0.h5",
+  "s3b_train_s32000_stack_e001920_p1.h5",
+  "s3b_train_s32000_stack_e002048_p0.h5",
+  "s3b_train_s32000_stack_e002048_p1.h5",
+  "s3b_train_s32000_stack_e002176_p0.h5",
+  "s3b_train_s32000_stack_e002176_p1.h5"
+ ],
+ "disk_bytes": 1902720269,
+ "mb_per_kept_episode": 1.750432630174793,
+ "cmd_resync_max_m": 0.0051835328340530396,
+ "this_invocation": {
+  "episodes_run": 1152,
+  "wall_s": 249.3,
+  "episodes_per_h": 16633.433539471003,
+  "torch_peak_vram_mib": 40.86767578125,
+  "device": "cuda:0",
+  "gpu": "NVIDIA H200"
+ },
+ "nan_guard_events": 0
+}

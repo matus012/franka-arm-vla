@@ -1,0 +1,9 @@
+# GATES Stage 2 re-plan (c691d00) data re-gate on 0c_s2_pick_rl224_y15 (fresh seed 32500, m 15; cpu_short via hpc/cpu_steps.py, `-` = exit code reported, not fatal): items 1 / 4(a) / 5 + yaw (--fresh), 4(b)/(c) + mutants, 2 audit, instrument (i)
+python scripts/s0c_rl_check.py --fresh --rerender 224 --expect-yaw 15 --kept 2000 --dataset /data/datasets/0c_s2_pick_rl224_y15 --out /runs/ks2
+python scripts/s1_relabel.py dscheck --dataset /data/datasets/0c_s2_pick_rl224_y15 --expect-original /data/datasets/0c_s2_pick_224a_y15 --out /runs/ks2/dscheck.json
+-python scripts/s1_relabel.py dscheck --mutant shift --dataset /data/datasets/0c_s2_pick_rl224_y15 --out /runs/ks2/mutant_shift.json
+-python scripts/s1_relabel.py dscheck --mutant claw --dataset /data/datasets/0c_s2_pick_rl224_y15 --out /runs/ks2/mutant_claw.json
+-python scripts/s1_relabel.py dscheck --mutant claw_offset --dataset /data/datasets/0c_s2_pick_rl224_y15 --out /runs/ks2/mutant_claw_offset.json
+python tests/test_data_audit.py --root /data/datasets/0c_s2_pick_rl224_y15
+python scripts/s1_tools.py arms --dataset /data/datasets/0c_s2_pick_rl224_y15 --out /runs/ks2/arms_build.json --device cpu
+python scripts/s2_norm.py --dataset /data/datasets/0c_s2_pick_rl224_y15 --init /runs/s1y15_U/checkpoints/041328/pretrained_model --out /runs/ks2/s2_norm.json

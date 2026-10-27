@@ -1,0 +1,3 @@
+# GATES Stage 1 redesign #2 (bdf1af2), V15 instrument (ii)-(iv) + run_key on /runs/s1y15_U ((iii) = sampler indices f(seed 0, epoch), epochs 1-12) + the seed-1 mutant (must fail)
+python scripts/s1_tools.py a1post --u-run /runs/s1y15_U --dataset /data/datasets/0c_s1_pick_rl224_y15 --sampler-epochs 12 --check-steps 1 20664 41328 --out /runs/s1y15_post/arms_post.json --device cpu
+-python scripts/s1_tools.py a1post --u-run /runs/s1y15_U --dataset /data/datasets/0c_s1_pick_rl224_y15 --sampler-epochs 12 --sampler-seed 1 --check-steps 1 --out /runs/s1y15_post/iii_mutant_seed1.json --device cpu

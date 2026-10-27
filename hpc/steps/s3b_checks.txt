@@ -1,0 +1,10 @@
+# GATES 3A / 3B re-plan (86640ee), s3b data re-gate (cpu_short via hpc/cpu_steps.py, `-` = exit code reported, not fatal): per-task set items 1 / 4(a) / 5 + yaw (--fresh, T 550), 4(b)/(c) + mutants, 2 audit; union set identity (s3_union_check) + audit; instrument (i) on the union
+python scripts/s0c_rl_check.py --fresh --rerender 224 --expect-yaw 15 --kept 2000 --dataset /data/datasets/0c_s3b_stack_rl224_y15 --out /runs/ks3b
+python scripts/s1_relabel.py dscheck --dataset /data/datasets/0c_s3b_stack_rl224_y15 --expect-original /data/datasets/0c_s3b_stack_224a_y15 --out /runs/ks3b/dscheck.json
+-python scripts/s1_relabel.py dscheck --mutant shift --dataset /data/datasets/0c_s3b_stack_rl224_y15 --out /runs/ks3b/mutant_shift.json
+-python scripts/s1_relabel.py dscheck --mutant claw --dataset /data/datasets/0c_s3b_stack_rl224_y15 --out /runs/ks3b/mutant_claw.json
+-python scripts/s1_relabel.py dscheck --mutant claw_offset --dataset /data/datasets/0c_s3b_stack_rl224_y15 --out /runs/ks3b/mutant_claw_offset.json
+python tests/test_data_audit.py --root /data/datasets/0c_s3b_stack_rl224_y15
+python scripts/s3_union_check.py --union /data/datasets/0c_s3b_s2_rl224_y15 --task-set /data/datasets/0c_s3b_stack_rl224_y15 --pick-set /data/datasets/0c_s2_pick_rl224_y15 --out /runs/ks3b/union_check.json
+python tests/test_data_audit.py --root /data/datasets/0c_s3b_s2_rl224_y15
+python scripts/s1_tools.py arms --dataset /data/datasets/0c_s3b_s2_rl224_y15 --out /runs/ks3b/arms_build.json --device cpu

@@ -1,0 +1,46 @@
+# 0B.4 mutants, group cpu, 2026-10-01T20:07:18, git HEAD cec6aed7729272c3dc3bb4d6960f9961c4a6cfab
+# per mutant: unmutated test result, mutant result + failing tests, restore check (sha256 + git diff)
+2a alignment: latency 0 (runtime frame buffer)
+  file vla_tabletop/bridge.py; test tests/test_alignment.py (policy venv)
+  unmutated: GREEN (4 passed in 13.31s)
+  mutant: KILLED by ['tests/test_alignment.py::test_runtime_feed_follows_the_rule'] (1 failed, 1 passed in 12.43s)
+  restore: sha256 identical, git diff clean -> OK
+2b alignment: export off by one row (row t gets label t+1)
+  file vla_policy/export.py; test tests/test_alignment.py (policy venv)
+  unmutated: GREEN (4 passed in 13.21s)
+  mutant: KILLED by ['tests/test_alignment.py::test_dataset_row_equals_runtime_feed'] (1 failed, 3 passed in 12.32s)
+  restore: sha256 identical, git diff clean -> OK
+3 instruction uniqueness: size never stated
+  file vla_common/tasks.py; test tests/test_instructions.py (sim venv)
+  unmutated: GREEN (43 passed in 3.89s)
+  mutant: KILLED by ['tests/test_instructions.py::test_instructions_resolve_uniquely[train-s2]'] (1 failed, 1 passed in 0.33s)
+  restore: sha256 identical, git diff clean -> OK
+4 held-out disjointness: one held-out place pair admitted to the train sampler
+  file vla_common/tasks.py; test tests/test_heldout.py (sim venv)
+  unmutated: GREEN (7 passed in 2.82s)
+  mutant: KILLED by ['tests/test_heldout.py::test_train_never_manipulates_held_out'] (1 failed, 1 passed in 0.89s)
+  restore: sha256 identical, git diff clean -> OK
+5a visual randomization: cube hue jitter enabled (+-0.05 hue on every cube)
+  file vla_tabletop/visual_rand.py; test tests/test_visual_rand.py (sim venv)
+  unmutated: GREEN (4 passed in 4.04s)
+  mutant: KILLED by ['tests/test_visual_rand.py::test_nominal_scene_is_inside_the_train_distribution'] (1 failed in 2.71s)
+  restore: sha256 identical, git diff clean -> OK
+5b visual randomization: held-out band overlapping train (hue 0.30-0.47 vs train 0.00-0.35)
+  file vla_tabletop/visual_rand.py; test tests/test_visual_rand.py (sim venv)
+  unmutated: GREEN (4 passed in 4.16s)
+  mutant: KILLED by ['tests/test_visual_rand.py::test_heldout_disjoint_from_train_with_margins'] (1 failed, 1 passed in 3.16s)
+  restore: sha256 identical, git diff clean -> OK
+ALL_KILLED=True
+
+# 0B.4 mutants, group sim, 2026-10-01T20:09:01, git HEAD dec1d408ad265bbc3c3fe6b6c2b89565a980f73f
+# per mutant: unmutated test result, mutant result + failing tests, restore check (sha256 + git diff)
+1 banned inputs: a cube-pose term appended to the state
+  file vla_tabletop/scene.py; test tests/test_sim_113.py (sim venv)
+  unmutated: GREEN (1 passed in 20.04s)
+  mutant: KILLED by ['tests/test_sim_113.py::test_scene_loads_obs_whitelist_and_parking'] (1 failed in 19.61s)
+  restore: sha256 identical, git diff clean -> OK
+ALL_KILLED=True
+
+GATE_0B4_MUTANTS_ALL_KILLED=True
+# diagnostic (not a mutant run): mutant 1 applied, scripts/check_scene_113.py exits 0 and prints policy_terms [joint_pos, joint_vel, gripper_width, cube_pos], dims [9,9,1,3], shape [4,22], teleport_state_max_abs_change 0.07 -> the kill is the whitelist + teleport assertions, not a crash (logs/jobs/g0b4_mutant1_diag.log); file restored (sha256 identical).
+# note: pytest -x lists the first failing test only; mutant 5a perturbs the hue of every env incl. the nominal ones, so it fails the nominal-scene test first.

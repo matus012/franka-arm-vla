@@ -1,0 +1,2 @@
+# GATES 2a attempt 1 (d33e371): checkpoint pick, 75 % checkpoint, validation 21640 eps 0-299
+sim scripts/eval_policy.py --policy smolvla --stage s2a --split train --visual nominal --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --episodes 300 --seed 21640 --ckpt /runs/s2a1_VT/checkpoints/025830/pretrained_model --out /runs/e2a1_c075/s2a1_VT_val_c075_s21640.json

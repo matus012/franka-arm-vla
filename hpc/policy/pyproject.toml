@@ -1,0 +1,38 @@
+[project]
+name = "vla-tabletop-policy"
+version = "0.1.0"
+description = "113: policy venv (LeRobot 0.6.1 SmolVLA / pi0.5, policy server, dataset export)"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "lerobot[smolvla,pi,training]==0.6.1",
+    "torch==2.10.0",
+    "torchvision==0.25.0",
+    "h5py>=3.11",
+    "numpy",
+    "av",
+    "pytest>=8",
+    "matplotlib>=3.9",
+    "tensorboard>=2.17",
+]
+
+[[tool.uv.index]]
+name = "nvidia"
+url = "https://pypi.nvidia.com"
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }
+
+[tool.uv]
+index-strategy = "unsafe-best-match"
+package = false
+environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]
+# PERUN copy: torchcodec 0.11 needs torch 2.11 (undefined symbol torch_dtype_float4_e2m1fn_x2 with torch 2.10) -> pinned 0.10.x.
+# torchcodec cannot load on native Windows (no shared FFmpeg DLLs) and lerobot falls back to pyav with a long
+# traceback on every import; keep it for Linux (PERUN decodes with torchcodec, brief section 7).
+override-dependencies = ["torchcodec>=0.10.0,<0.11.0 ; sys_platform == 'linux'"]

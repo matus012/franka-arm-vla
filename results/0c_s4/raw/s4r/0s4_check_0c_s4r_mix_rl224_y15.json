@@ -1,0 +1,972 @@
+{
+ "dataset": "/data/datasets/0c_s4r_mix_rl224_y15",
+ "name": "0c_s4r_mix_rl224_y15",
+ "kind": "s4r",
+ "episodes": 2000,
+ "rows": 969800,
+ "T_per_task": {
+  "pick": 350,
+  "place": 550,
+  "stack": 550
+ },
+ "image_size": 224,
+ "expect_yaw": 15.0,
+ "kept": 2000,
+ "expect_palette": "s4r",
+ "yaw": {
+  "expected_m": 15.0,
+  "n": 2000,
+  "spawn_fold": {
+   "min": -14.991167068481445,
+   "max": 14.991432189941406,
+   "mean": -0.20307181930541993,
+   "std": 8.65033497204143
+  },
+  "regenerated_fold": {
+   "min": -14.991167045020365,
+   "max": 14.991430197466912,
+   "mean": -0.20307179921133098,
+   "std": 8.650334908549693
+  }
+ },
+ "source_successful_episodes": 2278,
+ "kept_stream_indices": [
+  2,
+  2023
+ ],
+ "video_check": {
+  "episodes": [
+   0,
+   222,
+   444,
+   666,
+   888,
+   1111,
+   1333,
+   1555,
+   1777,
+   1999
+  ],
+  "rows": 4900,
+  "psnr_min": 38.40744248202619,
+  "psnr_mean": 43.033249728928276,
+  "identity_fail": 0,
+  "backend": "torchcodec"
+ },
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "noise_std_per_arm_dim": [
+   0.09998129308223724,
+   0.09999177604913712,
+   0.09998716413974762,
+   0.10008658468723297
+  ],
+  "noise_rows_per_dim": [
+   955321,
+   931823,
+   915249,
+   962663
+  ],
+  "claw_exec_ne_label_rows": 0,
+  "mutant_action_exec_flagged_episodes": 2000,
+  "episodes_checked": 2000,
+  "state_dims_std_lt_1e-6": [],
+  "state_std": [
+   0.21787515566503332,
+   0.3102931443433382,
+   0.14117714428829656,
+   0.3732998726426065,
+   0.07154065497091794,
+   0.19659811117870898,
+   0.405870264719588,
+   0.008364400152982832,
+   0.008374424234886463,
+   0.2008296598194923,
+   0.38998268902032523,
+   0.20307787997696825,
+   0.3848747779667217,
+   0.11499786534135394,
+   0.5870418448321998,
+   0.4173004777772533,
+   0.04267317896876936,
+   0.042519335243602005,
+   0.013271540679764923
+  ]
+ },
+ "expert_success": {
+  "batches": [
+   {
+    "dir": "/data/0c/s4ry15/b000",
+    "start": 0,
+    "episodes": 1152,
+    "envs": 128,
+    "kept": 1141,
+    "attempted": 1152,
+    "rate_pct": 99.04513888888889,
+    "ci95_pct": [
+     98.29826182715735,
+     99.46599929651218
+    ],
+    "per_task": {
+     "pick": {
+      "attempted": 384,
+      "kept": 381,
+      "rate": 0.9921875,
+      "ci95": [
+       0.9772850850420458,
+       0.9973396071003133
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 0,
+       "early_close": 0,
+       "release_failure": 0,
+       "invalid": 0
+      },
+      "failed_unflagged": 3
+     },
+     "place": {
+      "attempted": 376,
+      "kept": 376,
+      "rate": 1.0,
+      "ci95": [
+       0.9898863105041681,
+       1.0
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 0,
+       "early_close": 0,
+       "release_failure": 0,
+       "invalid": 0
+      },
+      "failed_unflagged": 0
+     },
+     "stack": {
+      "attempted": 392,
+      "kept": 384,
+      "rate": 0.9795918367346939,
+      "ci95": [
+       0.9602513910609407,
+       0.9896235083937905
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 7,
+       "early_close": 0,
+       "release_failure": 6,
+       "invalid": 0
+      },
+      "failed_unflagged": 0
+     }
+    },
+    "nan_guard_events": 0,
+    "cmd_resync_max_m": 0.004985589534044266,
+    "episodes_per_h": 12012.169013098492,
+    "wall_s": 345.2,
+    "disk_bytes": 4041334371
+   },
+   {
+    "dir": "/data/0c/s4ry15/b001",
+    "start": 1152,
+    "episodes": 1152,
+    "envs": 128,
+    "kept": 1137,
+    "attempted": 1152,
+    "rate_pct": 98.69791666666667,
+    "ci95_pct": [
+     97.86276652254726,
+     99.2093582391848
+    ],
+    "per_task": {
+     "pick": {
+      "attempted": 364,
+      "kept": 357,
+      "rate": 0.9807692307692307,
+      "ci95": [
+       0.9608423235490162,
+       0.9906541901677575
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 0,
+       "early_close": 0,
+       "release_failure": 0,
+       "invalid": 0
+      },
+      "failed_unflagged": 7
+     },
+     "place": {
+      "attempted": 416,
+      "kept": 416,
+      "rate": 1.0,
+      "ci95": [
+       0.9908498824318505,
+       0.9999999999999999
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 0,
+       "early_close": 0,
+       "release_failure": 0,
+       "invalid": 0
+      },
+      "failed_unflagged": 0
+     },
+     "stack": {
+      "attempted": 372,
+      "kept": 364,
+      "rate": 0.978494623655914,
+      "ci95": [
+       0.9581439309011338,
+       0.9890636161080318
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 8,
+       "early_close": 0,
+       "release_failure": 5,
+       "invalid": 0
+      },
+      "failed_unflagged": 0
+     }
+    },
+    "nan_guard_events": 0,
+    "cmd_resync_max_m": 0.004812777042388916,
+    "episodes_per_h": 12014.562520292375,
+    "wall_s": 345.2,
+    "disk_bytes": 4069414729
+   }
+  ],
+  "pooled": {
+   "kept": 2278,
+   "attempted": 2304,
+   "rate_pct": 98.87152777777777,
+   "ci95_pct": [
+    98.35160874084832,
+    99.22874512745877
+   ]
+  },
+  "per_target": {
+   "colour:blue": {
+    "kept": 767,
+    "attempted": 775,
+    "rate_pct": 98.96774193548387,
+    "ci95_pct": [
+     97.97638553593025,
+     99.47603611180915
+    ]
+   },
+   "colour:green": {
+    "kept": 404,
+    "attempted": 410,
+    "rate_pct": 98.53658536585365,
+    "ci95_pct": [
+     96.84442926071091,
+     99.32763270695982
+    ]
+   },
+   "colour:red": {
+    "kept": 708,
+    "attempted": 718,
+    "rate_pct": 98.60724233983287,
+    "ci95_pct": [
+     97.45535398061271,
+     99.24176073264293
+    ]
+   },
+   "colour:yellow": {
+    "kept": 399,
+    "attempted": 401,
+    "rate_pct": 99.50124688279301,
+    "ci95_pct": [
+     98.19992485883698,
+     99.86312004563923
+    ]
+   },
+   "cube:blue_large": {
+    "kept": 377,
+    "attempted": 382,
+    "rate_pct": 98.69109947643979,
+    "ci95_pct": [
+     96.9729579292247,
+     99.43966320856865
+    ]
+   },
+   "cube:blue_small": {
+    "kept": 390,
+    "attempted": 393,
+    "rate_pct": 99.23664122137404,
+    "ci95_pct": [
+     97.77995702812854,
+     99.7400610344939
+    ]
+   },
+   "cube:green_small": {
+    "kept": 404,
+    "attempted": 410,
+    "rate_pct": 98.53658536585365,
+    "ci95_pct": [
+     96.84442926071091,
+     99.32763270695982
+    ]
+   },
+   "cube:red_large": {
+    "kept": 361,
+    "attempted": 364,
+    "rate_pct": 99.17582417582418,
+    "ci95_pct": [
+     97.60517764499416,
+     99.71932290089299
+    ]
+   },
+   "cube:red_small": {
+    "kept": 347,
+    "attempted": 354,
+    "rate_pct": 98.0225988700565,
+    "ci95_pct": [
+     95.97517727262348,
+     99.03892952770381
+    ]
+   },
+   "cube:yellow_large": {
+    "kept": 399,
+    "attempted": 401,
+    "rate_pct": 99.50124688279301,
+    "ci95_pct": [
+     98.19992485883698,
+     99.86312004563923
+    ]
+   },
+   "size:large": {
+    "kept": 1137,
+    "attempted": 1147,
+    "rate_pct": 99.128160418483,
+    "ci95_pct": [
+     98.40257653607082,
+     99.52575695482835
+    ]
+   },
+   "size:small": {
+    "kept": 1141,
+    "attempted": 1157,
+    "rate_pct": 98.6171132238548,
+    "ci95_pct": [
+     97.76542773850026,
+     99.14701923100876
+    ]
+   }
+  }
+ },
+ "expert": {
+  "pick": {
+   "ceiling_pct": 100.0,
+   "pooled": {
+    "kept": 738,
+    "attempted": 748,
+    "rate_pct": 98.66310160427807,
+    "ci95_pct": [
+     97.55666919099325,
+     99.27223732335763
+    ]
+   },
+   "batches": [
+    {
+     "kept": 381,
+     "attempted": 384,
+     "rate_pct": 99.21875,
+     "ci95_pct": [
+      97.72850850420458,
+      99.73396071003134
+     ]
+    },
+    {
+     "kept": 357,
+     "attempted": 364,
+     "rate_pct": 98.07692307692308,
+     "ci95_pct": [
+      96.08423235490162,
+      99.06541901677575
+     ]
+    }
+   ]
+  },
+  "place": {
+   "ceiling_pct": 100.0,
+   "pooled": {
+    "kept": 792,
+    "attempted": 792,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     99.51729087798377,
+     100.0
+    ]
+   },
+   "batches": [
+    {
+     "kept": 376,
+     "attempted": 376,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      98.98863105041681,
+      100.0
+     ]
+    },
+    {
+     "kept": 416,
+     "attempted": 416,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.08498824318505,
+      99.99999999999999
+     ]
+    }
+   ]
+  },
+  "stack": {
+   "ceiling_pct": 97.3,
+   "pooled": {
+    "kept": 748,
+    "attempted": 764,
+    "rate_pct": 97.90575916230367,
+    "ci95_pct": [
+     96.62527591432676,
+     98.70688634413905
+    ]
+   },
+   "batches": [
+    {
+     "kept": 384,
+     "attempted": 392,
+     "rate_pct": 97.95918367346938,
+     "ci95_pct": [
+      96.02513910609407,
+      98.96235083937906
+     ]
+    },
+    {
+     "kept": 364,
+     "attempted": 372,
+     "rate_pct": 97.84946236559139,
+     "ci95_pct": [
+      95.81439309011338,
+      98.90636161080319
+     ]
+    }
+   ]
+  }
+ },
+ "palette": {
+  "visual_mode": [
+   "train_rand"
+  ],
+  "visual_json_mode": [
+   "s4r_train"
+  ],
+  "table_palette": [
+   "s4r"
+  ],
+  "nonnominal_table": 1594,
+  "nondefault_light": 1663
+ },
+ "table": {
+  "box_u0_v0_u1_v1": [
+   0,
+   190,
+   64,
+   222
+  ],
+  "image_size": 224,
+  "episodes": [
+   0,
+   41,
+   82,
+   122,
+   163,
+   204,
+   245,
+   286,
+   326,
+   367,
+   408,
+   449,
+   490,
+   530,
+   571,
+   612,
+   653,
+   694,
+   734,
+   775,
+   816,
+   857,
+   898,
+   938,
+   979,
+   1020,
+   1061,
+   1101,
+   1142,
+   1183,
+   1224,
+   1265,
+   1305,
+   1346,
+   1387,
+   1428,
+   1469,
+   1509,
+   1550,
+   1591,
+   1632,
+   1673,
+   1713,
+   1754,
+   1795,
+   1836,
+   1877,
+   1917,
+   1958,
+   1999
+  ],
+  "reason": "lower-left corner, outside the object footprint x 0.33..0.67 / y +-0.30 projected through the side camera (eye 1.15, 0.45, 0.55 -> look 0.5, 0, 0.18) with object size and 12 px camera-jitter margin; see module docstring",
+  "per_episode_saturation": [
+   0.027522935779816418,
+   0.019801980198019733,
+   0.053846153846153766,
+   0.06711409395973168,
+   0.0,
+   0.02105263157894744,
+   0.02083333333333326,
+   0.08403361344537821,
+   0.0,
+   0.021126760563380406,
+   0.07262569832402226,
+   0.023437500000000028,
+   0.08029197080291964,
+   0.0594594594594594,
+   0.06779661016949144,
+   0.01826484018264834,
+   0.03496503496503504,
+   0.030000000000000037,
+   0.03496503496503504,
+   0.03125000000000007,
+   0.05479452054794521,
+   0.021505376344085947,
+   0.04237288135593229,
+   0.013245033112582735,
+   0.027272727272727303,
+   0.03797468354430384,
+   0.05813953488372105,
+   0.064516129032258,
+   0.04166666666666671,
+   0.030000000000000037,
+   0.04587155963302749,
+   0.021276595744680923,
+   0.014705882352941124,
+   0.014705882352941124,
+   0.014705882352941124,
+   0.05940594059405934,
+   0.052631578947368446,
+   0.03864734299516908,
+   0.016042780748663044,
+   0.022222222222222143,
+   0.02564102564102555,
+   0.02439024390243911,
+   0.07000000000000003,
+   0.0,
+   0.052884615384615336,
+   0.028985507246376847,
+   0.019801980198019733,
+   0.01694915254237294,
+   0.024691358024691273,
+   0.06756756756756771
+  ],
+  "per_episode_value": [
+   0.42745098039215684,
+   0.396078431372549,
+   0.5098039215686274,
+   0.5843137254901961,
+   0.29411764705882354,
+   0.37254901960784315,
+   0.3764705882352941,
+   0.4666666666666667,
+   0.5372549019607843,
+   0.5568627450980392,
+   0.7019607843137254,
+   0.5019607843137255,
+   0.5372549019607843,
+   0.7254901960784313,
+   0.6941176470588235,
+   0.8588235294117647,
+   0.5607843137254902,
+   0.39215686274509803,
+   0.5607843137254902,
+   0.6274509803921569,
+   0.5725490196078431,
+   0.7294117647058823,
+   0.4627450980392157,
+   0.592156862745098,
+   0.43137254901960786,
+   0.30980392156862746,
+   0.33725490196078434,
+   0.36470588235294116,
+   0.5647058823529412,
+   0.39215686274509803,
+   0.42745098039215684,
+   0.3686274509803922,
+   0.5333333333333333,
+   0.5333333333333333,
+   0.5333333333333333,
+   0.396078431372549,
+   0.5215686274509804,
+   0.8117647058823529,
+   0.7333333333333333,
+   0.5294117647058824,
+   0.4588235294117647,
+   0.3215686274509804,
+   0.39215686274509803,
+   0.44313725490196076,
+   0.8156862745098039,
+   0.8117647058823529,
+   0.396078431372549,
+   0.4627450980392157,
+   0.3176470588235294,
+   0.5803921568627451
+  ],
+  "per_episode_recorded_table_value": [
+   0.5523273944854736,
+   0.5,
+   0.6455145478248596,
+   0.7281636595726013,
+   0.3983885645866394,
+   0.5026790499687195,
+   0.5,
+   0.4147639870643616,
+   0.49413424730300903,
+   0.5,
+   0.6922560930252075,
+   0.5,
+   0.5306146740913391,
+   0.6202700138092041,
+   0.590870201587677,
+   0.7338355779647827,
+   0.7141317129135132,
+   0.5,
+   0.7402802109718323,
+   0.5245410203933716,
+   0.4761776924133301,
+   0.6168866157531738,
+   0.38692349195480347,
+   0.5,
+   0.36465051770210266,
+   0.41253235936164856,
+   0.4404545724391937,
+   0.48510682582855225,
+   0.7111778259277344,
+   0.5,
+   0.554338812828064,
+   0.470730721950531,
+   0.5,
+   0.5,
+   0.5,
+   0.35957881808280945,
+   0.46857768297195435,
+   0.744998574256897,
+   0.7087965607643127,
+   0.5,
+   0.4415756165981293,
+   0.41512227058410645,
+   0.4957330822944641,
+   0.38315072655677795,
+   0.7020506262779236,
+   0.7000961303710938,
+   0.5,
+   0.5860868692398071,
+   0.4019808769226074,
+   0.7447850108146667
+  ],
+  "numbers": {
+   "n": 50,
+   "saturation_max": 0.08403361344537821,
+   "saturation_median": 0.029492753623188442,
+   "value_min": 0.29411764705882354,
+   "value_max": 0.8588235294117647,
+   "spearman_value_vs_recorded_table_value": 0.7093772400373043
+  },
+  "items": {
+   "6_table_region_median_saturation_le_0.10": true,
+   "6_table_value_spearman_ge_0.5": true
+  }
+ },
+ "sheet": {
+  "png": "0c_s4r_mix_rl224_y15.png",
+  "episodes": [
+   {
+    "lerobot_episode": 127,
+    "episode_index": 364,
+    "instruction": "pick up the large blue cube from the table",
+    "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"large\"], \"dest\": null, \"cubes\": [[\"blue\", \"large\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      121
+     ],
+     [
+      "carry",
+      197
+     ],
+     [
+      "hold",
+      273
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 0,
+    "episode_index": 2,
+    "instruction": "pick the blue cube up",
+    "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"large\"], \"dest\": null, \"cubes\": [[\"red\", \"large\"], [\"blue\", \"large\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      108
+     ],
+     [
+      "carry",
+      188
+     ],
+     [
+      "hold",
+      268
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 383,
+    "episode_index": 12,
+    "instruction": "put the blue cube on the yellow pad",
+    "spec": "{\"task\": \"place\", \"target\": [\"blue\", \"small\"], \"dest\": \"yellow\", \"cubes\": [[\"yellow\", \"large\"], [\"red\", \"large\"], [\"blue\", \"small\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      104
+     ],
+     [
+      "carry",
+      215
+     ],
+     [
+      "release",
+      326
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 381,
+    "episode_index": 5,
+    "instruction": "put the red cube on the red pad",
+    "spec": "{\"task\": \"place\", \"target\": [\"red\", \"large\"], \"dest\": \"red\", \"cubes\": [[\"red\", \"large\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      117
+     ],
+     [
+      "carry",
+      241
+     ],
+     [
+      "release",
+      366
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 757,
+    "episode_index": 0,
+    "instruction": "please stack the red cube on the large yellow cube",
+    "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"small\"], \"dest\": [\"yellow\", \"large\"], \"cubes\": [[\"blue\", \"small\"], [\"yellow\", \"large\"], [\"red\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      120
+     ],
+     [
+      "carry",
+      204
+     ],
+     [
+      "release",
+      288
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 758,
+    "episode_index": 1,
+    "instruction": "stack the blue cube on the green cube",
+    "spec": "{\"task\": \"stack\", \"target\": [\"blue\", \"small\"], \"dest\": [\"green\", \"small\"], \"cubes\": [[\"yellow\", \"small\"], [\"red\", \"large\"], [\"blue\", \"small\"], [\"green\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      118
+     ],
+     [
+      "carry",
+      216
+     ],
+     [
+      "release",
+      314
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   }
+  ],
+  "chosen_sidecar_indices": [
+   127,
+   0,
+   383,
+   381,
+   757,
+   758
+  ],
+  "notes": [
+   "table rgb (0.584, 0.569, 0.563) light elev 32.9 deg",
+   "table rgb (0.552, 0.538, 0.53) light elev 35.3 deg",
+   "table rgb (0.566, 0.55, 0.571) light elev 51.6 deg",
+   "table rgb (0.5, 0.5, 0.5) light elev 51.6 deg",
+   "table rgb (0.624, 0.628, 0.627) light elev 76.5 deg",
+   "table rgb (0.379, 0.376, 0.377) light elev 76.5 deg"
+  ]
+ },
+ "mix": {
+  "share": {
+   "pick": 0.3255,
+   "place": 0.3455,
+   "stack": 0.329
+  },
+  "counts": {
+   "pick": 651,
+   "place": 691,
+   "stack": 658
+  },
+  "band": [
+   0.3,
+   0.37
+  ]
+ },
+ "items": {
+  "1_count_eq_K": true,
+  "1_tasks_as_expected": true,
+  "1_T_per_task_eq_timing": true,
+  "1_rows_eq_sum_T": true,
+  "1_rows_per_episode_eq_T": true,
+  "1_columns_exact_action_eq_r": true,
+  "1_image_size": true,
+  "1_psnr_min_ge_35": true,
+  "1_frame_identity": true,
+  "1_kept_are_first_K_successful_in_order": true,
+  "1_split_rule": true,
+  "1_cube_yaw_max_deg_eq_expected": true,
+  "yaw_spawn_attrs_present": true,
+  "yaw_spawn_fold_in_range": true,
+  "yaw_regenerated_layout_fold_in_range": true,
+  "yaw_spawn_agrees_with_regenerated_layout": true,
+  "yaw_coverage": true,
+  "1_expert_pooled_pick_ge_ceiling_minus_5": true,
+  "1_expert_every_batch_pick_ge_ceiling_minus_10": true,
+  "1_expert_pooled_place_ge_ceiling_minus_5": true,
+  "1_expert_every_batch_place_ge_ceiling_minus_10": true,
+  "1_expert_pooled_stack_ge_ceiling_minus_5": true,
+  "1_expert_every_batch_stack_ge_ceiling_minus_10": true,
+  "1_expert_every_batch_n_ge_200": true,
+  "palette_table_palette_eq_expected_all": true,
+  "palette_visual_mode_train_rand_all": true,
+  "palette_visual_json_s4r_train_all": true,
+  "palette_params_inside_train_outside_heldout_all": true,
+  "5_sheet_six_episodes_two_per_task": true,
+  "5_sheet_has_nonnominal_table": true,
+  "5_sheet_has_nondefault_light": true,
+  "6_table_region_median_saturation_le_0.10": true,
+  "6_table_value_spearman_ge_0.5": true,
+  "4a_noise_std_in_band": true,
+  "4a_claw_identical": true,
+  "1_mix_share_each_task_in_band": true
+ },
+ "pass": true,
+ "wall_s": 510.5
+}

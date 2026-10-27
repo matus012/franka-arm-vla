@@ -1,0 +1,144 @@
+{
+ "source": "/runs/e10_3apick/f10_3apick_d_para_s11903.json",
+ "chosen": [
+  0,
+  1,
+  2,
+  3,
+  5,
+  7,
+  8,
+  12,
+  47,
+  85
+ ],
+ "rounds": 1,
+ "wall_s": 130.2,
+ "git_sha": "290b3e0",
+ "frames": [
+  {
+   "index": 0,
+   "types_recorded": [
+    "drop"
+   ],
+   "types_replay": [
+    "drop"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep0_pick_drop.png",
+   "video": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep0.mp4"
+  },
+  {
+   "index": 1,
+   "types_recorded": [
+    "drop"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep1_pick_drop.png",
+   "video": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep1.mp4"
+  },
+  {
+   "index": 2,
+   "types_recorded": [
+    "fail_other"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep2_pick_fail_other.png"
+  },
+  {
+   "index": 3,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep3_pick_early_close.png"
+  },
+  {
+   "index": 5,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep5_pick_success.png"
+  },
+  {
+   "index": 7,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep7_pick_drop_early_close.png",
+   "video": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep7.mp4"
+  },
+  {
+   "index": 8,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep8_pick_drop_early_close.png",
+   "video": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep8.mp4"
+  },
+  {
+   "index": 12,
+   "types_recorded": [
+    "jam",
+    "drop"
+   ],
+   "types_replay": [
+    "drop"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep12_pick_jam_drop.png",
+   "video": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep12.mp4"
+  },
+  {
+   "index": 47,
+   "types_recorded": [
+    "slam",
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep47_pick_slam_early_close.png"
+  },
+  {
+   "index": 85,
+   "types_recorded": [
+    "wrong_object",
+    "early_close"
+   ],
+   "types_replay": [
+    "wrong_object",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep85_pick_wrong_object_early_close.png"
+  }
+ ]
+}

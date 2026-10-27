@@ -1,0 +1,16 @@
+{
+ "log": "results\\s2bp2\\guard\\t2bp2_VT_134009_head.out",
+ "margin_recorded": 4.290705137127942,
+ "log_contrastive": [
+  [
+   "1.0",
+   "4.290705137127942",
+   "True"
+  ]
+ ],
+ "log_init_sha256": [
+  "e87fd97bdd74dbf2625dd402c90fac734e2afc56414716d2270faf97abd1e503"
+ ],
+ "log_ok": true,
+ "ok": true
+}

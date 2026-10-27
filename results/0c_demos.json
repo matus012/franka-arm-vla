@@ -1,0 +1,1359 @@
+{
+ "gate": "0C",
+ "datasets": {
+  "0c_s1_pick": {
+   "task": "pick",
+   "ceiling_pct": 100.0,
+   "dataset": "/mnt/project/<project-id>/113_vla_tabletop/data/mnt/project/<project-id>/113_vla_tabletop/datasets/0c_s1_pick",
+   "episodes": 500,
+   "rows": 175000,
+   "train": 475,
+   "val": 25,
+   "disk_gb": 0.435320797,
+   "pooled": {
+    "kept": 627,
+    "attempted": 640,
+    "rate_pct": 97.96875,
+    "ci95_pct": [
+     96.55591089689453,
+     98.80916026346543
+    ]
+   },
+   "batches": [
+    {
+     "start": 0,
+     "episodes": 320,
+     "kept": 314,
+     "attempted": 320,
+     "rate_pct": 98.125,
+     "ci95_pct": [
+      95.97030630683673,
+      99.13791944303604
+     ],
+     "nan_guard_events": 0,
+     "episodes_per_h": 13600.168629723843,
+     "wall_s": 84.7,
+     "failures": {
+      "pick": {
+       "attempted": 320,
+       "kept": 314,
+       "rate": 0.98125,
+       "ci95": [
+        0.9597030630683673,
+        0.9913791944303604
+       ],
+       "failures": {
+        "wrong_object": 0,
+        "wrong_grasp": 0,
+        "wrong_dest": 0,
+        "slam": 0,
+        "jam": 0,
+        "drop": 0,
+        "early_close": 0,
+        "release_failure": 0,
+        "invalid": 0
+       },
+       "failed_unflagged": 6
+      }
+     }
+    },
+    {
+     "start": 320,
+     "episodes": 320,
+     "kept": 313,
+     "attempted": 320,
+     "rate_pct": 97.8125,
+     "ci95_pct": [
+      95.55420481102652,
+      98.93643505735356
+     ],
+     "nan_guard_events": 0,
+     "episodes_per_h": 13629.130595190494,
+     "wall_s": 84.5,
+     "failures": {
+      "pick": {
+       "attempted": 320,
+       "kept": 313,
+       "rate": 0.978125,
+       "ci95": [
+        0.9555420481102652,
+        0.9893643505735357
+       ],
+       "failures": {
+        "wrong_object": 0,
+        "wrong_grasp": 0,
+        "wrong_dest": 0,
+        "slam": 0,
+        "jam": 0,
+        "drop": 0,
+        "early_close": 0,
+        "release_failure": 0,
+        "invalid": 0
+       },
+       "failed_unflagged": 7
+      }
+     }
+    }
+   ],
+   "per_colour": {
+    "blue": {
+     "kept": 244,
+     "attempted": 247,
+     "rate_pct": 98.78542510121457,
+     "ci95_pct": [
+      96.49046929123027,
+      99.58609855078637
+     ]
+    },
+    "green": {
+     "kept": 89,
+     "attempted": 90,
+     "rate_pct": 98.88888888888889,
+     "ci95_pct": [
+      93.97144555232022,
+      99.80359664644875
+     ]
+    },
+    "red": {
+     "kept": 201,
+     "attempted": 205,
+     "rate_pct": 98.04878048780488,
+     "ci95_pct": [
+      95.0911961729602,
+      99.23866914123008
+     ]
+    },
+    "yellow": {
+     "kept": 93,
+     "attempted": 98,
+     "rate_pct": 94.89795918367346,
+     "ci95_pct": [
+      88.60739614476198,
+      97.801301283401
+     ]
+    }
+   },
+   "per_size": {
+    "large": {
+     "kept": 321,
+     "attempted": 332,
+     "rate_pct": 96.6867469879518,
+     "ci95_pct": [
+      94.16535897833361,
+      98.14006119593904
+     ]
+    },
+    "small": {
+     "kept": 306,
+     "attempted": 308,
+     "rate_pct": 99.35064935064935,
+     "ci95_pct": [
+      97.66364265232545,
+      99.82174736619679
+     ]
+    }
+   },
+   "per_cube": {
+    "blue_large": {
+     "kept": 118,
+     "attempted": 120,
+     "rate_pct": 98.33333333333333,
+     "ci95_pct": [
+      94.1262873187086,
+      99.54175314588485
+     ]
+    },
+    "blue_small": {
+     "kept": 126,
+     "attempted": 127,
+     "rate_pct": 99.21259842519684,
+     "ci95_pct": [
+      95.67449252236082,
+      99.86087237687616
+     ]
+    },
+    "green_small": {
+     "kept": 89,
+     "attempted": 90,
+     "rate_pct": 98.88888888888889,
+     "ci95_pct": [
+      93.97144555232022,
+      99.80359664644875
+     ]
+    },
+    "red_large": {
+     "kept": 110,
+     "attempted": 114,
+     "rate_pct": 96.49122807017544,
+     "ci95_pct": [
+      91.32402851480909,
+      98.62722808727369
+     ]
+    },
+    "red_small": {
+     "kept": 91,
+     "attempted": 91,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      95.9494567784601,
+      100.0
+     ]
+    },
+    "yellow_large": {
+     "kept": 93,
+     "attempted": 98,
+     "rate_pct": 94.89795918367346,
+     "ci95_pct": [
+      88.60739614476198,
+      97.801301283401
+     ]
+    }
+   },
+   "noise_std": [
+    0.1000969335436821,
+    0.0998559445142746,
+    0.0999034196138382,
+    0.099920354783535
+   ],
+   "state_dims_std_lt_1e-6": [],
+   "video": {
+    "episodes": [
+     0,
+     55,
+     111,
+     166,
+     222,
+     277,
+     333,
+     388,
+     444,
+     499
+    ],
+    "rows": 3500,
+    "psnr_min": 36.68332260100891,
+    "psnr_mean": 41.4059032481637,
+    "identity_fail": 0,
+    "backend": "torchcodec"
+   },
+   "audit_violations": 0,
+   "items": {
+    "1_count_eq_plan": true,
+    "1_rows_per_episode_eq_T": true,
+    "1_columns_exact": true,
+    "1_psnr_min_ge_35": true,
+    "1_frame_identity": true,
+    "3_pooled_ge_ceiling_minus_5": true,
+    "3_every_batch_ge_ceiling_minus_10": true,
+    "3_every_batch_n_ge_200": true,
+    "4_noise_std_in_band": true,
+    "4_claw_identical": true,
+    "4_mutant_action_exec_flagged": true,
+    "2_audit_clean": true
+   },
+   "sheet": "results/frames/0c/0c_s1_pick.png",
+   "sheet_episodes": [
+    {
+     "lerobot_episode": 0,
+     "episode_index": 0,
+     "instruction": "pick the cube up",
+     "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"large\"], \"dest\": null, \"cubes\": [[\"blue\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+     "steps": [
+      [
+       "start",
+       0
+      ],
+      [
+       "grasp",
+       102
+      ],
+      [
+       "carry",
+       184
+      ],
+      [
+       "hold",
+       266
+      ],
+      [
+       "end",
+       349
+      ]
+     ]
+    },
+    {
+     "lerobot_episode": 250,
+     "episode_index": 255,
+     "instruction": "pick the cube up",
+     "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"large\"], \"dest\": null, \"cubes\": [[\"red\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+     "steps": [
+      [
+       "start",
+       0
+      ],
+      [
+       "grasp",
+       123
+      ],
+      [
+       "carry",
+       198
+      ],
+      [
+       "hold",
+       273
+      ],
+      [
+       "end",
+       349
+      ]
+     ]
+    },
+    {
+     "lerobot_episode": 499,
+     "episode_index": 511,
+     "instruction": "pick up the cube",
+     "spec": "{\"task\": \"pick\", \"target\": [\"green\", \"small\"], \"dest\": null, \"cubes\": [[\"green\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+     "steps": [
+      [
+       "start",
+       0
+      ],
+      [
+       "grasp",
+       106
+      ],
+      [
+       "carry",
+       187
+      ],
+      [
+       "hold",
+       268
+      ],
+      [
+       "end",
+       349
+      ]
+     ]
+    }
+   ]
+  },
+  "0c_s2_pick": {
+   "task": "pick",
+   "ceiling_pct": 100.0,
+   "dataset": "/mnt/project/<project-id>/113_vla_tabletop/data/mnt/project/<project-id>/113_vla_tabletop/datasets/0c_s2_pick",
+   "episodes": 2000,
+   "rows": 700000,
+   "train": 1900,
+   "val": 100,
+   "disk_gb": 1.903406552,
+   "pooled": {
+    "kept": 2250,
+    "attempted": 2304,
+    "rate_pct": 97.65625,
+    "ci95_pct": [
+     96.95459875319862,
+     98.19924542744185
+    ]
+   },
+   "batches": [
+    {
+     "start": 0,
+     "episodes": 1152,
+     "kept": 1124,
+     "attempted": 1152,
+     "rate_pct": 97.56944444444444,
+     "ci95_pct": [
+      96.50956980601102,
+      98.31311177942422
+     ],
+     "nan_guard_events": 0,
+     "episodes_per_h": 22160.617583809202,
+     "wall_s": 187.1,
+     "failures": {
+      "pick": {
+       "attempted": 1152,
+       "kept": 1124,
+       "rate": 0.9756944444444444,
+       "ci95": [
+        0.9650956980601102,
+        0.9831311177942421
+       ],
+       "failures": {
+        "wrong_object": 0,
+        "wrong_grasp": 0,
+        "wrong_dest": 0,
+        "slam": 0,
+        "jam": 0,
+        "drop": 0,
+        "early_close": 0,
+        "release_failure": 0,
+        "invalid": 0
+       },
+       "failed_unflagged": 28
+      }
+     }
+    },
+    {
+     "start": 1152,
+     "episodes": 1152,
+     "kept": 1126,
+     "attempted": 1152,
+     "rate_pct": 97.74305555555556,
+     "ci95_pct": [
+      96.71352677642973,
+      98.45522298997426
+     ],
+     "nan_guard_events": 0,
+     "episodes_per_h": 22028.618377507486,
+     "wall_s": 188.3,
+     "failures": {
+      "pick": {
+       "attempted": 1152,
+       "kept": 1126,
+       "rate": 0.9774305555555556,
+       "ci95": [
+        0.9671352677642974,
+        0.9845522298997426
+       ],
+       "failures": {
+        "wrong_object": 0,
+        "wrong_grasp": 0,
+        "wrong_dest": 0,
+        "slam": 0,
+        "jam": 0,
+        "drop": 0,
+        "early_close": 0,
+        "release_failure": 0,
+        "invalid": 0
+       },
+       "failed_unflagged": 26
+      }
+     }
+    }
+   ],
+   "per_colour": {
+    "blue": {
+     "kept": 752,
+     "attempted": 766,
+     "rate_pct": 98.17232375979113,
+     "ci95_pct": [
+      96.9556451494888,
+      98.90823126352915
+     ]
+    },
+    "green": {
+     "kept": 378,
+     "attempted": 381,
+     "rate_pct": 99.21259842519684,
+     "ci95_pct": [
+      97.71082497036198,
+      99.73186313820008
+     ]
+    },
+    "red": {
+     "kept": 744,
+     "attempted": 766,
+     "rate_pct": 97.12793733681463,
+     "ci95_pct": [
+      95.6897099531092,
+      98.09581683577827
+     ]
+    },
+    "yellow": {
+     "kept": 376,
+     "attempted": 391,
+     "rate_pct": 96.16368286445012,
+     "ci95_pct": [
+      93.76746606529778,
+      97.66160321210359
+     ]
+    }
+   },
+   "per_size": {
+    "large": {
+     "kept": 1109,
+     "attempted": 1155,
+     "rate_pct": 96.01731601731602,
+     "ci95_pct": [
+      94.72856176193838,
+      97.00097228309417
+     ]
+    },
+    "small": {
+     "kept": 1141,
+     "attempted": 1149,
+     "rate_pct": 99.30374238468234,
+     "ci95_pct": [
+      98.63211167815241,
+      99.64678457264215
+     ]
+    }
+   },
+   "per_cube": {
+    "blue_large": {
+     "kept": 369,
+     "attempted": 381,
+     "rate_pct": 96.85039370078741,
+     "ci95_pct": [
+      94.57614194883723,
+      98.18929713051385
+     ]
+    },
+    "blue_small": {
+     "kept": 383,
+     "attempted": 385,
+     "rate_pct": 99.48051948051948,
+     "ci95_pct": [
+      98.12591644531018,
+      99.85742690066927
+     ]
+    },
+    "green_small": {
+     "kept": 378,
+     "attempted": 381,
+     "rate_pct": 99.21259842519684,
+     "ci95_pct": [
+      97.71082497036198,
+      99.73186313820008
+     ]
+    },
+    "red_large": {
+     "kept": 364,
+     "attempted": 383,
+     "rate_pct": 95.03916449086162,
+     "ci95_pct": [
+      92.38234662687135,
+      96.80144332746653
+     ]
+    },
+    "red_small": {
+     "kept": 380,
+     "attempted": 383,
+     "rate_pct": 99.21671018276763,
+     "ci95_pct": [
+      97.72264442691237,
+      99.73326517536411
+     ]
+    },
+    "yellow_large": {
+     "kept": 376,
+     "attempted": 391,
+     "rate_pct": 96.16368286445012,
+     "ci95_pct": [
+      93.76746606529778,
+      97.66160321210359
+     ]
+    }
+   },
+   "noise_std": [
+    0.09999363869428635,
+    0.1000218614935875,
+    0.09988737851381302,
+    0.0999494418501854
+   ],
+   "state_dims_std_lt_1e-6": [],
+   "video": {
+    "episodes": [
+     0,
+     222,
+     444,
+     666,
+     888,
+     1111,
+     1333,
+     1555,
+     1777,
+     1999
+    ],
+    "rows": 3500,
+    "psnr_min": 35.724426625941334,
+    "psnr_mean": 41.04209759515984,
+    "identity_fail": 0,
+    "backend": "torchcodec"
+   },
+   "audit_violations": 0,
+   "items": {
+    "1_count_eq_plan": true,
+    "1_rows_per_episode_eq_T": true,
+    "1_columns_exact": true,
+    "1_psnr_min_ge_35": true,
+    "1_frame_identity": true,
+    "3_pooled_ge_ceiling_minus_5": true,
+    "3_every_batch_ge_ceiling_minus_10": true,
+    "3_every_batch_n_ge_200": true,
+    "4_noise_std_in_band": true,
+    "4_claw_identical": true,
+    "4_mutant_action_exec_flagged": true,
+    "2_audit_clean": true
+   },
+   "sheet": "results/frames/0c/0c_s2_pick.png",
+   "sheet_episodes": [
+    {
+     "lerobot_episode": 0,
+     "episode_index": 0,
+     "instruction": "pick the red cube up",
+     "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"small\"], \"dest\": null, \"cubes\": [[\"yellow\", \"small\"], [\"red\", \"small\"], [\"yellow\", \"large\"], [\"green\", \"small\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+     "steps": [
+      [
+       "start",
+       0
+      ],
+      [
+       "grasp",
+       130
+      ],
+      [
+       "carry",
+       203
+      ],
+      [
+       "hold",
+       276
+      ],
+      [
+       "end",
+       349
+      ]
+     ]
+    },
+    {
+     "lerobot_episode": 1000,
+     "episode_index": 1021,
+     "instruction": "please pick up the red cube",
+     "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"large\"], \"dest\": null, \"cubes\": [[\"red\", \"large\"], [\"blue\", \"small\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+     "steps": [
+      [
+       "start",
+       0
+      ],
+      [
+       "grasp",
+       138
+      ],
+      [
+       "carry",
+       208
+      ],
+      [
+       "hold",
+       278
+      ],
+      [
+       "end",
+       349
+      ]
+     ]
+    },
+    {
+     "lerobot_episode": 1999,
+     "episode_index": 2046,
+     "instruction": "please pick up the blue cube",
+     "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"large\"], \"dest\": null, \"cubes\": [[\"blue\", \"large\"], [\"yellow\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+     "steps": [
+      [
+       "start",
+       0
+      ],
+      [
+       "grasp",
+       120
+      ],
+      [
+       "carry",
+       196
+      ],
+      [
+       "hold",
+       272
+      ],
+      [
+       "end",
+       349
+      ]
+     ]
+    }
+   ]
+  },
+  "0c_s3a_place": {
+   "task": "place",
+   "ceiling_pct": 100.0,
+   "dataset": "/mnt/project/<project-id>/113_vla_tabletop/data/mnt/project/<project-id>/113_vla_tabletop/datasets/0c_s3a_place",
+   "episodes": 2000,
+   "rows": 1100000,
+   "train": 1900,
+   "val": 100,
+   "disk_gb": 3.108026396,
+   "pooled": {
+    "kept": 2304,
+    "attempted": 2304,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     99.83354143542607,
+     100.0
+    ]
+   },
+   "batches": [
+    {
+     "start": 0,
+     "episodes": 1152,
+     "kept": 1152,
+     "attempted": 1152,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.66763611899762,
+      100.0
+     ],
+     "nan_guard_events": 0,
+     "episodes_per_h": 16461.522905783433,
+     "wall_s": 251.9,
+     "failures": {
+      "place": {
+       "attempted": 1152,
+       "kept": 1152,
+       "rate": 1.0,
+       "ci95": [
+        0.9966763611899763,
+        1.0
+       ],
+       "failures": {
+        "wrong_object": 0,
+        "wrong_grasp": 0,
+        "wrong_dest": 0,
+        "slam": 0,
+        "jam": 0,
+        "drop": 0,
+        "early_close": 0,
+        "release_failure": 0,
+        "invalid": 0
+       },
+       "failed_unflagged": 0
+      }
+     }
+    },
+    {
+     "start": 1152,
+     "episodes": 1152,
+     "kept": 1152,
+     "attempted": 1152,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.66763611899762,
+      100.0
+     ],
+     "nan_guard_events": 0,
+     "episodes_per_h": 16560.180144600712,
+     "wall_s": 250.4,
+     "failures": {
+      "place": {
+       "attempted": 1152,
+       "kept": 1152,
+       "rate": 1.0,
+       "ci95": [
+        0.9966763611899763,
+        1.0
+       ],
+       "failures": {
+        "wrong_object": 0,
+        "wrong_grasp": 0,
+        "wrong_dest": 0,
+        "slam": 0,
+        "jam": 0,
+        "drop": 0,
+        "early_close": 0,
+        "release_failure": 0,
+        "invalid": 0
+       },
+       "failed_unflagged": 0
+      }
+     }
+    }
+   ],
+   "per_colour": {
+    "blue": {
+     "kept": 778,
+     "attempted": 778,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.50864727586762,
+      99.99999999999999
+     ]
+    },
+    "green": {
+     "kept": 442,
+     "attempted": 442,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.13834868706736,
+      100.0
+     ]
+    },
+    "red": {
+     "kept": 637,
+     "attempted": 637,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.40053829214582,
+      99.99999999999999
+     ]
+    },
+    "yellow": {
+     "kept": 447,
+     "attempted": 447,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.14790471864177,
+      100.0
+     ]
+    }
+   },
+   "per_size": {
+    "large": {
+     "kept": 1133,
+     "attempted": 1133,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.6620813312954,
+      99.99999999999997
+     ]
+    },
+    "small": {
+     "kept": 1171,
+     "attempted": 1171,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.67301123828099,
+      100.0
+     ]
+    }
+   },
+   "per_cube": {
+    "blue_large": {
+     "kept": 339,
+     "attempted": 339,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      98.87948253654166,
+      100.0
+     ]
+    },
+    "blue_small": {
+     "kept": 439,
+     "attempted": 439,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.13251148943549,
+      99.99999999999999
+     ]
+    },
+    "green_small": {
+     "kept": 442,
+     "attempted": 442,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.13834868706736,
+      100.0
+     ]
+    },
+    "red_large": {
+     "kept": 347,
+     "attempted": 347,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      98.90503292654009,
+      100.0
+     ]
+    },
+    "red_small": {
+     "kept": 290,
+     "attempted": 290,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      98.6926289538309,
+      100.0
+     ]
+    },
+    "yellow_large": {
+     "kept": 447,
+     "attempted": 447,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.14790471864177,
+      100.0
+     ]
+    }
+   },
+   "noise_std": [
+    0.10004150122404099,
+    0.09982558339834213,
+    0.09991392493247986,
+    0.10004284232854843
+   ],
+   "state_dims_std_lt_1e-6": [],
+   "video": {
+    "episodes": [
+     0,
+     222,
+     444,
+     666,
+     888,
+     1111,
+     1333,
+     1555,
+     1777,
+     1999
+    ],
+    "rows": 5500,
+    "psnr_min": 35.82568554336438,
+    "psnr_mean": 40.791148971686056,
+    "identity_fail": 0,
+    "backend": "torchcodec"
+   },
+   "audit_violations": 0,
+   "items": {
+    "1_count_eq_plan": true,
+    "1_rows_per_episode_eq_T": true,
+    "1_columns_exact": true,
+    "1_psnr_min_ge_35": true,
+    "1_frame_identity": true,
+    "3_pooled_ge_ceiling_minus_5": true,
+    "3_every_batch_ge_ceiling_minus_10": true,
+    "3_every_batch_n_ge_200": true,
+    "4_noise_std_in_band": true,
+    "4_claw_identical": true,
+    "4_mutant_action_exec_flagged": true,
+    "2_audit_clean": true
+   },
+   "sheet": "results/frames/0c/0c_s3a_place.png",
+   "sheet_episodes": [
+    {
+     "lerobot_episode": 0,
+     "episode_index": 0,
+     "instruction": "please put the red cube on the yellow pad",
+     "spec": "{\"task\": \"place\", \"target\": [\"red\", \"small\"], \"dest\": \"yellow\", \"cubes\": [[\"red\", \"small\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+     "steps": [
+      [
+       "start",
+       0
+      ],
+      [
+       "grasp",
+       107
+      ],
+      [
+       "carry",
+       208
+      ],
+      [
+       "release",
+       309
+      ],
+      [
+       "end",
+       549
+      ]
+     ]
+    },
+    {
+     "lerobot_episode": 1000,
+     "episode_index": 1000,
+     "instruction": "move the red cube onto the yellow pad",
+     "spec": "{\"task\": \"place\", \"target\": [\"red\", \"large\"], \"dest\": \"yellow\", \"cubes\": [[\"red\", \"large\"], [\"yellow\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+     "steps": [
+      [
+       "start",
+       0
+      ],
+      [
+       "grasp",
+       122
+      ],
+      [
+       "carry",
+       210
+      ],
+      [
+       "release",
+       298
+      ],
+      [
+       "end",
+       549
+      ]
+     ]
+    },
+    {
+     "lerobot_episode": 1999,
+     "episode_index": 1999,
+     "instruction": "move the yellow cube onto the red pad",
+     "spec": "{\"task\": \"place\", \"target\": [\"yellow\", \"large\"], \"dest\": \"red\", \"cubes\": [[\"yellow\", \"large\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+     "steps": [
+      [
+       "start",
+       0
+      ],
+      [
+       "grasp",
+       123
+      ],
+      [
+       "carry",
+       229
+      ],
+      [
+       "release",
+       335
+      ],
+      [
+       "end",
+       549
+      ]
+     ]
+    }
+   ]
+  },
+  "0c_s3b_stack": {
+   "task": "stack",
+   "ceiling_pct": 97.3,
+   "dataset": "/mnt/project/<project-id>/113_vla_tabletop/data/mnt/project/<project-id>/113_vla_tabletop/datasets/0c_s3b_stack",
+   "episodes": 2000,
+   "rows": 1100000,
+   "train": 1900,
+   "val": 100,
+   "disk_gb": 3.045611888,
+   "pooled": {
+    "kept": 2193,
+    "attempted": 2304,
+    "rate_pct": 95.18229166666667,
+    "ci95_pct": [
+     94.23017265714047,
+     95.98399108789296
+    ]
+   },
+   "batches": [
+    {
+     "start": 0,
+     "episodes": 1152,
+     "kept": 1106,
+     "attempted": 1152,
+     "rate_pct": 96.00694444444444,
+     "ci95_pct": [
+      94.71493990081335,
+      96.9931280559032
+     ],
+     "nan_guard_events": 0,
+     "episodes_per_h": 16530.82508842245,
+     "wall_s": 250.9,
+     "failures": {
+      "stack": {
+       "attempted": 1152,
+       "kept": 1106,
+       "rate": 0.9600694444444444,
+       "ci95": [
+        0.9471493990081336,
+        0.969931280559032
+       ],
+       "failures": {
+        "wrong_object": 0,
+        "wrong_grasp": 0,
+        "wrong_dest": 0,
+        "slam": 0,
+        "jam": 0,
+        "drop": 46,
+        "early_close": 0,
+        "release_failure": 43,
+        "invalid": 0
+       },
+       "failed_unflagged": 0
+      }
+     }
+    },
+    {
+     "start": 1152,
+     "episodes": 1152,
+     "kept": 1087,
+     "attempted": 1152,
+     "rate_pct": 94.35763888888889,
+     "ci95_pct": [
+      92.87183792838218,
+      95.54858230913133
+     ],
+     "nan_guard_events": 0,
+     "episodes_per_h": 16633.433539471003,
+     "wall_s": 249.3,
+     "failures": {
+      "stack": {
+       "attempted": 1152,
+       "kept": 1087,
+       "rate": 0.9435763888888888,
+       "ci95": [
+        0.9287183792838217,
+        0.9554858230913134
+       ],
+       "failures": {
+        "wrong_object": 0,
+        "wrong_grasp": 0,
+        "wrong_dest": 0,
+        "slam": 0,
+        "jam": 0,
+        "drop": 60,
+        "early_close": 0,
+        "release_failure": 62,
+        "invalid": 0
+       },
+       "failed_unflagged": 0
+      }
+     }
+    }
+   ],
+   "per_colour": {
+    "blue": {
+     "kept": 699,
+     "attempted": 735,
+     "rate_pct": 95.10204081632654,
+     "ci95_pct": [
+      93.29370112215788,
+      96.44136523035934
+     ]
+    },
+    "green": {
+     "kept": 353,
+     "attempted": 371,
+     "rate_pct": 95.14824797843666,
+     "ci95_pct": [
+      92.46175797985246,
+      96.90932569922694
+     ]
+    },
+    "red": {
+     "kept": 779,
+     "attempted": 815,
+     "rate_pct": 95.58282208588957,
+     "ci95_pct": [
+      93.94541246873509,
+      96.79252756753078
+     ]
+    },
+    "yellow": {
+     "kept": 362,
+     "attempted": 383,
+     "rate_pct": 94.51697127937337,
+     "ci95_pct": [
+      91.76363108418415,
+      96.38614391416141
+     ]
+    }
+   },
+   "per_size": {
+    "large": {
+     "kept": 1132,
+     "attempted": 1191,
+     "rate_pct": 95.04617968094038,
+     "ci95_pct": [
+      93.66247699310972,
+      96.14022154031932
+     ]
+    },
+    "small": {
+     "kept": 1061,
+     "attempted": 1113,
+     "rate_pct": 95.32794249775382,
+     "ci95_pct": [
+      93.9245205621356,
+      96.41953538993494
+     ]
+    }
+   },
+   "per_cube": {
+    "blue_large": {
+     "kept": 336,
+     "attempted": 358,
+     "rate_pct": 93.85474860335195,
+     "ci95_pct": [
+      90.87118857404042,
+      95.90711441820812
+     ]
+    },
+    "blue_small": {
+     "kept": 363,
+     "attempted": 377,
+     "rate_pct": 96.28647214854111,
+     "ci95_pct": [
+      93.86387135239744,
+      97.77527731203418
+     ]
+    },
+    "green_small": {
+     "kept": 353,
+     "attempted": 371,
+     "rate_pct": 95.14824797843666,
+     "ci95_pct": [
+      92.46175797985246,
+      96.90932569922694
+     ]
+    },
+    "red_large": {
+     "kept": 434,
+     "attempted": 450,
+     "rate_pct": 96.44444444444444,
+     "ci95_pct": [
+      94.30282712851512,
+      97.79979193505244
+     ]
+    },
+    "red_small": {
+     "kept": 345,
+     "attempted": 365,
+     "rate_pct": 94.52054794520548,
+     "ci95_pct": [
+      91.68845234095272,
+      96.42525283763884
+     ]
+    },
+    "yellow_large": {
+     "kept": 362,
+     "attempted": 383,
+     "rate_pct": 94.51697127937337,
+     "ci95_pct": [
+      91.76363108418415,
+      96.38614391416141
+     ]
+    }
+   },
+   "noise_std": [
+    0.09996825456619263,
+    0.10005035251379013,
+    0.10002199560403824,
+    0.09998636692762375
+   ],
+   "state_dims_std_lt_1e-6": [],
+   "video": {
+    "episodes": [
+     0,
+     222,
+     444,
+     666,
+     888,
+     1111,
+     1333,
+     1555,
+     1777,
+     1999
+    ],
+    "rows": 5500,
+    "psnr_min": 35.37494973806896,
+    "psnr_mean": 40.646792064301344,
+    "identity_fail": 0,
+    "backend": "torchcodec"
+   },
+   "audit_violations": 0,
+   "items": {
+    "1_count_eq_plan": true,
+    "1_rows_per_episode_eq_T": true,
+    "1_columns_exact": true,
+    "1_psnr_min_ge_35": true,
+    "1_frame_identity": true,
+    "3_pooled_ge_ceiling_minus_5": true,
+    "3_every_batch_ge_ceiling_minus_10": true,
+    "3_every_batch_n_ge_200": true,
+    "4_noise_std_in_band": true,
+    "4_claw_identical": true,
+    "4_mutant_action_exec_flagged": true,
+    "2_audit_clean": true
+   },
+   "sheet": "results/frames/0c/0c_s3b_stack.png",
+   "sheet_episodes": [
+    {
+     "lerobot_episode": 0,
+     "episode_index": 0,
+     "instruction": "stack the red cube on the large yellow cube",
+     "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"large\"], \"dest\": [\"yellow\", \"large\"], \"cubes\": [[\"blue\", \"small\"], [\"green\", \"small\"], [\"red\", \"large\"], [\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+     "steps": [
+      [
+       "start",
+       0
+      ],
+      [
+       "grasp",
+       133
+      ],
+      [
+       "carry",
+       239
+      ],
+      [
+       "release",
+       345
+      ],
+      [
+       "end",
+       549
+      ]
+     ]
+    },
+    {
+     "lerobot_episode": 1000,
+     "episode_index": 1040,
+     "instruction": "stack the blue cube on top of the large green cube",
+     "spec": "{\"task\": \"stack\", \"target\": [\"blue\", \"large\"], \"dest\": [\"green\", \"large\"], \"cubes\": [[\"blue\", \"large\"], [\"green\", \"large\"], [\"yellow\", \"small\"], [\"red\", \"small\"], [\"red\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+     "steps": [
+      [
+       "start",
+       0
+      ],
+      [
+       "grasp",
+       106
+      ],
+      [
+       "carry",
+       185
+      ],
+      [
+       "release",
+       264
+      ],
+      [
+       "end",
+       549
+      ]
+     ]
+    },
+    {
+     "lerobot_episode": 1999,
+     "episode_index": 2099,
+     "instruction": "stack the large yellow cube on top of the red cube",
+     "spec": "{\"task\": \"stack\", \"target\": [\"yellow\", \"large\"], \"dest\": [\"red\", \"large\"], \"cubes\": [[\"blue\", \"large\"], [\"yellow\", \"small\"], [\"yellow\", \"large\"], [\"red\", \"large\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+     "steps": [
+      [
+       "start",
+       0
+      ],
+      [
+       "grasp",
+       134
+      ],
+      [
+       "carry",
+       225
+      ],
+      [
+       "release",
+       317
+      ],
+      [
+       "end",
+       549
+      ]
+     ]
+    }
+   ]
+  }
+ },
+ "s4r": "0c_s4r_mix DEFERRED (GATES '0C note', not generated)",
+ "ceilings_source": "GATES 0A.2 attempt 1 RESULT (9e0d0af): pick 100, place 100, stack 97.3 %",
+ "pass_items_1_to_4": true,
+ "gpu_h_collect": 0.475,
+ "jobs": "GPU 95815 95816 95817 95819 95820 95821 95822 95823; CPU 95818 95824 95825 95826 95827 95828 95829 95830 95831 95832",
+ "audit_mutants": "results/0c_audit_mutants.txt"
+}

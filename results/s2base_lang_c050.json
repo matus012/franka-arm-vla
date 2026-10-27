@@ -1,0 +1,34 @@
+{
+ "ck": "c050",
+ "step": "017220",
+ "seed": 21620,
+ "episodes": [
+  0,
+  99
+ ],
+ "swap": "shuffle",
+ "attempt1": {
+  "true_success": 0,
+  "shuffled_success": 0,
+  "b_true_only": 0,
+  "c_shuffled_only": 0,
+  "mcnemar_z": null,
+  "wrong_grasp_true": 11,
+  "wrong_grasp_shuffled": 14,
+  "ckpt": "/runs/s2base_U/checkpoints/017220/pretrained_model",
+  "ckpt_sha": "7dc028e7ddb25cb247a3444e6d49fda08b4994f946826970767b7dd49d968acd"
+ },
+ "attempt0": {
+  "true_success": 14,
+  "shuffled_success": 11,
+  "b_true_only": 5,
+  "c_shuffled_only": 2,
+  "mcnemar_z": 1.1338934190276817,
+  "wrong_grasp_true": 23,
+  "wrong_grasp_shuffled": 25,
+  "ckpt": "/runs/s2_U/checkpoints/017220/pretrained_model",
+  "ckpt_sha": "411c38f65f4a334654be73ff974e622852b51daa3cc64e62a0f2435787c30a67"
+ },
+ "same_donor_permutation_as_attempt0": true,
+ "note": "reported only: no pass / fail, triggers nothing"
+}

@@ -1,0 +1,2 @@
+# GATES Stage 1, arm frozen: encoder choice, picked checkpoint (100 %, pick rule in results/s1_frozen_val.json), episodes 0-999 of validation seed 21610
+sim scripts/eval_policy.py --policy smolvla --ckpt /runs/s1_frozen/checkpoints/020664/pretrained_model --episodes 1000 --stage s1 --split train --visual nominal --seed 21610 --envs 128 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --out /runs/e1_frozen_choice/s1_frozen_choice_s21610.json

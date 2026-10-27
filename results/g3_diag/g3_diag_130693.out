@@ -1,0 +1,234 @@
+=== g3_diag on <node> NVIDIA H200 start 2026-10-25T02:22:18+02:00 repo 3d1f570
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 50:00 cpus 8
+CUDA OK NVIDIA H200
+=== step 1 start 1792887744.111542533 sim scripts/g3_dump_t0.py --stream paired --seed 21645 --envs 128 --image-size 224 --out /runs/g3_diag/t0_p21645.npz
+[g3_dump] paired seed 21645: 1001 samples, B 128, H 224
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 21645
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 3.280622 s, Mean: 3.280622 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.576914 s, Mean: 0.576914 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.087425 s, Mean: 0.087425 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.008697 s, Mean: 0.048061 s, Std: 0.055669 s, N: 2
+Contact sensor construction took: Last: 0.007368 s, Mean: 0.034497 s, Std: 0.045842 s, N: 3
+Contact sensor construction took: Last: 0.005263 s, Mean: 0.027188 s, Std: 0.040183 s, N: 4
+Initialize solver took: Last: 8.901486 s, Mean: 8.901486 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 14.067954 s, Mean: 14.067954 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 34.386770 s, Mean: 34.386770 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[g3_dump] batch 0: 128/1001 (46 s)
+[g3_dump] batch 1: 256/1001 (46 s)
+[g3_dump] batch 2: 384/1001 (46 s)
+[g3_dump] batch 3: 512/1001 (46 s)
+[g3_dump] batch 4: 640/1001 (46 s)
+[g3_dump] batch 5: 768/1001 (46 s)
+[g3_dump] batch 6: 896/1001 (46 s)
+[g3_dump] batch 7: 1001/1001 (46 s)
+G3_DUMP={"stream": "paired", "seed": 21645, "n": 1001, "groups": 405, "out": "/runs/g3_diag/t0_p21645.npz", "wall_s": 47.3}
+=== step 1 done 1792887808.745080454
+=== step 2 start 1792887808.746807393 sim scripts/g3_dump_t0.py --stream unpaired --seed 21640 --paired-seed 21645 --envs 128 --image-size 224 --out /runs/g3_diag/t0_u21640.npz
+[g3_dump] unpaired seed 21640: 999 samples, B 128, H 224
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 21640
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 3.175477 s, Mean: 3.175477 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.428942 s, Mean: 0.428942 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.086341 s, Mean: 0.086341 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.009106 s, Mean: 0.047724 s, Std: 0.054613 s, N: 2
+Contact sensor construction took: Last: 0.007677 s, Mean: 0.034375 s, Std: 0.045010 s, N: 3
+Contact sensor construction took: Last: 0.005509 s, Mean: 0.027158 s, Std: 0.039483 s, N: 4
+Initialize solver took: Last: 8.622943 s, Mean: 8.622943 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 13.873519 s, Mean: 13.873519 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 33.416640 s, Mean: 33.416640 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[g3_dump] batch 0: 128/999 (43 s)
+[g3_dump] batch 1: 256/999 (44 s)
+[g3_dump] batch 2: 384/999 (44 s)
+[g3_dump] batch 3: 512/999 (44 s)
+[g3_dump] batch 4: 640/999 (44 s)
+[g3_dump] batch 5: 768/999 (44 s)
+[g3_dump] batch 6: 896/999 (44 s)
+[g3_dump] batch 7: 999/999 (44 s)
+G3_DUMP={"stream": "unpaired", "seed": 21640, "n": 999, "groups": 999, "out": "/runs/g3_diag/t0_u21640.npz", "wall_s": 45.2}
+=== step 2 done 1792887868.732783218
+=== step 3 start 1792887868.734505089 pol scripts/g3_probe.py extract --ckpt /runs/s2a1_VT/checkpoints/034440/pretrained_model --dumps /runs/g3_diag/t0_p21645.npz /runs/g3_diag/t0_u21640.npz --out /runs/g3_diag/c034440
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[g3] /runs/s2a1_VT/checkpoints/034440/pretrained_model: 2000 samples, model up 34 s, sha 07e87cc6f5b2
+[g3] features true done (59 s)
+[g3] features shuffled done (83 s)
+G3_EXTRACT={"ckpt": "/runs/s2a1_VT/checkpoints/034440/pretrained_model", "div": {"full_chunk": {"n_layouts": 100, "instruction_effect": 2.76423714697361, "noise_effect": 26.890628881454468, "ratio": 0.10279555599683309, "per_layout_ratio_median": 0.07047210813932678, "ignores_language": true}, "first_10": {"n_layouts": 100, "instruction_effect": 1.382777721658349, "noise_effect": 16.457488180994986, "ratio": 0.08402118880177431, "per_layout_ratio_median": 0.0505730895233365, "ignores_language": true}}, "wall_s": 99.5}
+=== step 3 done 1792887979.163317662
+=== step 4 start 1792887979.168976576 pol scripts/g3_probe.py extract --ckpt /runs/s1y15_U/checkpoints/041328/pretrained_model --dumps /runs/g3_diag/t0_p21645.npz /runs/g3_diag/t0_u21640.npz --out /runs/g3_diag/c041328
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[g3] /runs/s1y15_U/checkpoints/041328/pretrained_model: 2000 samples, model up 29 s, sha c3dcef76f53e
+[g3] features true done (53 s)
+[g3] features shuffled done (77 s)
+G3_EXTRACT={"ckpt": "/runs/s1y15_U/checkpoints/041328/pretrained_model", "div": {"full_chunk": {"n_layouts": 100, "instruction_effect": 1.5930650629103185, "noise_effect": 18.939199368953705, "ratio": 0.08411469945882549, "per_layout_ratio_median": 0.06899721776093642, "ignores_language": true}, "first_10": {"n_layouts": 100, "instruction_effect": 1.1422754628956318, "noise_effect": 18.398570326566695, "ratio": 0.06208501218413901, "per_layout_ratio_median": 0.03964922103768886, "ignores_language": true}}, "wall_s": 93.3}
+=== step 4 done 1792888078.789055206
+=== g3_diag done 2026-10-25T02:27:58+02:00

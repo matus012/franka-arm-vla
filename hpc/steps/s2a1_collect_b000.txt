@@ -1,0 +1,2 @@
+# GATES 2a attempt 1 (d33e371): counterfactual paired-scene collect, s2a seed 32800, groups 0-549 (one episode per valid target per layout), H 224, sigma 0.1, m 15, B 128; batch b000 (also the smoke: its export + item P run before b001's data is used)
+sim scripts/collect.py --stage s2a --split train --paired-targets --start-group 0 --groups 550 --seed 32800 --envs 128 --noise-sigma 0.1 --image-size 224 --visual nominal --cube-yaw-max-deg 15 --out /data/0c/s2apy15/b000

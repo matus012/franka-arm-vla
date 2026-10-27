@@ -1,0 +1,4 @@
+=== x3r1_export on <node> cpu x16 start 2026-10-02T01:02:29+02:00
+[export] 10 episodes found, 10 selected, 3500 rows, manifest-verified 4 files; audit CLEAN
+EXPORT_SUMMARY={"name": "0b3_overfit_r1", "root": "/data/datasets/0b3_overfit_r1", "sources": ["/data/0b3r1/collect"], "files": 1, "episodes": 10, "rows": 3500, "per_task": {"pick": 10}, "streams": ["s1_s31600"], "workers": 1, "manifest_verified_files": 4, "audit_clean": true, "train_episodes": 10, "val_episodes": 0, "disk_bytes": 8599979, "wall_s": 29.2}
+=== x3r1_export done 2026-10-02T01:03:02+02:00

@@ -1,0 +1,231 @@
+{
+ "source": "/runs/e1r2_test/s1r2_U_test_s11503.json",
+ "chosen": [
+  0,
+  1,
+  2,
+  4,
+  10,
+  12,
+  13,
+  14,
+  17,
+  20,
+  25,
+  29,
+  39,
+  70,
+  83,
+  120
+ ],
+ "rounds": 1,
+ "wall_s": 130.1,
+ "git_sha": "7274aa8",
+ "frames": [
+  {
+   "index": 0,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep0_pick_success.png"
+  },
+  {
+   "index": 1,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep1_pick_success.png"
+  },
+  {
+   "index": 2,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep2_pick_success.png"
+  },
+  {
+   "index": 4,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep4_pick_drop_early_close.png",
+   "video": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep4.mp4"
+  },
+  {
+   "index": 10,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep10_pick_drop_early_close.png",
+   "video": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep10.mp4"
+  },
+  {
+   "index": 12,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep12_pick_early_close.png",
+   "video": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep12.mp4"
+  },
+  {
+   "index": 13,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep13_pick_drop_early_close.png",
+   "video": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep13.mp4"
+  },
+  {
+   "index": 14,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep14_pick_drop_early_close.png",
+   "video": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep14.mp4"
+  },
+  {
+   "index": 17,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep17_pick_drop_early_close.png",
+   "video": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep17.mp4"
+  },
+  {
+   "index": 20,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep20_pick_drop_early_close.png",
+   "video": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep20.mp4"
+  },
+  {
+   "index": 25,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep25_pick_drop_early_close.png",
+   "video": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep25.mp4"
+  },
+  {
+   "index": 29,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep29_pick_drop_early_close.png",
+   "video": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep29.mp4"
+  },
+  {
+   "index": 39,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep39_pick_early_close.png",
+   "video": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep39.mp4"
+  },
+  {
+   "index": 70,
+   "types_recorded": [
+    "fail_other"
+   ],
+   "types_replay": [
+    "fail_other"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep70_pick_fail_other.png",
+   "video": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep70.mp4"
+  },
+  {
+   "index": 83,
+   "types_recorded": [
+    "fail_other"
+   ],
+   "types_replay": [
+    "fail_other"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep83_pick_fail_other.png",
+   "video": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep83.mp4"
+  },
+  {
+   "index": 120,
+   "types_recorded": [
+    "fail_other"
+   ],
+   "types_replay": [
+    "fail_other"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep120_pick_fail_other.png",
+   "video": "/runs/e1r2_test/frames/s1r2_U_test_s11503/s1r2_U_test_s11503_ep120.mp4"
+  }
+ ]
+}

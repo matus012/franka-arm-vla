@@ -1,0 +1,45 @@
+{
+ "ckpt": "checkpoints/s1a1_U/pretrained_model",
+ "ckpt_sha": "c804bae235ceb00dbabf20ae3f92ebcd50a251b6f2b14bf1fa01371e6cbf88d8",
+ "image_size": 128,
+ "instructions": [
+  "pick up the red cube",
+  "pick the small blue cube up",
+  "please pick up the yellow cube"
+ ],
+ "others": [
+  [
+   "pick up the blue cube",
+   "pick up the green cube"
+  ],
+  [
+   "pick the small yellow cube up"
+  ],
+  [
+   "please pick up the green cube",
+   "please pick up the red cube",
+   "please pick up the blue cube"
+  ]
+ ],
+ "guided_s": 5.12,
+ "a_w1_vs_plain_same_batch_maxabs": 0.0,
+ "plain_s": 2.12,
+ "b_w1_vs_plain_B_rows_maxabs": 0.0001996755599975586,
+ "c_self_others_w8_vs_plain_B_rows_maxabs": 1.9729137420654297e-05,
+ "d_w2_vs_w1_arm_l2_per_env": [
+  2.9196553230285645,
+  0.04074408859014511,
+  0.7597795724868774
+ ],
+ "d_w8_vs_w1_arm_l2_per_env": [
+  8.724967002868652,
+  0.2833102345466614,
+  1.7116671800613403
+ ],
+ "plain_noise_q1_vs_q0_arm_l2_per_env": [
+  2.1264209747314453,
+  0.2320011854171753,
+  0.8564854264259338
+ ],
+ "pass": true
+}

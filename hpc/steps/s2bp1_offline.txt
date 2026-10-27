@@ -1,0 +1,2 @@
+# GATES 2b amended one fix (consultant 2026-10-26): offline val MAE / claw accuracy at c100 (reported only), moved to a CPU job (2M's c100 GPU job spent > 1 h in this step and hit its limit)
+python scripts/s0b3_prep.py offline --val-only --dataset /data/datasets/0c_s2_pair_rl224_y15 --ckpt /runs/s2bp1_VT/checkpoints/034440/pretrained_model --out /runs/s2bp1_offline/offline_val_034440.json --n-action-steps 10 --device cpu

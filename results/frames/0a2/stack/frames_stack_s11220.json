@@ -1,0 +1,66 @@
+[
+ {
+  "episode": 133,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2\\stack\\stack_s11220_ep133_success.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"blue\", \"large\"], \"dest\": [\"green\", \"large\"], \"cubes\": [[\"yellow\", \"small\"], [\"green\", \"large\"], [\"blue\", \"large\"], [\"red\", \"small\"], [\"red\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 164,
+  "success": false,
+  "drop": true,
+  "release_failure": true,
+  "sheet": "results\\frames\\0a2\\stack\\stack_s11220_ep164_FAIL.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"green\", \"small\"], \"dest\": [\"yellow\", \"small\"], \"cubes\": [[\"yellow\", \"small\"], [\"green\", \"large\"], [\"green\", \"small\"], [\"red\", \"small\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 166,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2\\stack\\stack_s11220_ep166_success.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"small\"], \"dest\": [\"green\", \"small\"], \"cubes\": [[\"red\", \"small\"], [\"blue\", \"small\"], [\"green\", \"large\"], [\"green\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 198,
+  "success": false,
+  "drop": true,
+  "release_failure": true,
+  "sheet": "results\\frames\\0a2\\stack\\stack_s11220_ep198_FAIL.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"small\"], \"dest\": [\"red\", \"large\"], \"cubes\": [[\"blue\", \"small\"], [\"red\", \"large\"], [\"red\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 278,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2\\stack\\stack_s11220_ep278_success.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"green\", \"small\"], \"dest\": [\"yellow\", \"small\"], \"cubes\": [[\"green\", \"large\"], [\"green\", \"small\"], [\"yellow\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 289,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2\\stack\\stack_s11220_ep289_success.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"green\", \"small\"], \"dest\": [\"red\", \"small\"], \"cubes\": [[\"red\", \"large\"], [\"green\", \"small\"], [\"yellow\", \"small\"], [\"red\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 0,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2\\stack\\stack_s11220_ep0_success.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"large\"], \"dest\": [\"blue\", \"large\"], \"cubes\": [[\"red\", \"large\"], [\"yellow\", \"large\"], [\"blue\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 1,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2\\stack\\stack_s11220_ep1_success.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"yellow\", \"large\"], \"dest\": [\"blue\", \"large\"], \"cubes\": [[\"blue\", \"small\"], [\"blue\", \"large\"], [\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ }
+]

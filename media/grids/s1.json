@@ -1,0 +1,105 @@
+{
+ "stream": "d11_s1_s51010",
+ "seed": 51010,
+ "ckpt": "/runs/s1y15_U/checkpoints/041328/pretrained_model",
+ "ckpt_sha": "c3dcef76f53e00e5954469970c25c38980a396723f7bbbf2b85919e6cc6688f5",
+ "episodes": [
+  {
+   "index": 0,
+   "instruction": "pick up the cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 1,
+   "instruction": "pick the cube up",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 2,
+   "instruction": "pick up the cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 3,
+   "instruction": "pick up the cube from the table",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 4,
+   "instruction": "pick up the cube from the table",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 5,
+   "instruction": "pick the cube up",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 6,
+   "instruction": "pick up the cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 7,
+   "instruction": "pick up the cube from the table",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 8,
+   "instruction": "pick the cube up",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 9,
+   "instruction": "pick up the cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 10,
+   "instruction": "pick up the cube from the table",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 11,
+   "instruction": "pick up the cube from the table",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 12,
+   "instruction": "pick the cube up",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 13,
+   "instruction": "pick up the cube from the table",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 14,
+   "instruction": "pick the cube up",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 15,
+   "instruction": "pick the cube up",
+   "success": true,
+   "shown_verdict": "success"
+  }
+ ],
+ "full_size_episode": 0
+}

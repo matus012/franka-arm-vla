@@ -1,0 +1,10 @@
+{
+ "ckpt": "/runs/d2fix_fit_relabel/checkpoints/003000/pretrained_model",
+ "ckpt_sha": "9ca1b7e200293293cd402af69eccc1558a6f8645ef8b54b6afbe31874d4481d6",
+ "val_episodes": 25,
+ "samples": 2900,
+ "action_override": "/runs/d2fix/relabel_0c_s1_pick.npz",
+ "val_loss": 0.03177587231171542,
+ "dtype": "float32 (served)",
+ "git_sha": "f06dfa5"
+}

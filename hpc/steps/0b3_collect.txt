@@ -1,0 +1,3 @@
+# GATES 0B.3 data: 10 expert demos, seed 31600 episodes 0-9, Stage 1 scene, clean labels (sigma 0), T_pick, H 128.
+# B = 10 envs (one chunk = the 10 states): the replay ceiling (prerequisite a) reruns this exact layout.
+sim scripts/collect.py --stage s1 --split train --start 0 --episodes 10 --seed 31600 --envs 10 --noise-sigma 0 --image-size 128 --visual nominal --out /data/0b3/collect

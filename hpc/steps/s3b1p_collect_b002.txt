@@ -1,0 +1,2 @@
+# 009b prep (task 008 FAIL branch; registered once the consultant writes 009b + GATES): paired s3b1 (stack, one cube size per scene) collect, data seed 33300 groups 1000-1499, H 224, sigma 0.1, m 15, B 128; batch b002
+sim scripts/collect.py --stage s3b1 --split train --paired-targets --start-group 1000 --groups 500 --seed 33300 --envs 128 --noise-sigma 0.1 --image-size 224 --visual nominal --cube-yaw-max-deg 15 --out /data/0c/s3b1py15/b002

@@ -1,0 +1,58 @@
+[
+ {
+  "episode": 59,
+  "success": false,
+  "drop": true,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2a1\\stack\\stack_s11221_ep59_FAIL.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"blue\", \"small\"], \"dest\": [\"green\", \"small\"], \"cubes\": [[\"green\", \"large\"], [\"green\", \"small\"], [\"blue\", \"small\"], [\"red\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 76,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2a1\\stack\\stack_s11221_ep76_success.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"yellow\", \"large\"], \"dest\": [\"blue\", \"small\"], \"cubes\": [[\"yellow\", \"small\"], [\"yellow\", \"large\"], [\"blue\", \"small\"], [\"green\", \"small\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 164,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2a1\\stack\\stack_s11221_ep164_success.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"blue\", \"large\"], \"dest\": [\"blue\", \"small\"], \"cubes\": [[\"red\", \"small\"], [\"blue\", \"small\"], [\"green\", \"small\"], [\"blue\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 185,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2a1\\stack\\stack_s11221_ep185_success.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"blue\", \"small\"], \"dest\": [\"red\", \"small\"], \"cubes\": [[\"blue\", \"small\"], [\"red\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 246,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2a1\\stack\\stack_s11221_ep246_success.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"blue\", \"small\"], \"dest\": [\"red\", \"small\"], \"cubes\": [[\"yellow\", \"small\"], [\"blue\", \"large\"], [\"red\", \"small\"], [\"green\", \"small\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 258,
+  "success": false,
+  "drop": true,
+  "release_failure": true,
+  "sheet": "results\\frames\\0a2a1\\stack\\stack_s11221_ep258_FAIL.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"large\"], \"dest\": [\"blue\", \"small\"], \"cubes\": [[\"blue\", \"large\"], [\"blue\", \"small\"], [\"red\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 0,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2a1\\stack\\stack_s11221_ep0_success.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"large\"], \"dest\": [\"yellow\", \"small\"], \"cubes\": [[\"blue\", \"small\"], [\"red\", \"large\"], [\"blue\", \"large\"], [\"yellow\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ }
+]

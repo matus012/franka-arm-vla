@@ -1,0 +1,298 @@
+{
+ "envs": 16,
+ "image_size": 224,
+ "device": "cuda:0",
+ "groups": [
+  {
+   "layout_id": 0,
+   "members": 3,
+   "targets": [
+    "red_small",
+    "green_small",
+    "blue_small"
+   ],
+   "side": {
+    "X_slot_equals_Y_slot_all": true,
+    "X_slot_equals_Y_slot_other_target_slots": true,
+    "diff_Xi_Xj_equals_diff_Xi_Yj_all_pairs": true,
+    "slots_where_X_slot_differs_from_X_slot0": [
+     2,
+     8,
+     10,
+     15
+    ],
+    "max_abs_diff_between_X_slots": 3,
+    "n_px_X0_vs_X_slots": [
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "wrist": {
+    "X_slot_equals_Y_slot_all": true,
+    "X_slot_equals_Y_slot_other_target_slots": true,
+    "diff_Xi_Xj_equals_diff_Xi_Yj_all_pairs": true,
+    "slots_where_X_slot_differs_from_X_slot0": [
+     1,
+     3,
+     4,
+     11,
+     13,
+     14,
+     15
+    ],
+    "max_abs_diff_between_X_slots": 18,
+    "n_px_X0_vs_X_slots": [
+     0,
+     3,
+     0,
+     3,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "layout_id": 2,
+   "members": 3,
+   "targets": [
+    "red_small",
+    "green_small",
+    "blue_small"
+   ],
+   "side": {
+    "X_slot_equals_Y_slot_all": true,
+    "X_slot_equals_Y_slot_other_target_slots": true,
+    "diff_Xi_Xj_equals_diff_Xi_Yj_all_pairs": true,
+    "slots_where_X_slot_differs_from_X_slot0": [
+     2,
+     8,
+     10,
+     15
+    ],
+    "max_abs_diff_between_X_slots": 3,
+    "n_px_X0_vs_X_slots": [
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "wrist": {
+    "X_slot_equals_Y_slot_all": true,
+    "X_slot_equals_Y_slot_other_target_slots": true,
+    "diff_Xi_Xj_equals_diff_Xi_Yj_all_pairs": true,
+    "slots_where_X_slot_differs_from_X_slot0": [
+     1,
+     3,
+     4,
+     11,
+     13,
+     14,
+     15
+    ],
+    "max_abs_diff_between_X_slots": 18,
+    "n_px_X0_vs_X_slots": [
+     0,
+     3,
+     0,
+     3,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "layout_id": 3,
+   "members": 3,
+   "targets": [
+    "red_small",
+    "green_small",
+    "blue_small"
+   ],
+   "side": {
+    "X_slot_equals_Y_slot_all": true,
+    "X_slot_equals_Y_slot_other_target_slots": true,
+    "diff_Xi_Xj_equals_diff_Xi_Yj_all_pairs": true,
+    "slots_where_X_slot_differs_from_X_slot0": [
+     2,
+     8,
+     10,
+     15
+    ],
+    "max_abs_diff_between_X_slots": 3,
+    "n_px_X0_vs_X_slots": [
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "wrist": {
+    "X_slot_equals_Y_slot_all": true,
+    "X_slot_equals_Y_slot_other_target_slots": true,
+    "diff_Xi_Xj_equals_diff_Xi_Yj_all_pairs": true,
+    "slots_where_X_slot_differs_from_X_slot0": [
+     1,
+     3,
+     4,
+     11,
+     13,
+     14,
+     15
+    ],
+    "max_abs_diff_between_X_slots": 18,
+    "n_px_X0_vs_X_slots": [
+     0,
+     3,
+     0,
+     3,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "layout_id": 4,
+   "members": 3,
+   "targets": [
+    "red_small",
+    "green_small",
+    "blue_small"
+   ],
+   "side": {
+    "X_slot_equals_Y_slot_all": true,
+    "X_slot_equals_Y_slot_other_target_slots": true,
+    "diff_Xi_Xj_equals_diff_Xi_Yj_all_pairs": true,
+    "slots_where_X_slot_differs_from_X_slot0": [
+     2,
+     8,
+     9,
+     10,
+     11,
+     15
+    ],
+    "max_abs_diff_between_X_slots": 129,
+    "n_px_X0_vs_X_slots": [
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     1,
+     1,
+     1,
+     0,
+     0,
+     0,
+     1
+    ]
+   },
+   "wrist": {
+    "X_slot_equals_Y_slot_all": true,
+    "X_slot_equals_Y_slot_other_target_slots": true,
+    "diff_Xi_Xj_equals_diff_Xi_Yj_all_pairs": true,
+    "slots_where_X_slot_differs_from_X_slot0": [
+     1,
+     3,
+     4,
+     11,
+     13,
+     14,
+     15
+    ],
+    "max_abs_diff_between_X_slots": 18,
+    "n_px_X0_vs_X_slots": [
+     0,
+     3,
+     0,
+     3,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     1,
+     1
+    ]
+   }
+  }
+ ],
+ "residual_is_slot_determined": true
+}

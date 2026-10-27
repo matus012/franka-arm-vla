@@ -1,0 +1,2 @@
+# GATES Stage 1 redesign instrument (iii) mutant: s1r_U steps against the sampler with seed 1 (must fail; the rl224-vs-rl dataset mutant was equivalent: same window structure)
+-python scripts/s1_tools.py a1post --u-run /runs/s1r_U --dataset /data/datasets/0c_s1_pick_rl224 --sampler-epochs 48 --sampler-seed 1 --check-steps 1 --out /runs/s1r_post_mut/iii_mutant_seed1.json --device cpu

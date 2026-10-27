@@ -1,0 +1,29 @@
+# s1
+=== a1rl_s1 on <node> cpu x16 start 2026-10-02T07:18:58+02:00
+{
+ "dataset": "/data/datasets/0c_s1_pick_rl",
+ "violations": 0,
+ "first": []
+}
+=== a1rl_s1 done 2026-10-02T07:19:52+02:00
+# s2
+# tests/test_data_audit.py --root (job 95949, k1rl_rest)
+{
+ "dataset": "/data/datasets/0c_s2_pick_rl",
+ "violations": 0,
+ "first": []
+}
+# s3a
+# tests/test_data_audit.py --root (job 95949, k1rl_rest)
+{
+ "dataset": "/data/datasets/0c_s3a_place_rl",
+ "violations": 0,
+ "first": []
+}
+# s3b
+# tests/test_data_audit.py --root (job 95949, k1rl_rest)
+{
+ "dataset": "/data/datasets/0c_s3b_stack_rl",
+ "violations": 0,
+ "first": []
+}

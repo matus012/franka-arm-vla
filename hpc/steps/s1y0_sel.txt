@@ -1,0 +1,2 @@
+# GATES Stage 1 redesign #2 (bdf1af2), V0 selection run: the picked checkpoint (041328 = the 100 % pick from results/s1y0_U_val.json, committed before this run) on validation seed 21790 eps 0-999 at m 0 (N 10, H 224, B 128, default sampling)
+sim scripts/eval_policy.py --policy smolvla --stage s1 --split train --visual nominal --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 0 --policy-python /opt/policy/bin/python --episodes 1000 --seed 21790 --ckpt /runs/s1y0_U/checkpoints/041328/pretrained_model --out /runs/e1y0_sel/s1y0_U_sel_s21790.json

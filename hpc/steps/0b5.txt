@@ -1,0 +1,11 @@
+# GATES 0B.5 (one PERUN job). Inputs: the laptop's 0B.1 set (data/0b_smoke HDF5 -> /data/0b5/src, datasets/0b_smoke ->
+# /data/datasets/0b_smoke) and its pyav decode reference (scripts/s0b5_decode.py ref -> /data/0b5/ref).
+# (1) round trip with torchcodec + decoded frames vs the laptop's pyav decode (>= 40 dB, frame identity)
+pol scripts/s0b5_decode.py perun --dataset /data/datasets/0b_smoke --src /data/0b5/src --ref /data/0b5/ref --out /runs/g0b5/decode.json
+# (2) 0B.2 item (1) at B = 64: untrained smolvla_base (0b_smoke stats), sim + server in the container, 2 episodes per env
+sim scripts/eval_policy.py --policy smolvla --ckpt lerobot/smolvla_base --dataset /data/datasets/0b_smoke --stage s1 --split train --visual nominal --episodes 128 --seed 21500 --envs 64 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --out /runs/g0b5/bridge_b64_base.json
+# (3) 200-step fine-tune smoke on the 0B.1 dataset -> checkpoint -> the server loads and serves it (one B = 64 round)
+pol -m vla_policy.train_smolvla --dataset /data/datasets/0b_smoke --out /runs/g0b5/train200 --init lerobot/smolvla_base --n-action-steps 20 --epochs 100 --max-steps 200 --batch-size 8 --row-sampling window --video-backend torchcodec --workers 4 --seed 0
+sim scripts/eval_policy.py --policy smolvla --ckpt /runs/g0b5/train200/checkpoints/000200/pretrained_model --stage s1 --split train --visual nominal --episodes 64 --seed 21500 --envs 64 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --out /runs/g0b5/bridge_b64_ft200.json
+# measured: server latency at B = 64, 128, 256
+pol scripts/s0b5_server_latency.py --dataset /data/datasets/0b_smoke --batches 64 128 256 --out /runs/g0b5/server_latency.json

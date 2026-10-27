@@ -1,0 +1,766 @@
+{
+ "dataset": "/data/datasets/0c_s2a_pair_rl224_y15",
+ "n_layouts": 100,
+ "members_mean": 2.51,
+ "data_instruction_effect": {
+  "full_chunk": 43.84167546787953,
+  "first_10": 23.269173406336257
+ },
+ "data_instruction_effect_raw": {
+  "full_chunk": 7.69879838375061,
+  "first_10": 2.3864733368009325
+ },
+ "layouts": [
+  {
+   "layout_id": 0,
+   "lerobot_episodes": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 1,
+   "lerobot_episodes": [
+    3,
+    4
+   ]
+  },
+  {
+   "layout_id": 2,
+   "lerobot_episodes": [
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "layout_id": 3,
+   "lerobot_episodes": [
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "layout_id": 4,
+   "lerobot_episodes": [
+    11,
+    12,
+    13
+   ]
+  },
+  {
+   "layout_id": 5,
+   "lerobot_episodes": [
+    14,
+    15
+   ]
+  },
+  {
+   "layout_id": 6,
+   "lerobot_episodes": [
+    16,
+    17,
+    18
+   ]
+  },
+  {
+   "layout_id": 7,
+   "lerobot_episodes": [
+    19,
+    20,
+    21
+   ]
+  },
+  {
+   "layout_id": 10,
+   "lerobot_episodes": [
+    22,
+    23
+   ]
+  },
+  {
+   "layout_id": 11,
+   "lerobot_episodes": [
+    24,
+    25,
+    26
+   ]
+  },
+  {
+   "layout_id": 12,
+   "lerobot_episodes": [
+    27,
+    28
+   ]
+  },
+  {
+   "layout_id": 13,
+   "lerobot_episodes": [
+    29,
+    30
+   ]
+  },
+  {
+   "layout_id": 14,
+   "lerobot_episodes": [
+    31,
+    32
+   ]
+  },
+  {
+   "layout_id": 15,
+   "lerobot_episodes": [
+    33,
+    34,
+    35
+   ]
+  },
+  {
+   "layout_id": 16,
+   "lerobot_episodes": [
+    36,
+    37,
+    38
+   ]
+  },
+  {
+   "layout_id": 17,
+   "lerobot_episodes": [
+    39,
+    40
+   ]
+  },
+  {
+   "layout_id": 18,
+   "lerobot_episodes": [
+    41,
+    42
+   ]
+  },
+  {
+   "layout_id": 20,
+   "lerobot_episodes": [
+    43,
+    44,
+    45
+   ]
+  },
+  {
+   "layout_id": 21,
+   "lerobot_episodes": [
+    46,
+    47,
+    48
+   ]
+  },
+  {
+   "layout_id": 22,
+   "lerobot_episodes": [
+    49,
+    50
+   ]
+  },
+  {
+   "layout_id": 23,
+   "lerobot_episodes": [
+    51,
+    52
+   ]
+  },
+  {
+   "layout_id": 24,
+   "lerobot_episodes": [
+    53,
+    54,
+    55
+   ]
+  },
+  {
+   "layout_id": 25,
+   "lerobot_episodes": [
+    56,
+    57
+   ]
+  },
+  {
+   "layout_id": 27,
+   "lerobot_episodes": [
+    58,
+    59,
+    60
+   ]
+  },
+  {
+   "layout_id": 29,
+   "lerobot_episodes": [
+    61,
+    62
+   ]
+  },
+  {
+   "layout_id": 30,
+   "lerobot_episodes": [
+    63,
+    64
+   ]
+  },
+  {
+   "layout_id": 32,
+   "lerobot_episodes": [
+    65,
+    66,
+    67
+   ]
+  },
+  {
+   "layout_id": 34,
+   "lerobot_episodes": [
+    68,
+    69
+   ]
+  },
+  {
+   "layout_id": 35,
+   "lerobot_episodes": [
+    70,
+    71
+   ]
+  },
+  {
+   "layout_id": 36,
+   "lerobot_episodes": [
+    72,
+    73
+   ]
+  },
+  {
+   "layout_id": 37,
+   "lerobot_episodes": [
+    74,
+    75,
+    76
+   ]
+  },
+  {
+   "layout_id": 39,
+   "lerobot_episodes": [
+    77,
+    78,
+    79
+   ]
+  },
+  {
+   "layout_id": 40,
+   "lerobot_episodes": [
+    80,
+    81
+   ]
+  },
+  {
+   "layout_id": 42,
+   "lerobot_episodes": [
+    82,
+    83,
+    84
+   ]
+  },
+  {
+   "layout_id": 43,
+   "lerobot_episodes": [
+    85,
+    86
+   ]
+  },
+  {
+   "layout_id": 44,
+   "lerobot_episodes": [
+    87,
+    88
+   ]
+  },
+  {
+   "layout_id": 45,
+   "lerobot_episodes": [
+    89,
+    90
+   ]
+  },
+  {
+   "layout_id": 46,
+   "lerobot_episodes": [
+    91,
+    92
+   ]
+  },
+  {
+   "layout_id": 47,
+   "lerobot_episodes": [
+    93,
+    94,
+    95
+   ]
+  },
+  {
+   "layout_id": 48,
+   "lerobot_episodes": [
+    96,
+    97,
+    98
+   ]
+  },
+  {
+   "layout_id": 50,
+   "lerobot_episodes": [
+    99,
+    100,
+    101
+   ]
+  },
+  {
+   "layout_id": 51,
+   "lerobot_episodes": [
+    102,
+    103
+   ]
+  },
+  {
+   "layout_id": 53,
+   "lerobot_episodes": [
+    104,
+    105
+   ]
+  },
+  {
+   "layout_id": 55,
+   "lerobot_episodes": [
+    106,
+    107
+   ]
+  },
+  {
+   "layout_id": 56,
+   "lerobot_episodes": [
+    108,
+    109,
+    110
+   ]
+  },
+  {
+   "layout_id": 57,
+   "lerobot_episodes": [
+    111,
+    112
+   ]
+  },
+  {
+   "layout_id": 58,
+   "lerobot_episodes": [
+    113,
+    114
+   ]
+  },
+  {
+   "layout_id": 59,
+   "lerobot_episodes": [
+    115,
+    116,
+    117
+   ]
+  },
+  {
+   "layout_id": 60,
+   "lerobot_episodes": [
+    118,
+    119,
+    120
+   ]
+  },
+  {
+   "layout_id": 61,
+   "lerobot_episodes": [
+    121,
+    122,
+    123
+   ]
+  },
+  {
+   "layout_id": 62,
+   "lerobot_episodes": [
+    124,
+    125,
+    126
+   ]
+  },
+  {
+   "layout_id": 63,
+   "lerobot_episodes": [
+    127,
+    128,
+    129
+   ]
+  },
+  {
+   "layout_id": 64,
+   "lerobot_episodes": [
+    130,
+    131
+   ]
+  },
+  {
+   "layout_id": 65,
+   "lerobot_episodes": [
+    132,
+    133
+   ]
+  },
+  {
+   "layout_id": 66,
+   "lerobot_episodes": [
+    134,
+    135
+   ]
+  },
+  {
+   "layout_id": 67,
+   "lerobot_episodes": [
+    136,
+    137
+   ]
+  },
+  {
+   "layout_id": 68,
+   "lerobot_episodes": [
+    138,
+    139
+   ]
+  },
+  {
+   "layout_id": 69,
+   "lerobot_episodes": [
+    140,
+    141
+   ]
+  },
+  {
+   "layout_id": 72,
+   "lerobot_episodes": [
+    142,
+    143
+   ]
+  },
+  {
+   "layout_id": 73,
+   "lerobot_episodes": [
+    144,
+    145,
+    146
+   ]
+  },
+  {
+   "layout_id": 74,
+   "lerobot_episodes": [
+    147,
+    148
+   ]
+  },
+  {
+   "layout_id": 75,
+   "lerobot_episodes": [
+    149,
+    150
+   ]
+  },
+  {
+   "layout_id": 76,
+   "lerobot_episodes": [
+    151,
+    152,
+    153
+   ]
+  },
+  {
+   "layout_id": 77,
+   "lerobot_episodes": [
+    154,
+    155,
+    156
+   ]
+  },
+  {
+   "layout_id": 79,
+   "lerobot_episodes": [
+    157,
+    158
+   ]
+  },
+  {
+   "layout_id": 80,
+   "lerobot_episodes": [
+    159,
+    160
+   ]
+  },
+  {
+   "layout_id": 81,
+   "lerobot_episodes": [
+    161,
+    162,
+    163
+   ]
+  },
+  {
+   "layout_id": 82,
+   "lerobot_episodes": [
+    164,
+    165
+   ]
+  },
+  {
+   "layout_id": 84,
+   "lerobot_episodes": [
+    166,
+    167,
+    168
+   ]
+  },
+  {
+   "layout_id": 85,
+   "lerobot_episodes": [
+    169,
+    170,
+    171
+   ]
+  },
+  {
+   "layout_id": 88,
+   "lerobot_episodes": [
+    172,
+    173
+   ]
+  },
+  {
+   "layout_id": 89,
+   "lerobot_episodes": [
+    174,
+    175
+   ]
+  },
+  {
+   "layout_id": 90,
+   "lerobot_episodes": [
+    176,
+    177,
+    178
+   ]
+  },
+  {
+   "layout_id": 91,
+   "lerobot_episodes": [
+    179,
+    180
+   ]
+  },
+  {
+   "layout_id": 92,
+   "lerobot_episodes": [
+    181,
+    182,
+    183
+   ]
+  },
+  {
+   "layout_id": 93,
+   "lerobot_episodes": [
+    184,
+    185,
+    186
+   ]
+  },
+  {
+   "layout_id": 94,
+   "lerobot_episodes": [
+    187,
+    188
+   ]
+  },
+  {
+   "layout_id": 95,
+   "lerobot_episodes": [
+    189,
+    190,
+    191
+   ]
+  },
+  {
+   "layout_id": 96,
+   "lerobot_episodes": [
+    192,
+    193,
+    194
+   ]
+  },
+  {
+   "layout_id": 97,
+   "lerobot_episodes": [
+    195,
+    196
+   ]
+  },
+  {
+   "layout_id": 98,
+   "lerobot_episodes": [
+    197,
+    198
+   ]
+  },
+  {
+   "layout_id": 99,
+   "lerobot_episodes": [
+    199,
+    200
+   ]
+  },
+  {
+   "layout_id": 100,
+   "lerobot_episodes": [
+    201,
+    202,
+    203
+   ]
+  },
+  {
+   "layout_id": 101,
+   "lerobot_episodes": [
+    204,
+    205,
+    206
+   ]
+  },
+  {
+   "layout_id": 102,
+   "lerobot_episodes": [
+    207,
+    208,
+    209
+   ]
+  },
+  {
+   "layout_id": 103,
+   "lerobot_episodes": [
+    210,
+    211,
+    212
+   ]
+  },
+  {
+   "layout_id": 104,
+   "lerobot_episodes": [
+    213,
+    214
+   ]
+  },
+  {
+   "layout_id": 107,
+   "lerobot_episodes": [
+    215,
+    216,
+    217
+   ]
+  },
+  {
+   "layout_id": 108,
+   "lerobot_episodes": [
+    218,
+    219,
+    220
+   ]
+  },
+  {
+   "layout_id": 109,
+   "lerobot_episodes": [
+    221,
+    222,
+    223
+   ]
+  },
+  {
+   "layout_id": 110,
+   "lerobot_episodes": [
+    224,
+    225,
+    226
+   ]
+  },
+  {
+   "layout_id": 111,
+   "lerobot_episodes": [
+    227,
+    228,
+    229
+   ]
+  },
+  {
+   "layout_id": 112,
+   "lerobot_episodes": [
+    230,
+    231
+   ]
+  },
+  {
+   "layout_id": 113,
+   "lerobot_episodes": [
+    232,
+    233,
+    234
+   ]
+  },
+  {
+   "layout_id": 114,
+   "lerobot_episodes": [
+    235,
+    236
+   ]
+  },
+  {
+   "layout_id": 115,
+   "lerobot_episodes": [
+    237,
+    238
+   ]
+  },
+  {
+   "layout_id": 116,
+   "lerobot_episodes": [
+    239,
+    240,
+    241
+   ]
+  },
+  {
+   "layout_id": 117,
+   "lerobot_episodes": [
+    242,
+    243,
+    244
+   ]
+  },
+  {
+   "layout_id": 118,
+   "lerobot_episodes": [
+    245,
+    246,
+    247
+   ]
+  },
+  {
+   "layout_id": 121,
+   "lerobot_episodes": [
+    248,
+    249,
+    250
+   ]
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+=== g3_sup on <node> NVIDIA H200 start 2026-10-25T02:32:23+02:00 repo 0179115
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 20:00 cpus 8
+CUDA OK NVIDIA H200
+=== step 1 start 1792888348.465105185 pol scripts/g3_probe.py divonly --ckpt /runs/s2a1_VT/checkpoints/034440/pretrained_model --dumps /runs/g3_diag/t0_p21645.npz /runs/g3_diag/t0_u21640.npz --out /runs/g3_sup/c034440
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[g3] /runs/s2a1_VT/checkpoints/034440/pretrained_model: 2000 samples, model up 20 s, sha 07e87cc6f5b2
+G3_EXTRACT={"ckpt": "/runs/s2a1_VT/checkpoints/034440/pretrained_model", "div": {"full_chunk": {"n_layouts": 100, "instruction_effect": 2.76423714697361, "noise_effect": 26.890628881454468, "ratio": 0.10279555599683309, "per_layout_ratio_median": 0.07047210813932678, "ignores_language": true}, "first_10": {"n_layouts": 100, "instruction_effect": 1.382777721658349, "noise_effect": 16.457488180994986, "ratio": 0.08402118880177431, "per_layout_ratio_median": 0.0505730895233365, "ignores_language": true}}, "wall_s": 36.8}
+=== step 1 done 1792888391.846237194
+=== step 2 start 1792888391.847654527 pol scripts/g3_probe.py divonly --ckpt /runs/s1y15_U/checkpoints/041328/pretrained_model --dumps /runs/g3_diag/t0_p21645.npz /runs/g3_diag/t0_u21640.npz --out /runs/g3_sup/c041328
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[g3] /runs/s1y15_U/checkpoints/041328/pretrained_model: 2000 samples, model up 20 s, sha c3dcef76f53e
+G3_EXTRACT={"ckpt": "/runs/s1y15_U/checkpoints/041328/pretrained_model", "div": {"full_chunk": {"n_layouts": 100, "instruction_effect": 1.5930650629103185, "noise_effect": 18.939199368953705, "ratio": 0.08411469945882549, "per_layout_ratio_median": 0.06899721776093642, "ignores_language": true}, "first_10": {"n_layouts": 100, "instruction_effect": 1.1422754628956318, "noise_effect": 18.398570326566695, "ratio": 0.06208501218413901, "per_layout_ratio_median": 0.03964922103768886, "ignores_language": true}}, "wall_s": 36.6}
+=== step 2 done 1792888435.010314486
+=== g3_sup done 2026-10-25T02:33:55+02:00

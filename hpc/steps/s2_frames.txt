@@ -1,0 +1,2 @@
+# GATES Stage 2 test close-up frames (protocol replay of test round 0): 3 successes + the first 12 failures, before the FAIL is recorded
+sim scripts/eval_policy.py --replay /runs/e2_test/s2_test_s11520.json --sheets 3 --videos 2,3,6,7,8,9,12,14,15,16,17,18 --policy-python /opt/policy/bin/python

@@ -1,0 +1,68 @@
+{
+ "actions": "results\\0b3_r1_aux\\actions.npz",
+ "close_max": 50,
+ "per_demo": {
+  "0": {
+   "close_step": 126,
+   "lift_step": 136,
+   "delay": 10,
+   "timeout": false
+  },
+  "1": {
+   "close_step": 140,
+   "lift_step": 150,
+   "delay": 10,
+   "timeout": false
+  },
+  "2": {
+   "close_step": 134,
+   "lift_step": 144,
+   "delay": 10,
+   "timeout": false
+  },
+  "3": {
+   "close_step": 112,
+   "lift_step": 122,
+   "delay": 10,
+   "timeout": false
+  },
+  "4": {
+   "close_step": 137,
+   "lift_step": 146,
+   "delay": 9,
+   "timeout": false
+  },
+  "5": {
+   "close_step": 122,
+   "lift_step": 132,
+   "delay": 10,
+   "timeout": false
+  },
+  "6": {
+   "close_step": 119,
+   "lift_step": 129,
+   "delay": 10,
+   "timeout": false
+  },
+  "7": {
+   "close_step": 114,
+   "lift_step": 124,
+   "delay": 10,
+   "timeout": false
+  },
+  "8": {
+   "close_step": 107,
+   "lift_step": 117,
+   "delay": 10,
+   "timeout": false
+  },
+  "9": {
+   "close_step": 103,
+   "lift_step": 112,
+   "delay": 9,
+   "timeout": false
+  }
+ },
+ "n_timeout": 0,
+ "n": 10
+}

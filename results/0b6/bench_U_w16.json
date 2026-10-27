@@ -1,0 +1,60 @@
+{
+  "git_sha": "f23e458",
+  "gpu": "NVIDIA H200",
+  "torch": "2.10.0+cu130",
+  "lerobot": "0.6.1",
+  "dataset": "/data/datasets/0b6_s1",
+  "rows": 175350,
+  "episodes": 501,
+  "image_shape": [
+    128,
+    128,
+    3
+  ],
+  "batch_size": 64,
+  "workers": 16,
+  "video_backend": "torchcodec",
+  "dtype": "per config (bf16_autocast, trainable_fp32)",
+  "row_sampling": "window",
+  "init": "lerobot/smolvla_base",
+  "n_action_steps": 20,
+  "seed": 21500,
+  "configs": {
+    "unfrozen": {
+      "freeze_vision_encoder": false,
+      "train_expert_only": false,
+      "refreeze_non_vision_vlm": true,
+      "trainable_fp32": true,
+      "bf16_autocast": true,
+      "workers": 16,
+      "phase_epoch_s": {
+        "e2e": [
+          1790877180.7442794,
+          1790877306.2818658
+        ],
+        "gpu_cached": [
+          1790877306.2818658,
+          1790877431.8511114
+        ]
+      },
+      "params_total": 450046176,
+      "params_trainable": 186314016,
+      "vision_params_trainable": 86433024,
+      "by_dtype": {
+        "trainable_float32": 186314016,
+        "frozen_bfloat16": 263732160
+      },
+      "warmup_steps": 50,
+      "timed_steps": 300,
+      "warmup_s": 23.128001488745213,
+      "gpu_s_per_sample": 0.00654006437510058,
+      "e2e_s_per_sample": 0.0065384151804998205,
+      "data_wait_frac_e2e": 0.00017009533025266312,
+      "samples_per_s_gpu": 152.90369370173377,
+      "samples_per_s_e2e": 152.9422608375194,
+      "peak_mem_allocated_gib": 60.477266788482666,
+      "peak_mem_reserved_gib": 60.7734375
+    }
+  },
+  "wall_s": 294.4403347969055
+}

@@ -1,0 +1,121 @@
+=== e2a1_c100 on <node> NVIDIA H200 start 2026-10-25T00:44:33+02:00 repo 7f4f36d
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 1:15:00 cpus 8
+CUDA OK NVIDIA H200
+=== step 1 start 1792881878.156946509 sim scripts/eval_policy.py --policy smolvla --stage s2a --split train --visual nominal --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --episodes 300 --seed 21640 --ckpt /runs/s2a1_VT/checkpoints/034440/pretrained_model --out /runs/e2a1_c100/s2a1_VT_val_c100_s21640.json
+[eval] server up after 28.0 s: {"policy": "smolvla", "n_action_steps": 10, "chunk_size": 50, "image_size": 224, "state_dim": 19, "action_dim": 5, "ckpt_sha": "07e87cc6f5b2533ab4b931e356e7cf944e6b53d49bbf2cc0109ab416290cb3ff", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 224, 224], "observation.images.camera2": [3, 224, 224], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": false, "train_expert_only": false, "dtype": "float32", "sampling": "default", "k": 1, "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 21640
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 3.622968 s, Mean: 3.622968 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.409232 s, Mean: 0.409232 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068863 s, Mean: 0.068863 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007105 s, Mean: 0.037984 s, Std: 0.043670 s, N: 2
+Contact sensor construction took: Last: 0.005971 s, Mean: 0.027313 s, Std: 0.035988 s, N: 3
+Contact sensor construction took: Last: 0.004161 s, Mean: 0.021525 s, Std: 0.031582 s, N: 4
+Initialize solver took: Last: 7.298822 s, Mean: 7.298822 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.423614 s, Mean: 11.423614 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.532751 s, Mean: 27.532751 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=224 policy=smolvla N=10 episodes 0..299 in 3 rounds
+[eval] pick round 0: 38/128 success (kept slots), 89 s; 128 eps, 3713 eps/h
+[eval] pick round 1: 33/128 success (kept slots), 86 s; 256 eps, 4384 eps/h
+[eval] pick round 2: 13/44 success (kept slots), 86 s; 300 eps, 3648 eps/h
+EVAL_SUMMARY={"n": 300, "success": {"all": 0.28, "pick": 0.28}, "latency": {"server_s_p50": 2.027165, "server_s_p95": 2.0536795, "rtt_s_p50": 2.04766, "rtt_s_p95": 2.075195, "queries": 102}, "wall_s": 296.1, "episodes_per_gpu_h": 3647.886541305551, "slots_per_gpu_h": 4669.294772871106, "smart_length": null}
+NAN_GUARD_EVENTS=0
+=== step 1 done 1792882214.614162114
+=== step 2 start 1792882214.615391349 pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s2a_pair_rl224_y15 --ckpt /runs/s2a1_VT/checkpoints/034440/pretrained_model --out /runs/e2a1_c100/vloss_034440.json
+[s1_tools] vloss device=cuda
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+VLOSS={"ckpt": "/runs/s2a1_VT/checkpoints/034440/pretrained_model", "ckpt_sha": "07e87cc6f5b2533ab4b931e356e7cf944e6b53d49bbf2cc0109ab416290cb3ff", "val_episodes": 102, "samples": 11832, "action_override": null, "task_swap": "none", "val_loss": 0.016853757380829663, "dtype": "float32 (served)", "git_sha": "7f4f36d"}
+=== step 2 done 1792882439.963959486
+=== step 3 start 1792882439.965291556 pol scripts/s0b3_prep.py offline --val-only --dataset /data/datasets/0c_s2a_pair_rl224_y15 --ckpt /runs/s2a1_VT/checkpoints/034440/pretrained_model --out /runs/e2a1_c100/offline_val_034440.json --n-action-steps 10
+[s0b3_prep] offline device=cuda
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+OFFLINE={"mae_arm_norm": 0.06227982091699161, "claw_acc": 0.9983473389355743, "mae_arm_norm_per_query": [1.3627078574077756, 0.14028969385168133, 0.16441441750993915, 0.14210284541488863, 0.07558496311471305, 0.019184172502718866, 0.01021727344806434, 0.005352266593927554, 0.0036192347464498644, 0.0037061247139183037, 0.006043949789897192, 0.016381249959379725, 0.03308218699542111, 0.03409738208660308, 0.02948541897714284, 0.025361114062880184, 0.016623006188584602, 0.008582409505513222, 0.007613368172600281, 0.006569887767089349, 0.0047440643367521905, 0.004658809753463548, 0.004166703495452655, 0.0037540413174486044, 0.004395532125022774, 0.004700954446532563, 0.004020055020958477, 0.00593451452076289, 0.004712040207403547, 0.004786668153589263, 0.0045712500463659855, 0.005161117931243544, 0.004587628399295842, 0.004016304468535179, 0.004565249402623843]}
+=== step 3 done 1792884573.935517574
+=== e2a1_c100 done 2026-10-25T01:29:33+02:00

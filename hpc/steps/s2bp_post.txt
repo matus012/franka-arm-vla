@@ -1,0 +1,3 @@
+# GATES 2b amended (3862001) instruments IT / I4 on /runs/s2bp_VT vs the 2M picked init (PICK2M); seed-1 mutant must differ
+python scripts/s1_tools.py a1post --u-run /runs/s2bp_VT --dataset /data/datasets/0c_s2_pair_rl224_y15 --sampler-epochs 5 --check-steps 1 17220 34440 --expect-trainable vision+text --ref-init /runs/s2m_VT/checkpoints/068880/pretrained_model --out /runs/s2bp_post/arms_post.json --device cpu
+-python scripts/s1_tools.py a1post --u-run /runs/s2bp_VT --dataset /data/datasets/0c_s2_pair_rl224_y15 --sampler-epochs 5 --sampler-seed 1 --check-steps 1 --expect-trainable vision+text --ref-init /runs/s2m_VT/checkpoints/068880/pretrained_model --out /runs/s2bp_post/iii_mutant_seed1.json --device cpu

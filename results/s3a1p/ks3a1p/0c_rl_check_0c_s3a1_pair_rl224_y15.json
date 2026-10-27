@@ -1,0 +1,205 @@
+{
+ "dataset": "/data/datasets/0c_s3a1_pair_rl224_y15",
+ "name": "0c_s3a1_pair_rl224_y15",
+ "label": "relabel_setpoint",
+ "episodes": 3999,
+ "rows": 2199450,
+ "T": [
+  550
+ ],
+ "image_size": 224,
+ "expect_yaw": 15.0,
+ "kept": 3999,
+ "yaw": {
+  "expected_m": 15.0,
+  "n": 3999,
+  "spawn_fold": {
+   "min": -14.99331283569336,
+   "max": 14.997581481933594,
+   "mean": -0.25021174288475684,
+   "std": 8.64385057115106
+  },
+  "regenerated_fold": {
+   "min": -14.993313127059707,
+   "max": 14.99758246822212,
+   "mean": -0.250211764463295,
+   "std": 8.643850532861878
+  }
+ },
+ "source_successful_episodes": 6000,
+ "kept_stream_indices": [
+  0,
+  3998
+ ],
+ "video_check": {
+  "episodes": [
+   0,
+   444,
+   888,
+   1333,
+   1777,
+   2221,
+   2665,
+   3110,
+   3554,
+   3998
+  ],
+  "rows": 5500,
+  "psnr_min": 38.84079812319654,
+  "psnr_mean": 42.70446034843754,
+  "identity_fail": 0,
+  "backend": "torchcodec"
+ },
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "noise_std_per_arm_dim": [
+   0.09998733550310135,
+   0.0999872088432312,
+   0.10006394982337952,
+   0.09995133429765701
+  ],
+  "noise_rows_per_dim": [
+   2170404,
+   2123179,
+   2090719,
+   2189187
+  ],
+  "claw_exec_ne_label_rows": 0,
+  "mutant_action_exec_flagged_episodes": 3999,
+  "episodes_checked": 3999,
+  "state_dims_std_lt_1e-6": [],
+  "state_std": [
+   0.20233159157457703,
+   0.2707236428348245,
+   0.12118021925430285,
+   0.3179765632762133,
+   0.06799988406737609,
+   0.17583398070124104,
+   0.37772089230303374,
+   0.007923856152398028,
+   0.007924637547897838,
+   0.20196502908795713,
+   0.38310767083779146,
+   0.20354908442856712,
+   0.3720563358309242,
+   0.11012908433801484,
+   0.5564312756743008,
+   0.4031972221095864,
+   0.043769236826533574,
+   0.04353341054327539,
+   0.012670744065550485
+  ]
+ },
+ "sheet": {
+  "png": "0c_s3a1_pair_rl224_y15.png",
+  "episodes": [
+   {
+    "lerobot_episode": 0,
+    "episode_index": 0,
+    "instruction": "place the blue cube on the yellow pad",
+    "spec": "{\"task\": \"place\", \"target\": [\"blue\", \"small\"], \"dest\": \"yellow\", \"cubes\": [[\"green\", \"small\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      119
+     ],
+     [
+      "carry",
+      229
+     ],
+     [
+      "release",
+      339
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1999,
+    "episode_index": 1999,
+    "instruction": "move the green cube onto the blue pad",
+    "spec": "{\"task\": \"place\", \"target\": [\"green\", \"small\"], \"dest\": \"blue\", \"cubes\": [[\"green\", \"small\"], [\"red\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      120
+     ],
+     [
+      "carry",
+      217
+     ],
+     [
+      "release",
+      315
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 3998,
+    "episode_index": 3998,
+    "instruction": "please put the red cube on the green pad",
+    "spec": "{\"task\": \"place\", \"target\": [\"red\", \"small\"], \"dest\": \"green\", \"cubes\": [[\"green\", \"small\"], [\"red\", \"small\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      124
+     ],
+     [
+      "carry",
+      223
+     ],
+     [
+      "release",
+      323
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   }
+  ]
+ },
+ "items": {
+  "1_count_eq_K": true,
+  "1_rows_eq_K_T": true,
+  "1_rows_per_episode_eq_T": true,
+  "1_columns_exact_action_eq_r": true,
+  "1_image_size": true,
+  "1_psnr_min_ge_35": true,
+  "1_frame_identity": true,
+  "1_kept_are_first_K_successful_in_order": true,
+  "1_split_rule": true,
+  "1_cube_yaw_max_deg_eq_expected": true,
+  "yaw_spawn_attrs_present": true,
+  "yaw_spawn_fold_in_range": true,
+  "yaw_regenerated_layout_fold_in_range": true,
+  "yaw_spawn_agrees_with_regenerated_layout": true,
+  "yaw_coverage": true,
+  "4a_noise_std_in_band": true,
+  "4a_claw_identical": true
+ },
+ "pass_items_1_4a": true,
+ "git_sha": "588b9f6",
+ "wall_s": 660.8
+}

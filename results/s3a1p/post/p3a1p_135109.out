@@ -1,0 +1,10 @@
+=== p3a1p on <node> cpu x16 start 2026-10-27T11:59:09+01:00
+=== step start 1793098749.3 /opt/policy/bin/python scripts/s1_tools.py a1post --u-run /runs/s3a1p_VT --dataset /data/datasets/0c_s3a1_pair_s2a_rl224_y15 --sampler-epochs 2 --check-steps 1 17754 35508 --expect-trainable vision+text --ref-init /runs/s2m_VT/checkpoints/068880/pretrained_model --out /runs/s3a1p_post/arms_post.json --device cpu
+[s1_tools] a1post device=cpu
+A1POST={"u_run": "/runs/s3a1p_VT", "ref_run": "/runs/s1_frozen", "final_ckpt": "035508", "check_ii": true, "check_iii": false, "check_iv": true, "run_key_action_override_null": true, "git_sha": "00fc0d3", "ref_init": "/runs/s2m_VT/checkpoints/068880/pretrained_model", "pass": false}
+=== step done 1793099123.2 rc 0
+=== step start 1793099123.2 /opt/policy/bin/python scripts/s1_tools.py a1post --u-run /runs/s3a1p_VT --dataset /data/datasets/0c_s3a1_pair_s2a_rl224_y15 --sampler-epochs 2 --sampler-seed 1 --check-steps 1 --expect-trainable vision+text --ref-init /runs/s2m_VT/checkpoints/068880/pretrained_model --out /runs/s3a1p_post/iii_mutant_seed1.json --device cpu
+[s1_tools] a1post device=cpu
+A1POST={"u_run": "/runs/s3a1p_VT", "ref_run": "/runs/s1_frozen", "final_ckpt": "035508", "check_ii": true, "check_iii": false, "check_iv": true, "run_key_action_override_null": true, "git_sha": "00fc0d3", "ref_init": "/runs/s2m_VT/checkpoints/068880/pretrained_model", "pass": false}
+=== step done 1793099455.9 rc 0
+=== p3a1p done 2026-10-27T12:10:55+01:00

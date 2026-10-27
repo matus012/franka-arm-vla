@@ -1,0 +1,3 @@
+# GATES Stage 1 close-up frames (protocol replay of round 0 of each test stream): chosen arm U: 3 successes + first of every failure type + the first 10 failures (sheets + MP4); arm F: 3 successes + first of every failure type + 3 failures
+sim scripts/eval_policy.py --replay /runs/e1_unfrozen_test/s1_unfrozen_test_s11500_0.json --sheets 3 --videos 1,2,4,5,6,8,9,11,12,13 --policy-python /opt/policy/bin/python
+sim scripts/eval_policy.py --replay /runs/e1_frozen_test/s1_frozen_test_s11500_0.json --sheets 3 --videos 2,3,4 --policy-python /opt/policy/bin/python

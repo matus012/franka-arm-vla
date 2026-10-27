@@ -1,0 +1,22 @@
+{
+ "ck": "c050",
+ "step": "017220",
+ "seed": 21640,
+ "episodes": [
+  0,
+  99
+ ],
+ "swap": "shuffle",
+ "pair": {
+  "true_success": 19,
+  "shuffled_success": 17,
+  "b_true_only": 3,
+  "c_shuffled_only": 1,
+  "mcnemar_z": 1.0,
+  "wrong_grasp_true": 33,
+  "wrong_grasp_shuffled": 36,
+  "ckpt": "/runs/s2a_VT/checkpoints/017220/pretrained_model",
+  "ckpt_sha": "1f112b5347756be9b0be643b2a81a9017092377a3b2299cad6eb201935da8d77"
+ },
+ "note": "reported only: no pass / fail, triggers nothing"
+}

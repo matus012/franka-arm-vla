@@ -1,0 +1,36 @@
+{
+ "gate": "0B.5 measured",
+ "ckpt": "lerobot/smolvla_base",
+ "dataset": "/data/datasets/0b_smoke",
+ "n_action_steps": 20,
+ "dtype": "float32 (TF32 off)",
+ "gpu": "NVIDIA H200",
+ "torch": "2.10.0+cu130",
+ "git_sha": "9bc590e",
+ "per_batch": {
+  "64": {
+   "server_s_p50": 1.0432023121975362,
+   "server_s_p95": 1.045677280286327,
+   "server_s_mean": 1.0436069649644195,
+   "per_env_ms_p50": 16.300036128086504,
+   "reps": 10,
+   "peak_mem_allocated_gib": 4.3960137367248535
+  },
+  "128": {
+   "server_s_p50": 2.0734261400066316,
+   "server_s_p95": 2.074140482256189,
+   "server_s_mean": 2.0734918389469383,
+   "per_env_ms_p50": 16.19864171880181,
+   "reps": 10,
+   "peak_mem_allocated_gib": 7.059518814086914
+  },
+  "256": {
+   "server_s_p50": 4.026168897282332,
+   "server_s_p95": 4.027474737400189,
+   "server_s_mean": 4.026209485344589,
+   "per_env_ms_p50": 15.72722225500911,
+   "reps": 10,
+   "peak_mem_allocated_gib": 12.386956691741943
+  }
+ }
+}

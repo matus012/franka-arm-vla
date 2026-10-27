@@ -1,0 +1,105 @@
+{
+ "stream": "d11_3bstack_s51050",
+ "seed": 51050,
+ "ckpt": "/runs/s3b1p_VT/checkpoints/026631/pretrained_model",
+ "ckpt_sha": "8f3ee7711987616a2bc0bee8e27228650de887cf7c1e931b5fe03283c1c2edde",
+ "episodes": [
+  {
+   "index": 0,
+   "instruction": "stack the small blue cube on top of the small red cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 1,
+   "instruction": "stack the yellow cube on the red cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 2,
+   "instruction": "stack the red cube onto the large yellow cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 3,
+   "instruction": "stack the green cube on top of the yellow cube",
+   "success": false,
+   "shown_verdict": "hit table"
+  },
+  {
+   "index": 4,
+   "instruction": "stack the small blue cube on top of the green cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 5,
+   "instruction": "stack the small green cube on the red cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 6,
+   "instruction": "stack the red cube on top of the yellow cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 7,
+   "instruction": "stack the green cube on top of the blue cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 8,
+   "instruction": "stack the small blue cube onto the yellow cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 9,
+   "instruction": "stack the blue cube on the green cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 10,
+   "instruction": "stack the yellow cube on the large blue cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 11,
+   "instruction": "please stack the large blue cube on the yellow cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 12,
+   "instruction": "stack the red cube onto the blue cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 13,
+   "instruction": "please stack the small green cube on the yellow cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 14,
+   "instruction": "stack the blue cube on the red cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 15,
+   "instruction": "please stack the green cube on the yellow cube",
+   "success": true,
+   "shown_verdict": "success"
+  }
+ ],
+ "full_size_episode": 0
+}

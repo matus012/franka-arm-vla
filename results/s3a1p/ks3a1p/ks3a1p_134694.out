@@ -1,0 +1,102 @@
+=== ks3a1p on <node> cpu x16 start 2026-10-27T05:12:17+01:00
+=== step start 1793074337.3 /opt/policy/bin/python scripts/paired_check.py --dataset /data/datasets/0c_s3a1_pair_s2a_rl224_y15 --out /runs/ks3a1p
+PAIRED_CHECK={"name": "0c_s3a1_pair_s2a_rl224_y15", "pass": true, "items": {"s2a_paired_s32800/P_i_distinct_targets": true, "s2a_paired_s32800/P1_layout_identical": true, "s2a_paired_s32800/P2a_state_delta_vs_target": true, "s2a_paired_s32800/P2b_state_classifier": true, "s2a_paired_s32800/P2c_slot_independent": true, "s2a_paired_s32800/P_iii_labels_instr_differ": true, "s2a_paired_s32800/P_iv_group_in_one_split": true, "s2a_paired_s32800/P_same_scene_spec": true, "s2a_paired_s32800/P_regenerates": true, "s2a_paired_s32800/P_kept_groups_rule": true, "s2a_paired_s32800/P_split_rule": true, "s3a1_paired_s33200/P_i_distinct_targets": true, "s3a1_paired_s33200/P1_layout_identical": true, "s3a1_paired_s33200/P2a_state_delta_vs_target": true, "s3a1_paired_s33200/P2b_state_classifier": true, "s3a1_paired_s33200/P2c_slot_independent": true, "s3a1_paired_s33200/P_iii_labels_instr_differ": true, "s3a1_paired_s33200/P_iv_group_in_one_split": true, "s3a1_paired_s33200/P_same_scene_spec": true, "s3a1_paired_s33200/P_regenerates": true, "s3a1_paired_s33200/P_kept_groups_rule": true, "s3a1_paired_s33200/P_split_rule": true}, "s2a_paired_s32800": {"groups": 1597, "episodes": 4000, "group_sizes": {"2": 791, "3": 806}, "P2b": {"accuracy": 0.3305, "majority_rate": 0.33525, "se": 0.007464205207187166, "abs_diff_in_se": 0.6363705000267512, "classes": [0, 1, 2, 3]}, "P2c_p": 0.9729469571000444}, "s3a1_paired_s33200": {"groups": 1333, "episodes": 3999, "group_sizes": {"3": 1333}, "P2b": {"accuracy": 0.04776194048512128, "majority_rate": 0.058014503625906474, "se": 0.0036967041610264243, "abs_diff_in_se": 2.7734334948616706, "classes": [0, 1, 3, 13, 15, 16, 26, 27, 28, 29, 52, 53, 54, 55, 65, 66, 67, 91, 92, 93, 94]}, "P2c_p": 0.7415797475052541, "relation_split": {"pairs": 3999, "counts": {"same_target": 1679, "same_dest": 1113, "both_differ": 1207, "duplicate": 0}, "fractions": {"same_target": 0.4198549637409352, "same_dest": 0.27831957989497375, "both_differ": 0.301825456364091, "duplicate": 0.0}, "recorded_relation_mismatch_episodes": [], "n_recorded_relation_mismatch": 0}}}
+=== step done 1793074435.4 rc 0
+=== step start 1793074435.4 /opt/policy/bin/python tests/test_data_audit.py --root /data/datasets/0c_s3a1_pair_s2a_rl224_y15
+{
+ "dataset": "/data/datasets/0c_s3a1_pair_s2a_rl224_y15",
+ "violations": 0,
+ "first": []
+}
+=== step done 1793074561.5 rc 0
+=== step start 1793074561.5 /opt/policy/bin/python scripts/s1_tools.py arms --dataset /data/datasets/0c_s3a1_pair_s2a_rl224_y15 --out /runs/ks3a1p/arms_build.json --device cpu
+[s1_tools] arms device=cpu
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+ARMS={"check_i_U": true, "check_i_mutant_fve_only": false, "counts": {"F": 99880992, "U": 186314016, "mutant_fve_only": 99880992}, "pass": true}
+=== step done 1793074924.4 rc 0
+=== step start 1793074924.4 /opt/policy/bin/python scripts/s2_norm.py --dataset /data/datasets/0c_s3a1_pair_s2a_rl224_y15 --init /runs/s2m_VT/checkpoints/068880/pretrained_model --out /runs/ks3a1p/s3a1p_norm.json
+[s2_norm] instrument_finding=True ratio_outside_band={'observation.state': [], 'action': []} -> /runs/ks3a1p/s3a1p_norm.json
+=== step done 1793075430.9 rc 1
+=== step start 1793075430.9 /opt/policy/bin/python scripts/s2r_tools.py margin --dataset /data/datasets/0c_s3a1_pair_s2a_rl224_y15 --stage s3a1 --out /runs/ks3a1p/margin.json
+{
+ "rule": "m = 0.5 x mean over train episodes of mean over other members of mean_{50 x 5}((a_e - a_o)^2), first chunk, action normalized MEAN_STD (train rows), LeRobot eps 1e-8",
+ "dataset": "/data/datasets/0c_s3a1_pair_s2a_rl224_y15",
+ "stage": "s3a1",
+ "train_episodes": 3801,
+ "val_episodes": 398,
+ "train_layouts": 1267,
+ "ordered_pairs": 7602,
+ "action_dims": 5,
+ "chunk": 50,
+ "expected_sq_diff": 5.5900333902782116,
+ "margin": 2.7950166951391058,
+ "per_episode_quantiles": {
+  "10": 0.059952731322680405,
+  "25": 2.355857608782233,
+  "50": 4.862198602679258,
+  "75": 7.636137489966885,
+  "90": 11.834285971511257
+ },
+ "frac_episodes_below_margin": 0.2893975269665877,
+ "action_mean": [
+  0.009292995557188988,
+  -8.614231046522036e-05,
+  -0.06396792829036713,
+  -0.002733315108343959,
+  0.4824753403663635
+ ],
+ "action_std": [
+  0.15349633991718292,
+  0.22777411341667175,
+  0.276854008436203,
+  0.07335956394672394,
+  0.49969279766082764
+ ],
+ "task_column_checked": true,
+ "ok": true
+}
+=== step done 1793076021.3 rc 0
+=== step start 1793076021.3 /opt/policy/bin/python scripts/s2r_tools.py margin --dataset /data/datasets/0c_s3a1_pair_rl224_y15 --out /runs/ks3a1p/margin_task_only.json
+{
+ "rule": "m = 0.5 x mean over train episodes of mean over other members of mean_{50 x 5}((a_e - a_o)^2), first chunk, action normalized MEAN_STD (train rows), LeRobot eps 1e-8",
+ "dataset": "/data/datasets/0c_s3a1_pair_rl224_y15",
+ "train_episodes": 3801,
+ "val_episodes": 198,
+ "train_layouts": 1267,
+ "ordered_pairs": 7602,
+ "action_dims": 5,
+ "chunk": 50,
+ "expected_sq_diff": 6.078381406249032,
+ "margin": 3.039190703124516,
+ "per_episode_quantiles": {
+  "10": 0.0644348738022424,
+  "25": 2.5199174970336276,
+  "50": 5.290834705766869,
+  "75": 8.306166367620957,
+  "90": 12.783247395663299
+ },
+ "frac_episodes_below_margin": 0.2925545908971323,
+ "action_mean": [
+  0.007496295031160116,
+  4.031636126455851e-05,
+  -0.05423108488321304,
+  -0.002332461066544056,
+  0.3644442856311798
+ ],
+ "action_std": [
+  0.15170592069625854,
+  0.22542792558670044,
+  0.26260802149772644,
+  0.0667145624756813,
+  0.48127397894859314
+ ],
+ "task_column_checked": true,
+ "ok": true
+}
+=== step done 1793076394.0 rc 0
+=== ks3a1p done 2026-10-27T05:46:34+01:00

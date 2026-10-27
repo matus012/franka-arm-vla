@@ -1,0 +1,640 @@
+{
+ "config": {
+  "policy": "expert",
+  "ckpt": "",
+  "stage": "s3b1",
+  "mix": "1,1,1",
+  "split": "train",
+  "visual": "nominal",
+  "seed": 51003,
+  "envs": 4,
+  "image_size": 224,
+  "n": 10,
+  "period": 3,
+  "latency": 1,
+  "dataset": "",
+  "provisional_n": false,
+  "cube_yaw_max_deg": 15.0,
+  "expert_fresh": false,
+  "instruction_swap": "none",
+  "table_palette": "112"
+ },
+ "cube_yaw_max_deg": 15.0,
+ "n_episodes": 4,
+ "server_info": null,
+ "ckpt": "",
+ "ckpt_sha": null,
+ "stats_sha": null,
+ "expert_version": "113-expert-v1",
+ "detector_version": "113-detectors-v1 (GATES.md conventions 2026-10-01)",
+ "T_steps": {
+  "stack": 550
+ },
+ "aggregate": {
+  "all": {
+   "n": 4,
+   "success": {
+    "count": 4,
+    "n": 4,
+    "rate": 1.0,
+    "ci95": [
+     0.5100999795960008,
+     1.0
+    ]
+   },
+   "wrong_grasp": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "wrong_dest": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "wrong_object": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "slam": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "slam_10N": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "slam_50N": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "jam": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "release_failure": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "release_fail_not_released": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "release_fail_off_destination": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "release_fail_not_clear": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "release_fail_unstable": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "early_close": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "drop": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "distractor_disturbed": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "clean": {
+    "count": 4,
+    "n": 4,
+    "rate": 1.0,
+    "ci95": [
+     0.5100999795960008,
+     1.0
+    ]
+   },
+   "invalid": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "stack_stability": {
+    "count": 4,
+    "n": 4,
+    "rate": 1.0,
+    "ci95": [
+     0.5100999795960008,
+     1.0
+    ]
+   },
+   "completion_s_p50": 7.61
+  },
+  "stack": {
+   "n": 4,
+   "success": {
+    "count": 4,
+    "n": 4,
+    "rate": 1.0,
+    "ci95": [
+     0.5100999795960008,
+     1.0
+    ]
+   },
+   "wrong_grasp": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "wrong_dest": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "wrong_object": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "slam": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "slam_10N": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "slam_50N": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "jam": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "release_failure": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "release_fail_not_released": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "release_fail_off_destination": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "release_fail_not_clear": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "release_fail_unstable": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "early_close": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "drop": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "distractor_disturbed": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "clean": {
+    "count": 4,
+    "n": 4,
+    "rate": 1.0,
+    "ci95": [
+     0.5100999795960008,
+     1.0
+    ]
+   },
+   "invalid": {
+    "count": 0,
+    "n": 4,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.48990002040399916
+    ]
+   },
+   "stack_stability": {
+    "count": 4,
+    "n": 4,
+    "rate": 1.0,
+    "ci95": [
+     0.5100999795960008,
+     1.0
+    ]
+   },
+   "completion_s_p50": 7.61,
+   "success_by_target": {
+    "blue_large": {
+     "count": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.20654329147389294,
+      1.0
+     ]
+    },
+    "blue_small": {
+     "count": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.20654329147389294,
+      1.0
+     ]
+    },
+    "red_large": {
+     "count": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.20654329147389294,
+      1.0
+     ]
+    },
+    "yellow_large": {
+     "count": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.20654329147389294,
+      1.0
+     ]
+    }
+   },
+   "success_by_n_cubes": {
+    "3": {
+     "count": 1,
+     "n": 1,
+     "rate": 1.0,
+     "ci95": [
+      0.20654329147389294,
+      1.0
+     ]
+    },
+    "4": {
+     "count": 3,
+     "n": 3,
+     "rate": 1.0,
+     "ci95": [
+      0.43849391955098227,
+      1.0
+     ]
+    }
+   }
+  }
+ },
+ "latency": {
+  "server_s_p50": null,
+  "server_s_p95": null,
+  "rtt_s_p50": null,
+  "rtt_s_p95": null,
+  "queries": 0
+ },
+ "wall_s": 54.9,
+ "gpu_h": 0.015248355931705898,
+ "episodes_per_gpu_h": 262.29508196721315,
+ "bars": [],
+ "smart_length": null,
+ "runs": [
+  {
+   "episodes": [
+    0,
+    4
+   ],
+   "rounds": 1,
+   "slots_run": 4,
+   "wall_s": 54.9,
+   "gpu_h": 0.015248355931705898,
+   "episodes_per_gpu_h": 262.3233624605261,
+   "slots_per_gpu_h": 262.3233624605261,
+   "git_sha": "cf039e0",
+   "device": "cuda:0",
+   "gpu": "NVIDIA H200",
+   "torch_peak_vram_mib": 40.31689453125,
+   "nan_guard_events": 0,
+   "raw_latency": {
+    "server_s": [],
+    "rtt_s": []
+   }
+  }
+ ],
+ "episodes": [
+  {
+   "index": 0,
+   "task": "stack",
+   "target": "blue_large",
+   "n_cubes": 4,
+   "instruction": "stack the blue cube on the yellow cube",
+   "spec": "{\"task\": \"stack\", \"target\": [\"blue\", \"large\"], \"dest\": [\"yellow\", \"large\"], \"cubes\": [[\"blue\", \"large\"], [\"red\", \"large\"], [\"green\", \"large\"], [\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 550,
+   "round": 0,
+   "slot": 0,
+   "success": true,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": false,
+   "drop": false,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": true,
+   "stack_stable_after_release": true,
+   "grasp_confirmed": true,
+   "completion_step": 398,
+   "max_jam_run": 1,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": 14.831353187561035,
+   "spawn_yaw_fold_deg": 14.831352233886719,
+   "wrong_grasp_cube": -1,
+   "rest_cube": 5,
+   "rest_dest": 7
+  },
+  {
+   "index": 1,
+   "task": "stack",
+   "target": "blue_small",
+   "n_cubes": 3,
+   "instruction": "stack the small blue cube on the red cube",
+   "spec": "{\"task\": \"stack\", \"target\": [\"blue\", \"small\"], \"dest\": [\"red\", \"small\"], \"cubes\": [[\"blue\", \"small\"], [\"red\", \"small\"], [\"yellow\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 550,
+   "round": 0,
+   "slot": 1,
+   "success": true,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": false,
+   "drop": false,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": true,
+   "stack_stable_after_release": true,
+   "grasp_confirmed": true,
+   "completion_step": 425,
+   "max_jam_run": 1,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": 10.438672065734863,
+   "spawn_yaw_fold_deg": 10.438671112060547,
+   "wrong_grasp_cube": -1,
+   "rest_cube": 4,
+   "rest_dest": 0
+  },
+  {
+   "index": 2,
+   "task": "stack",
+   "target": "yellow_large",
+   "n_cubes": 4,
+   "instruction": "please stack the large yellow cube on the large red cube",
+   "spec": "{\"task\": \"stack\", \"target\": [\"yellow\", \"large\"], \"dest\": [\"red\", \"large\"], \"cubes\": [[\"green\", \"large\"], [\"blue\", \"large\"], [\"red\", \"large\"], [\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 550,
+   "round": 0,
+   "slot": 2,
+   "success": true,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": false,
+   "drop": false,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": true,
+   "stack_stable_after_release": true,
+   "grasp_confirmed": true,
+   "completion_step": 363,
+   "max_jam_run": 2,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": -9.266128540039062,
+   "spawn_yaw_fold_deg": -9.266128540039062,
+   "wrong_grasp_cube": -1,
+   "rest_cube": 7,
+   "rest_dest": 1
+  },
+  {
+   "index": 3,
+   "task": "stack",
+   "target": "red_large",
+   "n_cubes": 4,
+   "instruction": "stack the red cube onto the large yellow cube",
+   "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"large\"], \"dest\": [\"yellow\", \"large\"], \"cubes\": [[\"blue\", \"large\"], [\"red\", \"large\"], [\"yellow\", \"large\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 550,
+   "round": 0,
+   "slot": 3,
+   "success": true,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": false,
+   "drop": false,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": true,
+   "stack_stable_after_release": true,
+   "grasp_confirmed": true,
+   "completion_step": 354,
+   "max_jam_run": 0,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": -8.359699249267578,
+   "spawn_yaw_fold_deg": -8.359699249267578,
+   "wrong_grasp_cube": -1,
+   "rest_cube": 1,
+   "rest_dest": 7
+  }
+ ]
+}

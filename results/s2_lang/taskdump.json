@@ -1,0 +1,124 @@
+{
+ "dataset": "/data/datasets/0c_s2_pick_rl224_y15",
+ "batch_rows": 64,
+ "task_equals_sidecar_all_rows": true,
+ "distinct_tasks_in_batch": 31,
+ "tokens_shape": [
+  64,
+  48
+ ],
+ "rows": [
+  {
+   "row": 380398,
+   "episode": 1086,
+   "task": "pick up the blue cube from the table",
+   "decoded_tokens": "pick up the blue cube from the table\n",
+   "sidecar_instruction": "pick up the blue cube from the table",
+   "sidecar_target": [
+    "blue",
+    "small"
+   ]
+  },
+  {
+   "row": 350922,
+   "episode": 1002,
+   "task": "pick the blue cube up",
+   "decoded_tokens": "pick the blue cube up\n",
+   "sidecar_instruction": "pick the blue cube up",
+   "sidecar_target": [
+    "blue",
+    "large"
+   ]
+  },
+  {
+   "row": 15402,
+   "episode": 44,
+   "task": "pick up the large blue cube",
+   "decoded_tokens": "pick up the large blue cube\n",
+   "sidecar_instruction": "pick up the large blue cube",
+   "sidecar_target": [
+    "blue",
+    "large"
+   ]
+  },
+  {
+   "row": 333923,
+   "episode": 954,
+   "task": "pick the red cube up",
+   "decoded_tokens": "pick the red cube up\n",
+   "sidecar_instruction": "pick the red cube up",
+   "sidecar_target": [
+    "red",
+    "small"
+   ]
+  },
+  {
+   "row": 388690,
+   "episode": 1110,
+   "task": "please pick up the small red cube",
+   "decoded_tokens": "please pick up the small red cube\n",
+   "sidecar_instruction": "please pick up the small red cube",
+   "sidecar_target": [
+    "red",
+    "small"
+   ]
+  },
+  {
+   "row": 267085,
+   "episode": 763,
+   "task": "pick up the green cube",
+   "decoded_tokens": "pick up the green cube\n",
+   "sidecar_instruction": "pick up the green cube",
+   "sidecar_target": [
+    "green",
+    "small"
+   ]
+  },
+  {
+   "row": 151580,
+   "episode": 433,
+   "task": "pick up the large yellow cube",
+   "decoded_tokens": "pick up the large yellow cube\n",
+   "sidecar_instruction": "pick up the large yellow cube",
+   "sidecar_target": [
+    "yellow",
+    "large"
+   ]
+  },
+  {
+   "row": 686924,
+   "episode": 1962,
+   "task": "pick up the large yellow cube from the table",
+   "decoded_tokens": "pick up the large yellow cube from the table\n",
+   "sidecar_instruction": "pick up the large yellow cube from the table",
+   "sidecar_target": [
+    "yellow",
+    "large"
+   ]
+  },
+  {
+   "row": 292856,
+   "episode": 836,
+   "task": "pick the yellow cube up",
+   "decoded_tokens": "pick the yellow cube up\n",
+   "sidecar_instruction": "pick the yellow cube up",
+   "sidecar_target": [
+    "yellow",
+    "large"
+   ]
+  },
+  {
+   "row": 615289,
+   "episode": 1757,
+   "task": "pick the yellow cube up",
+   "decoded_tokens": "pick the yellow cube up\n",
+   "sidecar_instruction": "pick the yellow cube up",
+   "sidecar_target": [
+    "yellow",
+    "large"
+   ]
+  }
+ ],
+ "task_index_distinct_in_batch": 31,
+ "git_sha": "739d802"
+}

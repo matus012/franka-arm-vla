@@ -1,0 +1,1665 @@
+{
+ "ckpt": "/runs/s2a1_VT/checkpoints/034440/pretrained_model",
+ "ckpt_sha": "07e87cc6f5b2533ab4b931e356e7cf944e6b53d49bbf2cc0109ab416290cb3ff",
+ "n_samples": 2000,
+ "tokens_example": null,
+ "divergence": {
+  "full_chunk": {
+   "n_layouts": 100,
+   "instruction_effect": 2.76423714697361,
+   "noise_effect": 26.890628881454468,
+   "ratio": 0.10279555599683309,
+   "per_layout_ratio_median": 0.07047210813932678,
+   "ignores_language": true
+  },
+  "first_10": {
+   "n_layouts": 100,
+   "instruction_effect": 1.382777721658349,
+   "noise_effect": 16.457488180994986,
+   "ratio": 0.08402118880177431,
+   "per_layout_ratio_median": 0.0505730895233365,
+   "ignores_language": true
+  }
+ },
+ "layouts": [
+  {
+   "layout_id": 0,
+   "members": [
+    0,
+    1
+   ],
+   "instructions": [
+    "pick up the small red cube",
+    "pick the green cube up"
+   ],
+   "targets": [
+    0,
+    1
+   ]
+  },
+  {
+   "layout_id": 1,
+   "members": [
+    2,
+    3
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "pick the blue cube up"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 2,
+   "members": [
+    4,
+    5,
+    6
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "pick up the blue cube from the table",
+    "pick up the yellow cube from the table"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 3,
+   "members": [
+    7,
+    8,
+    9
+   ],
+   "instructions": [
+    "please pick up the large red cube",
+    "please pick up the blue cube",
+    "pick up the yellow cube"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 4,
+   "members": [
+    10,
+    11,
+    12
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "please pick up the large blue cube",
+    "pick up the yellow cube from the table"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 5,
+   "members": [
+    13,
+    14
+   ],
+   "instructions": [
+    "pick the small green cube up",
+    "pick up the blue cube from the table"
+   ],
+   "targets": [
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 6,
+   "members": [
+    15,
+    16,
+    17
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "pick up the blue cube from the table",
+    "pick the large yellow cube up"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 7,
+   "members": [
+    18,
+    19
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "please pick up the green cube"
+   ],
+   "targets": [
+    0,
+    1
+   ]
+  },
+  {
+   "layout_id": 8,
+   "members": [
+    20,
+    21,
+    22
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "pick up the small green cube",
+    "please pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 10,
+   "members": [
+    23,
+    24
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick up the large blue cube from the table"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 11,
+   "members": [
+    25,
+    26
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "pick up the yellow cube"
+   ],
+   "targets": [
+    0,
+    3
+   ]
+  },
+  {
+   "layout_id": 12,
+   "members": [
+    27,
+    28
+   ],
+   "instructions": [
+    "pick the small red cube up",
+    "please pick up the small green cube"
+   ],
+   "targets": [
+    0,
+    1
+   ]
+  },
+  {
+   "layout_id": 13,
+   "members": [
+    29,
+    30
+   ],
+   "instructions": [
+    "pick up the green cube from the table",
+    "pick up the blue cube from the table"
+   ],
+   "targets": [
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 14,
+   "members": [
+    31,
+    32,
+    33
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "pick the blue cube up",
+    "please pick up the yellow cube"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 15,
+   "members": [
+    34,
+    35
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "please pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 16,
+   "members": [
+    36,
+    37
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick up the green cube from the table"
+   ],
+   "targets": [
+    0,
+    1
+   ]
+  },
+  {
+   "layout_id": 17,
+   "members": [
+    38,
+    39
+   ],
+   "instructions": [
+    "pick up the small red cube",
+    "pick up the green cube"
+   ],
+   "targets": [
+    0,
+    1
+   ]
+  },
+  {
+   "layout_id": 18,
+   "members": [
+    40,
+    41
+   ],
+   "instructions": [
+    "pick up the small red cube",
+    "pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 20,
+   "members": [
+    42,
+    43
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "please pick up the large blue cube"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 21,
+   "members": [
+    44,
+    45
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "pick the large yellow cube up"
+   ],
+   "targets": [
+    0,
+    3
+   ]
+  },
+  {
+   "layout_id": 22,
+   "members": [
+    46,
+    47,
+    48
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick up the blue cube from the table",
+    "pick up the yellow cube from the table"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 24,
+   "members": [
+    49,
+    50,
+    51
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "pick up the green cube",
+    "pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 26,
+   "members": [
+    52,
+    53
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "please pick up the green cube"
+   ],
+   "targets": [
+    0,
+    1
+   ]
+  },
+  {
+   "layout_id": 27,
+   "members": [
+    54,
+    55,
+    56
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "please pick up the green cube",
+    "please pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 28,
+   "members": [
+    57,
+    58,
+    59
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "pick the small green cube up",
+    "pick up the small blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 29,
+   "members": [
+    60,
+    61,
+    62
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "pick up the green cube",
+    "please pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 30,
+   "members": [
+    63,
+    64,
+    65
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick up the blue cube from the table",
+    "please pick up the yellow cube"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 31,
+   "members": [
+    66,
+    67,
+    68
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "pick the blue cube up",
+    "pick the yellow cube up"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 33,
+   "members": [
+    69,
+    70
+   ],
+   "instructions": [
+    "pick up the large red cube",
+    "pick the large blue cube up"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 34,
+   "members": [
+    71,
+    72,
+    73
+   ],
+   "instructions": [
+    "pick up the small red cube from the table",
+    "pick the green cube up",
+    "pick up the blue cube from the table"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 35,
+   "members": [
+    74,
+    75,
+    76
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "please pick up the blue cube",
+    "pick up the yellow cube"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 36,
+   "members": [
+    77,
+    78
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "pick up the blue cube from the table"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 37,
+   "members": [
+    79,
+    80,
+    81
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "pick up the large blue cube",
+    "pick up the large yellow cube from the table"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 38,
+   "members": [
+    82,
+    83
+   ],
+   "instructions": [
+    "pick up the small green cube from the table",
+    "pick the blue cube up"
+   ],
+   "targets": [
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 39,
+   "members": [
+    84,
+    85
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "please pick up the small blue cube"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 40,
+   "members": [
+    86,
+    87,
+    88
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "please pick up the green cube",
+    "please pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 41,
+   "members": [
+    89,
+    90
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "pick the small green cube up"
+   ],
+   "targets": [
+    0,
+    1
+   ]
+  },
+  {
+   "layout_id": 42,
+   "members": [
+    91,
+    92
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "pick the yellow cube up"
+   ],
+   "targets": [
+    0,
+    3
+   ]
+  },
+  {
+   "layout_id": 44,
+   "members": [
+    93,
+    94
+   ],
+   "instructions": [
+    "pick up the small green cube from the table",
+    "pick up the blue cube from the table"
+   ],
+   "targets": [
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 45,
+   "members": [
+    95,
+    96
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick up the large blue cube from the table"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 46,
+   "members": [
+    97,
+    98
+   ],
+   "instructions": [
+    "pick up the blue cube from the table",
+    "pick the yellow cube up"
+   ],
+   "targets": [
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 47,
+   "members": [
+    99,
+    100,
+    101
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick up the blue cube from the table",
+    "pick up the yellow cube from the table"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 48,
+   "members": [
+    102,
+    103
+   ],
+   "instructions": [
+    "pick up the blue cube from the table",
+    "please pick up the yellow cube"
+   ],
+   "targets": [
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 51,
+   "members": [
+    104,
+    105,
+    106
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "pick up the small green cube from the table",
+    "pick up the blue cube from the table"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 52,
+   "members": [
+    107,
+    108
+   ],
+   "instructions": [
+    "please pick up the large blue cube",
+    "pick the yellow cube up"
+   ],
+   "targets": [
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 53,
+   "members": [
+    109,
+    110,
+    111
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "pick up the blue cube from the table",
+    "please pick up the yellow cube"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 54,
+   "members": [
+    112,
+    113
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "pick up the large blue cube"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 55,
+   "members": [
+    114,
+    115
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "please pick up the green cube"
+   ],
+   "targets": [
+    0,
+    1
+   ]
+  },
+  {
+   "layout_id": 56,
+   "members": [
+    116,
+    117
+   ],
+   "instructions": [
+    "pick the large red cube up",
+    "pick the blue cube up"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 57,
+   "members": [
+    118,
+    119,
+    120
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "pick up the green cube from the table",
+    "pick up the blue cube from the table"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 58,
+   "members": [
+    121,
+    122
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "pick the blue cube up"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 59,
+   "members": [
+    123,
+    124,
+    125
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "pick up the blue cube",
+    "pick the yellow cube up"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 60,
+   "members": [
+    126,
+    127,
+    128
+   ],
+   "instructions": [
+    "pick the small red cube up",
+    "pick up the green cube from the table",
+    "pick up the small blue cube from the table"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 61,
+   "members": [
+    129,
+    130,
+    131
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick up the small green cube",
+    "pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 62,
+   "members": [
+    132,
+    133,
+    134
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick up the green cube from the table",
+    "pick up the small blue cube from the table"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 64,
+   "members": [
+    135,
+    136,
+    137
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "please pick up the green cube",
+    "pick the small blue cube up"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 66,
+   "members": [
+    138,
+    139,
+    140
+   ],
+   "instructions": [
+    "pick up the large red cube",
+    "please pick up the large blue cube",
+    "pick up the yellow cube"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 67,
+   "members": [
+    141,
+    142
+   ],
+   "instructions": [
+    "pick up the small red cube",
+    "pick the blue cube up"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 68,
+   "members": [
+    143,
+    144
+   ],
+   "instructions": [
+    "pick up the small red cube",
+    "pick up the blue cube from the table"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 70,
+   "members": [
+    145,
+    146
+   ],
+   "instructions": [
+    "pick up the large red cube",
+    "please pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 71,
+   "members": [
+    147,
+    148,
+    149
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick the green cube up",
+    "pick up the small blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 72,
+   "members": [
+    150,
+    151,
+    152
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick the large blue cube up",
+    "pick up the large yellow cube from the table"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 73,
+   "members": [
+    153,
+    154,
+    155
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "please pick up the large blue cube",
+    "pick up the large yellow cube"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 74,
+   "members": [
+    156,
+    157,
+    158
+   ],
+   "instructions": [
+    "pick the small red cube up",
+    "pick up the small green cube",
+    "please pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 75,
+   "members": [
+    159,
+    160
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "pick up the green cube from the table"
+   ],
+   "targets": [
+    0,
+    1
+   ]
+  },
+  {
+   "layout_id": 76,
+   "members": [
+    161,
+    162
+   ],
+   "instructions": [
+    "pick the green cube up",
+    "please pick up the blue cube"
+   ],
+   "targets": [
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 77,
+   "members": [
+    163,
+    164
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 78,
+   "members": [
+    165,
+    166
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "please pick up the yellow cube"
+   ],
+   "targets": [
+    0,
+    3
+   ]
+  },
+  {
+   "layout_id": 79,
+   "members": [
+    167,
+    168
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "pick up the blue cube from the table"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 80,
+   "members": [
+    169,
+    170
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick up the green cube"
+   ],
+   "targets": [
+    0,
+    1
+   ]
+  },
+  {
+   "layout_id": 81,
+   "members": [
+    171,
+    172
+   ],
+   "instructions": [
+    "please pick up the blue cube",
+    "please pick up the large yellow cube"
+   ],
+   "targets": [
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 83,
+   "members": [
+    173,
+    174
+   ],
+   "instructions": [
+    "pick the green cube up",
+    "pick up the blue cube"
+   ],
+   "targets": [
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 85,
+   "members": [
+    175,
+    176,
+    177
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "please pick up the blue cube",
+    "pick up the yellow cube from the table"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 86,
+   "members": [
+    178,
+    179
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "please pick up the yellow cube"
+   ],
+   "targets": [
+    0,
+    3
+   ]
+  },
+  {
+   "layout_id": 87,
+   "members": [
+    180,
+    181
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "please pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 88,
+   "members": [
+    182,
+    183,
+    184
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "please pick up the green cube",
+    "pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 89,
+   "members": [
+    185,
+    186
+   ],
+   "instructions": [
+    "pick up the small red cube from the table",
+    "pick the blue cube up"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 90,
+   "members": [
+    187,
+    188,
+    189
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "please pick up the blue cube",
+    "please pick up the large yellow cube"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 91,
+   "members": [
+    190,
+    191,
+    192
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick the green cube up",
+    "pick the blue cube up"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 92,
+   "members": [
+    193,
+    194
+   ],
+   "instructions": [
+    "pick up the blue cube from the table",
+    "please pick up the large yellow cube"
+   ],
+   "targets": [
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 93,
+   "members": [
+    195,
+    196,
+    197
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "please pick up the small green cube",
+    "pick the small blue cube up"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 94,
+   "members": [
+    198,
+    199
+   ],
+   "instructions": [
+    "pick up the small red cube from the table",
+    "please pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 95,
+   "members": [
+    200,
+    201
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick up the green cube"
+   ],
+   "targets": [
+    0,
+    1
+   ]
+  },
+  {
+   "layout_id": 96,
+   "members": [
+    202,
+    203
+   ],
+   "instructions": [
+    "pick the green cube up",
+    "please pick up the blue cube"
+   ],
+   "targets": [
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 97,
+   "members": [
+    204,
+    205,
+    206
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "pick the small green cube up",
+    "please pick up the small blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 98,
+   "members": [
+    207,
+    208
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "pick the blue cube up"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 99,
+   "members": [
+    209,
+    210,
+    211
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "pick up the blue cube",
+    "please pick up the large yellow cube"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 101,
+   "members": [
+    212,
+    213,
+    214
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick the green cube up",
+    "please pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 102,
+   "members": [
+    215,
+    216,
+    217
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "please pick up the large blue cube",
+    "pick up the yellow cube"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 103,
+   "members": [
+    218,
+    219,
+    220
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "pick up the small green cube from the table",
+    "pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 104,
+   "members": [
+    221,
+    222,
+    223
+   ],
+   "instructions": [
+    "please pick up the red cube",
+    "pick up the blue cube",
+    "pick the yellow cube up"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 105,
+   "members": [
+    224,
+    225,
+    226
+   ],
+   "instructions": [
+    "pick the large red cube up",
+    "pick up the large blue cube from the table",
+    "pick up the yellow cube from the table"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 106,
+   "members": [
+    227,
+    228
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick up the small green cube from the table"
+   ],
+   "targets": [
+    0,
+    1
+   ]
+  },
+  {
+   "layout_id": 107,
+   "members": [
+    229,
+    230,
+    231
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick up the blue cube from the table",
+    "please pick up the yellow cube"
+   ],
+   "targets": [
+    0,
+    2,
+    3
+   ]
+  },
+  {
+   "layout_id": 108,
+   "members": [
+    232,
+    233
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "please pick up the green cube"
+   ],
+   "targets": [
+    0,
+    1
+   ]
+  },
+  {
+   "layout_id": 109,
+   "members": [
+    234,
+    235
+   ],
+   "instructions": [
+    "pick the red cube up",
+    "pick up the large blue cube from the table"
+   ],
+   "targets": [
+    0,
+    2
+   ]
+  },
+  {
+   "layout_id": 110,
+   "members": [
+    236,
+    237
+   ],
+   "instructions": [
+    "pick up the green cube from the table",
+    "pick the blue cube up"
+   ],
+   "targets": [
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 111,
+   "members": [
+    238,
+    239,
+    240
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "pick up the green cube from the table",
+    "please pick up the small blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 112,
+   "members": [
+    241,
+    242,
+    243
+   ],
+   "instructions": [
+    "pick up the red cube from the table",
+    "please pick up the small green cube",
+    "please pick up the blue cube"
+   ],
+   "targets": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "layout_id": 113,
+   "members": [
+    244,
+    245
+   ],
+   "instructions": [
+    "pick up the red cube",
+    "pick up the small green cube"
+   ],
+   "targets": [
+    0,
+    1
+   ]
+  }
+ ],
+ "wall_s": 36.8
+}

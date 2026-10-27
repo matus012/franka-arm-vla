@@ -1,0 +1,3 @@
+# GATES 2b amended one fix (consultant 2026-10-26): checkpoint pick, 100 % checkpoint, validation 21650 eps 0-299; offline val loss + MAE (reported)
+sim scripts/eval_policy.py --policy smolvla --stage s2 --split train --visual nominal --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --episodes 300 --seed 21650 --ckpt /runs/s2bp1_VT/checkpoints/034440/pretrained_model --out /runs/e2bp1_c100/s2bp1_VT_val_c100_s21650.json
+pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s2_pair_rl224_y15 --ckpt /runs/s2bp1_VT/checkpoints/034440/pretrained_model --out /runs/e2bp1_c100/vloss_034440.json

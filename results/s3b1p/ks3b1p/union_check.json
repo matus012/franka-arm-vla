@@ -1,0 +1,42 @@
+{
+ "items": {
+  "task_set_count": true,
+  "pick_set_count": true,
+  "union_count": true,
+  "task_and_pick_keys_disjoint": true,
+  "union_keys_eq_task_plus_pick": true,
+  "task_episodes_identical": true,
+  "pick_episodes_identical": true,
+  "split_rule_per_stream": true,
+  "label_relabel_setpoint": true,
+  "columns_exact_action_eq_r": true,
+  "rows_per_episode_eq_T": true,
+  "export_counts_eq_sidecar": true,
+  "split_json_eq_sidecar": true
+ },
+ "only_in_union": [],
+ "missing_from_union": [],
+ "task_field_diffs": [],
+ "pick_field_diffs": [],
+ "split_violations": [],
+ "T_by_task": {
+  "pick": [
+   350
+  ],
+  "stack": [
+   550
+  ]
+ },
+ "union": "/data/datasets/0c_s3b1_pair_s2a_rl224_y15",
+ "task_set": "/data/datasets/0c_s3b1_pair_rl224_y15",
+ "pick_set": "/data/datasets/0c_s2a_pair4k_rl224_y15",
+ "sets": [],
+ "kept": 4000,
+ "kept_task": null,
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "episodes_checked": 8000
+ },
+ "pass": true
+}

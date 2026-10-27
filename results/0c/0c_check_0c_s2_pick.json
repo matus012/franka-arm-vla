@@ -1,0 +1,399 @@
+{
+ "dataset": "/data/datasets/0c_s2_pick",
+ "name": "0c_s2_pick",
+ "task": "pick",
+ "ceiling_pct": 100.0,
+ "export": {
+  "name": "0c_s2_pick",
+  "root": "/data/datasets/0c_s2_pick",
+  "sources": [
+   "/data/0c/s2/b000",
+   "/data/0c/s2/b001"
+  ],
+  "files": 16,
+  "episodes": 2000,
+  "rows": 700000,
+  "per_task": {
+   "pick": 2000
+  },
+  "streams": [
+   "s2_s31800"
+  ],
+  "workers": 16,
+  "manifest_verified_files": 40,
+  "audit_clean": true,
+  "train_episodes": 1900,
+  "val_episodes": 100,
+  "disk_bytes": 1903406552,
+  "wall_s": 1138.5
+ },
+ "expert_success": {
+  "batches": [
+   {
+    "dir": "/data/0c/s2/b000",
+    "start": 0,
+    "episodes": 1152,
+    "envs": 128,
+    "kept": 1124,
+    "attempted": 1152,
+    "rate_pct": 97.56944444444444,
+    "ci95_pct": [
+     96.50956980601102,
+     98.31311177942422
+    ],
+    "per_task": {
+     "pick": {
+      "attempted": 1152,
+      "kept": 1124,
+      "rate": 0.9756944444444444,
+      "ci95": [
+       0.9650956980601102,
+       0.9831311177942421
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 0,
+       "early_close": 0,
+       "release_failure": 0,
+       "invalid": 0
+      },
+      "failed_unflagged": 28
+     }
+    },
+    "nan_guard_events": 0,
+    "cmd_resync_max_m": 0.004797309637069702,
+    "episodes_per_h": 22160.617583809202,
+    "wall_s": 187.1,
+    "disk_bytes": 1233286109
+   },
+   {
+    "dir": "/data/0c/s2/b001",
+    "start": 1152,
+    "episodes": 1152,
+    "envs": 128,
+    "kept": 1126,
+    "attempted": 1152,
+    "rate_pct": 97.74305555555556,
+    "ci95_pct": [
+     96.71352677642973,
+     98.45522298997426
+    ],
+    "per_task": {
+     "pick": {
+      "attempted": 1152,
+      "kept": 1126,
+      "rate": 0.9774305555555556,
+      "ci95": [
+       0.9671352677642974,
+       0.9845522298997426
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 0,
+       "early_close": 0,
+       "release_failure": 0,
+       "invalid": 0
+      },
+      "failed_unflagged": 26
+     }
+    },
+    "nan_guard_events": 0,
+    "cmd_resync_max_m": 0.005751460790634155,
+    "episodes_per_h": 22028.618377507486,
+    "wall_s": 188.3,
+    "disk_bytes": 1237633243
+   }
+  ],
+  "pooled": {
+   "kept": 2250,
+   "attempted": 2304,
+   "rate_pct": 97.65625,
+   "ci95_pct": [
+    96.95459875319862,
+    98.19924542744185
+   ]
+  },
+  "per_target": {
+   "colour:blue": {
+    "kept": 752,
+    "attempted": 766,
+    "rate_pct": 98.17232375979113,
+    "ci95_pct": [
+     96.9556451494888,
+     98.90823126352915
+    ]
+   },
+   "colour:green": {
+    "kept": 378,
+    "attempted": 381,
+    "rate_pct": 99.21259842519684,
+    "ci95_pct": [
+     97.71082497036198,
+     99.73186313820008
+    ]
+   },
+   "colour:red": {
+    "kept": 744,
+    "attempted": 766,
+    "rate_pct": 97.12793733681463,
+    "ci95_pct": [
+     95.6897099531092,
+     98.09581683577827
+    ]
+   },
+   "colour:yellow": {
+    "kept": 376,
+    "attempted": 391,
+    "rate_pct": 96.16368286445012,
+    "ci95_pct": [
+     93.76746606529778,
+     97.66160321210359
+    ]
+   },
+   "cube:blue_large": {
+    "kept": 369,
+    "attempted": 381,
+    "rate_pct": 96.85039370078741,
+    "ci95_pct": [
+     94.57614194883723,
+     98.18929713051385
+    ]
+   },
+   "cube:blue_small": {
+    "kept": 383,
+    "attempted": 385,
+    "rate_pct": 99.48051948051948,
+    "ci95_pct": [
+     98.12591644531018,
+     99.85742690066927
+    ]
+   },
+   "cube:green_small": {
+    "kept": 378,
+    "attempted": 381,
+    "rate_pct": 99.21259842519684,
+    "ci95_pct": [
+     97.71082497036198,
+     99.73186313820008
+    ]
+   },
+   "cube:red_large": {
+    "kept": 364,
+    "attempted": 383,
+    "rate_pct": 95.03916449086162,
+    "ci95_pct": [
+     92.38234662687135,
+     96.80144332746653
+    ]
+   },
+   "cube:red_small": {
+    "kept": 380,
+    "attempted": 383,
+    "rate_pct": 99.21671018276763,
+    "ci95_pct": [
+     97.72264442691237,
+     99.73326517536411
+    ]
+   },
+   "cube:yellow_large": {
+    "kept": 376,
+    "attempted": 391,
+    "rate_pct": 96.16368286445012,
+    "ci95_pct": [
+     93.76746606529778,
+     97.66160321210359
+    ]
+   },
+   "size:large": {
+    "kept": 1109,
+    "attempted": 1155,
+    "rate_pct": 96.01731601731602,
+    "ci95_pct": [
+     94.72856176193838,
+     97.00097228309417
+    ]
+   },
+   "size:small": {
+    "kept": 1141,
+    "attempted": 1149,
+    "rate_pct": 99.30374238468234,
+    "ci95_pct": [
+     98.63211167815241,
+     99.64678457264215
+    ]
+   }
+  }
+ },
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "noise_std_per_arm_dim": [
+   0.09999363869428635,
+   0.1000218614935875,
+   0.09988737851381302,
+   0.0999494418501854
+  ],
+  "noise_rows_per_dim": [
+   685968,
+   662128,
+   644965,
+   685364
+  ],
+  "claw_exec_ne_label_rows": 0,
+  "mutant_action_exec_flagged_episodes": 2000,
+  "episodes_checked": 2000,
+  "state_dims_std_lt_1e-6": [],
+  "state_std": [
+   0.23525364957430017,
+   0.34010893348842125,
+   0.15977402194417636,
+   0.40308123060364276,
+   0.08298465995901108,
+   0.20435548610927962,
+   0.6015882209288972,
+   0.009170396002028474,
+   0.009143578139647234,
+   0.20429035852669725,
+   0.4095628305026514,
+   0.21501982915428242,
+   0.3895124191167938,
+   0.1301228096659836,
+   0.6418408308282697,
+   0.4523244188466452,
+   0.04111752886429441,
+   0.04115186989835587,
+   0.013277487135393139
+  ]
+ },
+ "video": {
+  "episodes": [
+   0,
+   222,
+   444,
+   666,
+   888,
+   1111,
+   1333,
+   1555,
+   1777,
+   1999
+  ],
+  "rows": 3500,
+  "psnr_min": 35.724426625941334,
+  "psnr_mean": 41.04209759515984,
+  "identity_fail": 0,
+  "backend": "torchcodec"
+ },
+ "sheet": {
+  "png": "0c_s2_pick.png",
+  "episodes": [
+   {
+    "lerobot_episode": 0,
+    "episode_index": 0,
+    "instruction": "pick the red cube up",
+    "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"small\"], \"dest\": null, \"cubes\": [[\"yellow\", \"small\"], [\"red\", \"small\"], [\"yellow\", \"large\"], [\"green\", \"small\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      130
+     ],
+     [
+      "carry",
+      203
+     ],
+     [
+      "hold",
+      276
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1000,
+    "episode_index": 1021,
+    "instruction": "please pick up the red cube",
+    "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"large\"], \"dest\": null, \"cubes\": [[\"red\", \"large\"], [\"blue\", \"small\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      138
+     ],
+     [
+      "carry",
+      208
+     ],
+     [
+      "hold",
+      278
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1999,
+    "episode_index": 2046,
+    "instruction": "please pick up the blue cube",
+    "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"large\"], \"dest\": null, \"cubes\": [[\"blue\", \"large\"], [\"yellow\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      120
+     ],
+     [
+      "carry",
+      196
+     ],
+     [
+      "hold",
+      272
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   }
+  ]
+ },
+ "items": {
+  "1_count_eq_plan": true,
+  "1_rows_per_episode_eq_T": true,
+  "1_columns_exact": true,
+  "1_psnr_min_ge_35": true,
+  "1_frame_identity": true,
+  "3_pooled_ge_ceiling_minus_5": true,
+  "3_every_batch_ge_ceiling_minus_10": true,
+  "3_every_batch_n_ge_200": true,
+  "4_noise_std_in_band": true,
+  "4_claw_identical": true,
+  "4_mutant_action_exec_flagged": true
+ },
+ "pass_items_1_3_4": true,
+ "wall_s": 129.4
+}

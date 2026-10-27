@@ -1,0 +1,40 @@
+{
+ "gate": "0B.5 (1)",
+ "backend": "torchcodec",
+ "dataset": "/data/datasets/0b_smoke",
+ "sources": [
+  "/data/0b5/src/s1_train_s31500_pick_e000000_p0.h5"
+ ],
+ "roundtrip_torchcodec": {
+  "episodes": 20,
+  "rows": 7000,
+  "column_mismatch": [],
+  "rows_per_episode_mismatch": [],
+  "chunk_mismatch": 0,
+  "pad_mismatch": 0,
+  "identity_fail": 75,
+  "psnr_min": 36.44082321908875,
+  "psnr_mean": 41.43973415851337,
+  "dataset_episodes": 20
+ },
+ "rows": 7000,
+ "laptop_ref_rows": 7000,
+ "psnr_torchcodec_vs_pyav_min_db": Infinity,
+ "psnr_torchcodec_vs_pyav_mean_finite_db": Infinity,
+ "identical_images_frac": 1.0,
+ "pyav_perun_vs_laptop_sha_mismatch": 0,
+ "psnr_torchcodec_vs_laptop_pyav_ep0_min_db": Infinity,
+ "ep0_rows": 350,
+ "bar_db": 40.0,
+ "wall_s": 343.2,
+ "checks": {
+  "1_columns_exact": true,
+  "frame_identity": false,
+  "rows_per_episode_eq_T": true,
+  "chunks_padded": true,
+  "same_row_count_as_laptop": true,
+  "pyav_perun_eq_laptop": true,
+  "psnr_vs_laptop_pyav_ge_40dB": true
+ },
+ "pass": false
+}

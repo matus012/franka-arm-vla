@@ -1,0 +1,2 @@
+# GATES Stage 2M (task 006): the union-only-adds check alone (the ks2m job hit its time limit inside it: the first version re-read whole columns per sampled episode; fixed to read each column once)
+python scripts/s2r_tools.py union --old /data/datasets/0c_s2a_pair_rl224_y15 --new /data/datasets/0c_s2a_pair6k_rl224_y15 --out /runs/ks2m_union/union.json

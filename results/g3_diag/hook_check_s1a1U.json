@@ -1,0 +1,14 @@
+{
+ "calls_per_prefill": {
+  "4": 1,
+  "8": 1,
+  "12": 1,
+  "16": 1
+ },
+ "final_norm_of_L16_capture_maxabs": 0.0,
+ "kv_L4_K_half_vs_kproj_hook_maxabs": 0.0,
+ "kv_L8_K_half_vs_kproj_hook_maxabs": 0.0,
+ "kv_L12_K_half_vs_kproj_hook_maxabs": 0.0,
+ "kv_L16_K_half_vs_kproj_hook_maxabs": 0.0,
+ "pass": true
+}

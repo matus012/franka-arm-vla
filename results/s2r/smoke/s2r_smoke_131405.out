@@ -1,0 +1,89 @@
+=== s2r_smoke on <node> NVIDIA H200 start 2026-10-25T11:09:21+01:00 repo 15ed486
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 40:00 cpus 8
+CUDA OK NVIDIA H200
+=== step 1 start 1792922967.174521092 pol -m vla_policy.train_smolvla --dataset /data/datasets/0c_s2a_pair_rl224_y15 --init /runs/s2a1_VT/checkpoints/034440/pretrained_model --n-action-steps 10 --epochs 1 --max-steps 150 --batch-size 16 --workers 6 --freeze-vision-encoder false --train-expert-only false --cosine-to-total --row-sampling window --video-backend torchcodec --seed 0 --lr 1e-4 --save-every-steps 1000000 --out /runs/s2r_smoke/plain
+[train] device=cuda cuda_available=True NVIDIA H200
+[train] dataset /data/datasets/0c_s2a_pair_rl224_y15 episodes=2000 (train 1898, val 102 never sampled) rows=700000 samples/epoch=220168 steps/epoch=13761 total_steps=150
+[train] init_sha256=07e87cc6f5b2533ab4b931e356e7cf944e6b53d49bbf2cc0109ab416290cb3ff (/runs/s2a1_VT/checkpoints/034440/pretrained_model)
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[train] policy on cuda:0; {'params_total': 450046176, 'params_trainable': 392904096, 'vision_params_trainable': 86433024, 'by_dtype': {'trainable_float32': 392904096, 'frozen_bfloat16': 57142080}}; freeze_vision_encoder=False train_expert_only=False; trainable_parts={'vision': 86433024, 'text_model': 194793600, 'connector': 11796480, 'expert': 98245840, 'other': 1635152, 'frozen_names_prefixes': {'model.vlm_with_expert.vlm.model.text_model.layers.15': 9832320, 'model.vlm_with_expert.vlm.model.text_model.norm': 960, 'model.vlm_with_expert.vlm.lm_head': 47308800}}
+[train] step 50/150 epoch 0 loss 0.0462 lr 7.56e-05 gn 0.74 update 0.152s data 0.000s
+[train] step 100/150 epoch 0 loss 0.0226 lr 2.69e-05 gn 0.33 update 0.152s data 0.000s
+[train] step 150/150 epoch 0 loss 0.0122 lr 2.50e-06 gn 0.38 update 0.151s data 0.000s
+[train] done: {"final_step": 150, "samples_seen_this_run": 2400, "wall_s": 143.36170029640198, "steady_state": {"warmup_steps_excluded": 50, "samples": 1600, "s": 15.351325148716569, "gpu_s_per_sample": 0.009594578217947855, "data_wait_frac": 0.000851975635681362}, "peak_mem_allocated_gib": 20.623299598693848, "final_ckpt": "/runs/s2r_smoke/plain/checkpoints/000150/pretrained_model"}
+=== step 1 done 1792923116.148219591
+=== step 2 start 1792923116.149453024 pol -m vla_policy.train_smolvla --dataset /data/datasets/0c_s2a_pair_rl224_y15 --init /runs/s2a1_VT/checkpoints/034440/pretrained_model --n-action-steps 10 --epochs 1 --max-steps 150 --batch-size 16 --workers 6 --freeze-vision-encoder false --train-expert-only false --cosine-to-total --row-sampling window --video-backend torchcodec --seed 0 --lr 1e-4 --save-every-steps 1000000 --out /runs/s2r_smoke/contrast --contrastive-lambda 1.0 --contrastive-margin 4.210268301913095
+[train] device=cuda cuda_available=True NVIDIA H200
+[train] contrastive lambda=1.0 margin=4.210268301913095 share_vision=True layouts=799 episodes_in_table=2000
+[train] dataset /data/datasets/0c_s2a_pair_rl224_y15 episodes=2000 (train 1898, val 102 never sampled) rows=700000 samples/epoch=220168 steps/epoch=13761 total_steps=150
+[train] init_sha256=07e87cc6f5b2533ab4b931e356e7cf944e6b53d49bbf2cc0109ab416290cb3ff (/runs/s2a1_VT/checkpoints/034440/pretrained_model)
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[train] policy on cuda:0; {'params_total': 450046176, 'params_trainable': 392904096, 'vision_params_trainable': 86433024, 'by_dtype': {'trainable_float32': 392904096, 'frozen_bfloat16': 57142080}}; freeze_vision_encoder=False train_expert_only=False; trainable_parts={'vision': 86433024, 'text_model': 194793600, 'connector': 11796480, 'expert': 98245840, 'other': 1635152, 'frozen_names_prefixes': {'model.vlm_with_expert.vlm.model.text_model.layers.15': 9832320, 'model.vlm_with_expert.vlm.model.text_model.norm': 960, 'model.vlm_with_expert.vlm.lm_head': 47308800}}
+[train] step 50/150 epoch 0 loss 0.0421 lr 7.56e-05 gn 0.69 update 0.213s data 0.000s total 4.2518 hinge 4.2097 gap 0.0005 active 1.000
+[train] step 100/150 epoch 0 loss 0.0214 lr 2.69e-05 gn 0.42 update 0.214s data 0.000s total 4.2313 hinge 4.2099 gap 0.0004 active 1.000
+[train] step 150/150 epoch 0 loss 0.0107 lr 2.50e-06 gn 0.35 update 0.206s data 0.000s total 4.2206 hinge 4.2099 gap 0.0004 active 1.000
+[train] done: {"final_step": 150, "samples_seen_this_run": 2400, "wall_s": 136.742023229599, "steady_state": {"warmup_steps_excluded": 50, "samples": 1600, "s": 21.265789062716067, "gpu_s_per_sample": 0.013291118164197542, "data_wait_frac": 0.0006716647137127742}, "peak_mem_allocated_gib": 24.324076175689697, "final_ckpt": "/runs/s2r_smoke/contrast/checkpoints/000150/pretrained_model"}
+=== step 2 done 1792923258.328248637
+=== step 3 start 1792923258.329406635 pol scripts/s2r_tools.py steps --steps /runs/s2r_smoke/contrast/steps.jsonl --margin 4.210268301913095 --i2-max 0.10 --out /runs/s2r_smoke/ic_contrast.json
+{
+ "steps_jsonl": "/runs/s2r_smoke/contrast/steps.jsonl",
+ "steps": 150,
+ "last_step": 150,
+ "i2": {
+  "mean_loss_steps_1_50": 0.03959759092889726,
+  "max": 0.1,
+  "pass": true
+ },
+ "contrastive_steps": 150,
+ "first50": {
+  "steps": [
+   1,
+   50
+  ],
+  "loss": 0.03959759092889726,
+  "l_other": 0.03739558378234506,
+  "gap": 9.15151224762667e-05,
+  "hinge": 4.210176963806152,
+  "hinge_active": 1.0,
+  "loss_total": 4.249774554735049
+ },
+ "last50": {
+  "steps": [
+   101,
+   150
+  ],
+  "loss": 0.02387492500944063,
+  "l_other": 0.022045444010291248,
+  "gap": -0.0003958364951540716,
+  "hinge": 4.2106642913818355,
+  "hinge_active": 1.0,
+  "loss_total": 4.234539216391276
+ },
+ "void": {
+  "steps": 150,
+  "gap_mean": 2.980877793258211e-05,
+  "hinge_mean": 4.2102386728922525,
+  "void_contrast_flag": false
+ },
+ "ok": true
+}
+=== step 3 done 1792923262.227440390
+=== step 4 start 1792923262.228350444 pol scripts/s2r_tools.py steps --steps /runs/s2a1_VT/steps.jsonl --margin 4.210268301913095 --i2-max 0.10 --expect-i2 fail --out /runs/s2r_smoke/i2_mutant_130518.json
+{
+ "steps_jsonl": "/runs/s2a1_VT/steps.jsonl",
+ "steps": 34440,
+ "last_step": 34440,
+ "i2": {
+  "mean_loss_steps_1_50": 0.2587703082885128,
+  "max": 0.1,
+  "pass": false
+ },
+ "contrastive_steps": 0,
+ "ok": true
+}
+=== step 4 done 1792923266.632382906
+=== s2r_smoke done 2026-10-25T11:14:26+01:00

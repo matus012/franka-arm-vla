@@ -1,0 +1,2 @@
+# Stage 1 fix diagnosis D1: close-up sheets of the best D1 variant (zero flow-matching noise), protocol replay of round 0 of validation seed 21600: 3 successes + first of every failure type + failures 2, 3, 6, 8, 10, 11 (MP4s)
+sim scripts/eval_policy.py --replay /runs/d1fix/s1_fixdiag_zero_s21600.json --sheets 3 --videos 2,3,6,8,10,11 --policy-python /opt/policy/bin/python

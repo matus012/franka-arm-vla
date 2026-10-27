@@ -1,0 +1,109 @@
+{
+  "S": 1221893,
+  "L_B_hours": 6.0,
+  "formula": "E_B = min(6, floor(L_B*3600/(3*S*r_B)))",
+  "configs": {
+    "A": {
+      "processes": [
+        "A"
+      ],
+      "overlap_window_epoch_s": [
+        1791068930.3321438,
+        1791068951.645663
+      ],
+      "overlap_wall_s": 21.31351923942566,
+      "samples_in_window": 38400,
+      "charged_rate_gpu_s_per_sample": 0.0005550395635267099,
+      "compute_only_rate_gpu_s_per_sample": 0.0002984962467598962,
+      "data_wait_share": 0.4617688369343214,
+      "gpu_util": {
+        "mean_util_pct": 25.904761904761905,
+        "samples": 21
+      },
+      "per_process": {
+        "A": {
+          "window_s": [
+            1791068930.3321438,
+            1791068951.645663
+          ],
+          "own_window_wall_s": 21.31351923942566,
+          "steps_in_overlap": 300,
+          "samples_in_overlap": 38400,
+          "compute_s_per_sample": 0.0002984962467598962,
+          "data_wait_share": 0.4617688369343214
+        }
+      },
+      "trainer_summary_gpu_s_per_sample": {
+        "A": 0.0005545874472591095
+      },
+      "how": "window = [max_p t_p(step 50), min_p t_p(step 350)] from steps.jsonl step-end times; samples = batch rows of all processes' steps that ended inside it; rate = window wall x 1 GPU / samples",
+      "E_B": 6
+    },
+    "B": {
+      "processes": [
+        "B0",
+        "B1",
+        "B2"
+      ],
+      "overlap_window_epoch_s": [
+        1791069258.899139,
+        1791069277.2045026
+      ],
+      "overlap_wall_s": 18.305363655090332,
+      "samples_in_window": 83712,
+      "charged_rate_gpu_s_per_sample": 0.00021867072409081532,
+      "compute_only_rate_gpu_s_per_sample": 0.00018160091147365368,
+      "data_wait_share": 0.16712599685956575,
+      "gpu_util": {
+        "mean_util_pct": 70.94444444444444,
+        "samples": 18
+      },
+      "per_process": {
+        "B0": {
+          "window_s": [
+            1791069258.899139,
+            1791069281.63979
+          ],
+          "own_window_wall_s": 22.74065113067627,
+          "steps_in_overlap": 222,
+          "samples_in_overlap": 28416,
+          "compute_s_per_sample": 0.0005643314852440617,
+          "data_wait_share": 0.12031156410568636
+        },
+        "B1": {
+          "window_s": [
+            1791069254.1636288,
+            1791069279.2602282
+          ],
+          "own_window_wall_s": 25.096599340438843,
+          "steps_in_overlap": 216,
+          "samples_in_overlap": 27648,
+          "compute_s_per_sample": 0.0005294874892435338,
+          "data_wait_share": 0.19753900228753343
+        },
+        "B2": {
+          "window_s": [
+            1791069251.8011699,
+            1791069277.2045026
+          ],
+          "own_window_wall_s": 25.403332710266113,
+          "steps_in_overlap": 216,
+          "samples_in_overlap": 27648,
+          "compute_s_per_sample": 0.0005405892287752875,
+          "data_wait_share": 0.18343775939538517
+        }
+      },
+      "trainer_summary_gpu_s_per_sample": {
+        "B0": 0.0005914277326276836,
+        "B1": 0.0006527926411460309,
+        "B2": 0.0006607897643455847
+      },
+      "how": "window = [max_p t_p(step 50), min_p t_p(step 350)] from steps.jsonl step-end times; samples = batch rows of all processes' steps that ended inside it; rate = window wall x 1 GPU / samples",
+      "E_B": 6
+    }
+  },
+  "chosen_config": "B",
+  "r_B": 0.00021867072409081532,
+  "E_B": 6,
+  "E_B_lt_3_needs_decode_efficient_loader": false
+}

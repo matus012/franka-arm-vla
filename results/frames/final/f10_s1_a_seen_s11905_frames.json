@@ -1,0 +1,62 @@
+{
+ "source": "/runs/e10_s1/f10_s1_a_seen_s11905.json",
+ "chosen": [
+  0,
+  1,
+  3,
+  209
+ ],
+ "rounds": 2,
+ "wall_s": 214.4,
+ "git_sha": "290b3e0",
+ "frames": [
+  {
+   "index": 0,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_s1/frames/f10_s1_a_seen_s11905/f10_s1_a_seen_s11905_ep0_pick_drop_early_close.png"
+  },
+  {
+   "index": 1,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_s1/frames/f10_s1_a_seen_s11905/f10_s1_a_seen_s11905_ep1_pick_success.png",
+   "video": "/runs/e10_s1/frames/f10_s1_a_seen_s11905/f10_s1_a_seen_s11905_ep1.mp4"
+  },
+  {
+   "index": 3,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_s1/frames/f10_s1_a_seen_s11905/f10_s1_a_seen_s11905_ep3_pick_success.png",
+   "video": "/runs/e10_s1/frames/f10_s1_a_seen_s11905/f10_s1_a_seen_s11905_ep3.mp4"
+  },
+  {
+   "index": 209,
+   "types_recorded": [
+    "fail_other"
+   ],
+   "types_replay": [
+    "fail_other"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_s1/frames/f10_s1_a_seen_s11905/f10_s1_a_seen_s11905_ep209_pick_fail_other.png"
+  }
+ ]
+}

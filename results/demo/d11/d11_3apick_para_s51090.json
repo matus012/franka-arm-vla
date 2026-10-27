@@ -1,0 +1,1229 @@
+{
+ "config": {
+  "policy": "smolvla",
+  "ckpt": "/runs/s3a1p_VT/checkpoints/035508/pretrained_model",
+  "stage": "s2a",
+  "mix": "1,1,1",
+  "split": "paraphrase",
+  "visual": "nominal",
+  "seed": 51090,
+  "envs": 16,
+  "image_size": 224,
+  "n": 10,
+  "period": 3,
+  "latency": 1,
+  "dataset": "",
+  "provisional_n": false,
+  "cube_yaw_max_deg": 15.0,
+  "expert_fresh": false,
+  "instruction_swap": "none",
+  "table_palette": "112"
+ },
+ "cube_yaw_max_deg": 15.0,
+ "n_episodes": 16,
+ "server_info": {
+  "policy": "smolvla",
+  "n_action_steps": 10,
+  "chunk_size": 50,
+  "image_size": 224,
+  "state_dim": 19,
+  "action_dim": 5,
+  "ckpt_sha": "f6adef8890138871f025994b9aeaa5714e67440c9601a272e001a998bc562f84",
+  "rename_map": {
+   "observation.images.side": "observation.images.camera1",
+   "observation.images.wrist": "observation.images.camera2"
+  },
+  "input_features": {
+   "observation.images.camera1": [
+    3,
+    224,
+    224
+   ],
+   "observation.images.camera2": [
+    3,
+    224,
+    224
+   ],
+   "observation.state": [
+    19
+   ]
+  },
+  "max_state_dim": 32,
+  "max_action_dim": 32,
+  "tokenizer_max_length": 48,
+  "freeze_vision_encoder": false,
+  "train_expert_only": false,
+  "dtype": "float32",
+  "sampling": "default",
+  "k": 1,
+  "guidance_w": null,
+  "device": "cuda:0",
+  "period": 3,
+  "latency": 1
+ },
+ "ckpt": "/runs/s3a1p_VT/checkpoints/035508/pretrained_model",
+ "ckpt_sha": "f6adef8890138871f025994b9aeaa5714e67440c9601a272e001a998bc562f84",
+ "stats_sha": "274512209665f32638d45bcec054d30f8a3e8171aded652bf98363be3a639aa5",
+ "expert_version": "113-expert-v1",
+ "detector_version": "113-detectors-v1 (GATES.md conventions 2026-10-01)",
+ "T_steps": {
+  "pick": 350
+ },
+ "aggregate": {
+  "all": {
+   "n": 16,
+   "success": {
+    "count": 2,
+    "n": 16,
+    "rate": 0.125,
+    "ci95": [
+     0.034976749337057134,
+     0.3602333143674828
+    ]
+   },
+   "wrong_grasp": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "wrong_dest": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "wrong_object": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "slam": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "slam_10N": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "slam_50N": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "jam": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "release_failure": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "release_fail_not_released": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "release_fail_off_destination": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "release_fail_not_clear": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "release_fail_unstable": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "early_close": {
+    "count": 9,
+    "n": 16,
+    "rate": 0.5625,
+    "ci95": [
+     0.33178195606776517,
+     0.7690163666481448
+    ]
+   },
+   "drop": {
+    "count": 6,
+    "n": 16,
+    "rate": 0.375,
+    "ci95": [
+     0.18480982554752806,
+     0.613593529020652
+    ]
+   },
+   "distractor_disturbed": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "clean": {
+    "count": 12,
+    "n": 16,
+    "rate": 0.75,
+    "ci95": [
+     0.5050123107060135,
+     0.8981809801576265
+    ]
+   },
+   "invalid": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "completion_s_p50": 3.32
+  },
+  "pick": {
+   "n": 16,
+   "success": {
+    "count": 2,
+    "n": 16,
+    "rate": 0.125,
+    "ci95": [
+     0.034976749337057134,
+     0.3602333143674828
+    ]
+   },
+   "wrong_grasp": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "wrong_dest": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "wrong_object": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "slam": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "slam_10N": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "slam_50N": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "jam": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "release_failure": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "release_fail_not_released": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "release_fail_off_destination": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "release_fail_not_clear": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "release_fail_unstable": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "early_close": {
+    "count": 9,
+    "n": 16,
+    "rate": 0.5625,
+    "ci95": [
+     0.33178195606776517,
+     0.7690163666481448
+    ]
+   },
+   "drop": {
+    "count": 6,
+    "n": 16,
+    "rate": 0.375,
+    "ci95": [
+     0.18480982554752806,
+     0.613593529020652
+    ]
+   },
+   "distractor_disturbed": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "clean": {
+    "count": 12,
+    "n": 16,
+    "rate": 0.75,
+    "ci95": [
+     0.5050123107060135,
+     0.8981809801576265
+    ]
+   },
+   "invalid": {
+    "count": 0,
+    "n": 16,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.19361341827271994
+    ]
+   },
+   "completion_s_p50": 3.32,
+   "success_by_target": {
+    "blue_large": {
+     "count": 1,
+     "n": 2,
+     "rate": 0.5,
+     "ci95": [
+      0.09452865480086614,
+      0.9054713451991339
+     ]
+    },
+    "blue_small": {
+     "count": 0,
+     "n": 2,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.6576280471103807
+     ]
+    },
+    "green_small": {
+     "count": 0,
+     "n": 2,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.6576280471103807
+     ]
+    },
+    "red_small": {
+     "count": 0,
+     "n": 6,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3903430336530645
+     ]
+    },
+    "yellow_large": {
+     "count": 1,
+     "n": 4,
+     "rate": 0.25,
+     "ci95": [
+      0.045586062644636216,
+      0.6993639475573634
+     ]
+    }
+   },
+   "success_by_n_cubes": {
+    "2": {
+     "count": 2,
+     "n": 5,
+     "rate": 0.4,
+     "ci95": [
+      0.1176182311592533,
+      0.769280067791163
+     ]
+    },
+    "3": {
+     "count": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3244156195108769
+     ]
+    },
+    "4": {
+     "count": 0,
+     "n": 3,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.5615060804490177
+     ]
+    }
+   }
+  }
+ },
+ "latency": {
+  "server_s_p50": 0.301265,
+  "server_s_p95": 0.306638,
+  "rtt_s_p50": 0.303285,
+  "rtt_s_p95": 0.3094695,
+  "queries": 34
+ },
+ "wall_s": 77.9,
+ "gpu_h": 0.021651480131679113,
+ "episodes_per_gpu_h": 739.4094993581514,
+ "bars": [],
+ "smart_length": null,
+ "runs": [
+  {
+   "episodes": [
+    0,
+    16
+   ],
+   "rounds": 1,
+   "slots_run": 16,
+   "wall_s": 77.9,
+   "gpu_h": 0.021651480131679113,
+   "episodes_per_gpu_h": 738.9795017565467,
+   "slots_per_gpu_h": 738.9795017565467,
+   "git_sha": "cf039e0",
+   "device": "cuda:0",
+   "gpu": "NVIDIA H200",
+   "torch_peak_vram_mib": 64.12548828125,
+   "nan_guard_events": 0,
+   "raw_latency": {
+    "server_s": [
+     0.30211,
+     0.30156,
+     0.30249,
+     0.30199,
+     0.3014,
+     0.30156,
+     0.3064,
+     0.30141,
+     0.3009,
+     0.30708,
+     0.31731,
+     0.30093,
+     0.30072,
+     0.30076,
+     0.30058,
+     0.30065,
+     0.30108,
+     0.30097,
+     0.30554,
+     0.30572,
+     0.3009,
+     0.30085,
+     0.30604,
+     0.30527,
+     0.30126,
+     0.30058,
+     0.30043,
+     0.30044,
+     0.3013,
+     0.30127,
+     0.30128,
+     0.30115,
+     0.30086,
+     0.30032
+    ],
+    "rtt_s": [
+     0.30636,
+     0.30354,
+     0.30464,
+     0.30415,
+     0.30349,
+     0.30346,
+     0.30836,
+     0.30341,
+     0.30296,
+     0.31153,
+     0.31987,
+     0.30286,
+     0.30285,
+     0.30282,
+     0.30266,
+     0.30251,
+     0.30297,
+     0.30281,
+     0.30746,
+     0.30767,
+     0.30292,
+     0.30273,
+     0.30811,
+     0.30707,
+     0.30332,
+     0.30246,
+     0.30251,
+     0.30226,
+     0.30337,
+     0.30316,
+     0.30342,
+     0.30325,
+     0.30292,
+     0.30219
+    ]
+   }
+  }
+ ],
+ "episodes": [
+  {
+   "index": 0,
+   "task": "pick",
+   "target": "yellow_large",
+   "n_cubes": 4,
+   "instruction": "can you grab the yellow cube",
+   "spec": "{\"task\": \"pick\", \"target\": [\"yellow\", \"large\"], \"dest\": null, \"cubes\": [[\"yellow\", \"large\"], [\"green\", \"large\"], [\"red\", \"large\"], [\"blue\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 0,
+   "success": false,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": true,
+   "drop": false,
+   "distractor_disturbed": false,
+   "clean": false,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": false,
+   "completion_step": -1,
+   "max_jam_run": 0,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": 0.5695493817329407,
+   "spawn_yaw_fold_deg": 0.569549560546875,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 1,
+   "task": "pick",
+   "target": "red_small",
+   "n_cubes": 2,
+   "instruction": "grab the red cube",
+   "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"small\"], \"dest\": null, \"cubes\": [[\"red\", \"small\"], [\"green\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 1,
+   "success": false,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": true,
+   "drop": true,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 156,
+   "max_jam_run": 0,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": -12.548027992248535,
+   "spawn_yaw_fold_deg": -12.548027038574219,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 2,
+   "task": "pick",
+   "target": "blue_small",
+   "n_cubes": 3,
+   "instruction": "grab the blue cube",
+   "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"small\"], \"dest\": null, \"cubes\": [[\"green\", \"small\"], [\"yellow\", \"small\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 2,
+   "success": false,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": false,
+   "drop": false,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 172,
+   "max_jam_run": 1,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": -4.323305606842041,
+   "spawn_yaw_fold_deg": -4.323307037353516,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 3,
+   "task": "pick",
+   "target": "blue_small",
+   "n_cubes": 3,
+   "instruction": "get hold of the small blue cube",
+   "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"small\"], \"dest\": null, \"cubes\": [[\"blue\", \"small\"], [\"red\", \"small\"], [\"yellow\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 3,
+   "success": false,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": true,
+   "drop": false,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 158,
+   "max_jam_run": 0,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": -11.353859901428223,
+   "spawn_yaw_fold_deg": -11.353858947753906,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 4,
+   "task": "pick",
+   "target": "red_small",
+   "n_cubes": 4,
+   "instruction": "lift the small red cube off the table",
+   "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"small\"], \"dest\": null, \"cubes\": [[\"green\", \"small\"], [\"blue\", \"small\"], [\"yellow\", \"small\"], [\"red\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 4,
+   "success": false,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": true,
+   "drop": false,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 161,
+   "max_jam_run": 0,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": -2.7568581104278564,
+   "spawn_yaw_fold_deg": -2.7568588256835938,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 5,
+   "task": "pick",
+   "target": "blue_large",
+   "n_cubes": 2,
+   "instruction": "can you grab the blue cube",
+   "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"large\"], \"dest\": null, \"cubes\": [[\"yellow\", \"large\"], [\"blue\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 5,
+   "success": false,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": false,
+   "drop": true,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 147,
+   "max_jam_run": 2,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": -0.15571531653404236,
+   "spawn_yaw_fold_deg": -0.1557159423828125,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 6,
+   "task": "pick",
+   "target": "green_small",
+   "n_cubes": 2,
+   "instruction": "grab the green cube",
+   "spec": "{\"task\": \"pick\", \"target\": [\"green\", \"small\"], \"dest\": null, \"cubes\": [[\"green\", \"small\"], [\"yellow\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 6,
+   "success": false,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": false,
+   "drop": false,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 170,
+   "max_jam_run": 1,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": -13.027341842651367,
+   "spawn_yaw_fold_deg": -13.027341842651367,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 7,
+   "task": "pick",
+   "target": "green_small",
+   "n_cubes": 3,
+   "instruction": "get hold of the green cube",
+   "spec": "{\"task\": \"pick\", \"target\": [\"green\", \"small\"], \"dest\": null, \"cubes\": [[\"blue\", \"small\"], [\"green\", \"small\"], [\"yellow\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 7,
+   "success": false,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": false,
+   "drop": false,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 156,
+   "max_jam_run": 1,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": -5.892121315002441,
+   "spawn_yaw_fold_deg": -5.892120361328125,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 8,
+   "task": "pick",
+   "target": "blue_large",
+   "n_cubes": 2,
+   "instruction": "lift the blue cube off the table",
+   "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"large\"], \"dest\": null, \"cubes\": [[\"yellow\", \"large\"], [\"blue\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 8,
+   "success": true,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": false,
+   "drop": false,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 190,
+   "max_jam_run": 1,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": 9.165685653686523,
+   "spawn_yaw_fold_deg": 9.165687561035156,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 9,
+   "task": "pick",
+   "target": "yellow_large",
+   "n_cubes": 3,
+   "instruction": "can you grab the large yellow cube",
+   "spec": "{\"task\": \"pick\", \"target\": [\"yellow\", \"large\"], \"dest\": null, \"cubes\": [[\"yellow\", \"large\"], [\"blue\", \"large\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 9,
+   "success": false,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": true,
+   "drop": true,
+   "distractor_disturbed": false,
+   "clean": false,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 199,
+   "max_jam_run": 1,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": 2.4144320487976074,
+   "spawn_yaw_fold_deg": 2.4144325256347656,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 10,
+   "task": "pick",
+   "target": "red_small",
+   "n_cubes": 3,
+   "instruction": "can you grab the red cube",
+   "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"small\"], \"dest\": null, \"cubes\": [[\"red\", \"small\"], [\"green\", \"small\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 10,
+   "success": false,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": true,
+   "drop": true,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 166,
+   "max_jam_run": 1,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": 5.540400981903076,
+   "spawn_yaw_fold_deg": 5.540401458740234,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 11,
+   "task": "pick",
+   "target": "red_small",
+   "n_cubes": 3,
+   "instruction": "get hold of the red cube",
+   "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"small\"], \"dest\": null, \"cubes\": [[\"yellow\", \"small\"], [\"blue\", \"small\"], [\"red\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 11,
+   "success": false,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": true,
+   "drop": true,
+   "distractor_disturbed": false,
+   "clean": false,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 149,
+   "max_jam_run": 1,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": 5.3434553146362305,
+   "spawn_yaw_fold_deg": 5.343456268310547,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 12,
+   "task": "pick",
+   "target": "yellow_large",
+   "n_cubes": 4,
+   "instruction": "get hold of the yellow cube",
+   "spec": "{\"task\": \"pick\", \"target\": [\"yellow\", \"large\"], \"dest\": null, \"cubes\": [[\"red\", \"large\"], [\"green\", \"large\"], [\"blue\", \"large\"], [\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 12,
+   "success": false,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": true,
+   "drop": true,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 210,
+   "max_jam_run": 0,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": -13.965004920959473,
+   "spawn_yaw_fold_deg": -13.965003967285156,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 13,
+   "task": "pick",
+   "target": "red_small",
+   "n_cubes": 3,
+   "instruction": "can you grab the red cube",
+   "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"small\"], \"dest\": null, \"cubes\": [[\"green\", \"small\"], [\"red\", \"small\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 13,
+   "success": false,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": false,
+   "drop": false,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 169,
+   "max_jam_run": 0,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": 4.012268543243408,
+   "spawn_yaw_fold_deg": 4.01226806640625,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 14,
+   "task": "pick",
+   "target": "red_small",
+   "n_cubes": 3,
+   "instruction": "grab the red cube",
+   "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"small\"], \"dest\": null, \"cubes\": [[\"red\", \"small\"], [\"green\", \"small\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 14,
+   "success": false,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": false,
+   "drop": false,
+   "distractor_disturbed": false,
+   "clean": true,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 165,
+   "max_jam_run": 0,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": 8.735457420349121,
+   "spawn_yaw_fold_deg": 8.735458374023438,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  },
+  {
+   "index": 15,
+   "task": "pick",
+   "target": "yellow_large",
+   "n_cubes": 2,
+   "instruction": "grab the yellow cube",
+   "spec": "{\"task\": \"pick\", \"target\": [\"yellow\", \"large\"], \"dest\": null, \"cubes\": [[\"blue\", \"large\"], [\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+   "T": 350,
+   "round": 0,
+   "slot": 15,
+   "success": true,
+   "wrong_grasp": false,
+   "wrong_dest": false,
+   "wrong_object": false,
+   "slam": false,
+   "slam_10N": false,
+   "slam_50N": false,
+   "jam": false,
+   "release_failure": false,
+   "release_fail_not_released": false,
+   "release_fail_off_destination": false,
+   "release_fail_not_clear": false,
+   "release_fail_unstable": false,
+   "early_close": true,
+   "drop": false,
+   "distractor_disturbed": false,
+   "clean": false,
+   "invalid": false,
+   "stack_release_rest_seen": false,
+   "stack_stable_after_release": false,
+   "grasp_confirmed": true,
+   "completion_step": 257,
+   "max_jam_run": 0,
+   "max_hand_table_or_pad_force": 0.0,
+   "spawn_yaw_deg": -11.473742485046387,
+   "spawn_yaw_fold_deg": -11.473743438720703,
+   "wrong_grasp_cube": -1,
+   "rest_cube": -1,
+   "rest_dest": -1
+  }
+ ]
+}

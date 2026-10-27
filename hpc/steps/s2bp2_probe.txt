@@ -1,0 +1,2 @@
+# GATES 2b sizes round 2 (task 008, reported): paired-target probe on the picked checkpoint 068880, validation probe stream 21655 (s2, paired, m 15), 100 layouts
+sim scripts/eval_policy.py --policy smolvla --ckpt /runs/s2bp2_VT/checkpoints/068880/pretrained_model --stage s2 --split train --visual nominal --paired-targets --groups 100 --seed 21655 --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --out /runs/e2bp2_probe/s2bp2_probe_s21655.json

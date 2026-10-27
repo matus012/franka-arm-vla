@@ -1,0 +1,13 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0 -- <home>\A_MAIN\ws\113_vla_tabletop\policy\.venv\Scripts\python.exe
+rootdir: <home>\A_MAIN\ws\113_vla_tabletop
+configfile: pyproject.toml
+plugins: anyio-4.15.1, platformdirs-4.12.2
+collecting ... collected 4 items
+
+tests/test_alignment.py::test_timing_rule PASSED                         [ 25%]
+tests/test_alignment.py::test_runtime_feed_follows_the_rule PASSED       [ 50%]
+tests/test_alignment.py::test_server_got_the_delayed_frame_at_query_steps_only PASSED [ 75%]
+tests/test_alignment.py::test_dataset_row_equals_runtime_feed PASSED     [100%]
+
+============================= 4 passed in 20.02s ==============================

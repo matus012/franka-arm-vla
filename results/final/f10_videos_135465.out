@@ -1,0 +1,617 @@
+=== f10_videos on <node> NVIDIA H200 start 2026-10-27T16:22:18+01:00 repo 290b3e0
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 1:00:00 cpus 8
+CUDA OK NVIDIA H200
+=== step 1 start 1793114542.543924335 sim scripts/eval_policy.py --policy-python /opt/policy/bin/python --replay /runs/e10_s1/f10_s1_a_seen_s11905.json --sheets 1 --videos 1,3
+[eval] server up after 20.0 s: {"policy": "smolvla", "n_action_steps": 10, "chunk_size": 50, "image_size": 224, "state_dim": 19, "action_dim": 5, "ckpt_sha": "c3dcef76f53e00e5954469970c25c38980a396723f7bbbf2b85919e6cc6688f5", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 224, 224], "observation.images.camera2": [3, 224, 224], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": false, "train_expert_only": false, "dtype": "float32", "sampling": "default", "k": 1, "guidance_w": null, "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 11905
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.620360 s, Mean: 2.620360 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.354351 s, Mean: 0.354351 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068036 s, Mean: 0.068036 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007095 s, Mean: 0.037566 s, Std: 0.043092 s, N: 2
+Contact sensor construction took: Last: 0.005980 s, Mean: 0.027037 s, Std: 0.035511 s, N: 3
+Contact sensor construction took: Last: 0.004359 s, Mean: 0.021368 s, Std: 0.031133 s, N: 4
+Initialize solver took: Last: 7.365733 s, Mean: 7.365733 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.399371 s, Mean: 11.399371 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.543047 s, Mean: 27.543047 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=224 policy=smolvla N=10 episodes 0..999 in 2 rounds (replay)
+[eval] pick round 0: 2/3 success (kept slots), 94 s; 3 eps, 85 eps/h
+[eval] pick round 1: 0/1 success (kept slots), 87 s; 4 eps, 67 eps/h
+REPLAY_SUMMARY=[{"index": 0, "types_recorded": ["drop", "early_close"], "types_replay": ["drop", "early_close"], "reproduced": true, "sheet": "/runs/e10_s1/frames/f10_s1_a_seen_s11905/f10_s1_a_seen_s11905_ep0_pick_drop_early_close.png"}, {"index": 1, "types_recorded": ["success"], "types_replay": ["success"], "reproduced": true, "sheet": "/runs/e10_s1/frames/f10_s1_a_seen_s11905/f10_s1_a_seen_s11905_ep1_pick_success.png", "video": "/runs/e10_s1/frames/f10_s1_a_seen_s11905/f10_s1_a_seen_s11905_ep1.mp4"}, {"index": 3, "types_recorded": ["success"], "types_replay": ["success"], "reproduced": true, "sheet": "/runs/e10_s1/frames/f10_s1_a_seen_s11905/f10_s1_a_seen_s11905_ep3_pick_success.png", "video": "/runs/e10_s1/frames/f10_s1_a_seen_s11905/f10_s1_a_seen_s11905_ep3.mp4"}, {"index": 209, "types_recorded": ["fail_other"], "types_replay": ["fail_other"], "reproduced": true, "sheet": "/runs/e10_s1/frames/f10_s1_a_seen_s11905/f10_s1_a_seen_s11905_ep209_pick_fail_other.png"}]
+NAN_GUARD_EVENTS=0
+=== step 1 done 1793114789.383961987
+=== step 2 start 1793114789.385131547 sim scripts/eval_policy.py --policy-python /opt/policy/bin/python --replay /runs/e2m_probe/s2m_probe_s21645.json --sheets 1 --videos 31,32,33
+[eval] server up after 21.0 s: {"policy": "smolvla", "n_action_steps": 10, "chunk_size": 50, "image_size": 224, "state_dim": 19, "action_dim": 5, "ckpt_sha": "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 224, 224], "observation.images.camera2": [3, 224, 224], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": false, "train_expert_only": false, "dtype": "float32", "sampling": "default", "k": 1, "guidance_w": null, "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 21645
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.561224 s, Mean: 2.561224 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.355314 s, Mean: 0.355314 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068380 s, Mean: 0.068380 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007159 s, Mean: 0.037769 s, Std: 0.043290 s, N: 2
+Contact sensor construction took: Last: 0.005926 s, Mean: 0.027155 s, Std: 0.035707 s, N: 3
+Contact sensor construction took: Last: 0.004278 s, Mean: 0.021436 s, Std: 0.031318 s, N: 4
+Initialize solver took: Last: 7.348547 s, Mean: 7.348547 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.305083 s, Mean: 11.305083 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.413699 s, Mean: 27.413699 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=224 policy=smolvla N=10 episodes 0..211 in 1 rounds (replay)
+[eval] pick round 0: 4/6 success (kept slots), 94 s; 6 eps, 169 eps/h
+REPLAY_SUMMARY=[{"index": 0, "types_recorded": ["success"], "types_replay": ["success"], "reproduced": true, "sheet": "/runs/e2m_probe/frames/s2m_probe_s21645/s2m_probe_s21645_ep0_pick_success.png"}, {"index": 4, "types_recorded": ["drop", "early_close"], "types_replay": ["drop", "early_close"], "reproduced": true, "sheet": "/runs/e2m_probe/frames/s2m_probe_s21645/s2m_probe_s21645_ep4_pick_drop_early_close.png"}, {"index": 31, "types_recorded": ["success"], "types_replay": ["success"], "reproduced": true, "sheet": "/runs/e2m_probe/frames/s2m_probe_s21645/s2m_probe_s21645_ep31_pick_success.png", "video": "/runs/e2m_probe/frames/s2m_probe_s21645/s2m_probe_s21645_ep31.mp4"}, {"index": 32, "types_recorded": ["success"], "types_replay": ["success"], "reproduced": true, "sheet": "/runs/e2m_probe/frames/s2m_probe_s21645/s2m_probe_s21645_ep32_pick_success.png", "video": "/runs/e2m_probe/frames/s2m_probe_s21645/s2m_probe_s21645_ep32.mp4"}, {"index": 33, "types_recorded": ["success"], "types_replay": ["success"], "reproduced": false, "sheet": "/runs/e2m_probe/frames/s2m_probe_s21645/s2m_probe_s21645_ep33_pick_success.png", "video": "/runs/e2m_probe/frames/s2m_probe_s21645/s2m_probe_s21645_ep33.mp4"}, {"index": 127, "types_recorded": ["wrong_object", "early_close"], "types_replay": ["wrong_object", "early_close"], "reproduced": true, "sheet": "/runs/e2m_probe/frames/s2m_probe_s21645/s2m_probe_s21645_ep127_pick_wrong_object_early_close.png"}]
+NAN_GUARD_EVENTS=0
+=== step 2 done 1793114950.608220929
+=== step 3 start 1793114950.609314134 sim scripts/eval_policy.py --policy-python /opt/policy/bin/python --replay /runs/e10_3aplace/f10_3aplace_a_seen_s11910.json --sheets 1 --videos 0,2
+[eval] server up after 21.0 s: {"policy": "smolvla", "n_action_steps": 10, "chunk_size": 50, "image_size": 224, "state_dim": 19, "action_dim": 5, "ckpt_sha": "f6adef8890138871f025994b9aeaa5714e67440c9601a272e001a998bc562f84", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 224, 224], "observation.images.camera2": [3, 224, 224], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": false, "train_expert_only": false, "dtype": "float32", "sampling": "default", "k": 1, "guidance_w": null, "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 11910
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.581262 s, Mean: 2.581262 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.384364 s, Mean: 0.384364 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068047 s, Mean: 0.068047 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007151 s, Mean: 0.037599 s, Std: 0.043060 s, N: 2
+Contact sensor construction took: Last: 0.006068 s, Mean: 0.027088 s, Std: 0.035475 s, N: 3
+Contact sensor construction took: Last: 0.004347 s, Mean: 0.021403 s, Std: 0.031117 s, N: 4
+Initialize solver took: Last: 7.297601 s, Mean: 7.297601 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.516870 s, Mean: 11.516870 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.588109 s, Mean: 27.588109 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=224 policy=smolvla N=10 episodes 0..999 in 3 rounds (replay)
+[eval] place round 0: 3/7 success (kept slots), 149 s; 7 eps, 138 eps/h
+[eval] place round 1: 0/1 success (kept slots), 138 s; 8 eps, 90 eps/h
+[eval] place round 5: 0/1 success (kept slots), 138 s; 9 eps, 71 eps/h
+REPLAY_SUMMARY=[{"index": 0, "types_recorded": ["success"], "types_replay": ["release_failure"], "reproduced": false, "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep0_place_success.png", "video": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep0.mp4"}, {"index": 1, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep1_place_early_close.png"}, {"index": 2, "types_recorded": ["success"], "types_replay": ["success"], "reproduced": true, "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep2_place_success.png", "video": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep2.mp4"}, {"index": 4, "types_recorded": ["release_failure", "early_close"], "types_replay": ["release_failure", "early_close"], "reproduced": true, "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep4_place_release_failure_early_close.png"}, {"index": 6, "types_recorded": ["drop", "early_close"], "types_replay": ["success"], "reproduced": false, "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep6_place_drop_early_close.png"}, {"index": 14, "types_recorded": ["jam", "release_failure", "early_close"], "types_replay": ["success"], "reproduced": false, "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep14_place_jam_release_failure_early_close.png"}, {"index": 19, "types_recorded": ["slam", "early_close"], "types_replay": ["early_close"], "reproduced": false, "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep19_place_slam_early_close.png"}, {"index": 166, "types_recorded": ["fail_other"], "types_replay": ["fail_other"], "reproduced": true, "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep166_place_fail_other.png"}, {"index": 684, "types_recorded": ["wrong_object", "release_failure", "drop", "early_close"], "types_replay": ["slam", "drop", "early_close"], "reproduced": false, "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep684_place_wrong_object_release_failure_drop_early_close.png"}]
+NAN_GUARD_EVENTS=0
+=== step 3 done 1793115442.717956950
+=== step 4 start 1793115442.719229794 sim scripts/eval_policy.py --policy-python /opt/policy/bin/python --replay /runs/e10_3apick/f10_3apick_d_para_s11903.json --sheets 1 --videos 0,1,7,8,12
+[eval] server up after 21.0 s: {"policy": "smolvla", "n_action_steps": 10, "chunk_size": 50, "image_size": 224, "state_dim": 19, "action_dim": 5, "ckpt_sha": "f6adef8890138871f025994b9aeaa5714e67440c9601a272e001a998bc562f84", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 224, 224], "observation.images.camera2": [3, 224, 224], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": false, "train_expert_only": false, "dtype": "float32", "sampling": "default", "k": 1, "guidance_w": null, "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 11903
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.606441 s, Mean: 2.606441 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.355205 s, Mean: 0.355205 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068680 s, Mean: 0.068680 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007046 s, Mean: 0.037863 s, Std: 0.043582 s, N: 2
+Contact sensor construction took: Last: 0.006034 s, Mean: 0.027253 s, Std: 0.035880 s, N: 3
+Contact sensor construction took: Last: 0.004318 s, Mean: 0.021519 s, Std: 0.031461 s, N: 4
+Initialize solver took: Last: 7.367155 s, Mean: 7.367155 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.322946 s, Mean: 11.322946 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.449536 s, Mean: 27.449536 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=224 policy=smolvla N=10 episodes 0..999 in 1 rounds (replay)
+[eval] pick round 0: 2/10 success (kept slots), 97 s; 10 eps, 276 eps/h
+REPLAY_SUMMARY=[{"index": 0, "types_recorded": ["drop"], "types_replay": ["drop"], "reproduced": true, "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep0_pick_drop.png", "video": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep0.mp4"}, {"index": 1, "types_recorded": ["drop"], "types_replay": ["drop", "early_close"], "reproduced": false, "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep1_pick_drop.png", "video": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep1.mp4"}, {"index": 2, "types_recorded": ["fail_other"], "types_replay": ["success"], "reproduced": false, "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep2_pick_fail_other.png"}, {"index": 3, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep3_pick_early_close.png"}, {"index": 5, "types_recorded": ["success"], "types_replay": ["success"], "reproduced": true, "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep5_pick_success.png"}, {"index": 7, "types_recorded": ["drop", "early_close"], "types_replay": ["drop", "early_close"], "reproduced": true, "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep7_pick_drop_early_close.png", "video": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep7.mp4"}, {"index": 8, "types_recorded": ["drop", "early_close"], "types_replay": ["drop", "early_close"], "reproduced": true, "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep8_pick_drop_early_close.png", "video": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep8.mp4"}, {"index": 12, "types_recorded": ["jam", "drop"], "types_replay": ["drop"], "reproduced": false, "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep12_pick_jam_drop.png", "video": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep12.mp4"}, {"index": 47, "types_recorded": ["slam", "early_close"], "types_replay": ["early_close"], "reproduced": false, "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep47_pick_slam_early_close.png"}, {"index": 85, "types_recorded": ["wrong_object", "early_close"], "types_replay": ["wrong_object", "early_close"], "reproduced": true, "sheet": "/runs/e10_3apick/frames/f10_3apick_d_para_s11903/f10_3apick_d_para_s11903_ep85_pick_wrong_object_early_close.png"}]
+NAN_GUARD_EVENTS=0
+=== step 4 done 1793115606.439204662
+=== step 5 start 1793115606.440289004 sim scripts/eval_policy.py --policy-python /opt/policy/bin/python --replay /runs/e10_2m/f10_2m_c_heldout_s11902.json --sheets 1 --videos 1,2,4,5,6
+[eval] server up after 21.0 s: {"policy": "smolvla", "n_action_steps": 10, "chunk_size": 50, "image_size": 224, "state_dim": 19, "action_dim": 5, "ckpt_sha": "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 224, 224], "observation.images.camera2": [3, 224, 224], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": false, "train_expert_only": false, "dtype": "float32", "sampling": "default", "k": 1, "guidance_w": null, "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 11902
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.494316 s, Mean: 2.494316 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.365851 s, Mean: 0.365851 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068768 s, Mean: 0.068768 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007043 s, Mean: 0.037906 s, Std: 0.043647 s, N: 2
+Contact sensor construction took: Last: 0.005901 s, Mean: 0.027237 s, Std: 0.035972 s, N: 3
+Contact sensor construction took: Last: 0.004256 s, Mean: 0.021492 s, Std: 0.031538 s, N: 4
+Initialize solver took: Last: 7.378885 s, Mean: 7.378885 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.382966 s, Mean: 11.382966 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.568401 s, Mean: 27.568401 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=224 policy=smolvla N=10 episodes 0..999 in 3 rounds (replay)
+[eval] pick round 0: 1/8 success (kept slots), 95 s; 8 eps, 223 eps/h
+[eval] pick round 2: 0/1 success (kept slots), 87 s; 9 eps, 150 eps/h
+[eval] pick round 7: 0/1 success (kept slots), 87 s; 10 eps, 119 eps/h
+REPLAY_SUMMARY=[{"index": 0, "types_recorded": ["success"], "types_replay": ["success"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep0_pick_success.png"}, {"index": 1, "types_recorded": ["wrong_object", "early_close"], "types_replay": ["wrong_object", "early_close"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep1_pick_wrong_object_early_close.png", "video": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep1.mp4"}, {"index": 2, "types_recorded": ["wrong_object", "early_close"], "types_replay": ["wrong_object", "early_close"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep2_pick_wrong_object_early_close.png", "video": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep2.mp4"}, {"index": 4, "types_recorded": ["wrong_object", "early_close"], "types_replay": ["wrong_object", "early_close"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep4_pick_wrong_object_early_close.png", "video": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep4.mp4"}, {"index": 5, "types_recorded": ["wrong_object", "early_close"], "types_replay": ["wrong_object", "early_close"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep5_pick_wrong_object_early_close.png", "video": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep5.mp4"}, {"index": 6, "types_recorded": ["wrong_object", "early_close"], "types_replay": ["wrong_object", "early_close"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep6_pick_wrong_object_early_close.png", "video": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep6.mp4"}, {"index": 10, "types_recorded": ["drop", "early_close"], "types_replay": ["drop", "early_close"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep10_pick_drop_early_close.png"}, {"index": 37, "types_recorded": ["wrong_object", "jam", "early_close"], "types_replay": ["wrong_object", "jam", "early_close"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep37_pick_wrong_object_jam_early_close.png"}, {"index": 356, "types_recorded": ["fail_other"], "types_replay": ["fail_other"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep356_pick_fail_other.png"}, {"index": 964, "types_recorded": ["slam", "early_close"], "types_replay": ["slam", "early_close"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_c_heldout_s11902/f10_2m_c_heldout_s11902_ep964_pick_slam_early_close.png"}]
+NAN_GUARD_EVENTS=0
+=== step 5 done 1793115942.772988891
+=== step 6 start 1793115942.774119812 sim scripts/eval_policy.py --policy-python /opt/policy/bin/python --replay /runs/e10_2m/f10_2m_b_rand_s11901.json --sheets 1 --videos 0,1,4,5
+[eval] server up after 21.0 s: {"policy": "smolvla", "n_action_steps": 10, "chunk_size": 50, "image_size": 224, "state_dim": 19, "action_dim": 5, "ckpt_sha": "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 224, 224], "observation.images.camera2": [3, 224, 224], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": false, "train_expert_only": false, "dtype": "float32", "sampling": "default", "k": 1, "guidance_w": null, "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 11901
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.564988 s, Mean: 2.564988 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.355947 s, Mean: 0.355947 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068702 s, Mean: 0.068702 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007145 s, Mean: 0.037924 s, Std: 0.043527 s, N: 2
+Contact sensor construction took: Last: 0.006037 s, Mean: 0.027295 s, Std: 0.035864 s, N: 3
+Contact sensor construction took: Last: 0.004340 s, Mean: 0.021556 s, Std: 0.031452 s, N: 4
+Initialize solver took: Last: 7.374914 s, Mean: 7.374914 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.383209 s, Mean: 11.383209 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.533161 s, Mean: 27.533161 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=224 policy=smolvla N=10 episodes 0..999 in 3 rounds (replay)
+[eval] pick round 0: 1/7 success (kept slots), 99 s; 7 eps, 190 eps/h
+[eval] pick round 1: 0/1 success (kept slots), 88 s; 8 eps, 130 eps/h
+[eval] pick round 3: 0/1 success (kept slots), 88 s; 9 eps, 105 eps/h
+REPLAY_SUMMARY=[{"index": 0, "types_recorded": ["success"], "types_replay": ["success"], "reproduced": false, "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep0_pick_success.png", "video": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep0.mp4"}, {"index": 1, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep1_pick_early_close.png", "video": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep1.mp4"}, {"index": 4, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep4_pick_early_close.png", "video": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep4.mp4"}, {"index": 5, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep5_pick_early_close.png", "video": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep5.mp4"}, {"index": 9, "types_recorded": ["slam", "early_close"], "types_replay": ["slam", "early_close"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep9_pick_slam_early_close.png"}, {"index": 20, "types_recorded": ["drop", "early_close"], "types_replay": ["drop", "early_close"], "reproduced": false, "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep20_pick_drop_early_close.png"}, {"index": 71, "types_recorded": ["wrong_object", "early_close"], "types_replay": ["wrong_object", "early_close"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep71_pick_wrong_object_early_close.png"}, {"index": 158, "types_recorded": ["jam", "early_close"], "types_replay": ["slam", "jam", "early_close"], "reproduced": false, "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep158_pick_jam_early_close.png"}, {"index": 437, "types_recorded": ["fail_other"], "types_replay": ["fail_other"], "reproduced": true, "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep437_pick_fail_other.png"}]
+NAN_GUARD_EVENTS=0
+=== step 6 done 1793116285.191084728
+=== f10_videos done 2026-10-27T16:51:25+01:00

@@ -1,0 +1,9 @@
+# GATES Stage 4 re-plan (e2cef02) instruments B-I2 (input parity, CPU, + 3 mutants) and B-I4 (mix / sampler from steps.jsonl, + 2 mutants) for seed 2. FILL: STEP_C100 (final checkpoint step; parity is run on it). Mutants must report pass=false (their steps are non-fatal: results are read from the JSONs).
+# sbatch (lead): sbatch --time=00:30:00 --job-name=k4b_2 hpc/slurm/seq.sbatch k4b_seed2 hpc/steps/s4b_checks_seed2.txt   (pol venv; CPU work, GPU not used)
+pol scripts/s4b_mix.py --dataset /data/datasets/0c_s4_all_rl224_y15g --run /runs/s4_baseline_seed2 --out /runs/k4b_seed2/b_i4_mix.json
+pol scripts/s4b_mix.py --dataset /data/datasets/0c_s4_all_rl224_y15g --run /runs/s4_baseline_seed2 --out /runs/k4b_seed2/b_i4_mix_drop-stream.json --mutant drop-stream
+pol scripts/s4b_mix.py --dataset /data/datasets/0c_s4_all_rl224_y15g --run /runs/s4_baseline_seed2 --out /runs/k4b_seed2/b_i4_mix_seed1.json --mutant seed1
+pol scripts/s4b_parity.py --dataset /data/datasets/0c_s4_all_rl224_y15g --ckpt /runs/s4_baseline_seed2/ckpt_057276 --out /runs/k4b_seed2/b_i2_parity.json --video-backend torchcodec
+pol scripts/s4b_parity.py --dataset /data/datasets/0c_s4_all_rl224_y15g --ckpt /runs/s4_baseline_seed2/ckpt_057276 --out /runs/k4b_seed2/b_i2_parity_bgr.json --video-backend torchcodec --mutant bgr
+pol scripts/s4b_parity.py --dataset /data/datasets/0c_s4_all_rl224_y15g --ckpt /runs/s4_baseline_seed2/ckpt_057276 --out /runs/k4b_seed2/b_i2_parity_unnormalised.json --video-backend torchcodec --mutant unnormalised
+pol scripts/s4b_parity.py --dataset /data/datasets/0c_s4_all_rl224_y15g --ckpt /runs/s4_baseline_seed2/ckpt_057276 --out /runs/k4b_seed2/b_i2_parity_swapped_cams.json --video-backend torchcodec --mutant swapped_cams

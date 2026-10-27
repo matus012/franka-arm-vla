@@ -1,0 +1,16 @@
+{
+ "log": "results\\s3a1p\\train\\t3a1p_VT_134703.out",
+ "margin_recorded": 2.7950166951391058,
+ "log_contrastive": [
+  [
+   "1.0",
+   "2.7950166951391058",
+   "True"
+  ]
+ ],
+ "log_init_sha256": [
+  "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64"
+ ],
+ "log_ok": true,
+ "ok": true
+}

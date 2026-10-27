@@ -1,0 +1,11 @@
+{
+ "ckpt": "/runs/s3a1p_VT/checkpoints/008877/pretrained_model",
+ "ckpt_sha": "b1a5d24061bd74d8994ccb103e29b42ab7023c2a63745e4c3bc5423d135d4c3d",
+ "val_episodes": 398,
+ "samples": 59434,
+ "action_override": null,
+ "task_swap": "none",
+ "val_loss": 0.037205940171202226,
+ "dtype": "float32 (served)",
+ "git_sha": "6595627"
+}

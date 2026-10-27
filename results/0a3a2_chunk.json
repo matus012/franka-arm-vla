@@ -1,0 +1,11 @@
+{
+ "git_sha": "9e0d0affaceaab29dcfb0e31ddf7c1aba52f1c56",
+ "period": 3,
+ "latency": 1,
+ "candidates": {
+  "5": true,
+  "10": true,
+  "20": true
+ },
+ "chosen_N": 20
+}

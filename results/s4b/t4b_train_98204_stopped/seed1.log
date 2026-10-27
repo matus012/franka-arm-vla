@@ -1,0 +1,3 @@
+[train] device=cuda cuda_available=True
+[train] episodes train=7600 val=400 rows=3869800 S(train windows/epoch)=1221893 val windows=64490 steps_per_epoch=9546 epochs=6 total_steps=57276 save_steps=[14319, 28638, 42957, 57276] max_steps=None
+[train] params=855,634

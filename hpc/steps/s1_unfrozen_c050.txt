@@ -1,0 +1,4 @@
+# GATES Stage 1, arm unfrozen: early abort (c) offline val loss at the 25 % / 50 % checkpoints + checkpoint-pick / early abort (d) closed loop at 50 % (episodes 0-299, validation seed 21600)
+pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s1_pick --ckpt /runs/s1_unfrozen/checkpoints/005166/pretrained_model --out /runs/e1_unfrozen_c050/vloss_005166.json
+pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s1_pick --ckpt /runs/s1_unfrozen/checkpoints/010332/pretrained_model --out /runs/e1_unfrozen_c050/vloss_010332.json
+sim scripts/eval_policy.py --policy smolvla --ckpt /runs/s1_unfrozen/checkpoints/010332/pretrained_model --episodes 300 --stage s1 --split train --visual nominal --seed 21600 --envs 128 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --out /runs/e1_unfrozen_c050/s1_unfrozen_val_c050_s21600.json

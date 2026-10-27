@@ -1,0 +1,43 @@
+{
+ "layout_id": 1,
+ "plain": [
+  {
+   "index": 2,
+   "instruction": "please pick up the red cube",
+   "success": false,
+   "verdict": "missed grasp"
+  },
+  {
+   "index": 3,
+   "instruction": "pick the blue cube up",
+   "success": false,
+   "verdict": "wrong cube"
+  },
+  {
+   "index": 4,
+   "instruction": "pick the large yellow cube up",
+   "success": true,
+   "verdict": "success"
+  }
+ ],
+ "final": [
+  {
+   "index": 2,
+   "instruction": "please pick up the red cube",
+   "success": true,
+   "verdict": "success"
+  },
+  {
+   "index": 3,
+   "instruction": "pick the blue cube up",
+   "success": true,
+   "verdict": "success"
+  },
+  {
+   "index": 4,
+   "instruction": "pick the large yellow cube up",
+   "success": true,
+   "verdict": "success"
+  }
+ ]
+}

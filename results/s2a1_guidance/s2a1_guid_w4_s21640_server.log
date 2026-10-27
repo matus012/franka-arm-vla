@@ -1,0 +1,11 @@
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[server] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  65%|██████▍   | 317/489 [00:00<00:00, 3161.99it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 3947.63it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[server] smolvla on cuda:0: inputs ['observation.images.camera1', 'observation.images.camera2', 'observation.state'], outputs ['action'], n_action_steps 10, chunk 50, freeze_vision_encoder False, train_expert_only False, weights sha256 07e87cc6f5b2533ab4b931e356e7cf944e6b53d49bbf2cc0109ab416290cb3ff, sampling default (k 8), guidance_w 4.0
+[server] loaded in 19.6 s, host RSS 1978 MiB
+[server] listening on 127.0.0.1:46783
+[server] client closed; exiting

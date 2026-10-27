@@ -1,0 +1,131 @@
+{
+ "source": "/runs/e10_3aplace/f10_3aplace_a_seen_s11910.json",
+ "chosen": [
+  0,
+  1,
+  2,
+  4,
+  6,
+  14,
+  19,
+  166,
+  684
+ ],
+ "rounds": 3,
+ "wall_s": 458.5,
+ "git_sha": "290b3e0",
+ "frames": [
+  {
+   "index": 0,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "release_failure"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep0_place_success.png",
+   "video": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep0.mp4"
+  },
+  {
+   "index": 1,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep1_place_early_close.png"
+  },
+  {
+   "index": 2,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep2_place_success.png",
+   "video": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep2.mp4"
+  },
+  {
+   "index": 4,
+   "types_recorded": [
+    "release_failure",
+    "early_close"
+   ],
+   "types_replay": [
+    "release_failure",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep4_place_release_failure_early_close.png"
+  },
+  {
+   "index": 6,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep6_place_drop_early_close.png"
+  },
+  {
+   "index": 14,
+   "types_recorded": [
+    "jam",
+    "release_failure",
+    "early_close"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep14_place_jam_release_failure_early_close.png"
+  },
+  {
+   "index": 19,
+   "types_recorded": [
+    "slam",
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep19_place_slam_early_close.png"
+  },
+  {
+   "index": 166,
+   "types_recorded": [
+    "fail_other"
+   ],
+   "types_replay": [
+    "fail_other"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep166_place_fail_other.png"
+  },
+  {
+   "index": 684,
+   "types_recorded": [
+    "wrong_object",
+    "release_failure",
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "slam",
+    "drop",
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e10_3aplace/frames/f10_3aplace_a_seen_s11910/f10_3aplace_a_seen_s11910_ep684_place_wrong_object_release_failure_drop_early_close.png"
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+# GATES Stage 2M (task 006): checkpoint pick, 100 % checkpoint, validation 21640 eps 0-299; early signal step 2 ratio (21645, reported); offline val loss + MAE (reported)
+sim scripts/eval_policy.py --policy smolvla --stage s2a --split train --visual nominal --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --episodes 300 --seed 21640 --ckpt /runs/s2m_VT/checkpoints/068880/pretrained_model --out /runs/e2m_c100/s2m_VT_val_c100_s21640.json
+pol scripts/g3_probe.py divonly --ckpt /runs/s2m_VT/checkpoints/068880/pretrained_model --dumps /runs/g3_diag/t0_p21645.npz /runs/g3_diag/t0_u21640.npz --out /runs/e2m_c100/div_068880
+pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s2a_pair6k_rl224_y15 --ckpt /runs/s2m_VT/checkpoints/068880/pretrained_model --out /runs/e2m_c100/vloss_068880.json
+pol scripts/s0b3_prep.py offline --val-only --dataset /data/datasets/0c_s2a_pair6k_rl224_y15 --ckpt /runs/s2m_VT/checkpoints/068880/pretrained_model --out /runs/e2m_c100/offline_val_068880.json --n-action-steps 10

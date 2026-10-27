@@ -1,0 +1,61 @@
+{
+ "items": {
+  "set0_count": true,
+  "set1_count": true,
+  "set2_count": true,
+  "set3_count": true,
+  "union_count": true,
+  "sets_keys_pairwise_disjoint": true,
+  "union_keys_eq_sets": true,
+  "set0_episodes_identical": true,
+  "set1_episodes_identical": true,
+  "set2_episodes_identical": true,
+  "set3_episodes_identical": true,
+  "split_rule_per_stream": true,
+  "label_relabel_setpoint": true,
+  "columns_exact_action_eq_r": true,
+  "rows_per_episode_eq_T": true,
+  "export_counts_eq_sidecar": true,
+  "split_json_eq_sidecar": true
+ },
+ "S_option_B_train_windows_per_epoch": {
+  "total": 1221893,
+  "per_stream": {
+   "s2_32500": 220400,
+   "s3a_32600": 347700,
+   "s3b_32700": 347700,
+   "s4_32100": 306093
+  },
+  "per_task": {
+   "pick": 292436,
+   "place": 468480,
+   "stack": 460977
+  },
+  "train_episodes": 7600
+ },
+ "only_in_union": [],
+ "missing_from_union": [],
+ "set_field_diffs": [
+  [],
+  [],
+  [],
+  []
+ ],
+ "split_violations": [],
+ "union": "/data/datasets/0c_s4_all_rl224_y15g",
+ "task_set": "None",
+ "pick_set": "None",
+ "sets": [
+  "/data/datasets/0c_s2_pick_rl224_y15g",
+  "/data/datasets/0c_s3a_place_rl224_y15g",
+  "/data/datasets/0c_s3b_stack_rl224_y15g",
+  "/data/datasets/0c_s4r_mix_rl224_y15"
+ ],
+ "kept": 2000,
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "episodes_checked": 8000
+ },
+ "pass": true
+}

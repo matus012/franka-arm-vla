@@ -1,0 +1,22 @@
+=== a0c_all on <node> cpu x16 start 2026-10-02T02:27:45+02:00
+{
+ "dataset": "/data/datasets/0c_s1_pick",
+ "violations": 0,
+ "first": []
+}
+{
+ "dataset": "/data/datasets/0c_s2_pick",
+ "violations": 0,
+ "first": []
+}
+{
+ "dataset": "/data/datasets/0c_s3a_place",
+ "violations": 0,
+ "first": []
+}
+{
+ "dataset": "/data/datasets/0c_s3b_stack",
+ "violations": 0,
+ "first": []
+}
+=== a0c_all done 2026-10-02T02:31:28+02:00

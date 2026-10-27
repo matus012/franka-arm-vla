@@ -1,0 +1,2 @@
+# GATES Stage 1 test, attempt 1 (U, relabelled labels; checkpoint pick = 100 %, results/s1a1_unfrozen_val.json, committed before this run): episodes 0-999 of test seed 11501, once, default sampling
+sim scripts/eval_policy.py --policy smolvla --ckpt /runs/s1a1_unfrozen/checkpoints/020664/pretrained_model --episodes 1000 --stage s1 --split train --visual nominal --seed 11501 --envs 128 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --out /runs/e1a1_test/s1_unfrozen_test_s11501_1.json --bars "pick.success>=0.90,pick.slam<0.05,pick.jam<0.02"

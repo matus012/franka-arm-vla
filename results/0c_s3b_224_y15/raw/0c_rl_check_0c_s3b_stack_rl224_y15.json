@@ -1,0 +1,205 @@
+{
+ "dataset": "/data/datasets/0c_s3b_stack_rl224_y15",
+ "name": "0c_s3b_stack_rl224_y15",
+ "label": "relabel_setpoint",
+ "episodes": 2000,
+ "rows": 1100000,
+ "T": [
+  550
+ ],
+ "image_size": 224,
+ "expect_yaw": 15.0,
+ "kept": 2000,
+ "yaw": {
+  "expected_m": 15.0,
+  "n": 2000,
+  "spawn_fold": {
+   "min": -14.994064331054688,
+   "max": 14.964210510253906,
+   "mean": 0.00401573371887207,
+   "std": 8.639247338542125
+  },
+  "regenerated_fold": {
+   "min": -14.994064722507279,
+   "max": 14.96420867998814,
+   "mean": 0.004015755546122221,
+   "std": 8.639247255090329
+  }
+ },
+ "source_successful_episodes": 2243,
+ "kept_stream_indices": [
+  0,
+  2054
+ ],
+ "video_check": {
+  "episodes": [
+   0,
+   222,
+   444,
+   666,
+   888,
+   1111,
+   1333,
+   1555,
+   1777,
+   1999
+  ],
+  "rows": 5500,
+  "psnr_min": 38.75231596638187,
+  "psnr_mean": 42.71712237332951,
+  "identity_fail": 0,
+  "backend": "torchcodec"
+ },
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "noise_std_per_arm_dim": [
+   0.09997496753931046,
+   0.09995149075984955,
+   0.0998985543847084,
+   0.09997938573360443
+  ],
+  "noise_rows_per_dim": [
+   1084854,
+   1060303,
+   1045341,
+   1088458
+  ],
+  "claw_exec_ne_label_rows": 0,
+  "mutant_action_exec_flagged_episodes": 2000,
+  "episodes_checked": 2000,
+  "state_dims_std_lt_1e-6": [],
+  "state_std": [
+   0.22843708926572695,
+   0.32900399455720847,
+   0.15425763271996537,
+   0.40239200787550256,
+   0.07132871169498023,
+   0.19843260932500964,
+   0.4161341486312618,
+   0.007652700967936565,
+   0.007684991591076147,
+   0.20215139787831404,
+   0.3840879207433256,
+   0.20109213791423822,
+   0.38500793453248816,
+   0.11583884221688524,
+   0.5568026766236459,
+   0.443049040911266,
+   0.04171325312870026,
+   0.04177272246390971,
+   0.012406156392507351
+  ]
+ },
+ "sheet": {
+  "png": "0c_s3b_stack_rl224_y15.png",
+  "episodes": [
+   {
+    "lerobot_episode": 0,
+    "episode_index": 0,
+    "instruction": "stack the red cube on the green cube",
+    "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"large\"], \"dest\": [\"green\", \"small\"], \"cubes\": [[\"green\", \"small\"], [\"blue\", \"large\"], [\"yellow\", \"large\"], [\"yellow\", \"small\"], [\"red\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      107
+     ],
+     [
+      "carry",
+      195
+     ],
+     [
+      "release",
+      284
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1000,
+    "episode_index": 1026,
+    "instruction": "stack the large yellow cube on top of the small blue cube",
+    "spec": "{\"task\": \"stack\", \"target\": [\"yellow\", \"large\"], \"dest\": [\"blue\", \"small\"], \"cubes\": [[\"green\", \"small\"], [\"blue\", \"large\"], [\"yellow\", \"large\"], [\"red\", \"large\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      120
+     ],
+     [
+      "carry",
+      225
+     ],
+     [
+      "release",
+      330
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1999,
+    "episode_index": 2054,
+    "instruction": "please stack the blue cube on the large yellow cube",
+    "spec": "{\"task\": \"stack\", \"target\": [\"blue\", \"small\"], \"dest\": [\"yellow\", \"large\"], \"cubes\": [[\"yellow\", \"large\"], [\"blue\", \"small\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      129
+     ],
+     [
+      "carry",
+      237
+     ],
+     [
+      "release",
+      346
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   }
+  ]
+ },
+ "items": {
+  "1_count_eq_K": true,
+  "1_rows_eq_K_T": true,
+  "1_rows_per_episode_eq_T": true,
+  "1_columns_exact_action_eq_r": true,
+  "1_image_size": true,
+  "1_psnr_min_ge_35": true,
+  "1_frame_identity": true,
+  "1_kept_are_first_K_successful_in_order": true,
+  "1_split_rule": true,
+  "1_cube_yaw_max_deg_eq_expected": true,
+  "yaw_spawn_attrs_present": true,
+  "yaw_spawn_fold_in_range": true,
+  "yaw_regenerated_layout_fold_in_range": true,
+  "yaw_spawn_agrees_with_regenerated_layout": true,
+  "yaw_coverage": true,
+  "4a_noise_std_in_band": true,
+  "4a_claw_identical": true
+ },
+ "pass_items_1_4a": true,
+ "git_sha": "3ebf4bc",
+ "wall_s": 618.1
+}

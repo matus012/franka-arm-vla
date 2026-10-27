@@ -1,0 +1,3 @@
+# GATES Stage 2 redesign #2 part 2a item 3(b): executability replay of r on s2a validation 21640 eps 0-127 at m 15 (B >= 95 % of A's successes); then expert close-up frames of precondition 1 (item 5 sheet)
+sim scripts/s1_relabel.py replay --stages s2a:21640 --episodes 128 --envs 128 --cube-yaw-max-deg 15 --out /runs/rls2a/replay_s2a_s21640.json
+sim scripts/eval_policy.py --replay /runs/s2a_pre/s2a_expert_fresh_s11830.json --sheets 3 --policy-python /opt/policy/bin/python

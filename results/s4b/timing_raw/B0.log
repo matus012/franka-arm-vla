@@ -1,0 +1,349 @@
+[train] device=cuda cuda_available=True
+[train] episodes train=3800 val=200 rows=1800000 S(train windows/epoch)=568100 val windows=29900 steps_per_epoch=4438 epochs=1 total_steps=4438 save_steps=[] max_steps=350
+[train] params=855,634
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-xnjoetar'
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-8spkn77l'
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-su_ijteu'
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-chxagd4y'
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-162l849e'
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-2htgizx3'
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-zh75x9kq'
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-j5qhghcl'
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-ig3ymoqx'
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-i0uxstzv'
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-r6c9nauq'
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-1tlz44xl'
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-wasz3kos'
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-r5e9xhiw'
+Traceback (most recent call last):
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/util.py", line 136, in _remove_temp_dir
+    rmtree(tempdir, onerror=onerror)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 759, in rmtree
+    _rmtree_safe_fd(stack, onexc)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 703, in _rmtree_safe_fd
+    onexc(func, path, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 700, in _rmtree_safe_fd
+    onexc(os.unlink, fullname, err)
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/shutil.py", line 698, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+OSError: [Errno 16] Device or resource busy: '/cache/tmp/pymp-38h10yhw'
+[train] done: timing {'warmup_steps': 50, 'timed_steps': 300, 'samples': 38400, 'gpu_s_per_sample': 0.0005914277326276836, 'compute_s_per_sample': 0.0005195163736789254, 'complete': True} early_abort {'a_nan': False, 'b': None, 'c': None}

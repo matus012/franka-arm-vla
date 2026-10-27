@@ -1,0 +1,2 @@
+# GATES Stage 2 re-plan (c691d00): checkpoint pick, 75 % checkpoint, validation seed 21620 eps 0-299 (s2 / train, m 15, N 10, H 224, default sampling)
+sim scripts/eval_policy.py --policy smolvla --stage s2 --split train --visual nominal --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --episodes 300 --seed 21620 --ckpt /runs/s2_U/checkpoints/025830/pretrained_model --out /runs/e2_c075/s2_U_val_c075_s21620.json

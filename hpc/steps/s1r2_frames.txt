@@ -1,0 +1,2 @@
+# GATES Stage 1 redesign attempt 1 close-up frames (protocol replay of test round 0): 3 successes + 13 failures (the first 9 drop / early close, 12 early close only, and the never-grasped 39 / 70 / 83 / 120, three of them with no flag)
+sim scripts/eval_policy.py --replay /runs/e1r2_test/s1r2_U_test_s11503.json --sheets 3 --videos 4,10,12,13,14,17,20,25,29,39,70,83,120 --policy-python /opt/policy/bin/python

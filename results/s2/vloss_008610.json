@@ -1,0 +1,10 @@
+{
+ "ckpt": "/runs/s2_U/checkpoints/008610/pretrained_model",
+ "ckpt_sha": "d41283be0262db38365e72300ab177ee4e0b7af26276a2b4101584b1c75a2ce7",
+ "val_episodes": 100,
+ "samples": 11600,
+ "action_override": null,
+ "val_loss": 0.0234513366492144,
+ "dtype": "float32 (served)",
+ "git_sha": "3ebf4bc"
+}

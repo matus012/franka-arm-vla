@@ -1,0 +1,6 @@
+# 0B.3 diagnosis: offline per-query arm MAE (served fp32, noise seed 0) vs training step (is the approach fit still improving?)
+pol scripts/s0b3_prep.py offline --dataset /data/datasets/0b3_overfit --ckpt /runs/0b3_train/checkpoints/001000/pretrained_model --out /runs/0b3_diag/offline_001000.json
+pol scripts/s0b3_prep.py offline --dataset /data/datasets/0b3_overfit --ckpt /runs/0b3_train/checkpoints/002000/pretrained_model --out /runs/0b3_diag/offline_002000.json
+pol scripts/s0b3_prep.py offline --dataset /data/datasets/0b3_overfit --ckpt /runs/0b3_train/checkpoints/003000/pretrained_model --out /runs/0b3_diag/offline_003000.json
+pol scripts/s0b3_prep.py offline --dataset /data/datasets/0b3_overfit --ckpt /runs/0b3_train/checkpoints/004000/pretrained_model --out /runs/0b3_diag/offline_004000.json
+pol scripts/s0b3_prep.py offline --dataset /data/datasets/0b3_overfit --ckpt /runs/0b3_train/checkpoints/005000/pretrained_model --out /runs/0b3_diag/offline_005000.json

@@ -1,0 +1,733 @@
+{
+ "dataset": "/data/datasets/0c_s3b_stack_rl224_y15g",
+ "name": "0c_s3b_stack_rl224_y15g",
+ "kind": "grey",
+ "episodes": 2000,
+ "rows": 1100000,
+ "T_per_task": {
+  "stack": 550
+ },
+ "image_size": 224,
+ "expect_yaw": 15.0,
+ "kept": 2000,
+ "expect_palette": "s4r",
+ "yaw": {
+  "expected_m": 15.0,
+  "n": 2000,
+  "spawn_fold": {
+   "min": -14.994064331054688,
+   "max": 14.964210510253906,
+   "mean": 0.060187312126159666,
+   "std": 8.646872709647193
+  },
+  "regenerated_fold": {
+   "min": -14.994064722507279,
+   "max": 14.96420867998814,
+   "mean": 0.060187333450414694,
+   "std": 8.646872626738421
+  }
+ },
+ "source_successful_episodes": 2238,
+ "kept_stream_indices": [
+  0,
+  2057
+ ],
+ "video_check": {
+  "episodes": [
+   0,
+   222,
+   444,
+   666,
+   888,
+   1111,
+   1333,
+   1555,
+   1777,
+   1999
+  ],
+  "rows": 5500,
+  "psnr_min": 39.13265061899817,
+  "psnr_mean": 43.206137401470635,
+  "identity_fail": 0,
+  "backend": "torchcodec"
+ },
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "noise_std_per_arm_dim": [
+   0.09997370094060898,
+   0.09991942346096039,
+   0.09989248961210251,
+   0.09997596591711044
+  ],
+  "noise_rows_per_dim": [
+   1084940,
+   1060330,
+   1045363,
+   1088439
+  ],
+  "claw_exec_ne_label_rows": 0,
+  "mutant_action_exec_flagged_episodes": 2000,
+  "episodes_checked": 2000,
+  "state_dims_std_lt_1e-6": [],
+  "state_std": [
+   0.22850419946431014,
+   0.328947297970169,
+   0.15429097194872698,
+   0.40192835730128607,
+   0.07124336983611049,
+   0.19820127523564426,
+   0.4164358493245557,
+   0.00763425965468947,
+   0.007693362174972272,
+   0.2021042612797155,
+   0.3841948594510826,
+   0.200996044592423,
+   0.38492779808885963,
+   0.11570312637796644,
+   0.5567643829825717,
+   0.4431078539306718,
+   0.04184330026880653,
+   0.041867491824560336,
+   0.01239657035572667
+  ]
+ },
+ "expert_success": {
+  "batches": [
+   {
+    "dir": "/data/0c/s3by15g/b000",
+    "start": 0,
+    "episodes": 1152,
+    "envs": 128,
+    "kept": 1120,
+    "attempted": 1152,
+    "rate_pct": 97.22222222222223,
+    "ci95_pct": [
+     96.10494932148478,
+     98.02559590201298
+    ],
+    "per_task": {
+     "stack": {
+      "attempted": 1152,
+      "kept": 1120,
+      "rate": 0.9722222222222222,
+      "ci95": [
+       0.9610494932148478,
+       0.9802559590201297
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 29,
+       "early_close": 0,
+       "release_failure": 27,
+       "invalid": 0
+      },
+      "failed_unflagged": 0
+     }
+    },
+    "nan_guard_events": 0,
+    "cmd_resync_max_m": 0.004785612225532532,
+    "episodes_per_h": 12062.209913413875,
+    "wall_s": 343.8,
+    "disk_bytes": 4813566622
+   },
+   {
+    "dir": "/data/0c/s3by15g/b001",
+    "start": 1152,
+    "episodes": 1152,
+    "envs": 128,
+    "kept": 1118,
+    "attempted": 1152,
+    "rate_pct": 97.04861111111111,
+    "ci95_pct": [
+     95.90409063568028,
+     97.88038640684874
+    ],
+    "per_task": {
+     "stack": {
+      "attempted": 1152,
+      "kept": 1118,
+      "rate": 0.9704861111111112,
+      "ci95": [
+       0.9590409063568027,
+       0.9788038640684874
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 32,
+       "early_close": 0,
+       "release_failure": 31,
+       "invalid": 0
+      },
+      "failed_unflagged": 0
+     }
+    },
+    "nan_guard_events": 0,
+    "cmd_resync_max_m": 0.005419552326202393,
+    "episodes_per_h": 12049.584189666939,
+    "wall_s": 344.2,
+    "disk_bytes": 4782340629
+   }
+  ],
+  "pooled": {
+   "kept": 2238,
+   "attempted": 2304,
+   "rate_pct": 97.13541666666667,
+   "ci95_pct": [
+    96.3718781936812,
+    97.74203326367358
+   ]
+  },
+  "per_target": {
+   "colour:blue": {
+    "kept": 714,
+    "attempted": 734,
+    "rate_pct": 97.27520435967303,
+    "ci95_pct": [
+     95.82881257233092,
+     98.22931589318254
+    ]
+   },
+   "colour:green": {
+    "kept": 401,
+    "attempted": 425,
+    "rate_pct": 94.3529411764706,
+    "ci95_pct": [
+     91.73506561179498,
+     96.17618180450046
+    ]
+   },
+   "colour:red": {
+    "kept": 766,
+    "attempted": 786,
+    "rate_pct": 97.45547073791349,
+    "ci95_pct": [
+     96.10243720640199,
+     98.34688022635923
+    ]
+   },
+   "colour:yellow": {
+    "kept": 357,
+    "attempted": 359,
+    "rate_pct": 99.44289693593315,
+    "ci95_pct": [
+     97.99174429811836,
+     99.84709226306975
+    ]
+   },
+   "cube:blue_large": {
+    "kept": 407,
+    "attempted": 412,
+    "rate_pct": 98.7864077669903,
+    "ci95_pct": [
+     97.19087492813632,
+     99.48054996057128
+    ]
+   },
+   "cube:blue_small": {
+    "kept": 307,
+    "attempted": 322,
+    "rate_pct": 95.3416149068323,
+    "ci95_pct": [
+     92.45714305026867,
+     97.1569516509604
+    ]
+   },
+   "cube:green_small": {
+    "kept": 401,
+    "attempted": 425,
+    "rate_pct": 94.3529411764706,
+    "ci95_pct": [
+     91.73506561179498,
+     96.17618180450046
+    ]
+   },
+   "cube:red_large": {
+    "kept": 411,
+    "attempted": 413,
+    "rate_pct": 99.51573849878935,
+    "ci95_pct": [
+     98.25170559783881,
+     99.86710020273388
+    ]
+   },
+   "cube:red_small": {
+    "kept": 355,
+    "attempted": 373,
+    "rate_pct": 95.17426273458445,
+    "ci95_pct": [
+     92.50147914622656,
+     96.92601505823494
+    ]
+   },
+   "cube:yellow_large": {
+    "kept": 357,
+    "attempted": 359,
+    "rate_pct": 99.44289693593315,
+    "ci95_pct": [
+     97.99174429811836,
+     99.84709226306975
+    ]
+   },
+   "size:large": {
+    "kept": 1175,
+    "attempted": 1184,
+    "rate_pct": 99.23986486486487,
+    "ci95_pct": [
+     98.5616516530083,
+     99.59958465998157
+    ]
+   },
+   "size:small": {
+    "kept": 1063,
+    "attempted": 1120,
+    "rate_pct": 94.91071428571429,
+    "ci95_pct": [
+     93.4630992150879,
+     96.05129498423697
+    ]
+   }
+  }
+ },
+ "expert": {
+  "stack": {
+   "ceiling_pct": 97.3,
+   "pooled": {
+    "kept": 2238,
+    "attempted": 2304,
+    "rate_pct": 97.13541666666667,
+    "ci95_pct": [
+     96.3718781936812,
+     97.74203326367358
+    ]
+   },
+   "batches": [
+    {
+     "kept": 1120,
+     "attempted": 1152,
+     "rate_pct": 97.22222222222223,
+     "ci95_pct": [
+      96.10494932148478,
+      98.02559590201298
+     ]
+    },
+    {
+     "kept": 1118,
+     "attempted": 1152,
+     "rate_pct": 97.04861111111111,
+     "ci95_pct": [
+      95.90409063568028,
+      97.88038640684874
+     ]
+    }
+   ]
+  }
+ },
+ "palette": {
+  "visual_mode": [
+   "nominal"
+  ],
+  "visual_json_mode": [
+   "s4r_nominal"
+  ],
+  "table_palette": [
+   "s4r"
+  ],
+  "nonnominal_table": 0,
+  "nondefault_light": 0
+ },
+ "table": {
+  "box_u0_v0_u1_v1": [
+   0,
+   190,
+   64,
+   222
+  ],
+  "image_size": 224,
+  "episodes": [
+   0,
+   41,
+   82,
+   122,
+   163,
+   204,
+   245,
+   286,
+   326,
+   367,
+   408,
+   449,
+   490,
+   530,
+   571,
+   612,
+   653,
+   694,
+   734,
+   775,
+   816,
+   857,
+   898,
+   938,
+   979,
+   1020,
+   1061,
+   1101,
+   1142,
+   1183,
+   1224,
+   1265,
+   1305,
+   1346,
+   1387,
+   1428,
+   1469,
+   1509,
+   1550,
+   1591,
+   1632,
+   1673,
+   1713,
+   1754,
+   1795,
+   1836,
+   1877,
+   1917,
+   1958,
+   1999
+  ],
+  "reason": "lower-left corner, outside the object footprint x 0.33..0.67 / y +-0.30 projected through the side camera (eye 1.15, 0.45, 0.55 -> look 0.5, 0, 0.18) with object size and 12 px camera-jitter margin; see module docstring",
+  "per_episode_saturation": [
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733
+  ],
+  "per_episode_value": [
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549
+  ],
+  "per_episode_recorded_table_value": [
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5
+  ],
+  "numbers": {
+   "n": 50,
+   "saturation_max": 0.019801980198019733,
+   "saturation_median": 0.019801980198019733,
+   "value_min": 0.396078431372549,
+   "value_max": 0.396078431372549
+  },
+  "items": {
+   "6_table_region_median_saturation_le_0.10": true
+  }
+ },
+ "sheet": {
+  "png": "0c_s3b_stack_rl224_y15g.png",
+  "episodes": [
+   {
+    "lerobot_episode": 0,
+    "episode_index": 0,
+    "instruction": "stack the red cube on the green cube",
+    "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"large\"], \"dest\": [\"green\", \"small\"], \"cubes\": [[\"green\", \"small\"], [\"blue\", \"large\"], [\"yellow\", \"large\"], [\"yellow\", \"small\"], [\"red\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      107
+     ],
+     [
+      "carry",
+      195
+     ],
+     [
+      "release",
+      284
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1000,
+    "episode_index": 1030,
+    "instruction": "stack the green cube on the yellow cube",
+    "spec": "{\"task\": \"stack\", \"target\": [\"green\", \"small\"], \"dest\": [\"yellow\", \"small\"], \"cubes\": [[\"red\", \"small\"], [\"green\", \"small\"], [\"blue\", \"large\"], [\"yellow\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      109
+     ],
+     [
+      "carry",
+      185
+     ],
+     [
+      "release",
+      261
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1999,
+    "episode_index": 2057,
+    "instruction": "please stack the small red cube on the yellow cube",
+    "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"small\"], \"dest\": [\"yellow\", \"small\"], \"cubes\": [[\"red\", \"small\"], [\"blue\", \"small\"], [\"red\", \"large\"], [\"yellow\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      116
+     ],
+     [
+      "carry",
+      204
+     ],
+     [
+      "release",
+      292
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   }
+  ],
+  "chosen_sidecar_indices": [
+   0,
+   1000,
+   1999
+  ],
+  "notes": [
+   "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg",
+   "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg",
+   "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg"
+  ]
+ },
+ "twin": {
+  "kept_shared": 1962,
+  "only_here": 38,
+  "only_twin": 38,
+  "overlap_frac_of_set": 0.981,
+  "spec_or_instruction_diff": [],
+  "name": "0c_s3b_stack_rl224_y15",
+  "expert_pooled": {
+   "kept": 2243,
+   "attempted": 2304,
+   "rate_pct": 97.35243055555556,
+   "ci95_pct": [
+    96.61386947239883,
+    97.93334728632497
+   ]
+  },
+  "set_expert_pooled": {
+   "kept": 2238,
+   "attempted": 2304,
+   "rate_pct": 97.13541666666667,
+   "ci95_pct": [
+    96.3718781936812,
+    97.74203326367358
+   ]
+  }
+ },
+ "items": {
+  "1_count_eq_K": true,
+  "1_tasks_as_expected": true,
+  "1_T_per_task_eq_timing": true,
+  "1_rows_eq_sum_T": true,
+  "1_rows_per_episode_eq_T": true,
+  "1_columns_exact_action_eq_r": true,
+  "1_image_size": true,
+  "1_psnr_min_ge_35": true,
+  "1_frame_identity": true,
+  "1_kept_are_first_K_successful_in_order": true,
+  "1_split_rule": true,
+  "1_cube_yaw_max_deg_eq_expected": true,
+  "yaw_spawn_attrs_present": true,
+  "yaw_spawn_fold_in_range": true,
+  "yaw_regenerated_layout_fold_in_range": true,
+  "yaw_spawn_agrees_with_regenerated_layout": true,
+  "yaw_coverage": true,
+  "1_expert_pooled_stack_ge_ceiling_minus_5": true,
+  "1_expert_every_batch_stack_ge_ceiling_minus_10": true,
+  "1_expert_every_batch_n_ge_200": true,
+  "palette_table_palette_eq_expected_all": true,
+  "palette_visual_mode_nominal_all": true,
+  "palette_visual_json_s4r_nominal_all": true,
+  "5_sheet_three_episodes_first_middle_last": true,
+  "6_table_region_median_saturation_le_0.10": true,
+  "4a_noise_std_in_band": true,
+  "4a_claw_identical": true,
+  "1_twin_overlap_nonempty": true,
+  "1_twin_shared_specs_instructions_equal": true
+ },
+ "pass": true,
+ "wall_s": 656.2
+}

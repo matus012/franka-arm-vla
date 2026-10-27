@@ -1,0 +1,2 @@
+# GATES 3A / 3B amended (task 007): paired s3a collect, data seed 33000 groups 1000-1499, H 224, sigma 0.1, m 15, B 128; batch b002
+sim scripts/collect.py --stage s3a --split train --paired-targets --start-group 1000 --groups 500 --seed 33000 --envs 128 --noise-sigma 0.1 --image-size 224 --visual nominal --cube-yaw-max-deg 15 --out /data/0c/s3apy15/b002

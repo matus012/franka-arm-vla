@@ -1,0 +1,44 @@
+{
+ "rule": "m = 0.5 x mean over train episodes of mean over other members of mean_{50 x 5}((a_e - a_o)^2), first chunk, action normalized MEAN_STD (train rows), LeRobot eps 1e-8",
+ "dataset": "/data/datasets/0c_s3a1_pair_s2a_rl224_y15",
+ "stage": "s3a1",
+ "train_episodes": 3801,
+ "val_episodes": 398,
+ "train_layouts": 1267,
+ "ordered_pairs": 7602,
+ "action_dims": 5,
+ "chunk": 50,
+ "expected_sq_diff": 5.5900333902782116,
+ "margin": 2.7950166951391058,
+ "per_episode_quantiles": {
+  "10": 0.059952731322680405,
+  "25": 2.355857608782233,
+  "50": 4.862198602679258,
+  "75": 7.636137489966885,
+  "90": 11.834285971511257
+ },
+ "frac_episodes_below_margin": 0.2893975269665877,
+ "per_dim_expected_sq_diff": [
+  8.77440124001579,
+  9.064884173380886,
+  0.7240188891213118,
+  9.386862648873066,
+  0.0
+ ],
+ "action_mean": [
+  0.009292995557188988,
+  -8.614231046522036e-05,
+  -0.06396792829036713,
+  -0.002733315108343959,
+  0.4824753403663635
+ ],
+ "action_std": [
+  0.15349633991718292,
+  0.22777411341667175,
+  0.276854008436203,
+  0.07335956394672394,
+  0.49969279766082764
+ ],
+ "task_column_checked": true,
+ "ok": true
+}

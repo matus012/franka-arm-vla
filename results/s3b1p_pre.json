@@ -1,0 +1,30 @@
+{
+ "design": "009b precondition, s3b1 / train, m 15, seed 11850, B 128, paired off, 1,000 episodes",
+ "seed": 11850,
+ "n": 1000,
+ "fresh": {
+  "count": 991,
+  "n": 1000,
+  "rate": 0.991,
+  "ci95": [
+   0.982983992177176,
+   0.9952579934109885
+  ]
+ },
+ "chunked_N10": {
+  "count": 980,
+  "n": 1000,
+  "rate": 0.98,
+  "ci95": [
+   0.9693097584861028,
+   0.9870164188709625
+  ]
+ },
+ "diff_points": 1.1,
+ "gate": {
+  "expert_fresh_ge_85": true,
+  "chunked_ge_70": true,
+  "chunked_within_3_points": true
+ },
+ "gate_pass": true
+}

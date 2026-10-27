@@ -1,0 +1,236 @@
+{
+  "git_sha": "6595627",
+  "argv": {
+    "dataset": "/data/datasets/0c_s3a1_pair_s2a_rl224_y15",
+    "root": "None",
+    "out": "/runs/s3a1p_VT",
+    "init": "/runs/s2m_VT/checkpoints/068880/pretrained_model",
+    "freeze_vision_encoder": false,
+    "train_expert_only": false,
+    "refreeze_non_vision_vlm": false,
+    "trainable_fp32": true,
+    "n_action_steps": 10,
+    "epochs": 10,
+    "max_steps": 35508,
+    "row_sampling": "window",
+    "batch_size": 64,
+    "lr": 5e-05,
+    "seed": 0,
+    "save_every_steps": 8877,
+    "resume": false,
+    "video_backend": "torchcodec",
+    "workers": 6,
+    "distributed": "off",
+    "ddp_grad_weight": "valid",
+    "device": "cuda",
+    "action_override": null,
+    "cosine_to_total": true,
+    "contrastive_lambda": 1.0,
+    "contrastive_margin": 2.7950166951391058,
+    "contrastive_share_vision": true,
+    "cross_lambda": null,
+    "cross_frame0_extra": 0,
+    "overfit_abort": false
+  },
+  "init": "/runs/s2m_VT/checkpoints/068880/pretrained_model",
+  "init_sha256": "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64",
+  "resumed_from_step": null,
+  "final_step": 35508,
+  "total_steps": 35508,
+  "samples_seen_this_run": 2272511,
+  "samples_per_epoch": 1136383,
+  "steps_per_epoch": 17756,
+  "epochs_done": 1.9997747240369452,
+  "dataset": "/data/datasets/0c_s3a1_pair_s2a_rl224_y15",
+  "episodes": 7999,
+  "rows": 3599450,
+  "n_train_episodes": 7601,
+  "n_val_episodes": 398,
+  "train_rows": 3420550,
+  "fps": 50,
+  "image_shape": [
+    224,
+    224,
+    3
+  ],
+  "wall_s": 21876.297989606857,
+  "loop_s": 21360.680535793304,
+  "steady_state": {
+    "warmup_steps_excluded": 50,
+    "samples": 2269311,
+    "s": 21293.85886156233,
+    "gpu_s_per_sample": 0.009383402654621746,
+    "data_wait_frac": 0.00032111565174528227
+  },
+  "peak_mem_allocated_gib": 80.7671046257019,
+  "peak_mem_reserved_gib": 81.474609375,
+  "device": "cuda:0",
+  "gpu": "NVIDIA H200",
+  "dtype": "bf16 autocast",
+  "flags": {
+    "freeze_vision_encoder": false,
+    "train_expert_only": false,
+    "train_state_proj": true,
+    "chunk_size": 50,
+    "n_action_steps": 10,
+    "tokenizer_max_length": 48,
+    "normalization_mapping": {
+      "VISUAL": "IDENTITY",
+      "STATE": "MEAN_STD",
+      "ACTION": "MEAN_STD"
+    },
+    "rename_map": {
+      "observation.images.side": "observation.images.camera1",
+      "observation.images.wrist": "observation.images.camera2"
+    },
+    "row_sampling": "window",
+    "refreeze_non_vision_vlm": false,
+    "trainable_fp32": true
+  },
+  "deviations_from_lerobot_default": [
+    "bf16 autocast (lerobot-train: fp32 for SmolVLA)",
+    "trainable params cast to fp32 master weights (LeRobot trains bf16 weights directly)",
+    "task 005 instruction-contrastive hinge added to the flow loss (steps.jsonl `loss` = the flow loss L_true)"
+  ],
+  "params": {
+    "params_total": 450046176,
+    "params_trainable": 392904096,
+    "vision_params_trainable": 86433024,
+    "by_dtype": {
+      "trainable_float32": 392904096,
+      "frozen_bfloat16": 57142080
+    }
+  },
+  "trainable_parts": {
+    "vision": 86433024,
+    "text_model": 194793600,
+    "connector": 11796480,
+    "expert": 98245840,
+    "other": 1635152,
+    "frozen_names_prefixes": {
+      "model.vlm_with_expert.vlm.model.text_model.layers.15": 9832320,
+      "model.vlm_with_expert.vlm.model.text_model.norm": 960,
+      "model.vlm_with_expert.vlm.lm_head": 47308800
+    }
+  },
+  "optimizer": {
+    "lr": 5e-05,
+    "weight_decay": 1e-10,
+    "grad_clip_norm": 10.0,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08
+  },
+  "scheduler": {
+    "num_warmup_steps": 1183,
+    "num_decay_steps": 35508,
+    "peak_lr": 5e-05,
+    "decay_lr": 2.5e-06
+  },
+  "norm_stats": {
+    "observation.state": {
+      "mean": [
+        -0.0016489862464368343,
+        0.8042868971824646,
+        -0.0016707279719412327,
+        0.5358878970146179,
+        0.000538432621397078,
+        -0.5136789679527283,
+        0.04132063314318657,
+        -0.006205269601196051,
+        -0.006194657180458307,
+        -0.00017998024122789502,
+        0.08494818210601807,
+        -0.0007685616728849709,
+        0.059640489518642426,
+        0.0012933604884892702,
+        -0.058695416897535324,
+        0.0031682720873504877,
+        -0.00026261189486831427,
+        -0.00026692048413679004,
+        0.0676000714302063
+      ],
+      "std": [
+        0.2141459733247757,
+        0.29879406094551086,
+        0.13299046456813812,
+        0.35416775941848755,
+        0.07180918753147125,
+        0.1899087280035019,
+        0.3968871533870697,
+        0.00864331889897585,
+        0.008638361468911171,
+        0.19935095310211182,
+        0.39580050110816956,
+        0.20305810868740082,
+        0.38776254653930664,
+        0.11449451744556427,
+        0.6056814789772034,
+        0.4010433554649353,
+        0.04261335730552673,
+        0.04242343455553055,
+        0.013451567851006985
+      ]
+    },
+    "action": {
+      "mean": [
+        0.009292995557188988,
+        -8.614231046522036e-05,
+        -0.06396792829036713,
+        -0.002733315108343959,
+        0.4824753403663635
+      ],
+      "std": [
+        0.15349633991718292,
+        0.22777411341667175,
+        0.276854008436203,
+        0.07335956394672394,
+        0.49969279766082764
+      ]
+    }
+  },
+  "norm_report": {
+    "observation.state": {
+      "near_constant_dims": [],
+      "std_floor": 1e-06,
+      "stats_rows": 3420550
+    },
+    "action": {
+      "near_constant_dims": [],
+      "std_floor": 1e-06,
+      "stats_rows": 3420550
+    }
+  },
+  "stats_rows": 3420550,
+  "stats_split": "train",
+  "loss_first": [
+    2.0403048992156982
+  ],
+  "loss_last50_mean": 0.021415731385350228,
+  "overfit_abort_check": null,
+  "final_ckpt": "/runs/s3a1p_VT/checkpoints/035508/pretrained_model",
+  "torch": "2.10.0+cu130",
+  "lerobot": "0.6.1",
+  "contrastive": {
+    "lambda": 1.0,
+    "margin": 2.7950166951391058,
+    "share_vision": true,
+    "layouts": 2930,
+    "last50_mean": {
+      "hinge": 0.21013762935996055,
+      "gap": 22.86563201904297,
+      "hinge_active": 0.0790625,
+      "l_other": 22.885743141174316,
+      "loss_total": 0.23155336074531077
+    },
+    "first50_mean": {
+      "hinge": 1.524483609199524,
+      "gap": 13.53862138748169,
+      "hinge_active": 0.33625,
+      "l_other": 16.450769596099853,
+      "loss_total": 4.516864144802094
+    }
+  }
+}

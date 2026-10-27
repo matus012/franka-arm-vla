@@ -1,0 +1,3 @@
+# GATES 2a attempt 1: early pipeline check on b000 alone (not the data gate): paired export of 200 episodes to a scratch name + item P (incl. t=0 sha identity) (cpu_short via hpc/cpu_steps.py)
+python scripts/export_dataset.py --src /data/0c/s2apy15/b000 --paired --name smoke_s2a_pair --root /data/datasets_smoke --kept 200 --workers 16 --label relabel_setpoint
+python scripts/paired_check.py --dataset /data/datasets_smoke/smoke_s2a_pair --out /runs/ks2a1_smoke

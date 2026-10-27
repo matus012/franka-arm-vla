@@ -1,0 +1,411 @@
+=== c6_collect on <node> NVIDIA H200 start 2026-10-01T19:31:50+02:00 repo b1fa485
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 45:00 cpus 8
+CUDA OK NVIDIA H200
+=== step 1 start 1790875914.447793290 sim scripts/collect.py --stage s1 --split train --start 1000 --episodes 256 --seed 31500 --envs 128 --noise-sigma 0.1 --image-size 128 --visual nominal --out /data/0b6/s1_b128
+[collect] s1_train_s31500 episodes 1000..1255: 2 chunks, 0 finished, 2 to run
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 31500
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.657245 s, Mean: 2.657245 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.357146 s, Mean: 0.357146 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.067810 s, Mean: 0.067810 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007075 s, Mean: 0.037443 s, Std: 0.042946 s, N: 2
+Contact sensor construction took: Last: 0.005967 s, Mean: 0.026951 s, Std: 0.035389 s, N: 3
+Contact sensor construction took: Last: 0.004292 s, Mean: 0.021286 s, Std: 0.031037 s, N: 4
+Initialize solver took: Last: 7.319169 s, Mean: 7.319169 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.267581 s, Mean: 11.267581 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.303694 s, Mean: 27.303694 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[collect] device=cuda:0 envs=128 H=128 visual=nominal sigma=0.1
+[collect] pick_e001000: 125/128 kept, 19.3 s, resync err 4.56e-03 m, files ['s1_train_s31500_pick_e001000_p0.h5']; 128 eps in 53 s = 8736 eps/h
+[collect] pick_e001128: 126/128 kept, 16.8 s, resync err 4.26e-03 m, files ['s1_train_s31500_pick_e001128_p0.h5']; 256 eps in 70 s = 13255 eps/h
+COLLECT_SUMMARY={"prefix": "s1_train_s31500", "config": {"stage": "s1", "split": "train", "seed": 31500, "envs": 128, "noise_sigma": 0.1, "image_size": 128, "visual": "nominal", "mix": "1,1,1", "start": 1000, "episodes": 256, "period": 3, "latency": 1, "n_action_steps": 20, "part_bytes": 157286400, "git_sha": "b1fa485", "expert_version": "113-expert-v1", "detector_version": "113-detectors-v1 (GATES.md conventions 2026-10-01)"}, "chunks": 2, "attempted": 256, "kept": 251, "expert_success": 0.98046875, "ci95": [0.9551012298981227, 0.9916293936817815], "per_task": {"pick": {"attempted": 256, "kept": 251, "rate": 0.98046875, "ci95": [0.9551012298981227, 0.9916293936817815], "failures": {"wrong_object": 0, "wrong_grasp": 0, "wrong_dest": 0, "slam": 0, "jam": 0, "drop": 0, "early_close": 0, "release_failure": 0, "invalid": 0}, "failed_unflagged": 5}}, "disk_bytes": 262547466, "mb_per_kept_episode": 1.0460058406374502, "cmd_resync_max_m": 0.00455668568611145, "this_invocation": {"episodes_run": 256, "wall_s": 69.5, "episodes_per_h": 13254.961230031911, "torch_peak_vram_mib": 39.9853515625, "device": "cuda:0", "gpu": "NVIDIA H200"}, "nan_guard_events": 0}
+NAN_GUARD_EVENTS=0
+=== step 1 done 1790875995.317866040
+=== step 2 start 1790875995.318941742 sim scripts/collect.py --stage s3a --split train --start 1000 --episodes 256 --seed 31500 --envs 128 --noise-sigma 0.1 --image-size 128 --visual nominal --out /data/0b6/s3a_b128
+[collect] s3a_train_s31500 episodes 1000..1255: 2 chunks, 0 finished, 2 to run
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 31500
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.622808 s, Mean: 2.622808 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.354639 s, Mean: 0.354639 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068475 s, Mean: 0.068475 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007168 s, Mean: 0.037822 s, Std: 0.043350 s, N: 2
+Contact sensor construction took: Last: 0.005969 s, Mean: 0.027204 s, Std: 0.035747 s, N: 3
+Contact sensor construction took: Last: 0.004322 s, Mean: 0.021484 s, Std: 0.031349 s, N: 4
+Initialize solver took: Last: 7.274560 s, Mean: 7.274560 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.324221 s, Mean: 11.324221 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.335808 s, Mean: 27.335808 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[collect] device=cuda:0 envs=128 H=128 visual=nominal sigma=0.1
+[collect] place_e001000: 128/128 kept, 27.0 s, resync err 4.45e-03 m, files ['s3a_train_s31500_place_e001000_p0.h5', 's3a_train_s31500_place_e001000_p1.h5']; 128 eps in 60 s = 7621 eps/h
+[collect] place_e001128: 128/128 kept, 24.4 s, resync err 4.48e-03 m, files ['s3a_train_s31500_place_e001128_p0.h5', 's3a_train_s31500_place_e001128_p1.h5']; 256 eps in 85 s = 10854 eps/h
+COLLECT_SUMMARY={"prefix": "s3a_train_s31500", "config": {"stage": "s3a", "split": "train", "seed": 31500, "envs": 128, "noise_sigma": 0.1, "image_size": 128, "visual": "nominal", "mix": "1,1,1", "start": 1000, "episodes": 256, "period": 3, "latency": 1, "n_action_steps": 20, "part_bytes": 157286400, "git_sha": "b1fa485", "expert_version": "113-expert-v1", "detector_version": "113-detectors-v1 (GATES.md conventions 2026-10-01)"}, "chunks": 2, "attempted": 256, "kept": 256, "expert_success": 1.0, "ci95": [0.9852156082782743, 1.0], "per_task": {"place": {"attempted": 256, "kept": 256, "rate": 1.0, "ci95": [0.9852156082782743, 1.0], "failures": {"wrong_object": 0, "wrong_grasp": 0, "wrong_dest": 0, "slam": 0, "jam": 0, "drop": 0, "early_close": 0, "release_failure": 0, "invalid": 0}, "failed_unflagged": 0}}, "disk_bytes": 449573088, "mb_per_kept_episode": 1.756144875, "cmd_resync_max_m": 0.004476636648178101, "this_invocation": {"episodes_run": 256, "wall_s": 84.9, "episodes_per_h": 10853.54806886744, "torch_peak_vram_mib": 40.86669921875, "device": "cuda:0", "gpu": "NVIDIA H200"}, "nan_guard_events": 0}
+NAN_GUARD_EVENTS=0
+=== step 2 done 1790876091.473136282
+=== step 3 start 1790876091.474197782 sim scripts/collect.py --stage s3b --split train --start 1000 --episodes 256 --seed 31500 --envs 128 --noise-sigma 0.1 --image-size 128 --visual nominal --out /data/0b6/s3b_b128
+[collect] s3b_train_s31500 episodes 1000..1255: 2 chunks, 0 finished, 2 to run
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 31500
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.633220 s, Mean: 2.633220 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.372942 s, Mean: 0.372942 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068321 s, Mean: 0.068321 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007126 s, Mean: 0.037724 s, Std: 0.043271 s, N: 2
+Contact sensor construction took: Last: 0.005997 s, Mean: 0.027148 s, Std: 0.035661 s, N: 3
+Contact sensor construction took: Last: 0.004323 s, Mean: 0.021442 s, Std: 0.031274 s, N: 4
+Initialize solver took: Last: 7.291713 s, Mean: 7.291713 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.306692 s, Mean: 11.306692 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.369987 s, Mean: 27.369987 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[collect] device=cuda:0 envs=128 H=128 visual=nominal sigma=0.1
+[collect] stack_e001000: 123/128 kept, 26.7 s, resync err 4.45e-03 m, files ['s3b_train_s31500_stack_e001000_p0.h5', 's3b_train_s31500_stack_e001000_p1.h5']; 128 eps in 60 s = 7654 eps/h
+[collect] stack_e001128: 122/128 kept, 24.3 s, resync err 4.48e-03 m, files ['s3b_train_s31500_stack_e001128_p0.h5', 's3b_train_s31500_stack_e001128_p1.h5']; 256 eps in 85 s = 10906 eps/h
+COLLECT_SUMMARY={"prefix": "s3b_train_s31500", "config": {"stage": "s3b", "split": "train", "seed": 31500, "envs": 128, "noise_sigma": 0.1, "image_size": 128, "visual": "nominal", "mix": "1,1,1", "start": 1000, "episodes": 256, "period": 3, "latency": 1, "n_action_steps": 20, "part_bytes": 157286400, "git_sha": "b1fa485", "expert_version": "113-expert-v1", "detector_version": "113-detectors-v1 (GATES.md conventions 2026-10-01)"}, "chunks": 2, "attempted": 256, "kept": 245, "expert_success": 0.95703125, "ci95": [0.9247082047226964, 0.9758404372191636], "per_task": {"stack": {"attempted": 256, "kept": 245, "rate": 0.95703125, "ci95": [0.9247082047226964, 0.9758404372191636], "failures": {"wrong_object": 0, "wrong_grasp": 0, "wrong_dest": 0, "slam": 0, "jam": 0, "drop": 10, "early_close": 0, "release_failure": 10, "invalid": 0}, "failed_unflagged": 0}}, "disk_bytes": 425345447, "mb_per_kept_episode": 1.7361038653061223, "cmd_resync_max_m": 0.004476636648178101, "this_invocation": {"episodes_run": 256, "wall_s": 84.5, "episodes_per_h": 10905.785605496465, "torch_peak_vram_mib": 40.86669921875, "device": "cuda:0", "gpu": "NVIDIA H200"}, "nan_guard_events": 0}
+NAN_GUARD_EVENTS=0
+=== step 3 done 1790876186.965420965
+=== step 4 start 1790876186.966476777 sim scripts/collect.py --stage s1 --split train --start 2000 --episodes 256 --seed 31500 --envs 256 --noise-sigma 0.1 --image-size 128 --visual nominal --out /data/0b6/s1_b256
+[collect] s1_train_s31500 episodes 2000..2255: 1 chunks, 0 finished, 1 to run
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 31500
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.685245 s, Mean: 2.685245 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 256
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.924252 s, Mean: 0.924252 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.073694 s, Mean: 0.073694 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.012981 s, Mean: 0.043337 s, Std: 0.042930 s, N: 2
+Contact sensor construction took: Last: 0.011652 s, Mean: 0.032776 s, Std: 0.035442 s, N: 3
+Contact sensor construction took: Last: 0.008356 s, Mean: 0.026671 s, Std: 0.031409 s, N: 4
+Initialize solver took: Last: 6.984789 s, Mean: 6.984789 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.373359 s, Mean: 11.373359 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 28.049585 s, Mean: 28.049585 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[collect] device=cuda:0 envs=256 H=128 visual=nominal sigma=0.1
+[collect] pick_e002000: 250/256 kept, 27.4 s, resync err 4.84e-03 m, files ['s1_train_s31500_pick_e002000_p0.h5', 's1_train_s31500_pick_e002000_p1.h5']; 256 eps in 63 s = 14530 eps/h
+COLLECT_SUMMARY={"prefix": "s1_train_s31500", "config": {"stage": "s1", "split": "train", "seed": 31500, "envs": 256, "noise_sigma": 0.1, "image_size": 128, "visual": "nominal", "mix": "1,1,1", "start": 2000, "episodes": 256, "period": 3, "latency": 1, "n_action_steps": 20, "part_bytes": 157286400, "git_sha": "293270e", "expert_version": "113-expert-v1", "detector_version": "113-detectors-v1 (GATES.md conventions 2026-10-01)"}, "chunks": 1, "attempted": 256, "kept": 250, "expert_success": 0.9765625, "ci95": [0.9498183470640867, 0.9892152795761434], "per_task": {"pick": {"attempted": 256, "kept": 250, "rate": 0.9765625, "ci95": [0.9498183470640867, 0.9892152795761434], "failures": {"wrong_object": 0, "wrong_grasp": 0, "wrong_dest": 0, "slam": 0, "jam": 0, "drop": 0, "early_close": 0, "release_failure": 0, "invalid": 0}, "failed_unflagged": 6}}, "disk_bytes": 262770216, "mb_per_kept_episode": 1.051080864, "cmd_resync_max_m": 0.004841744899749756, "this_invocation": {"episodes_run": 256, "wall_s": 63.4, "episodes_per_h": 14529.80656577395, "torch_peak_vram_mib": 47.943359375, "device": "cuda:0", "gpu": "NVIDIA H200"}, "nan_guard_events": 0}
+NAN_GUARD_EVENTS=0
+=== step 4 done 1790876261.383664086
+=== c6_collect done 2026-10-01T19:37:41+02:00

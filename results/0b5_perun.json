@@ -1,0 +1,118 @@
+{
+ "gate": "0B.5",
+ "date": "2026-10-01",
+ "job": "95678 (g0b5, <node> H200, one job)",
+ "partition": "gpu_short",
+ "maxtime_rechecked": "MaxTime=2-00:00:00 (job log)",
+ "job_timelimit": "1:30:00",
+ "container": {
+  "sif": "/mnt/project/<project-id>/113_vla_tabletop/vla_tabletop.sif",
+  "sha256": "f76eaf8e4802a2ca408d4a7703a0c57550c8e3aeeb376d7c4f93581edd116c1c",
+  "build": "hpc/BUILD.md"
+ },
+ "git_sha_job": "b8632a5",
+ "inputs": {
+  "dataset": "laptop datasets/0b_smoke (0B.1); sha256 of every file equal after upload",
+  "hdf5": "data/0b_smoke/s1_train_s31500_pick_e000000_p0.h5 (sha256 0bbea877..., equal after upload)",
+  "laptop_ref": "scripts/s0b5_decode.py ref (pyav, Windows): per-row sha256 + episode 0 pixels"
+ },
+ "item1_roundtrip_torchcodec": {
+  "columns_exact": true,
+  "rows_per_episode_350": true,
+  "chunks_and_pad_exact": true,
+  "psnr_torchcodec_vs_laptop_pyav_min_db": Infinity,
+  "torchcodec_bit_identical_to_pyav_rows_frac": 1.0,
+  "pyav_perun_vs_laptop_sha_mismatch": 0,
+  "ep0_direct_psnr_vs_laptop_pixels_db": Infinity,
+  "psnr_vs_source_min_mean_db": [
+   36.44082321908875,
+   41.43973415851337
+  ],
+  "frame_identity": {
+   "synthetic_index_frames": "tests/test_alignment.py passed on PERUN (job 95672)",
+   "real_frames_identity_fail": 75,
+   "note": "torchcodec decode is bit-identical to the laptop pyav decode on all 14,000 images, so the real-frame identity result equals 0B.1 (13,925 / 14,000; the 75 misses are the 0B.1 adjacent-frame ties of near-static scenes, results/0b1_identity_diag.json)"
+  },
+  "pass": true
+ },
+ "item2_bridge_b64": {
+  "n": 128,
+  "B": 64,
+  "rounds": 2,
+  "queries": 34,
+  "server_s_p50": 1.01623,
+  "server_s_p95": 1.046094,
+  "rtt_s_p50": 1.018605,
+  "wall_s": 88.7,
+  "ckpt": "lerobot/smolvla_base",
+  "ckpt_sha": "7cd549ac2351fb069c0ddb3c34ad2d09cfc92b56a15dccdfc2e41467aaca01eb",
+  "stats_sha": "dc21adcad25577e32f202c622fbb31e7347931122c5bfa5eea66a123f3e13d63",
+  "server_dtype": "float32",
+  "nan_guard_events": 0,
+  "success_untrained": 0.0,
+  "pass": true,
+  "checks": "128 episodes (2 per env, 2 rounds of 64) completed without error; every response checked by PolicyBridge.act (shape (64, 20, 5), float32, finite); the executor clips the arm to [-1, 1] and thresholds the claw at 0.5; every query at t % 20 == 0 with frame index == frames.py rule (asserted)"
+ },
+ "item3_finetune_smoke": {
+  "train": {
+   "final_step": 200,
+   "samples_seen_this_run": 1600,
+   "wall_s": 33.08522653579712,
+   "steady_state": {
+    "warmup_steps_excluded": 50,
+    "samples": 1200,
+    "s": 10.800184780731797,
+    "gpu_s_per_sample": 0.009000153983943165,
+    "data_wait_frac": 0.0015815345891909216
+   },
+   "peak_mem_allocated_gib": 3.55580472946167,
+   "final_ckpt": "/runs/g0b5/train200/checkpoints/000200/pretrained_model",
+   "dtype": "bf16 autocast"
+  },
+  "served": {
+   "n": 64,
+   "B": 64,
+   "rounds": 1,
+   "queries": 17,
+   "server_s_p50": 1.01659,
+   "server_s_p95": 1.021398,
+   "rtt_s_p50": 1.01921,
+   "wall_s": 61.1,
+   "ckpt": "/runs/g0b5/train200/checkpoints/000200/pretrained_model",
+   "ckpt_sha": "818600caed14ac9ac3a1818b32f1e82cb632782b7202eef94132d4381277d270",
+   "stats_sha": "73ba92426266823fc110f16576e78559494cf00f53f81beea22ba4ac55cddffc",
+   "server_dtype": "float32",
+   "nan_guard_events": 0,
+   "success_untrained": 0.0
+  },
+  "pass": true
+ },
+ "measured_server_latency": {
+  "server_object": {
+   "64": {
+    "server_s_p50": 1.0432023121975362,
+    "server_s_p95": 1.045677280286327,
+    "per_env_ms_p50": 16.300036128086504,
+    "peak_mem_allocated_gib": 4.3960137367248535
+   },
+   "128": {
+    "server_s_p50": 2.0734261400066316,
+    "server_s_p95": 2.074140482256189,
+    "per_env_ms_p50": 16.19864171880181,
+    "peak_mem_allocated_gib": 7.059518814086914
+   },
+   "256": {
+    "server_s_p50": 4.026168897282332,
+    "server_s_p95": 4.027474737400189,
+    "per_env_ms_p50": 15.72722225500911,
+    "peak_mem_allocated_gib": 12.386956691741943
+   }
+  },
+  "in_loop_b64_server_s_p50": 1.01623,
+  "in_loop_b128_server_s_p50_0b6": 2.019415,
+  "dtype": "float32 (TF32 off)"
+ },
+ "gpu_h": 0.2013888888888889,
+ "wall_s": 725,
+ "pass": true
+}

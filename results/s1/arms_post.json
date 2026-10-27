@@ -1,0 +1,65 @@
+{
+ "F": {
+  "ckpt": "/runs/s1_frozen/checkpoints/020664/pretrained_model",
+  "parts": {
+   "vision_model": {
+    "tensors": 197,
+    "moved": 0,
+    "bit_identical": 197
+   },
+   "connector": {
+    "tensors": 1,
+    "moved": 0,
+    "bit_identical": 1
+   },
+   "text_model": {
+    "tensors": 146,
+    "moved": 0,
+    "bit_identical": 146
+   },
+   "lm_head": {
+    "tensors": 1,
+    "moved": 0,
+    "bit_identical": 1
+   }
+  }
+ },
+ "U": {
+  "ckpt": "/runs/s1_unfrozen/checkpoints/020664/pretrained_model",
+  "parts": {
+   "vision_model": {
+    "tensors": 197,
+    "moved": 197,
+    "bit_identical": 0
+   },
+   "connector": {
+    "tensors": 1,
+    "moved": 0,
+    "bit_identical": 1
+   },
+   "text_model": {
+    "tensors": 146,
+    "moved": 0,
+    "bit_identical": 146
+   },
+   "lm_head": {
+    "tensors": 1,
+    "moved": 0,
+    "bit_identical": 1
+   }
+  }
+ },
+ "check_ii": {
+  "frozen_parts_bit_identical": true,
+  "F_vision_bit_identical": true,
+  "U_vision_moved_frac": 1.0,
+  "pass": true
+ },
+ "check_iii": {
+  "steps_compared": 20664,
+  "steps_differing": 0,
+  "first_diff": [],
+  "pass": true
+ },
+ "pass": true
+}

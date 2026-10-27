@@ -1,0 +1,87 @@
+{
+ "source": "/runs/g4_probe/s2a1_guid_w2_s21640.json",
+ "chosen": [
+  0,
+  2,
+  3,
+  6,
+  28,
+  57
+ ],
+ "rounds": 1,
+ "wall_s": 260.8,
+ "git_sha": "6d3526e",
+ "frames": [
+  {
+   "index": 0,
+   "types_recorded": [
+    "wrong_object",
+    "early_close"
+   ],
+   "types_replay": [
+    "wrong_object",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/g4_probe/frames/s2a1_guid_w2_s21640/s2a1_guid_w2_s21640_ep0_pick_wrong_object_early_close.png"
+  },
+  {
+   "index": 2,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/g4_probe/frames/s2a1_guid_w2_s21640/s2a1_guid_w2_s21640_ep2_pick_success.png"
+  },
+  {
+   "index": 3,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/g4_probe/frames/s2a1_guid_w2_s21640/s2a1_guid_w2_s21640_ep3_pick_success.png"
+  },
+  {
+   "index": 6,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/g4_probe/frames/s2a1_guid_w2_s21640/s2a1_guid_w2_s21640_ep6_pick_success.png"
+  },
+  {
+   "index": 28,
+   "types_recorded": [
+    "fail_other"
+   ],
+   "types_replay": [
+    "fail_other"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/g4_probe/frames/s2a1_guid_w2_s21640/s2a1_guid_w2_s21640_ep28_pick_fail_other.png"
+  },
+  {
+   "index": 57,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/g4_probe/frames/s2a1_guid_w2_s21640/s2a1_guid_w2_s21640_ep57_pick_drop_early_close.png"
+  }
+ ]
+}

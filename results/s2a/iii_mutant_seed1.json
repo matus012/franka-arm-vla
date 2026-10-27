@@ -1,0 +1,91 @@
+{
+ "u_run": "/runs/s2a_VT",
+ "ref_run": "/runs/s1_frozen",
+ "final_ckpt": "034440",
+ "check_ii": {
+  "expect_trainable": "vision+text",
+  "parts": {
+   "vision_model": {
+    "tensors": 197,
+    "moved": 197,
+    "bit_identical": 0
+   },
+   "connector": {
+    "tensors": 1,
+    "moved": 1,
+    "bit_identical": 0
+   },
+   "text_trainable": {
+    "tensors": 136,
+    "moved": 136,
+    "bit_identical": 0
+   },
+   "text_frozen_by_lerobot": {
+    "tensors": 10,
+    "moved": 0,
+    "bit_identical": 10
+   },
+   "lm_head": {
+    "tensors": 1,
+    "moved": 0,
+    "bit_identical": 1
+   }
+  },
+  "text_last_layer_frozen": 15,
+  "frozen_parts_bit_identical": true,
+  "vision_moved_frac": 1.0,
+  "text_trainable_moved_frac": 1.0,
+  "connector_all_moved": true,
+  "pass": true
+ },
+ "check_iii": {
+  "mode": "sampler = f(seed 1, epoch)",
+  "epochs_checked": 10,
+  "steps_per_epoch": 3444,
+  "steps_compared": 34440,
+  "steps_differing": 34440,
+  "first_diff": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "pass": false
+ },
+ "check_iv": {
+  "steps": {
+   "1": {
+    "rows": 64,
+    "rows_bad": 0
+   }
+  },
+  "rows_checked": 64,
+  "rows_bad": 0,
+  "pass": true
+ },
+ "run_key_action_override_null": {
+  "per_ckpt": {
+   "008610": {
+    "action_override": null,
+    "dataset": "/data/datasets/0c_s2a_pick_rl224_y15"
+   },
+   "017220": {
+    "action_override": null,
+    "dataset": "/data/datasets/0c_s2a_pick_rl224_y15"
+   },
+   "025830": {
+    "action_override": null,
+    "dataset": "/data/datasets/0c_s2a_pick_rl224_y15"
+   },
+   "034440": {
+    "action_override": null,
+    "dataset": "/data/datasets/0c_s2a_pick_rl224_y15"
+   }
+  },
+  "pass": true
+ },
+ "git_sha": "92e8d88",
+ "ref_init": "/runs/s1y15_U/checkpoints/041328/pretrained_model",
+ "pass": false
+}

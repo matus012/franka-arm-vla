@@ -1,0 +1,88 @@
+{
+ "eval_seed": 32500,
+ "n_kept": 100,
+ "n_kept_same_seed": 100,
+ "kept_other_seed": [],
+ "kept_without_eval_record": [],
+ "trained_on": {
+  "n": 100,
+  "success": {
+   "count": 0,
+   "n": 100,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.03699480747600191
+   ]
+  },
+  "early_close": {
+   "count": 100,
+   "n": 100,
+   "rate": 1.0,
+   "ci95": [
+    0.9630051925239981,
+    0.9999999999999999
+   ]
+  },
+  "grasp_confirmed": {
+   "count": 0,
+   "n": 100,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.03699480747600191
+   ]
+  },
+  "wrong_object": {
+   "count": 1,
+   "n": 100,
+   "rate": 0.01,
+   "ci95": [
+    0.0017673865655472645,
+    0.0544875247609346
+   ]
+  }
+ },
+ "not_trained_on": {
+  "n": 28,
+  "success": {
+   "count": 0,
+   "n": 28,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.12064720365810762
+   ]
+  },
+  "early_close": {
+   "count": 28,
+   "n": 28,
+   "rate": 1.0,
+   "ci95": [
+    0.8793527963418923,
+    1.0
+   ]
+  },
+  "grasp_confirmed": {
+   "count": 0,
+   "n": 28,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.12064720365810762
+   ]
+  },
+  "wrong_object": {
+   "count": 0,
+   "n": 28,
+   "rate": 0.0,
+   "ci95": [
+    0.0,
+    0.12064720365810762
+   ]
+  }
+ },
+ "n_eval_records": 128,
+ "eval": "/runs/s4b_overfit/eval_s32500.json",
+ "summary": "/runs/s4b_overfit/train_summary.json"
+}

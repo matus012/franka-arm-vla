@@ -1,0 +1,204 @@
+=== d3_hybrid on <node> NVIDIA H200 start 2026-10-01T20:01:07+02:00 repo 9bc590e
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 30:00 cpus 8
+CUDA OK NVIDIA H200
+=== step 1 start 1790877671.347521009 sim scripts/s0b3_overfit.py eval --ckpt /runs/0b3_train/checkpoints/005000/pretrained_model --demo /runs/0b3_prereq/replay.json --actions /runs/0b3_prereq/actions.npz --demo-queries 1 --out /runs/0b3_diag/hybrid_k1.json --policy-python /opt/policy/bin/python
+[0b3] server up after 20.0 s: {"policy": "smolvla", "n_action_steps": 20, "chunk_size": 50, "image_size": 128, "state_dim": 19, "action_dim": 5, "ckpt_sha": "783bce08adf8ed745a43be73667e78c7d53b568fc668630c9c744bf876c6c922", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 128, 128], "observation.images.camera2": [3, 128, 128], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": true, "train_expert_only": true, "dtype": "float32", "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 31600
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.595268 s, Mean: 2.595268 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.374649 s, Mean: 0.374649 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068020 s, Mean: 0.068020 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007075 s, Mean: 0.037548 s, Std: 0.043095 s, N: 2
+Contact sensor construction took: Last: 0.005957 s, Mean: 0.027017 s, Std: 0.035514 s, N: 3
+Contact sensor construction took: Last: 0.004264 s, Mean: 0.021329 s, Std: 0.031149 s, N: 4
+Initialize solver took: Last: 7.320896 s, Mean: 7.320896 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.333898 s, Mean: 11.333898 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.371371 s, Mean: 27.371371 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[0b3] eval: device=cuda:0 B=128 H=128 N=20 T=350
+S0B3={"mode": "eval", "n_scored": 100, "success": 69, "per_state_success": {"0": 7, "1": 10, "2": 8, "3": 7, "4": 5, "5": 5, "6": 10, "7": 8, "8": 3, "9": 6}, "n_slam": 0, "n_jam": 0, "n_early_close": 8, "pass": false, "wall_s": 84.3}
+NAN_GUARD_EVENTS=0
+=== step 1 done 1790877788.178450065
+=== step 2 start 1790877788.180279636 sim scripts/s0b3_overfit.py eval --ckpt /runs/0b3_train/checkpoints/005000/pretrained_model --demo /runs/0b3_prereq/replay.json --actions /runs/0b3_prereq/actions.npz --demo-queries 2 --out /runs/0b3_diag/hybrid_k2.json --policy-python /opt/policy/bin/python
+[0b3] server up after 20.0 s: {"policy": "smolvla", "n_action_steps": 20, "chunk_size": 50, "image_size": 128, "state_dim": 19, "action_dim": 5, "ckpt_sha": "783bce08adf8ed745a43be73667e78c7d53b568fc668630c9c744bf876c6c922", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 128, 128], "observation.images.camera2": [3, 128, 128], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": true, "train_expert_only": true, "dtype": "float32", "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 31600
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.583176 s, Mean: 2.583176 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.367515 s, Mean: 0.367515 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068109 s, Mean: 0.068109 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007035 s, Mean: 0.037572 s, Std: 0.043186 s, N: 2
+Contact sensor construction took: Last: 0.006015 s, Mean: 0.027053 s, Std: 0.035560 s, N: 3
+Contact sensor construction took: Last: 0.004250 s, Mean: 0.021352 s, Std: 0.031193 s, N: 4
+Initialize solver took: Last: 7.282661 s, Mean: 7.282661 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.133282 s, Mean: 11.133282 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.160240 s, Mean: 27.160240 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[0b3] eval: device=cuda:0 B=128 H=128 N=20 T=350
+S0B3={"mode": "eval", "n_scored": 100, "success": 77, "per_state_success": {"0": 10, "1": 10, "2": 8, "3": 4, "4": 8, "5": 9, "6": 10, "7": 10, "8": 3, "9": 5}, "n_slam": 0, "n_jam": 0, "n_early_close": 1, "pass": false, "wall_s": 84.0}
+NAN_GUARD_EVENTS=0
+=== step 2 done 1790877904.311890715
+=== d3_hybrid done 2026-10-01T20:05:04+02:00

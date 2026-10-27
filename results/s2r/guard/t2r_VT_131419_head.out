@@ -1,0 +1,11 @@
+=== t2r_VT on <node> NVIDIA H200 start 2026-10-25T11:18:25+01:00
+[train] device=cuda:0 cuda_available=True NVIDIA H200 distributed=nccl world_size=4 per_rank_batch=16 rank_seeds=[0, 1, 2, 3]
+[train] contrastive lambda=1.0 margin=4.210268301913095 share_vision=True layouts=799 episodes_in_table=2000
+[train] dataset /data/datasets/0c_s2a_pair_rl224_y15 episodes=2000 (train 1898, val 102 never sampled) rows=700000 samples/epoch=220168 steps/epoch=3441 total_steps=34440
+[train] init_sha256=07e87cc6f5b2533ab4b931e356e7cf944e6b53d49bbf2cc0109ab416290cb3ff (/runs/s2a1_VT/checkpoints/034440/pretrained_model)
+[train] policy on cuda:0; {'params_total': 450046176, 'params_trainable': 392904096, 'vision_params_trainable': 86433024, 'by_dtype': {'trainable_float32': 392904096, 'frozen_bfloat16': 57142080}}; freeze_vision_encoder=False train_expert_only=False; trainable_parts={'vision': 86433024, 'text_model': 194793600, 'connector': 11796480, 'expert': 98245840, 'other': 1635152, 'frozen_names_prefixes': {'model.vlm_with_expert.vlm.model.text_model.layers.15': 9832320, 'model.vlm_with_expert.vlm.model.text_model.norm': 960, 'model.vlm_with_expert.vlm.lm_head': 47308800}}
+[train] step 50/34440 epoch 0 loss 0.0112 lr 4.44e-06 gn 0.18 update 0.229s data 0.000s total 4.2215 hinge 4.2102 gap 0.0000 active 1.000
+[train] step 100/34440 epoch 0 loss 0.0074 lr 8.79e-06 gn 0.20 update 0.227s data 0.000s total 4.2173 hinge 4.2099 gap 0.0004 active 1.000
+[train] step 150/34440 epoch 0 loss 0.0161 lr 1.31e-05 gn 0.20 update 0.227s data 0.000s total 4.2264 hinge 4.2103 gap -0.0000 active 1.000
+[train] step 200/34440 epoch 0 loss 0.0062 lr 1.75e-05 gn 0.16 update 0.232s data 0.000s total 4.2162 hinge 4.2100 gap 0.0003 active 1.000
+[train] step 250/34440 epoch 0 loss 0.0077 lr 2.18e-05 gn 0.17 update 0.229s data 0.001s total 4.2174 hinge 4.2097 gap 0.0005 active 1.000

@@ -1,0 +1,205 @@
+{
+ "dataset": "/data/datasets/0c_s1_pick_rl224_y0",
+ "name": "0c_s1_pick_rl224_y0",
+ "label": "relabel_setpoint",
+ "episodes": 2000,
+ "rows": 700000,
+ "T": [
+  350
+ ],
+ "image_size": 224,
+ "expect_yaw": 0.0,
+ "kept": 2000,
+ "yaw": {
+  "expected_m": 0.0,
+  "n": 2000,
+  "spawn_fold": {
+   "min": 0.0,
+   "max": 0.0,
+   "mean": 0.0,
+   "std": 0.0
+  },
+  "regenerated_fold": {
+   "min": 0.0,
+   "max": 0.0,
+   "mean": 0.0,
+   "std": 0.0
+  }
+ },
+ "source_successful_episodes": 2271,
+ "kept_stream_indices": [
+  0,
+  2024
+ ],
+ "video_check": {
+  "episodes": [
+   0,
+   222,
+   444,
+   666,
+   888,
+   1111,
+   1333,
+   1555,
+   1777,
+   1999
+  ],
+  "rows": 3500,
+  "psnr_min": 39.34352029241319,
+  "psnr_mean": 43.14613482176346,
+  "identity_fail": 0,
+  "backend": "torchcodec"
+ },
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "noise_std_per_arm_dim": [
+   0.09990832954645157,
+   0.10013177990913391,
+   0.09997162222862244,
+   0.09991446882486343
+  ],
+  "noise_rows_per_dim": [
+   686354,
+   662516,
+   645419,
+   698000
+  ],
+  "claw_exec_ne_label_rows": 0,
+  "mutant_action_exec_flagged_episodes": 2000,
+  "episodes_checked": 2000,
+  "state_dims_std_lt_1e-6": [],
+  "state_std": [
+   0.22916061315026676,
+   0.33431452778261284,
+   0.1445245547798966,
+   0.3965899955860134,
+   0.07537436550160602,
+   0.20353777108259796,
+   0.39464920607666976,
+   0.009202733240379141,
+   0.009081158493390706,
+   0.18992141045796332,
+   0.41453782783998194,
+   0.19644472540589314,
+   0.4143219353931655,
+   0.11777519063540777,
+   0.6839816438107541,
+   0.387568723474977,
+   0.04093126826597139,
+   0.040827813958013735,
+   0.013153577980658977
+  ]
+ },
+ "sheet": {
+  "png": "0c_s1_pick_rl224_y0.png",
+  "episodes": [
+   {
+    "lerobot_episode": 0,
+    "episode_index": 0,
+    "instruction": "pick up the cube",
+    "spec": "{\"task\": \"pick\", \"target\": [\"green\", \"small\"], \"dest\": null, \"cubes\": [[\"green\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      116
+     ],
+     [
+      "carry",
+      193
+     ],
+     [
+      "hold",
+      271
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1000,
+    "episode_index": 1015,
+    "instruction": "pick the cube up",
+    "spec": "{\"task\": \"pick\", \"target\": [\"yellow\", \"large\"], \"dest\": null, \"cubes\": [[\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      113
+     ],
+     [
+      "carry",
+      191
+     ],
+     [
+      "hold",
+      270
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1999,
+    "episode_index": 2024,
+    "instruction": "pick up the cube from the table",
+    "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"small\"], \"dest\": null, \"cubes\": [[\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      124
+     ],
+     [
+      "carry",
+      199
+     ],
+     [
+      "hold",
+      274
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   }
+  ]
+ },
+ "items": {
+  "1_count_eq_K": true,
+  "1_rows_eq_K_T": true,
+  "1_rows_per_episode_eq_T": true,
+  "1_columns_exact_action_eq_r": true,
+  "1_image_size": true,
+  "1_psnr_min_ge_35": true,
+  "1_frame_identity": true,
+  "1_kept_are_first_K_successful_in_order": true,
+  "1_split_rule": true,
+  "1_cube_yaw_max_deg_eq_expected": true,
+  "yaw_spawn_attrs_present": true,
+  "yaw_spawn_fold_in_range": true,
+  "yaw_regenerated_layout_fold_in_range": true,
+  "yaw_spawn_agrees_with_regenerated_layout": true,
+  "yaw_coverage": true,
+  "4a_noise_std_in_band": true,
+  "4a_claw_identical": true
+ },
+ "pass_items_1_4a": true,
+ "git_sha": "60dea8a",
+ "wall_s": 276.6
+}

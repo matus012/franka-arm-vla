@@ -1,0 +1,118 @@
+{
+ "build_check_i": {
+  "check_i_U": true,
+  "check_i_mutant_fve_only": false,
+  "n_vision_tensors": 197,
+  "counts": {
+   "F": 99880992,
+   "U": 186314016,
+   "mutant_fve_only": 99880992
+  },
+  "expected": {
+   "F": 99880992,
+   "U": 186314016
+  },
+  "reports": {
+   "F": {
+    "params_total": 450046176,
+    "params_trainable": 99880992,
+    "vision_params_trainable": 0,
+    "by_dtype": {
+     "frozen_bfloat16": 350165184,
+     "trainable_float32": 99880992
+    }
+   },
+   "U": {
+    "params_total": 450046176,
+    "params_trainable": 186314016,
+    "vision_params_trainable": 86433024,
+    "by_dtype": {
+     "trainable_float32": 186314016,
+     "frozen_bfloat16": 263732160
+    }
+   },
+   "mutant_fve_only": {
+    "params_trainable": 99880992
+   }
+  },
+  "trainable_dtypes": {
+   "F": [
+    "torch.float32"
+   ],
+   "U": [
+    "torch.float32"
+   ],
+   "mutant_fve_only": [
+    "torch.float32"
+   ]
+  },
+  "git_sha": "9d91fe8",
+  "pass": true
+ },
+ "post_checks_ii_iii": {
+  "F": {
+   "ckpt": "/runs/s1_frozen/checkpoints/020664/pretrained_model",
+   "parts": {
+    "vision_model": {
+     "tensors": 197,
+     "moved": 0,
+     "bit_identical": 197
+    },
+    "connector": {
+     "tensors": 1,
+     "moved": 0,
+     "bit_identical": 1
+    },
+    "text_model": {
+     "tensors": 146,
+     "moved": 0,
+     "bit_identical": 146
+    },
+    "lm_head": {
+     "tensors": 1,
+     "moved": 0,
+     "bit_identical": 1
+    }
+   }
+  },
+  "U": {
+   "ckpt": "/runs/s1_unfrozen/checkpoints/020664/pretrained_model",
+   "parts": {
+    "vision_model": {
+     "tensors": 197,
+     "moved": 197,
+     "bit_identical": 0
+    },
+    "connector": {
+     "tensors": 1,
+     "moved": 0,
+     "bit_identical": 1
+    },
+    "text_model": {
+     "tensors": 146,
+     "moved": 0,
+     "bit_identical": 146
+    },
+    "lm_head": {
+     "tensors": 1,
+     "moved": 0,
+     "bit_identical": 1
+    }
+   }
+  },
+  "check_ii": {
+   "frozen_parts_bit_identical": true,
+   "F_vision_bit_identical": true,
+   "U_vision_moved_frac": 1.0,
+   "pass": true
+  },
+  "check_iii": {
+   "steps_compared": 20664,
+   "steps_differing": 0,
+   "first_diff": [],
+   "pass": true
+  },
+  "pass": true
+ },
+ "pass": true
+}

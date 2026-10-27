@@ -1,0 +1,50 @@
+{
+ "check_i_U": true,
+ "check_i_mutant_fve_only": false,
+ "n_vision_tensors": 197,
+ "counts": {
+  "F": 99880992,
+  "U": 186314016,
+  "mutant_fve_only": 99880992
+ },
+ "expected": {
+  "F": 99880992,
+  "U": 186314016
+ },
+ "reports": {
+  "F": {
+   "params_total": 450046176,
+   "params_trainable": 99880992,
+   "vision_params_trainable": 0,
+   "by_dtype": {
+    "frozen_bfloat16": 350165184,
+    "trainable_float32": 99880992
+   }
+  },
+  "U": {
+   "params_total": 450046176,
+   "params_trainable": 186314016,
+   "vision_params_trainable": 86433024,
+   "by_dtype": {
+    "trainable_float32": 186314016,
+    "frozen_bfloat16": 263732160
+   }
+  },
+  "mutant_fve_only": {
+   "params_trainable": 99880992
+  }
+ },
+ "trainable_dtypes": {
+  "F": [
+   "torch.float32"
+  ],
+  "U": [
+   "torch.float32"
+  ],
+  "mutant_fve_only": [
+   "torch.float32"
+  ]
+ },
+ "git_sha": "2fd83ea",
+ "pass": true
+}

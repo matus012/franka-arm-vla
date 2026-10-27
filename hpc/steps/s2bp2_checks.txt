@@ -1,0 +1,12 @@
+# GATES 2b sizes round 2 (task 008) data gate on the 12,000 union (cpu_short via hpc/cpu_steps.py): items 1 / 4(a) / 5 + yaw (--kept 12000), item P, 4(b)/(c) + mutants, audit, instrument (i), norm vs the 2b fix pick, union-only-adds vs 0c_s2_pair_rl224_y15, margin by the 2R rule on the union (the 4,000-only value 4.2989 reported beside it)
+python scripts/s0c_rl_check.py --fresh --rerender 224 --expect-yaw 15 --kept 12000 --dataset /data/datasets/0c_s2_pair12k_rl224_y15 --out /runs/ks2bp2
+python scripts/paired_check.py --dataset /data/datasets/0c_s2_pair12k_rl224_y15 --out /runs/ks2bp2
+python scripts/s1_relabel.py dscheck --dataset /data/datasets/0c_s2_pair12k_rl224_y15 --expect-original /data/datasets/0c_s2_pair12k_224a_y15 --out /runs/ks2bp2/dscheck.json
+-python scripts/s1_relabel.py dscheck --mutant shift --dataset /data/datasets/0c_s2_pair12k_rl224_y15 --out /runs/ks2bp2/mutant_shift.json
+-python scripts/s1_relabel.py dscheck --mutant claw --dataset /data/datasets/0c_s2_pair12k_rl224_y15 --out /runs/ks2bp2/mutant_claw.json
+-python scripts/s1_relabel.py dscheck --mutant claw_offset --dataset /data/datasets/0c_s2_pair12k_rl224_y15 --out /runs/ks2bp2/mutant_claw_offset.json
+python tests/test_data_audit.py --root /data/datasets/0c_s2_pair12k_rl224_y15
+python scripts/s1_tools.py arms --dataset /data/datasets/0c_s2_pair12k_rl224_y15 --out /runs/ks2bp2/arms_build.json --device cpu
+-python scripts/s2_norm.py --dataset /data/datasets/0c_s2_pair12k_rl224_y15 --init /runs/s2bp1_VT/checkpoints/034440/pretrained_model --out /runs/ks2bp2/s2bp2_norm.json
+python scripts/s2r_tools.py union --old /data/datasets/0c_s2_pair_rl224_y15 --new /data/datasets/0c_s2_pair12k_rl224_y15 --out /runs/ks2bp2/union.json
+python scripts/s2r_tools.py margin --dataset /data/datasets/0c_s2_pair12k_rl224_y15 --out /runs/ks2bp2/margin.json

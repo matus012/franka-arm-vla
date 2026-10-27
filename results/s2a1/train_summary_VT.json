@@ -1,0 +1,221 @@
+{
+  "git_sha": "3620bf4",
+  "argv": {
+    "dataset": "/data/datasets/0c_s2a_pair_rl224_y15",
+    "root": "None",
+    "out": "/runs/s2a1_VT",
+    "init": "/runs/s1y15_U/checkpoints/041328/pretrained_model",
+    "freeze_vision_encoder": false,
+    "train_expert_only": false,
+    "refreeze_non_vision_vlm": false,
+    "trainable_fp32": true,
+    "n_action_steps": 10,
+    "epochs": 11,
+    "max_steps": 34440,
+    "row_sampling": "window",
+    "batch_size": 64,
+    "lr": null,
+    "seed": 0,
+    "save_every_steps": 8610,
+    "resume": false,
+    "video_backend": "torchcodec",
+    "workers": 6,
+    "distributed": "nccl",
+    "ddp_grad_weight": "valid",
+    "device": "cuda:0",
+    "action_override": null,
+    "cosine_to_total": true,
+    "overfit_abort": false
+  },
+  "init": "/runs/s1y15_U/checkpoints/041328/pretrained_model",
+  "init_sha256": "c3dcef76f53e00e5954469970c25c38980a396723f7bbbf2b85919e6cc6688f5",
+  "resumed_from_step": null,
+  "final_step": 34440,
+  "total_steps": 34440,
+  "samples_seen_this_run": 2203600,
+  "samples_per_epoch": 220168,
+  "steps_per_epoch": 3441,
+  "epochs_done": 10.00871839581517,
+  "dataset": "/data/datasets/0c_s2a_pair_rl224_y15",
+  "episodes": 2000,
+  "rows": 700000,
+  "n_train_episodes": 1898,
+  "n_val_episodes": 102,
+  "train_rows": 664300,
+  "fps": 50,
+  "image_shape": [
+    224,
+    224,
+    3
+  ],
+  "wall_s": 6241.0903577804565,
+  "loop_s": 6125.459270000458,
+  "steady_state": {
+    "warmup_steps_excluded": 50,
+    "samples": 2200400,
+    "s": 6074.3405655082315,
+    "gpu_s_per_sample": 0.011042247892216382,
+    "data_wait_frac": 0.0013316774826276673
+  },
+  "peak_mem_allocated_gib": 20.6177396774292,
+  "peak_mem_reserved_gib": 22.63671875,
+  "device": "cuda:0",
+  "gpu": "NVIDIA H200",
+  "dtype": "bf16 autocast",
+  "flags": {
+    "freeze_vision_encoder": false,
+    "train_expert_only": false,
+    "train_state_proj": true,
+    "chunk_size": 50,
+    "n_action_steps": 10,
+    "tokenizer_max_length": 48,
+    "normalization_mapping": {
+      "VISUAL": "IDENTITY",
+      "STATE": "MEAN_STD",
+      "ACTION": "MEAN_STD"
+    },
+    "rename_map": {
+      "observation.images.side": "observation.images.camera1",
+      "observation.images.wrist": "observation.images.camera2"
+    },
+    "row_sampling": "window",
+    "refreeze_non_vision_vlm": false,
+    "trainable_fp32": true
+  },
+  "deviations_from_lerobot_default": [
+    "bf16 autocast (lerobot-train: fp32 for SmolVLA)",
+    "trainable params cast to fp32 master weights (LeRobot trains bf16 weights directly)"
+  ],
+  "params": {
+    "params_total": 450046176,
+    "params_trainable": 392904096,
+    "vision_params_trainable": 86433024,
+    "by_dtype": {
+      "trainable_float32": 392904096,
+      "frozen_bfloat16": 57142080
+    }
+  },
+  "trainable_parts": {
+    "vision": 86433024,
+    "text_model": 194793600,
+    "connector": 11796480,
+    "expert": 98245840,
+    "other": 1635152,
+    "frozen_names_prefixes": {
+      "model.vlm_with_expert.vlm.model.text_model.layers.15": 9832320,
+      "model.vlm_with_expert.vlm.model.text_model.norm": 960,
+      "model.vlm_with_expert.vlm.lm_head": 47308800
+    }
+  },
+  "optimizer": {
+    "lr": 0.0001,
+    "weight_decay": 1e-10,
+    "grad_clip_norm": 10.0,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08
+  },
+  "scheduler": {
+    "num_warmup_steps": 1148,
+    "num_decay_steps": 34440,
+    "peak_lr": 0.0001,
+    "decay_lr": 2.5e-06
+  },
+  "norm_stats": {
+    "observation.state": {
+      "mean": [
+        -0.0019821315072476864,
+        0.791756272315979,
+        -0.0015102719189599156,
+        0.5589017868041992,
+        0.00021496832778211683,
+        -0.5452138781547546,
+        0.04002240300178528,
+        -0.008579844608902931,
+        -0.008643040433526039,
+        0.00032800683402456343,
+        0.10857763141393661,
+        -0.0007215978112071753,
+        0.0820714682340622,
+        0.0017220692243427038,
+        -0.08135024458169937,
+        0.004738710820674896,
+        -0.0011654566042125225,
+        -0.0012020409340038896,
+        0.06277710944414139
+      ],
+      "std": [
+        0.23260949552059174,
+        0.3363277316093445,
+        0.15289099514484406,
+        0.40003591775894165,
+        0.0784556046128273,
+        0.20523841679096222,
+        0.42932215332984924,
+        0.009139868430793285,
+        0.009160174056887627,
+        0.19496576488018036,
+        0.41247862577438354,
+        0.20292313396930695,
+        0.40845227241516113,
+        0.12256404012441635,
+        0.6756876111030579,
+        0.39837735891342163,
+        0.0409957580268383,
+        0.040900759398937225,
+        0.013200340792536736
+      ]
+    },
+    "action": {
+      "mean": [
+        0.011216332204639912,
+        0.0007570791058242321,
+        -0.07934325933456421,
+        -0.00349709065631032,
+        0.6676561832427979
+      ],
+      "std": [
+        0.15596884489059448,
+        0.23226284980773926,
+        0.29732969403266907,
+        0.08251945674419403,
+        0.47105351090431213
+      ]
+    }
+  },
+  "norm_report": {
+    "observation.state": {
+      "near_constant_dims": [],
+      "std_floor": 1e-06,
+      "stats_rows": 664300
+    },
+    "action": {
+      "near_constant_dims": [],
+      "std_floor": 1e-06,
+      "stats_rows": 664300
+    }
+  },
+  "stats_rows": 664300,
+  "stats_split": "train",
+  "loss_first": [
+    0.26105245505459607
+  ],
+  "loss_last50_mean": 0.01100100141551593,
+  "overfit_abort_check": null,
+  "final_ckpt": "/runs/s2a1_VT/checkpoints/034440/pretrained_model",
+  "torch": "2.10.0+cu130",
+  "lerobot": "0.6.1",
+  "world_size": 4,
+  "per_rank_batch": 16,
+  "backend": "nccl",
+  "rank_seeds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "global_batch": 64,
+  "ddp_grad_weight": "valid"
+}

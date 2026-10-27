@@ -1,0 +1,184 @@
+{
+ "source": "/runs/s3b_pre/s3b_expert_N10_s11820.json",
+ "chosen": [
+  0,
+  1,
+  2,
+  5,
+  21,
+  48,
+  79,
+  98,
+  110,
+  196,
+  213,
+  222,
+  279
+ ],
+ "rounds": 3,
+ "wall_s": 125.1,
+ "git_sha": "00c3065",
+ "frames": [
+  {
+   "index": 0,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep0_stack_success.png"
+  },
+  {
+   "index": 1,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep1_stack_success.png"
+  },
+  {
+   "index": 2,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep2_stack_success.png"
+  },
+  {
+   "index": 5,
+   "types_recorded": [
+    "drop"
+   ],
+   "types_replay": [
+    "drop"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep5_stack_drop.png",
+   "video": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep5.mp4"
+  },
+  {
+   "index": 21,
+   "types_recorded": [
+    "release_failure",
+    "drop"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep21_stack_release_failure_drop.png",
+   "video": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep21.mp4"
+  },
+  {
+   "index": 48,
+   "types_recorded": [
+    "drop"
+   ],
+   "types_replay": [
+    "drop"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep48_stack_drop.png",
+   "video": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep48.mp4"
+  },
+  {
+   "index": 79,
+   "types_recorded": [
+    "release_failure",
+    "drop"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep79_stack_release_failure_drop.png",
+   "video": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep79.mp4"
+  },
+  {
+   "index": 98,
+   "types_recorded": [
+    "release_failure",
+    "drop"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep98_stack_release_failure_drop.png",
+   "video": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep98.mp4"
+  },
+  {
+   "index": 110,
+   "types_recorded": [
+    "release_failure",
+    "drop"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep110_stack_release_failure_drop.png",
+   "video": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep110.mp4"
+  },
+  {
+   "index": 196,
+   "types_recorded": [
+    "release_failure",
+    "drop"
+   ],
+   "types_replay": [
+    "drop"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep196_stack_release_failure_drop.png",
+   "video": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep196.mp4"
+  },
+  {
+   "index": 213,
+   "types_recorded": [
+    "release_failure",
+    "drop"
+   ],
+   "types_replay": [
+    "release_failure",
+    "drop"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep213_stack_release_failure_drop.png",
+   "video": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep213.mp4"
+  },
+  {
+   "index": 222,
+   "types_recorded": [
+    "drop"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep222_stack_drop.png",
+   "video": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep222.mp4"
+  },
+  {
+   "index": 279,
+   "types_recorded": [
+    "release_failure",
+    "drop"
+   ],
+   "types_replay": [
+    "drop"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep279_stack_release_failure_drop.png",
+   "video": "/runs/s3b_pre/frames/s3b_expert_N10_s11820/s3b_expert_N10_s11820_ep279.mp4"
+  }
+ ]
+}

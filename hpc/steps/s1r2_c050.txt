@@ -1,0 +1,4 @@
+# GATES Stage 1 redesign attempt 1 (2,000 demos) (U, H 224, N 10, 41,328 steps = 12 epochs): early abort (c) offline val loss (against r) at the 25 % / 50 % checkpoints + checkpoint pick / early abort (d) closed loop at 50 % (episodes 0-299, validation seed 21600, default sampling)
+pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s1_pick_rl224_2k --ckpt /runs/s1r2_U/checkpoints/010332/pretrained_model --out /runs/e1r2_c050/vloss_010332.json
+pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s1_pick_rl224_2k --ckpt /runs/s1r2_U/checkpoints/020664/pretrained_model --out /runs/e1r2_c050/vloss_020664.json
+sim scripts/eval_policy.py --policy smolvla --episodes 300 --stage s1 --split train --visual nominal --seed 21600 --envs 128 --image-size 224 --n 10 --sampling default --policy-python /opt/policy/bin/python --ckpt /runs/s1r2_U/checkpoints/020664/pretrained_model --out /runs/e1r2_c050/s1r2_U_val_c050_s21600.json

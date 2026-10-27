@@ -1,0 +1,8 @@
+# GATES Stage 1 redesign attempt 1 (2,000 demos), data re-gate on 0c_s1_pick_rl224_2k (cpu_short; run by hpc/cpu_steps.py, `-` = exit code reported, not fatal); ref = the redesign set 0c_s1_pick_rl224 (its 500 = the first 500 here)
+python scripts/s0c_rl_check.py --dataset /data/datasets/0c_s1_pick_rl224_2k --ref /data/datasets/0c_s1_pick_rl224 --out /runs/k224_2k --rerender 224
+python scripts/s1_relabel.py dscheck --dataset /data/datasets/0c_s1_pick_rl224_2k --expect-original /data/datasets/0c_s1_pick_224a_2k --out /runs/k224_2k/dscheck.json
+-python scripts/s1_relabel.py dscheck --mutant shift --dataset /data/datasets/0c_s1_pick_rl224_2k --out /runs/k224_2k/mutant_shift.json
+-python scripts/s1_relabel.py dscheck --mutant claw --dataset /data/datasets/0c_s1_pick_rl224_2k --out /runs/k224_2k/mutant_claw.json
+-python scripts/s1_relabel.py dscheck --mutant claw_offset --dataset /data/datasets/0c_s1_pick_rl224_2k --out /runs/k224_2k/mutant_claw_offset.json
+python tests/test_data_audit.py --root /data/datasets/0c_s1_pick_rl224_2k
+python scripts/s1_tools.py arms --dataset /data/datasets/0c_s1_pick_rl224_2k --out /runs/k224_2k/arms_build.json --device cpu

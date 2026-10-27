@@ -1,0 +1,10 @@
+[
+ {
+  "episode": 0,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a3\\pick_s11300_ep0_success_N20.png",
+  "spec": "{\"task\": \"pick\", \"target\": [\"yellow\", \"large\"], \"dest\": null, \"cubes\": [[\"yellow\", \"small\"], [\"yellow\", \"large\"], [\"red\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ }
+]

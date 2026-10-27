@@ -1,0 +1,205 @@
+{
+ "dataset": "/data/datasets/0c_s2_pair12k_rl224_y15",
+ "name": "0c_s2_pair12k_rl224_y15",
+ "label": "relabel_setpoint",
+ "episodes": 12000,
+ "rows": 4200000,
+ "T": [
+  350
+ ],
+ "image_size": 224,
+ "expect_yaw": 15.0,
+ "kept": 12000,
+ "yaw": {
+  "expected_m": 15.0,
+  "n": 12000,
+  "spawn_fold": {
+   "min": -14.998985290527344,
+   "max": 14.998435974121094,
+   "mean": -0.129718518892924,
+   "std": 8.713812653280462
+  },
+  "regenerated_fold": {
+   "min": -14.998985946644765,
+   "max": 14.998434804710627,
+   "mean": -0.12971851327116954,
+   "std": 8.713812613043865
+  }
+ },
+ "source_successful_episodes": 13800,
+ "kept_stream_indices": [
+  0,
+  12642
+ ],
+ "video_check": {
+  "episodes": [
+   0,
+   1333,
+   2666,
+   4000,
+   5333,
+   6666,
+   7999,
+   9333,
+   10666,
+   11999
+  ],
+  "rows": 3500,
+  "psnr_min": 39.18607380761042,
+  "psnr_mean": 42.636502788940945,
+  "identity_fail": 0,
+  "backend": "torchcodec"
+ },
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "noise_std_per_arm_dim": [
+   0.09995368123054504,
+   0.09999335557222366,
+   0.10004548728466034,
+   0.09995976835489273
+  ],
+  "noise_rows_per_dim": [
+   4114238,
+   3976484,
+   3872900,
+   4169323
+  ],
+  "claw_exec_ne_label_rows": 0,
+  "mutant_action_exec_flagged_episodes": 12000,
+  "episodes_checked": 12000,
+  "state_dims_std_lt_1e-6": [],
+  "state_std": [
+   0.23084545572732598,
+   0.34072812419992154,
+   0.14901096603944122,
+   0.40821607398185794,
+   0.07704736213631481,
+   0.2072096030357668,
+   0.42210956730297966,
+   0.00913246742650252,
+   0.009123391121321593,
+   0.1949828930115032,
+   0.4141031165008705,
+   0.20176463980392967,
+   0.41082773581567983,
+   0.12130031120934859,
+   0.6750131078996029,
+   0.39706161828544606,
+   0.04050956405135057,
+   0.04039664271202155,
+   0.013183007944359433
+  ]
+ },
+ "sheet": {
+  "png": "0c_s2_pair12k_rl224_y15.png",
+  "episodes": [
+   {
+    "lerobot_episode": 0,
+    "episode_index": 0,
+    "instruction": "pick the small green cube up",
+    "spec": "{\"task\": \"pick\", \"target\": [\"green\", \"small\"], \"dest\": null, \"cubes\": [[\"blue\", \"large\"], [\"yellow\", \"large\"], [\"green\", \"small\"], [\"blue\", \"small\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      98
+     ],
+     [
+      "carry",
+      181
+     ],
+     [
+      "hold",
+      265
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 6000,
+    "episode_index": 6328,
+    "instruction": "pick up the blue cube from the table",
+    "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"small\"], \"dest\": null, \"cubes\": [[\"red\", \"large\"], [\"yellow\", \"large\"], [\"blue\", \"small\"], [\"yellow\", \"small\"], [\"red\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      121
+     ],
+     [
+      "carry",
+      197
+     ],
+     [
+      "hold",
+      273
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 11999,
+    "episode_index": 12642,
+    "instruction": "pick the large yellow cube up",
+    "spec": "{\"task\": \"pick\", \"target\": [\"yellow\", \"large\"], \"dest\": null, \"cubes\": [[\"blue\", \"small\"], [\"yellow\", \"small\"], [\"green\", \"large\"], [\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      129
+     ],
+     [
+      "carry",
+      202
+     ],
+     [
+      "hold",
+      275
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   }
+  ]
+ },
+ "items": {
+  "1_count_eq_K": true,
+  "1_rows_eq_K_T": true,
+  "1_rows_per_episode_eq_T": true,
+  "1_columns_exact_action_eq_r": true,
+  "1_image_size": true,
+  "1_psnr_min_ge_35": true,
+  "1_frame_identity": true,
+  "1_kept_are_first_K_successful_in_order": true,
+  "1_split_rule": true,
+  "1_cube_yaw_max_deg_eq_expected": true,
+  "yaw_spawn_attrs_present": true,
+  "yaw_spawn_fold_in_range": true,
+  "yaw_regenerated_layout_fold_in_range": true,
+  "yaw_spawn_agrees_with_regenerated_layout": true,
+  "yaw_coverage": true,
+  "4a_noise_std_in_band": true,
+  "4a_claw_identical": true
+ },
+ "pass_items_1_4a": true,
+ "git_sha": "b2980dd",
+ "wall_s": 422.3
+}

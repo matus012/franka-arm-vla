@@ -1,0 +1,20 @@
+﻿# 0C attempt 1 audit mutants (GATES 0C attempt 1 item 2), tests/test_data_audit.py synthetic mutants, git 746df1c, 2026-10-02T07:19:02
+============================= test session starts =============================
+platform win32 -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0 -- <home>\A_MAIN\ws\113_vla_tabletop\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: <home>\A_MAIN\ws\113_vla_tabletop
+configfile: pyproject.toml
+plugins: anyio-4.14.2, flaky-3.8.1, hydra-core-1.4.0.dev10, mock-3.16.0
+collecting ... collected 8 items
+
+tests/test_data_audit.py::test_synthetic_clean PASSED                    [ 12%]
+tests/test_data_audit.py::test_mutant_heldout_place_pair PASSED          [ 25%]
+tests/test_data_audit.py::test_mutant_heldout_target PASSED              [ 37%]
+tests/test_data_audit.py::test_mutant_paraphrase_instruction PASSED      [ 50%]
+tests/test_data_audit.py::test_mutant_heldout_band_visuals PASSED        [ 62%]
+tests/test_data_audit.py::test_mutant_split_rule_and_collision PASSED    [ 75%]
+tests/test_data_audit.py::test_split_rule_in_export_select PASSED        [ 87%]
+tests/test_data_audit.py::test_real_dataset[NOTSET] SKIPPED (set AUD...) [100%]
+
+======================== 7 passed, 1 skipped in 14.50s ========================
+

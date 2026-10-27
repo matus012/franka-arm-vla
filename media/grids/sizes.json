@@ -1,0 +1,105 @@
+{
+ "stream": "d11_sizes_s51030",
+ "seed": 51030,
+ "ckpt": "/runs/s2bp2_VT/checkpoints/068880/pretrained_model",
+ "ckpt_sha": "ee011bf902f9a1d956ee4d6a47dcc2e3f2cfee681a9a79ea53b458a18c55cc12",
+ "episodes": [
+  {
+   "index": 0,
+   "instruction": "pick up the yellow cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 1,
+   "instruction": "please pick up the large yellow cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 2,
+   "instruction": "pick up the red cube from the table",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 3,
+   "instruction": "please pick up the red cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 4,
+   "instruction": "please pick up the small blue cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 5,
+   "instruction": "pick the yellow cube up",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 6,
+   "instruction": "pick up the green cube from the table",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 7,
+   "instruction": "please pick up the large red cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 8,
+   "instruction": "pick up the small red cube from the table",
+   "success": false,
+   "shown_verdict": "wrong cube"
+  },
+  {
+   "index": 9,
+   "instruction": "pick up the green cube from the table",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 10,
+   "instruction": "pick up the large yellow cube from the table",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 11,
+   "instruction": "pick up the small blue cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 12,
+   "instruction": "pick up the small green cube from the table",
+   "success": false,
+   "shown_verdict": "wrong cube"
+  },
+  {
+   "index": 13,
+   "instruction": "pick the large yellow cube up",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 14,
+   "instruction": "pick up the yellow cube from the table",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 15,
+   "instruction": "pick up the large blue cube from the table",
+   "success": true,
+   "shown_verdict": "success"
+  }
+ ],
+ "full_size_episode": 8
+}

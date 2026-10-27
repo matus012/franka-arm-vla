@@ -1,0 +1,296 @@
+{
+ "source": "scripts/demo_facts.py (generated; do not edit by hand)",
+ "chapters": [
+  {
+   "key": "s1",
+   "title": "One cube: pick it up",
+   "task": "pick",
+   "model": "Stage 1 model",
+   "scene": "one cube (4 colours x 2 sizes), its yaw within +-15 deg of straight (the owner made the task easier after two misses at any yaw)",
+   "data": "2,000 scripted-expert demos",
+   "templates": [
+    "pick up the cube",
+    "pick the cube up",
+    "pick up the cube from the table"
+   ],
+   "rule": "Success = at the end of the 7 s episode the named cube is held by both fingers and lifted at least 10 cm above where it rested. Also scored: wrong cube; slam (hand or finger pushes on the table or a pad with > 20 N); drop (the grasped cube is not held for > 5 steps away from the destination).",
+   "time_limit_s": 7.0,
+   "result_lines": [
+    "Judged on 1,000 unseen test scenes: 96.8 % success (95 % CI 95.5 % to 97.7 %), bar >= 90 % -> PASS",
+    "Re-checked later on 1,000 fresh scenes: 95.3 %"
+   ],
+   "gate": {
+    "rate": 0.968,
+    "count": 968,
+    "n": 1000,
+    "ci95": [
+     0.9551749890510055,
+     0.977243033872133
+    ],
+    "bar": 0.9,
+    "verdict": "PASS",
+    "wrong": 0.0
+   },
+   "final": {
+    "rate": 0.953,
+    "count": 953,
+    "n": 1000,
+    "ci95": [
+     0.9380597525405758,
+     0.9644730773401544
+    ],
+    "wrong": 0.0,
+    "drop": 0.049
+   },
+   "verdict": "PASS"
+  },
+  {
+   "key": "2m",
+   "title": "Colours: pick the cube named by its colour",
+   "task": "pick",
+   "model": "colour model",
+   "scene": "2-4 cubes of different colours, one size per scene, 4 coloured pads",
+   "data": "6,000 scripted-expert demos (each scene shown once per cube that can be named)",
+   "templates": [
+    "pick up <cube>",
+    "pick <cube> up",
+    "pick up <cube> from the table",
+    "please pick up <cube>"
+   ],
+   "rule": "Success = at the end of the 7 s episode the named cube is held by both fingers and lifted at least 10 cm above where it rested. Also scored: wrong cube; slam (hand or finger pushes on the table or a pad with > 20 N); drop (the grasped cube is not held for > 5 steps away from the destination).",
+   "time_limit_s": 7.0,
+   "result_lines": [
+    "Judged on 1,000 unseen test scenes: 96.7 % success (95 % CI 95.4 % to 97.6 %), bar >= 85 % -> PASS",
+    "Re-checked later on 1,000 fresh scenes: 96.0 %"
+   ],
+   "gate": {
+    "rate": 0.967,
+    "count": 967,
+    "n": 1000,
+    "ci95": [
+     0.9540184599711052,
+     0.9764072167492062
+    ],
+    "bar": 0.85,
+    "verdict": "PASS",
+    "wrong": 0.001
+   },
+   "final": {
+    "rate": 0.96,
+    "count": 960,
+    "n": 1000,
+    "ci95": [
+     0.9459900625744302,
+     0.9704891907260906
+    ],
+    "wrong": 0.002,
+    "drop": 0.013
+   },
+   "verdict": "PASS"
+  },
+  {
+   "key": "sizes",
+   "title": "Colours and sizes: \"the small red cube\"",
+   "task": "pick",
+   "model": "sizes model",
+   "scene": "2-5 cubes, two sizes, so the size word is sometimes needed",
+   "data": "12,000 scripted-expert demos (paired scenes)",
+   "templates": [
+    "pick up <cube>",
+    "pick <cube> up",
+    "pick up <cube> from the table",
+    "please pick up <cube>"
+   ],
+   "rule": "Success = at the end of the 7 s episode the named cube is held by both fingers and lifted at least 10 cm above where it rested. Also scored: wrong cube; slam (hand or finger pushes on the table or a pad with > 20 N); drop (the grasped cube is not held for > 5 steps away from the destination).",
+   "time_limit_s": 7.0,
+   "result_lines": [
+    "Judged on 1,000 unseen test scenes: 79.4 % success (95 % CI 76.8 % to 81.8 %), bar >= 85 % -> FAIL"
+   ],
+   "gate": {
+    "rate": 0.794,
+    "count": 794,
+    "n": 1000,
+    "ci95": [
+     0.7678307565977307,
+     0.8179190270334717
+    ],
+    "bar": 0.85,
+    "verdict": "FAIL",
+    "wrong": 0.026
+   },
+   "final": null,
+   "verdict": "FAIL"
+  },
+  {
+   "key": "3aplace",
+   "title": "Place the named cube on the named pad",
+   "task": "place",
+   "model": "place model",
+   "scene": "2-4 cubes, 4 coloured pads",
+   "data": "~4,000 place demos + the colour-pick demos (paired scenes)",
+   "templates": [
+    "put <cube> on <pad>",
+    "place <cube> on <pad>",
+    "move <cube> onto <pad>",
+    "please put <cube> on <pad>"
+   ],
+   "rule": "Success = at the end of the 11 s episode the named cube rests flat (< 10 deg tilt) and still on the named pad (centre inside the pad), released for the last 10 control steps (0.2 s), with the gripper at least 5 cm above it. Also scored: wrong cube; slam (hand or finger pushes on the table or a pad with > 20 N); drop (the grasped cube is not held for > 5 steps away from the destination).",
+   "time_limit_s": 11.0,
+   "result_lines": [
+    "Judged on 1,000 unseen test scenes: 72.7 % success (95 % CI 69.9 % to 75.4 %), bar >= 80 % -> FAIL",
+    "Re-checked later on 1,000 fresh scenes: 71.5 %"
+   ],
+   "gate": {
+    "rate": 0.727,
+    "count": 727,
+    "n": 1000,
+    "ci95": [
+     0.6985580635351872,
+     0.7537045245065915
+    ],
+    "bar": 0.8,
+    "verdict": "FAIL",
+    "wrong": 0.002
+   },
+   "final": {
+    "rate": 0.715,
+    "count": 715,
+    "n": 1000,
+    "ci95": [
+     0.686239728877674,
+     0.7421147047301779
+    ],
+    "wrong": 0.003,
+    "drop": 0.1
+   },
+   "verdict": "FAIL"
+  },
+  {
+   "key": "3bstack",
+   "title": "Stack the named cube on another cube",
+   "task": "stack",
+   "model": "stack model (training stopped at 75 %)",
+   "scene": "2-4 cubes, 4 coloured pads",
+   "data": "4,000 stack demos + the colour-pick demos (paired scenes)",
+   "templates": [
+    "stack <cube> on <cube>",
+    "stack <cube> on top of <cube>",
+    "stack <cube> onto <cube>",
+    "please stack <cube> on <cube>"
+   ],
+   "rule": "Success = at the end of the 11 s episode the named cube rests flat and still on top of the named cube (centre over its top face), both released, for the last 50 control steps (1.0 s), with the gripper at least 5 cm above. Also scored: wrong cube; slam (hand or finger pushes on the table or a pad with > 20 N); drop (the grasped cube is not held for > 5 steps away from the destination).",
+   "time_limit_s": 11.0,
+   "result_lines": [
+    "Judged on 300 validation scenes; stopped by its guard before any test: 40.7 % success (95 % CI 35.3 % to 46.3 %), bar >= 70 % -> FAIL",
+    "(training was stopped: it needed >= 55 % at 75 % of training to continue)"
+   ],
+   "gate": {
+    "rate": 0.4066666666666667,
+    "count": 122,
+    "n": 300,
+    "ci95": [
+     0.3526007999029206,
+     0.4630926403633234
+    ],
+    "bar": 0.7,
+    "verdict": "FAIL",
+    "wrong": 0.07333333333333333,
+    "guard": 0.55
+   },
+   "final": null,
+   "verdict": "FAIL"
+  }
+ ],
+ "breaks": [
+  {
+   "key": "2m_b",
+   "title": "Randomized table colour and lighting",
+   "what": "The colour model on table colours / lighting it never saw in training (no 113 model was trained on these).",
+   "final": {
+    "rate": 0.187,
+    "count": 187,
+    "n": 1000,
+    "ci95": [
+     0.16404741574204446,
+     0.21234822277303605
+    ],
+    "wrong": 0.015,
+    "drop": 0.111
+   },
+   "seen": {
+    "rate": 0.96,
+    "count": 960,
+    "n": 1000,
+    "ci95": [
+     0.9459900625744302,
+     0.9704891907260906
+    ],
+    "wrong": 0.002,
+    "drop": 0.013
+   },
+   "line": "Measured on 1,000 fresh scenes: 18.7 % success (same model on ordinary scenes: 96.0 %)"
+  },
+  {
+   "key": "2m_c",
+   "title": "Colour-size combinations never used as targets",
+   "what": "\"the large green cube\", \"the small yellow cube\": each word seen in training, never this combination as a target.",
+   "final": {
+    "rate": 0.177,
+    "count": 177,
+    "n": 1000,
+    "ci95": [
+     0.15459299077028155,
+     0.20187918571652674
+    ],
+    "wrong": 0.643,
+    "drop": 0.022
+   },
+   "seen": {
+    "rate": 0.96,
+    "count": 960,
+    "n": 1000,
+    "ci95": [
+     0.9459900625744302,
+     0.9704891907260906
+    ],
+    "wrong": 0.002,
+    "drop": 0.013
+   },
+   "line": "Measured on 1,000 fresh scenes: 17.7 % success; wrong cube 64.3 % (same model on ordinary scenes: 96.0 %)"
+  },
+  {
+   "key": "3apick_d",
+   "title": "Reworded instructions",
+   "what": "The place model asked to pick, in words it was not trained on (\"grab ...\", \"get hold of ...\").",
+   "final": {
+    "rate": 0.122,
+    "count": 122,
+    "n": 1000,
+    "ci95": [
+     0.10314842422860387,
+     0.1437447111027074
+    ],
+    "wrong": 0.002,
+    "drop": 0.574
+   },
+   "seen": {
+    "rate": 0.878,
+    "count": 878,
+    "n": 1000,
+    "ci95": [
+     0.8562552888972927,
+     0.8968515757713962
+    ],
+    "wrong": 0.003,
+    "drop": 0.079
+   },
+   "line": "Measured on 1,000 fresh scenes: 12.2 % success; dropped 57.4 % (same model on ordinary scenes: 87.8 %)"
+  }
+ ],
+ "grounding": {
+  "plain_rate": 0.315,
+  "plain_wrong": 0.338,
+  "final_rate": 0.967
+ },
+ "budget_h200_h": 178.95
+}

@@ -1,0 +1,14 @@
+# GATES 3A / 3B amended (task 007) s3a data gate (cpu_short via hpc/cpu_steps.py): per-task items 1 / 4(a) / 5 + yaw (T 550), 4(b)/(c) + mutants, audit; union identity (s3_union_check, paired-aware) + item P per stream + audit on the union; instrument (i) arms; norm table vs the 2b pick (PICK2B); margin by the 2R rule on the union (--stage s3a, the trainer's normalization; consultant) + reported: on the s3a pairs alone
+python scripts/s0c_rl_check.py --fresh --rerender 224 --expect-yaw 15 --kept 3999 --dataset /data/datasets/0c_s3a_pair_rl224_y15 --out /runs/ks3ap
+python scripts/s1_relabel.py dscheck --dataset /data/datasets/0c_s3a_pair_rl224_y15 --expect-original /data/datasets/0c_s3a_pair_224a_y15 --out /runs/ks3ap/dscheck.json
+-python scripts/s1_relabel.py dscheck --mutant shift --dataset /data/datasets/0c_s3a_pair_rl224_y15 --out /runs/ks3ap/mutant_shift.json
+-python scripts/s1_relabel.py dscheck --mutant claw --dataset /data/datasets/0c_s3a_pair_rl224_y15 --out /runs/ks3ap/mutant_claw.json
+-python scripts/s1_relabel.py dscheck --mutant claw_offset --dataset /data/datasets/0c_s3a_pair_rl224_y15 --out /runs/ks3ap/mutant_claw_offset.json
+python tests/test_data_audit.py --root /data/datasets/0c_s3a_pair_rl224_y15
+python scripts/s3_union_check.py --union /data/datasets/0c_s3a_pair_s2_rl224_y15 --task-set /data/datasets/0c_s3a_pair_rl224_y15 --pick-set /data/datasets/0c_s2_pair_rl224_y15 --kept 4000 --kept-task 3999 --out /runs/ks3ap/union_check.json
+python scripts/paired_check.py --dataset /data/datasets/0c_s3a_pair_s2_rl224_y15 --out /runs/ks3ap
+python tests/test_data_audit.py --root /data/datasets/0c_s3a_pair_s2_rl224_y15
+python scripts/s1_tools.py arms --dataset /data/datasets/0c_s3a_pair_s2_rl224_y15 --out /runs/ks3ap/arms_build.json --device cpu
+-python scripts/s2_norm.py --dataset /data/datasets/0c_s3a_pair_s2_rl224_y15 --init /runs/s2bp_VT/checkpoints/PICK2B/pretrained_model --out /runs/ks3ap/s3ap_norm.json
+python scripts/s2r_tools.py margin --dataset /data/datasets/0c_s3a_pair_s2_rl224_y15 --stage s3a --out /runs/ks3ap/margin.json
+python scripts/s2r_tools.py margin --dataset /data/datasets/0c_s3a_pair_rl224_y15 --out /runs/ks3ap/margin_task_only.json

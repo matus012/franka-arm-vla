@@ -1,0 +1,6 @@
+# GATES 0B.6: expert data generation episodes per H200-h per task at H 128 (sigma 0.1 as 0C), + the s1 throughput set.
+# Seed 31500 = the registry's 0B pipeline / throughput data seed; episodes from 1000 on (0B.1 uses 0-19). Dev data only.
+sim scripts/collect.py --stage s1 --split train --start 1000 --episodes 256 --seed 31500 --envs 128 --noise-sigma 0.1 --image-size 128 --visual nominal --out /data/0b6/s1_b128
+sim scripts/collect.py --stage s3a --split train --start 1000 --episodes 256 --seed 31500 --envs 128 --noise-sigma 0.1 --image-size 128 --visual nominal --out /data/0b6/s3a_b128
+sim scripts/collect.py --stage s3b --split train --start 1000 --episodes 256 --seed 31500 --envs 128 --noise-sigma 0.1 --image-size 128 --visual nominal --out /data/0b6/s3b_b128
+sim scripts/collect.py --stage s1 --split train --start 2000 --episodes 256 --seed 31500 --envs 256 --noise-sigma 0.1 --image-size 128 --visual nominal --out /data/0b6/s1_b256

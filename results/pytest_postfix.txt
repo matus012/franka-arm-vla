@@ -1,0 +1,5 @@
+== post expert-fix full suite, HEAD 288e660, 2026-10-02T02:03:01+02:00
+sim venv:
+320 passed, 4 skipped, 36 warnings in 271.28s (0:04:31)
+policy venv (--ignore sim-only test_sim_113, test_chunked_expert):
+340 passed, 1 skipped in 245.92s (0:04:05)

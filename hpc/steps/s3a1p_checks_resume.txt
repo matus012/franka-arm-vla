@@ -1,0 +1,7 @@
+# 009 resume of s3a1p_checks.txt from the union paired_check (job 134400 stopped there: paired_check applied the uniform kept 4000 to the s3a1 stream, which the export kept at 3999 by --kept-stream; fixed by paired_check.stream_kept). Lines verbatim from s3a1p_checks.txt.
+python scripts/paired_check.py --dataset /data/datasets/0c_s3a1_pair_s2a_rl224_y15 --out /runs/ks3a1p
+python tests/test_data_audit.py --root /data/datasets/0c_s3a1_pair_s2a_rl224_y15
+python scripts/s1_tools.py arms --dataset /data/datasets/0c_s3a1_pair_s2a_rl224_y15 --out /runs/ks3a1p/arms_build.json --device cpu
+-python scripts/s2_norm.py --dataset /data/datasets/0c_s3a1_pair_s2a_rl224_y15 --init /runs/s2m_VT/checkpoints/068880/pretrained_model --out /runs/ks3a1p/s3a1p_norm.json
+python scripts/s2r_tools.py margin --dataset /data/datasets/0c_s3a1_pair_s2a_rl224_y15 --stage s3a1 --out /runs/ks3a1p/margin.json
+python scripts/s2r_tools.py margin --dataset /data/datasets/0c_s3a1_pair_rl224_y15 --out /runs/ks3a1p/margin_task_only.json

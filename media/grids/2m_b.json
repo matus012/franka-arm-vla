@@ -1,0 +1,105 @@
+{
+ "stream": "d11_2m_rand_s51070",
+ "seed": 51070,
+ "ckpt": "/runs/s2m_VT/checkpoints/068880/pretrained_model",
+ "ckpt_sha": "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64",
+ "episodes": [
+  {
+   "index": 0,
+   "instruction": "pick up the yellow cube from the table",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 1,
+   "instruction": "pick up the red cube from the table",
+   "success": false,
+   "shown_verdict": "missed grasp"
+  },
+  {
+   "index": 2,
+   "instruction": "pick up the green cube from the table",
+   "success": false,
+   "shown_verdict": "missed grasp"
+  },
+  {
+   "index": 3,
+   "instruction": "pick up the blue cube from the table",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 4,
+   "instruction": "pick the small red cube up",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 5,
+   "instruction": "please pick up the red cube",
+   "success": false,
+   "shown_verdict": "missed grasp"
+  },
+  {
+   "index": 6,
+   "instruction": "please pick up the blue cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 7,
+   "instruction": "pick up the green cube from the table",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 8,
+   "instruction": "pick up the green cube from the table",
+   "success": false,
+   "shown_verdict": "missed grasp"
+  },
+  {
+   "index": 9,
+   "instruction": "pick up the red cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 10,
+   "instruction": "please pick up the red cube",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 11,
+   "instruction": "please pick up the yellow cube",
+   "success": false,
+   "shown_verdict": "missed grasp"
+  },
+  {
+   "index": 12,
+   "instruction": "pick up the small red cube from the table",
+   "success": false,
+   "shown_verdict": "missed grasp"
+  },
+  {
+   "index": 13,
+   "instruction": "please pick up the large blue cube",
+   "success": false,
+   "shown_verdict": "missed grasp"
+  },
+  {
+   "index": 14,
+   "instruction": "pick up the green cube from the table",
+   "success": false,
+   "shown_verdict": "missed grasp"
+  },
+  {
+   "index": 15,
+   "instruction": "pick up the red cube",
+   "success": false,
+   "shown_verdict": "hit table"
+  }
+ ],
+ "full_size_episode": 1
+}

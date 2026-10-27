@@ -1,0 +1,4 @@
+# GATES Stage 1 redesign instrument (ii)-(iv) + run_key on /runs/s1r_U ((iii) = sampler indices f(seed 0, epoch), epochs 1-48); then the (iii) check validated on attempt 1's run (24 epochs, its own dataset: must pass) and its mutant (attempt-1 steps against the rl224 sampler: must fail)
+python scripts/s1_tools.py a1post --u-run /runs/s1r_U --dataset /data/datasets/0c_s1_pick_rl224 --sampler-epochs 48 --check-steps 1 20664 41328 --out /runs/s1r_post/arms_post.json --device cpu
+-python scripts/s1_tools.py a1post --u-run /runs/s1a1_unfrozen --dataset /data/datasets/0c_s1_pick_rl --sampler-epochs 24 --check-steps 1 --out /runs/s1r_post/iii_live_a1.json --device cpu
+-python scripts/s1_tools.py a1post --u-run /runs/s1a1_unfrozen --dataset /data/datasets/0c_s1_pick_rl224 --sampler-epochs 24 --check-steps 1 --out /runs/s1r_post/iii_mutant_a1_vs_rl224.json --device cpu

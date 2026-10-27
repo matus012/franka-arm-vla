@@ -1,0 +1,9 @@
+# GATES Stage 2 redesign #2 part 2a data gate on 0c_s2a_pick_rl224_y15 (fresh seed 32200, m 15; cpu_short via hpc/cpu_steps.py, `-` = exit code reported, not fatal): items 1 / 4(a) / 5 + yaw (--fresh), 4(b)/(c) + mutants, 2 audit, instrument (i), normalization table vs the S1 V15 parent
+python scripts/s0c_rl_check.py --fresh --rerender 224 --expect-yaw 15 --kept 2000 --dataset /data/datasets/0c_s2a_pick_rl224_y15 --out /runs/ks2a
+python scripts/s1_relabel.py dscheck --dataset /data/datasets/0c_s2a_pick_rl224_y15 --expect-original /data/datasets/0c_s2a_pick_224a_y15 --out /runs/ks2a/dscheck.json
+-python scripts/s1_relabel.py dscheck --mutant shift --dataset /data/datasets/0c_s2a_pick_rl224_y15 --out /runs/ks2a/mutant_shift.json
+-python scripts/s1_relabel.py dscheck --mutant claw --dataset /data/datasets/0c_s2a_pick_rl224_y15 --out /runs/ks2a/mutant_claw.json
+-python scripts/s1_relabel.py dscheck --mutant claw_offset --dataset /data/datasets/0c_s2a_pick_rl224_y15 --out /runs/ks2a/mutant_claw_offset.json
+python tests/test_data_audit.py --root /data/datasets/0c_s2a_pick_rl224_y15
+python scripts/s1_tools.py arms --dataset /data/datasets/0c_s2a_pick_rl224_y15 --out /runs/ks2a/arms_build.json --device cpu
+python scripts/s2_norm.py --dataset /data/datasets/0c_s2a_pick_rl224_y15 --init /runs/s1y15_U/checkpoints/041328/pretrained_model --out /runs/ks2a/s2a_norm.json

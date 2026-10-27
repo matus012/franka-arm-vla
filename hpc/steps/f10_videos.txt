@@ -1,0 +1,7 @@
+# 010 demo videos + looks at the surprising cells (replays, close-up camera; reported only). GATES 010 videos entry.
+sim scripts/eval_policy.py --policy-python /opt/policy/bin/python --replay /runs/e10_s1/f10_s1_a_seen_s11905.json --sheets 1 --videos 1,3
+sim scripts/eval_policy.py --policy-python /opt/policy/bin/python --replay /runs/e2m_probe/s2m_probe_s21645.json --sheets 1 --videos 31,32,33
+sim scripts/eval_policy.py --policy-python /opt/policy/bin/python --replay /runs/e10_3aplace/f10_3aplace_a_seen_s11910.json --sheets 1 --videos 0,2
+sim scripts/eval_policy.py --policy-python /opt/policy/bin/python --replay /runs/e10_3apick/f10_3apick_d_para_s11903.json --sheets 1 --videos 0,1,7,8,12
+sim scripts/eval_policy.py --policy-python /opt/policy/bin/python --replay /runs/e10_2m/f10_2m_c_heldout_s11902.json --sheets 1 --videos 1,2,4,5,6
+sim scripts/eval_policy.py --policy-python /opt/policy/bin/python --replay /runs/e10_2m/f10_2m_b_rand_s11901.json --sheets 1 --videos 0,1,4,5

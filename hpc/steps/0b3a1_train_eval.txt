@@ -1,0 +1,10 @@
+# GATES 0B.3 attempt 1 (GATES "0B.3 attempt 1 — batch 64", 2911ec3; on the re-run's fixed-expert demos, 18a2524): the one
+# change vs the attempt-0 commands is --batch-size 64, with --epochs 300 so the epoch cap does not bind (total 5,000).
+# Final-step checkpoint, one counted evaluation; then (reporting only, after the eval) offline per-query MAE at 1k-4k.
+pol -m vla_policy.train_smolvla --dataset /data/datasets/0b3_overfit_r1 --out /runs/0b3a1_train --init lerobot/smolvla_base --n-action-steps 20 --epochs 300 --max-steps 5000 --batch-size 64 --lr 1e-4 --row-sampling window --freeze-vision-encoder true --train-expert-only true --video-backend torchcodec --workers 4 --seed 0 --save-every-steps 1000 --overfit-abort
+pol scripts/s0b3_prep.py offline --dataset /data/datasets/0b3_overfit_r1 --ckpt /runs/0b3a1_train/checkpoints/005000/pretrained_model --out /runs/0b3a1_eval/offline.json
+sim scripts/s0b3_overfit.py eval --ckpt /runs/0b3a1_train/checkpoints/005000/pretrained_model --demo /runs/0b3r1_prereq/replay.json --out /runs/0b3a1_eval/0b3_overfit.json --frames-dir /runs/0b3a1_eval/frames --policy-python /opt/policy/bin/python
+pol scripts/s0b3_prep.py offline --dataset /data/datasets/0b3_overfit_r1 --ckpt /runs/0b3a1_train/checkpoints/001000/pretrained_model --out /runs/0b3a1_eval/offline_001000.json
+pol scripts/s0b3_prep.py offline --dataset /data/datasets/0b3_overfit_r1 --ckpt /runs/0b3a1_train/checkpoints/002000/pretrained_model --out /runs/0b3a1_eval/offline_002000.json
+pol scripts/s0b3_prep.py offline --dataset /data/datasets/0b3_overfit_r1 --ckpt /runs/0b3a1_train/checkpoints/003000/pretrained_model --out /runs/0b3a1_eval/offline_003000.json
+pol scripts/s0b3_prep.py offline --dataset /data/datasets/0b3_overfit_r1 --ckpt /runs/0b3a1_train/checkpoints/004000/pretrained_model --out /runs/0b3a1_eval/offline_004000.json

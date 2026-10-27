@@ -1,0 +1,2 @@
+# Post-kill diagnosis frames: close-up replay of the best variant (N20 zero-noise), round 0: 1 success, first failures per type, 6 large-cube failures (not a gate attempt)
+sim scripts/eval_policy.py --replay /runs/pk_chunk/s1a1_pk_n20zero_s21600.json --sheets 1 --videos 3,6,8,9,13,26 --policy-python /opt/policy/bin/python

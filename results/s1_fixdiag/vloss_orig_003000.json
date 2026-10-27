@@ -1,0 +1,10 @@
+{
+ "ckpt": "/runs/d2fix_fit_orig/checkpoints/003000/pretrained_model",
+ "ckpt_sha": "242a2afa2392f35b829fd9af22829b9bb089fcb9d579aefcc681268a65b76d4b",
+ "val_episodes": 25,
+ "samples": 2900,
+ "action_override": null,
+ "val_loss": 0.4813537505166284,
+ "dtype": "float32 (served)",
+ "git_sha": "f06dfa5"
+}

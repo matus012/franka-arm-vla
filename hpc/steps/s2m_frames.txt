@@ -1,0 +1,2 @@
+# GATES Stage 2M (task 006): close-up replay of test 11544 round 0 (after the PASS; for the record): 3 success sheets + the first episode of every failure type + videos of the round-0 failures 33, 94, 104
+sim scripts/eval_policy.py --replay /runs/e2m_test/s2m_test_s11544.json --sheets 3 --videos 33,94,104 --policy-python /opt/policy/bin/python

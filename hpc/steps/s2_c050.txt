@@ -1,0 +1,4 @@
+# GATES Stage 2 re-plan (c691d00) (U, H 224, N 10, 34,440 steps = 10 epochs, m 15, init S1 V15 041328): early abort (c) offline val loss (against r) at 25 % / 50 % + checkpoint pick / early abort (d) closed loop at 50 % (validation seed 21620 eps 0-299, s2 / train, default sampling)
+pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s2_pick_rl224_y15 --ckpt /runs/s2_U/checkpoints/008610/pretrained_model --out /runs/e2_c050/vloss_008610.json
+pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s2_pick_rl224_y15 --ckpt /runs/s2_U/checkpoints/017220/pretrained_model --out /runs/e2_c050/vloss_017220.json
+sim scripts/eval_policy.py --policy smolvla --stage s2 --split train --visual nominal --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --episodes 300 --seed 21620 --ckpt /runs/s2_U/checkpoints/017220/pretrained_model --out /runs/e2_c050/s2_U_val_c050_s21620.json

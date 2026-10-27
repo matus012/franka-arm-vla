@@ -1,0 +1,2 @@
+# GATES Stage 1 redesign #2 (bdf1af2), V0: checkpoint pick, 75 % checkpoint, validation seed 21600 eps 0-299 at m 0 (N 10, H 224, default sampling)
+sim scripts/eval_policy.py --policy smolvla --stage s1 --split train --visual nominal --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 0 --policy-python /opt/policy/bin/python --episodes 300 --seed 21600 --ckpt /runs/s1y0_U/checkpoints/030996/pretrained_model --out /runs/e1y0_c075/s1y0_U_val_c075_s21600.json

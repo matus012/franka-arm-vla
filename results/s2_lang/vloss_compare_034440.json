@@ -1,0 +1,83 @@
+{
+ "ckpt": "/runs/s2_U/checkpoints/034440/pretrained_model",
+ "ckpt_sha": "7a13a9f5feba775ad6117d1f8012b564e1b18831bedec54ce23ca016fe5a0b6b",
+ "val_episodes": 100,
+ "samples": 11600,
+ "action_override": null,
+ "task_swap": "compare",
+ "dtype": "float32 (served)",
+ "git_sha": "b1e12c8",
+ "blank_task": "",
+ "shuffle_donors": {
+  "episodes": 100,
+  "frac_different_target": 1.0,
+  "frac_same_instruction": 0.0
+ },
+ "shuffle_frac_samples_different_target": 1.0,
+ "loss": {
+  "none": 0.017594460590646184,
+  "shuffle": 0.01971872187508591,
+  "blank": 0.03604060634456832
+ },
+ "all": {
+  "samples": 11600,
+  "loss": {
+   "none": 0.01759446057943843,
+   "shuffle": 0.01971872167938624,
+   "blank": 0.03604060655007202
+  },
+  "shuffle_minus_none": {
+   "mean": 0.002124261099947806,
+   "ci95_sample_bootstrap": [
+    0.0017665168346190415,
+    0.00249696630006815
+   ],
+   "ci95_episode_bootstrap": [
+    0.0012558301098963033,
+    0.0030568212382638734
+   ]
+  },
+  "blank_minus_none": {
+   "mean": 0.018446145970633585,
+   "ci95_sample_bootstrap": [
+    0.01690322572846914,
+    0.020064222447154754
+   ],
+   "ci95_episode_bootstrap": [
+    0.01600546898158572,
+    0.021040249308806606
+   ]
+  }
+ },
+ "approach": {
+  "samples": 935,
+  "loss": {
+   "none": 0.14621873039492023,
+   "shuffle": 0.16720096633625142,
+   "blank": 0.2771275894915595
+  },
+  "shuffle_minus_none": {
+   "mean": 0.020982235941331195,
+   "ci95_sample_bootstrap": [
+    0.01704402503450115,
+    0.025012758353095996
+   ],
+   "ci95_episode_bootstrap": [
+    0.01210653576622201,
+    0.030568488360541685
+   ]
+  },
+  "blank_minus_none": {
+   "mean": 0.13090885909663932,
+   "ci95_sample_bootstrap": [
+    0.11471648932762697,
+    0.14838108410726655
+   ],
+   "ci95_episode_bootstrap": [
+    0.1069176219279769,
+    0.15704059164501272
+   ]
+  }
+ },
+ "approach_definition": "frame_index (control step of the sampled row) <= 30"
+}

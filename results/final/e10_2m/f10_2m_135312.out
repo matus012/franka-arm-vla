@@ -1,0 +1,436 @@
+=== f10_2m on <node> NVIDIA H200 start 2026-10-27T15:14:38+01:00 repo 4a7f7b6
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 1:45:00 cpus 8
+CUDA OK NVIDIA H200
+=== step 1 start 1793110482.830089678 sim scripts/eval_policy.py --policy smolvla --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --episodes 1000 --ckpt /runs/s2m_VT/checkpoints/068880/pretrained_model --stage s2a --split train --visual nominal --seed 11900 --out /runs/e10_2m/f10_2m_a_seen_s11900.json
+[eval] server up after 22.0 s: {"policy": "smolvla", "n_action_steps": 10, "chunk_size": 50, "image_size": 224, "state_dim": 19, "action_dim": 5, "ckpt_sha": "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 224, 224], "observation.images.camera2": [3, 224, 224], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": false, "train_expert_only": false, "dtype": "float32", "sampling": "default", "k": 1, "guidance_w": null, "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 11900
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.722202 s, Mean: 2.722202 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.373617 s, Mean: 0.373617 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.073800 s, Mean: 0.073800 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007397 s, Mean: 0.040598 s, Std: 0.046954 s, N: 2
+Contact sensor construction took: Last: 0.006318 s, Mean: 0.029172 s, Std: 0.038653 s, N: 3
+Contact sensor construction took: Last: 0.004432 s, Mean: 0.022987 s, Std: 0.033897 s, N: 4
+Initialize solver took: Last: 7.829206 s, Mean: 7.829206 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 12.081854 s, Mean: 12.081854 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 29.290038 s, Mean: 29.290038 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=224 policy=smolvla N=10 episodes 0..999 in 8 rounds
+[eval] pick round 0: 126/128 success (kept slots), 89 s; 128 eps, 3685 eps/h
+[eval] pick round 1: 123/128 success (kept slots), 86 s; 256 eps, 4358 eps/h
+[eval] pick round 2: 126/128 success (kept slots), 86 s; 384 eps, 4642 eps/h
+[eval] pick round 3: 122/128 success (kept slots), 87 s; 512 eps, 4796 eps/h
+[eval] pick round 4: 123/128 success (kept slots), 86 s; 640 eps, 4895 eps/h
+[eval] pick round 5: 119/128 success (kept slots), 86 s; 768 eps, 4963 eps/h
+[eval] pick round 6: 123/128 success (kept slots), 86 s; 896 eps, 5013 eps/h
+[eval] pick round 7: 98/104 success (kept slots), 86 s; 1000 eps, 4933 eps/h
+EVAL_SUMMARY={"n": 1000, "success": {"all": 0.96, "pick": 0.96}, "latency": {"server_s_p50": 2.03021, "server_s_p95": 2.032269, "rtt_s_p50": 2.049385, "rtt_s_p95": 2.054604, "queries": 272}, "wall_s": 729.8, "episodes_per_gpu_h": 4932.846329624055, "slots_per_gpu_h": 5051.234641535032, "smart_length": null}
+NAN_GUARD_EVENTS=0
+=== step 1 done 1793111247.892620705
+=== step 2 start 1793111247.894304098 sim scripts/eval_policy.py --policy smolvla --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --episodes 1000 --ckpt /runs/s2m_VT/checkpoints/068880/pretrained_model --stage s2a --split train --visual train_rand --table-palette s4r --seed 11901 --out /runs/e10_2m/f10_2m_b_rand_s11901.json
+[eval] server up after 22.0 s: {"policy": "smolvla", "n_action_steps": 10, "chunk_size": 50, "image_size": 224, "state_dim": 19, "action_dim": 5, "ckpt_sha": "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 224, 224], "observation.images.camera2": [3, 224, 224], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": false, "train_expert_only": false, "dtype": "float32", "sampling": "default", "k": 1, "guidance_w": null, "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 11901
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.658232 s, Mean: 2.658232 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.382027 s, Mean: 0.382027 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.073731 s, Mean: 0.073731 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007433 s, Mean: 0.040582 s, Std: 0.046880 s, N: 2
+Contact sensor construction took: Last: 0.006198 s, Mean: 0.029121 s, Std: 0.038639 s, N: 3
+Contact sensor construction took: Last: 0.004463 s, Mean: 0.022956 s, Std: 0.033872 s, N: 4
+Initialize solver took: Last: 7.821059 s, Mean: 7.821059 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.954676 s, Mean: 11.954676 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 29.174567 s, Mean: 29.174567 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=224 policy=smolvla N=10 episodes 0..999 in 8 rounds
+[eval] pick round 0: 34/128 success (kept slots), 92 s; 128 eps, 3608 eps/h
+[eval] pick round 1: 21/128 success (kept slots), 88 s; 256 eps, 4268 eps/h
+[eval] pick round 2: 20/128 success (kept slots), 89 s; 384 eps, 4540 eps/h
+[eval] pick round 3: 31/128 success (kept slots), 88 s; 512 eps, 4695 eps/h
+[eval] pick round 4: 34/128 success (kept slots), 88 s; 640 eps, 4795 eps/h
+[eval] pick round 5: 25/128 success (kept slots), 88 s; 768 eps, 4861 eps/h
+[eval] pick round 6: 10/128 success (kept slots), 88 s; 896 eps, 4908 eps/h
+[eval] pick round 7: 12/104 success (kept slots), 88 s; 1000 eps, 4830 eps/h
+EVAL_SUMMARY={"n": 1000, "success": {"all": 0.187, "pick": 0.187}, "latency": {"server_s_p50": 2.030495, "server_s_p95": 2.0325634999999997, "rtt_s_p50": 2.04932, "rtt_s_p95": 2.0540605, "queries": 272}, "wall_s": 745.4, "episodes_per_gpu_h": 4829.851476028892, "slots_per_gpu_h": 4945.767911453585, "smart_length": null}
+NAN_GUARD_EVENTS=0
+=== step 2 done 1793112028.686737608
+=== step 3 start 1793112028.688487752 sim scripts/eval_policy.py --policy smolvla --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --episodes 1000 --ckpt /runs/s2m_VT/checkpoints/068880/pretrained_model --stage s2a --split heldout_comp --visual nominal --seed 11902 --out /runs/e10_2m/f10_2m_c_heldout_s11902.json
+[eval] server up after 22.0 s: {"policy": "smolvla", "n_action_steps": 10, "chunk_size": 50, "image_size": 224, "state_dim": 19, "action_dim": 5, "ckpt_sha": "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 224, 224], "observation.images.camera2": [3, 224, 224], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": false, "train_expert_only": false, "dtype": "float32", "sampling": "default", "k": 1, "guidance_w": null, "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 11902
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.560616 s, Mean: 2.560616 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.377282 s, Mean: 0.377282 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.073534 s, Mean: 0.073534 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007367 s, Mean: 0.040451 s, Std: 0.046786 s, N: 2
+Contact sensor construction took: Last: 0.006059 s, Mean: 0.028987 s, Std: 0.038584 s, N: 3
+Contact sensor construction took: Last: 0.004390 s, Mean: 0.022837 s, Std: 0.033819 s, N: 4
+Initialize solver took: Last: 7.813945 s, Mean: 7.813945 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.906498 s, Mean: 11.906498 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 29.127353 s, Mean: 29.127353 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=224 policy=smolvla N=10 episodes 0..999 in 8 rounds
+[eval] pick round 0: 22/128 success (kept slots), 89 s; 128 eps, 3691 eps/h
+[eval] pick round 1: 25/128 success (kept slots), 86 s; 256 eps, 4361 eps/h
+[eval] pick round 2: 19/128 success (kept slots), 87 s; 384 eps, 4640 eps/h
+[eval] pick round 3: 19/128 success (kept slots), 87 s; 512 eps, 4794 eps/h
+[eval] pick round 4: 31/128 success (kept slots), 86 s; 640 eps, 4893 eps/h
+[eval] pick round 5: 25/128 success (kept slots), 86 s; 768 eps, 4962 eps/h
+[eval] pick round 6: 22/128 success (kept slots), 87 s; 896 eps, 5010 eps/h
+[eval] pick round 7: 14/104 success (kept slots), 87 s; 1000 eps, 4929 eps/h
+EVAL_SUMMARY={"n": 1000, "success": {"all": 0.177, "pick": 0.177}, "latency": {"server_s_p50": 2.030135, "server_s_p95": 2.0318345, "rtt_s_p50": 2.049125, "rtt_s_p95": 2.0544305, "queries": 272}, "wall_s": 730.4, "episodes_per_gpu_h": 4928.963762275665, "slots_per_gpu_h": 5047.258892570281, "smart_length": null}
+NAN_GUARD_EVENTS=0
+=== step 3 done 1793112794.117838208
+=== step 4 start 1793112794.119606739 sim scripts/eval_policy.py --policy smolvla --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --episodes 1000 --ckpt /runs/s2m_VT/checkpoints/068880/pretrained_model --stage s2a --split paraphrase --visual nominal --seed 11903 --out /runs/e10_2m/f10_2m_d_para_s11903.json
+[eval] server up after 21.0 s: {"policy": "smolvla", "n_action_steps": 10, "chunk_size": 50, "image_size": 224, "state_dim": 19, "action_dim": 5, "ckpt_sha": "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 224, 224], "observation.images.camera2": [3, 224, 224], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": false, "train_expert_only": false, "dtype": "float32", "sampling": "default", "k": 1, "guidance_w": null, "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 11903
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 3.497781 s, Mean: 3.497781 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.391158 s, Mean: 0.391158 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.073819 s, Mean: 0.073819 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007382 s, Mean: 0.040600 s, Std: 0.046978 s, N: 2
+Contact sensor construction took: Last: 0.006092 s, Mean: 0.029098 s, Std: 0.038735 s, N: 3
+Contact sensor construction took: Last: 0.004463 s, Mean: 0.022939 s, Std: 0.033941 s, N: 4
+Initialize solver took: Last: 7.840880 s, Mean: 7.840880 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 12.015321 s, Mean: 12.015321 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 29.343257 s, Mean: 29.343257 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=224 policy=smolvla N=10 episodes 0..999 in 8 rounds
+[eval] pick round 0: 123/128 success (kept slots), 89 s; 128 eps, 3660 eps/h
+[eval] pick round 1: 128/128 success (kept slots), 86 s; 256 eps, 4340 eps/h
+[eval] pick round 2: 124/128 success (kept slots), 87 s; 384 eps, 4625 eps/h
+[eval] pick round 3: 122/128 success (kept slots), 87 s; 512 eps, 4782 eps/h
+[eval] pick round 4: 123/128 success (kept slots), 86 s; 640 eps, 4883 eps/h
+[eval] pick round 5: 119/128 success (kept slots), 87 s; 768 eps, 4949 eps/h
+[eval] pick round 6: 124/128 success (kept slots), 86 s; 896 eps, 5001 eps/h
+[eval] pick round 7: 100/104 success (kept slots), 86 s; 1000 eps, 4922 eps/h
+EVAL_SUMMARY={"n": 1000, "success": {"all": 0.963, "pick": 0.963}, "latency": {"server_s_p50": 2.0303199999999997, "server_s_p95": 2.045813, "rtt_s_p50": 2.04983, "rtt_s_p95": 2.067398, "queries": 272}, "wall_s": 731.5, "episodes_per_gpu_h": 4921.625914787694, "slots_per_gpu_h": 5039.744936742598, "smart_length": null}
+NAN_GUARD_EVENTS=0
+=== step 4 done 1793113559.946094207
+=== f10_2m done 2026-10-27T16:05:59+01:00

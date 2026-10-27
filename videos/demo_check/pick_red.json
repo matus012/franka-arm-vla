@@ -1,0 +1,82 @@
+{
+ "instruction": "pick up the red cube",
+ "seed": 1,
+ "layout_index": 0,
+ "policy": "expert",
+ "ckpt": "",
+ "visual": "nominal",
+ "image_size": 128,
+ "n": 10,
+ "T": 350,
+ "spec": {
+  "task": "pick",
+  "target": [
+   "red",
+   "small"
+  ],
+  "dest": null,
+  "cubes": [
+   [
+    "yellow",
+    "large"
+   ],
+   [
+    "blue",
+    "large"
+   ],
+   [
+    "blue",
+    "small"
+   ],
+   [
+    "green",
+    "large"
+   ],
+   [
+    "red",
+    "small"
+   ]
+  ],
+  "pads": [
+   "red",
+   "green",
+   "blue",
+   "yellow"
+  ]
+ },
+ "success": true,
+ "detectors": {
+  "success": true,
+  "wrong_grasp": false,
+  "wrong_dest": false,
+  "wrong_object": false,
+  "slam": false,
+  "slam_10N": false,
+  "slam_50N": false,
+  "jam": false,
+  "release_failure": false,
+  "release_fail_not_released": false,
+  "release_fail_off_destination": false,
+  "release_fail_not_clear": false,
+  "release_fail_unstable": false,
+  "early_close": false,
+  "drop": false,
+  "distractor_disturbed": false,
+  "clean": true,
+  "invalid": false,
+  "stack_release_rest_seen": false,
+  "stack_stable_after_release": false,
+  "grasp_confirmed": true,
+  "completion_step": 184,
+  "max_jam_run": 0,
+  "max_hand_table_or_pad_force": 0.0,
+  "spawn_yaw_deg": -111.01815032958984,
+  "spawn_yaw_fold_deg": -21.018150329589844,
+  "wrong_grasp_cube": -1
+ },
+ "frames": 212,
+ "fps": 25,
+ "video": "<home>\\A_MAIN\\ws\\113_vla_tabletop\\videos\\demo_check\\pick_red.mp4",
+ "wall_s": 113.7,
+ "git_sha": "c8d0ba9f88239f344fa7e6d16b39ae11f975952c"
+}

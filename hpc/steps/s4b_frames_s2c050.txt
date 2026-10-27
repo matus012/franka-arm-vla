@@ -1,0 +1,5 @@
+# GATES Stage 4 re-plan (e2cef02): close-up frames of the seed 2 c050 validation (98249, 0 / 300 per task, early_close 300 / 300) - protocol replay of round 0, looked at before abort (d) is read (orchestrator / consultant 2026-10-04: prove the eval path first). ~0.05 H200-h, inside the evaluation line.
+# sbatch (lead): sbatch --time=00:30:00 --job-name=f4b_s2c050 hpc/slurm/seq.sbatch f4b_s2c050 hpc/steps/s4b_frames_s2c050.txt
+sim scripts/eval_policy.py --replay /runs/e4b_val_seed2/val_c050_pick_s21720.json --sheets 3 --videos 0,1,2,3,4,5,6,7,8,9 --policy-python /opt/policy/bin/python
+sim scripts/eval_policy.py --replay /runs/e4b_val_seed2/val_c050_place_s21730.json --sheets 2 --videos 0,1,2 --policy-python /opt/policy/bin/python
+sim scripts/eval_policy.py --replay /runs/e4b_val_seed2/val_c050_stack_s21740.json --sheets 2 --videos 0,1,2 --policy-python /opt/policy/bin/python

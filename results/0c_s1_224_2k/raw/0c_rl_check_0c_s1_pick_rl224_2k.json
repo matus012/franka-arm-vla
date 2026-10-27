@@ -1,0 +1,516 @@
+{
+ "dataset": "/data/datasets/0c_s1_pick_rl224_2k",
+ "ref": "/data/datasets/0c_s1_pick_rl224",
+ "name": "0c_s1_pick_rl224_2k",
+ "label": "relabel_setpoint",
+ "episodes": 2000,
+ "rows": 700000,
+ "T": [
+  350
+ ],
+ "image_size": 224,
+ "overlap_with_ref": {
+  "kept_shared": 500,
+  "only_here": 1500,
+  "only_ref": 0,
+  "shared_spec_or_instruction_diff": [],
+  "prefix_episodes_differing_from_ref": [],
+  "same_position_same_stream_index": 500
+ },
+ "expert_success": {
+  "batches": [
+   {
+    "dir": "/data/0c/s1_224/b000",
+    "start": 0,
+    "episodes": 320,
+    "envs": 128,
+    "kept": 313,
+    "attempted": 320,
+    "rate_pct": 97.8125,
+    "ci95_pct": [
+     95.55420481102652,
+     98.93643505735356
+    ],
+    "per_task": {
+     "pick": {
+      "attempted": 320,
+      "kept": 313,
+      "rate": 0.978125,
+      "ci95": [
+       0.9555420481102652,
+       0.9893643505735357
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 0,
+       "early_close": 0,
+       "release_failure": 0,
+       "invalid": 0
+      },
+      "failed_unflagged": 7
+     }
+    },
+    "nan_guard_events": 0,
+    "cmd_resync_max_m": 0.004482895135879517,
+    "episodes_per_h": 10712.626223383748,
+    "wall_s": 107.5,
+    "disk_bytes": 777838312
+   },
+   {
+    "dir": "/data/0c/s1_224/b001",
+    "start": 320,
+    "episodes": 320,
+    "envs": 128,
+    "kept": 312,
+    "attempted": 320,
+    "rate_pct": 97.5,
+    "ci95_pct": [
+     95.1451565552115,
+     98.72789743167591
+    ],
+    "per_task": {
+     "pick": {
+      "attempted": 320,
+      "kept": 312,
+      "rate": 0.975,
+      "ci95": [
+       0.951451565552115,
+       0.9872789743167592
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 0,
+       "early_close": 0,
+       "release_failure": 0,
+       "invalid": 0
+      },
+      "failed_unflagged": 8
+     }
+    },
+    "nan_guard_events": 0,
+    "cmd_resync_max_m": 0.004397645592689514,
+    "episodes_per_h": 10860.721507642336,
+    "wall_s": 106.1,
+    "disk_bytes": 781125007
+   },
+   {
+    "dir": "/data/0c/s1_224/b002",
+    "start": 640,
+    "episodes": 640,
+    "envs": 128,
+    "kept": 627,
+    "attempted": 640,
+    "rate_pct": 97.96875,
+    "ci95_pct": [
+     96.55591089689453,
+     98.80916026346543
+    ],
+    "per_task": {
+     "pick": {
+      "attempted": 640,
+      "kept": 627,
+      "rate": 0.9796875,
+      "ci95": [
+       0.9655591089689453,
+       0.9880916026346542
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 0,
+       "early_close": 0,
+       "release_failure": 0,
+       "invalid": 0
+      },
+      "failed_unflagged": 13
+     }
+    },
+    "nan_guard_events": 0,
+    "cmd_resync_max_m": 0.004651963710784912,
+    "episodes_per_h": 14820.27463667526,
+    "wall_s": 155.5,
+    "disk_bytes": 1549513913
+   },
+   {
+    "dir": "/data/0c/s1_224/b003",
+    "start": 1280,
+    "episodes": 640,
+    "envs": 128,
+    "kept": 629,
+    "attempted": 640,
+    "rate_pct": 98.28125,
+    "ci95_pct": [
+     96.94871548620364,
+     99.03762649604789
+    ],
+    "per_task": {
+     "pick": {
+      "attempted": 640,
+      "kept": 629,
+      "rate": 0.9828125,
+      "ci95": [
+       0.9694871548620364,
+       0.9903762649604789
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 0,
+       "early_close": 0,
+       "release_failure": 0,
+       "invalid": 0
+      },
+      "failed_unflagged": 11
+     }
+    },
+    "nan_guard_events": 0,
+    "cmd_resync_max_m": 0.004756927490234375,
+    "episodes_per_h": 14431.414932998934,
+    "wall_s": 159.7,
+    "disk_bytes": 1564959232
+   },
+   {
+    "dir": "/data/0c/s1_224/b004",
+    "start": 1920,
+    "episodes": 320,
+    "envs": 128,
+    "kept": 314,
+    "attempted": 320,
+    "rate_pct": 98.125,
+    "ci95_pct": [
+     95.97030630683673,
+     99.13791944303604
+    ],
+    "per_task": {
+     "pick": {
+      "attempted": 320,
+      "kept": 314,
+      "rate": 0.98125,
+      "ci95": [
+       0.9597030630683673,
+       0.9913791944303604
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 0,
+       "early_close": 0,
+       "release_failure": 0,
+       "invalid": 0
+      },
+      "failed_unflagged": 6
+     }
+    },
+    "nan_guard_events": 0,
+    "cmd_resync_max_m": 0.0050904154777526855,
+    "episodes_per_h": 10586.257446324202,
+    "wall_s": 108.8,
+    "disk_bytes": 780480940
+   }
+  ],
+  "pooled": {
+   "kept": 2195,
+   "attempted": 2240,
+   "rate_pct": 97.99107142857143,
+   "ci95_pct": [
+    97.3225777620048,
+    98.49523754189188
+   ]
+  },
+  "per_target": {
+   "colour:blue": {
+    "kept": 776,
+    "attempted": 790,
+    "rate_pct": 98.22784810126582,
+    "ci95_pct": [
+     97.04743409319268,
+     98.94148863396094
+    ]
+   },
+   "colour:green": {
+    "kept": 327,
+    "attempted": 330,
+    "rate_pct": 99.0909090909091,
+    "ci95_pct": [
+     97.36165467308521,
+     99.69036041430952
+    ]
+   },
+   "colour:red": {
+    "kept": 741,
+    "attempted": 754,
+    "rate_pct": 98.27586206896552,
+    "ci95_pct": [
+     97.07260160138816,
+     98.9896889880965
+    ]
+   },
+   "colour:yellow": {
+    "kept": 351,
+    "attempted": 366,
+    "rate_pct": 95.90163934426229,
+    "ci95_pct": [
+     93.34882562634914,
+     97.50087867949422
+    ]
+   },
+   "cube:blue_large": {
+    "kept": 367,
+    "attempted": 379,
+    "rate_pct": 96.83377308707124,
+    "ci95_pct": [
+     94.54795114785549,
+     98.17969391475006
+    ]
+   },
+   "cube:blue_small": {
+    "kept": 409,
+    "attempted": 411,
+    "rate_pct": 99.51338199513383,
+    "ci95_pct": [
+     98.24328334707914,
+     99.86645299565988
+    ]
+   },
+   "cube:green_small": {
+    "kept": 327,
+    "attempted": 330,
+    "rate_pct": 99.0909090909091,
+    "ci95_pct": [
+     97.36165467308521,
+     99.69036041430952
+    ]
+   },
+   "cube:red_large": {
+    "kept": 378,
+    "attempted": 391,
+    "rate_pct": 96.67519181585678,
+    "ci95_pct": [
+     94.39526868285586,
+     98.0468650740735
+    ]
+   },
+   "cube:red_small": {
+    "kept": 363,
+    "attempted": 363,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     98.9527905232122,
+     100.0
+    ]
+   },
+   "cube:yellow_large": {
+    "kept": 351,
+    "attempted": 366,
+    "rate_pct": 95.90163934426229,
+    "ci95_pct": [
+     93.34882562634914,
+     97.50087867949422
+    ]
+   },
+   "size:large": {
+    "kept": 1096,
+    "attempted": 1136,
+    "rate_pct": 96.47887323943662,
+    "ci95_pct": [
+     95.24080304314765,
+     97.40364860697638
+    ]
+   },
+   "size:small": {
+    "kept": 1099,
+    "attempted": 1104,
+    "rate_pct": 99.54710144927536,
+    "ci95_pct": [
+     98.94417831811025,
+     99.80640118711868
+    ]
+   }
+  }
+ },
+ "ceiling_pct": 100.0,
+ "video_check": {
+  "episodes": [
+   0,
+   222,
+   444,
+   666,
+   888,
+   1111,
+   1333,
+   1555,
+   1777,
+   1999
+  ],
+  "rows": 3500,
+  "psnr_min": 39.33850710711085,
+  "psnr_mean": 43.22432162171181,
+  "identity_fail": 0,
+  "backend": "torchcodec"
+ },
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "noise_std_per_arm_dim": [
+   0.10001984983682632,
+   0.0998661145567894,
+   0.09990277886390686,
+   0.10008105635643005
+  ],
+  "noise_rows_per_dim": [
+   686486,
+   662421,
+   644996,
+   685107
+  ],
+  "claw_exec_ne_label_rows": 0,
+  "mutant_action_exec_flagged_episodes": 2000,
+  "episodes_checked": 2000,
+  "state_dims_std_lt_1e-6": [],
+  "state_std": [
+   0.233521272394188,
+   0.33953419843089544,
+   0.15494954080072174,
+   0.4022250673620111,
+   0.08074234150785024,
+   0.203700767646683,
+   0.594022963651848,
+   0.00919941716721878,
+   0.009050573711686096,
+   0.20350518649042434,
+   0.4085287025394325,
+   0.21301033199792982,
+   0.3879286697947743,
+   0.1268503813406257,
+   0.6408212132247724,
+   0.45202069541674833,
+   0.04070159175318838,
+   0.04066894967019424,
+   0.01327259788988287
+  ]
+ },
+ "sheet": {
+  "png": "0c_s1_pick_rl224_2k.png",
+  "episodes": [
+   {
+    "lerobot_episode": 0,
+    "episode_index": 0,
+    "instruction": "pick the cube up",
+    "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"large\"], \"dest\": null, \"cubes\": [[\"blue\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      102
+     ],
+     [
+      "carry",
+      184
+     ],
+     [
+      "hold",
+      266
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1000,
+    "episode_index": 1019,
+    "instruction": "pick the cube up",
+    "spec": "{\"task\": \"pick\", \"target\": [\"yellow\", \"large\"], \"dest\": null, \"cubes\": [[\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      140
+     ],
+     [
+      "carry",
+      209
+     ],
+     [
+      "hold",
+      279
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1999,
+    "episode_index": 2041,
+    "instruction": "pick the cube up",
+    "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"small\"], \"dest\": null, \"cubes\": [[\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      104
+     ],
+     [
+      "carry",
+      185
+     ],
+     [
+      "hold",
+      267
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   }
+  ]
+ },
+ "items": {
+  "1_count_eq_plan": true,
+  "1_first_ref_episodes_identical": true,
+  "1_rows_per_episode_eq_T": true,
+  "1_columns_exact_action_eq_r": true,
+  "1_image_size": true,
+  "1_psnr_min_ge_35": true,
+  "1_frame_identity": true,
+  "1_shared_stream_specs_equal": true,
+  "1_expert_pooled_ge_ceiling_minus_5": true,
+  "1_expert_every_batch_ge_ceiling_minus_10": true,
+  "1_expert_every_batch_n_ge_200": true,
+  "4a_noise_std_in_band": true,
+  "4a_claw_identical": true
+ },
+ "pass_items_1_4a": true,
+ "git_sha": "819d8b4",
+ "wall_s": 266.5
+}

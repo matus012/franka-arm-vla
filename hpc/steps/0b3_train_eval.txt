@@ -1,0 +1,6 @@
+# GATES 0B.3 counted run (attempt 0): SmolVLA from smolvla_base, arm F defaults, chunk 50, N 20, H 128, MEAN_STD,
+# seed 0, lr 1e-4, batch 8, 5,000 steps, row option B (window), early abort at step 1,000; then the final-step
+# checkpoint (no selection): offline MAE / claw accuracy on the 10 demos, and the 100-episode closed-loop gate.
+pol -m vla_policy.train_smolvla --dataset /data/datasets/0b3_overfit --out /runs/0b3_train --init lerobot/smolvla_base --n-action-steps 20 --epochs 100 --max-steps 5000 --batch-size 8 --lr 1e-4 --row-sampling window --freeze-vision-encoder true --train-expert-only true --video-backend torchcodec --workers 4 --seed 0 --save-every-steps 1000 --overfit-abort
+pol scripts/s0b3_prep.py offline --dataset /data/datasets/0b3_overfit --ckpt /runs/0b3_train/checkpoints/005000/pretrained_model --out /runs/0b3_eval/offline.json
+sim scripts/s0b3_overfit.py eval --ckpt /runs/0b3_train/checkpoints/005000/pretrained_model --demo /runs/0b3_prereq/replay.json --out /runs/0b3_eval/0b3_overfit.json --frames-dir /runs/0b3_eval/frames --policy-python /opt/policy/bin/python

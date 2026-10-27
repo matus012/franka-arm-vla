@@ -1,0 +1,7 @@
+# GATES Stage 4 re-plan (e2cef02), grey nominal re-renders: s2 32500 / s3a 32600 / s3b 32700 (the streams of the 112-table sets), eps 0-2303 each (2 batches of 1,152), H 224, sigma 0.1, m 15, --visual nominal --table-palette s4r
+sim scripts/collect.py --stage s2 --split train --start 0 --episodes 1152 --seed 32500 --envs 128 --noise-sigma 0.1 --image-size 224 --visual nominal --table-palette s4r --cube-yaw-max-deg 15 --out /data/0c/s2y15g/b000
+sim scripts/collect.py --stage s2 --split train --start 1152 --episodes 1152 --seed 32500 --envs 128 --noise-sigma 0.1 --image-size 224 --visual nominal --table-palette s4r --cube-yaw-max-deg 15 --out /data/0c/s2y15g/b001
+sim scripts/collect.py --stage s3a --split train --start 0 --episodes 1152 --seed 32600 --envs 128 --noise-sigma 0.1 --image-size 224 --visual nominal --table-palette s4r --cube-yaw-max-deg 15 --out /data/0c/s3ay15g/b000
+sim scripts/collect.py --stage s3a --split train --start 1152 --episodes 1152 --seed 32600 --envs 128 --noise-sigma 0.1 --image-size 224 --visual nominal --table-palette s4r --cube-yaw-max-deg 15 --out /data/0c/s3ay15g/b001
+sim scripts/collect.py --stage s3b --split train --start 0 --episodes 1152 --seed 32700 --envs 128 --noise-sigma 0.1 --image-size 224 --visual nominal --table-palette s4r --cube-yaw-max-deg 15 --out /data/0c/s3by15g/b000
+sim scripts/collect.py --stage s3b --split train --start 1152 --episodes 1152 --seed 32700 --envs 128 --noise-sigma 0.1 --image-size 224 --visual nominal --table-palette s4r --cube-yaw-max-deg 15 --out /data/0c/s3by15g/b001

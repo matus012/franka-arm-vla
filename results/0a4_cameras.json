@@ -1,0 +1,27 @@
+{
+ "git_sha": "5b99bc3bec522783df2f782ce6d1c20ffec65db3",
+ "sizes": {
+  "128": {
+   "pass": true,
+   "smart_length": "decided at 300",
+   "a_min_cube_side": 0.9730088762755872,
+   "b_wrist_target": 0.9890686957453649,
+   "c_min_pad_side": 0.9726569420657887
+  },
+  "224": {
+   "pass": true,
+   "smart_length": "decided at 300",
+   "a_min_cube_side": 0.980375581184711,
+   "b_wrist_target": 0.9920265780730897,
+   "c_min_pad_side": 0.9849701765782791
+  },
+  "256": {
+   "pass": true,
+   "smart_length": "decided at 300",
+   "a_min_cube_side": 0.9815228549000664,
+   "b_wrist_target": 0.9924766906012218,
+   "c_min_pad_side": 0.9866532805763893
+  }
+ },
+ "chosen_size": 128
+}

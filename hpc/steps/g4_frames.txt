@@ -1,0 +1,2 @@
+# GATES 004 frames (reported only): close-up replay of the best w's run (w = 2, 21640 eps 0-299), 3 successes + the first episode of every failure type
+sim scripts/eval_policy.py --replay /runs/g4_probe/s2a1_guid_w2_s21640.json --sheets 3 --policy-python /opt/policy/bin/python

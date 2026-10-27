@@ -1,0 +1,27 @@
+{
+ "stage": "0A.2 timing",
+ "task": "place",
+ "seed": 21210,
+ "episodes": 300,
+ "cap_steps": 1500,
+ "completion_fraction": 1.0,
+ "completion_time_s_p50": 7.35,
+ "completion_time_s_p99": 8.861199999999998,
+ "T_s": 11,
+ "T_steps": 550,
+ "grasp_dz_m": {
+  "small": -0.0010605715215206146,
+  "large": -0.001086995005607605
+ },
+ "success_at_cap": 1.0,
+ "git_sha": "605bc98624ad2790065be537570dd2272ed34b58",
+ "expert_version": "113-expert-v1",
+ "expert": {
+  "fresh": true,
+  "sigma": 0.0,
+  "noise_seed": 21210000
+ },
+ "detector_version": "113-detectors-v1 (GATES.md conventions 2026-10-01)",
+ "wall_s": 128.2,
+ "nan_guard_events": 0
+}

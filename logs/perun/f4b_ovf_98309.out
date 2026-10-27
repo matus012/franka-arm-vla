@@ -1,0 +1,105 @@
+=== f4b_ovf on <node> NVIDIA H200 start 2026-10-04T09:32:18+02:00 repo 2c0df0d
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 20:00 cpus 8
+CUDA OK NVIDIA H200
+=== step 1 start 1791099142.616312900 sim scripts/eval_policy.py --replay /runs/s4b_overfit/eval_s32500.json --sheets 1 --videos 0,1,2,3,4,5,6,7,8,9,10,11 --policy-python /opt/policy/bin/python
+[eval] server up after 4.0 s: {"policy": "baseline", "n_action_steps": 10, "chunk_size": 10, "image_size": 224, "state_dim": 19, "action_dim": 5, "ckpt_sha": "bfe2f5b2b8e9fa153527592cab4591d76bcb6c49f358a17ee6eaa948da9ad170", "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 32500
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.520862 s, Mean: 2.520862 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.377581 s, Mean: 0.377581 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068004 s, Mean: 0.068004 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.006992 s, Mean: 0.037498 s, Std: 0.043142 s, N: 2
+Contact sensor construction took: Last: 0.005909 s, Mean: 0.026968 s, Std: 0.035542 s, N: 3
+Contact sensor construction took: Last: 0.004226 s, Mean: 0.021283 s, Std: 0.031168 s, N: 4
+Initialize solver took: Last: 6.873558 s, Mean: 6.873558 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.832674 s, Mean: 11.832674 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.587279 s, Mean: 27.587279 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=224 policy=baseline N=10 episodes 0..127 in 1 rounds (replay)
+[eval] pick round 0: 0/13 success (kept slots), 24 s; 13 eps, 806 eps/h
+REPLAY_SUMMARY=[{"index": 0, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep0_pick_early_close.png", "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep0.mp4"}, {"index": 1, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep1_pick_early_close.png", "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep1.mp4"}, {"index": 2, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep2_pick_early_close.png", "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep2.mp4"}, {"index": 3, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep3_pick_early_close.png", "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep3.mp4"}, {"index": 4, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep4_pick_early_close.png", "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep4.mp4"}, {"index": 5, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep5_pick_early_close.png", "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep5.mp4"}, {"index": 6, "types_recorded": ["slam", "early_close"], "types_replay": ["slam", "early_close"], "reproduced": true, "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep6_pick_slam_early_close.png", "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep6.mp4"}, {"index": 7, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep7_pick_early_close.png", "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep7.mp4"}, {"index": 8, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep8_pick_early_close.png", "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep8.mp4"}, {"index": 9, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep9_pick_early_close.png", "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep9.mp4"}, {"index": 10, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep10_pick_early_close.png", "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep10.mp4"}, {"index": 11, "types_recorded": ["early_close"], "types_replay": ["early_close"], "reproduced": true, "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep11_pick_early_close.png", "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep11.mp4"}, {"index": 56, "types_recorded": ["wrong_object", "early_close"], "types_replay": ["wrong_object", "early_close"], "reproduced": false, "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep56_pick_wrong_object_early_close.png"}]
+NAN_GUARD_EVENTS=0
+=== step 1 done 1791099216.536189365
+=== f4b_ovf done 2026-10-04T09:33:36+02:00

@@ -1,0 +1,160 @@
+{
+ "dataset": "/data/datasets/0c_s1_pick_rl",
+ "ref": "/data/datasets/0c_s1_pick",
+ "name": "0c_s1_pick_rl",
+ "label": "relabel_setpoint",
+ "episodes": 500,
+ "rows": 175000,
+ "T": [
+  350
+ ],
+ "episode_list_diff": [],
+ "videos": {
+  "files": 3,
+  "sha256_identical_to_ref": true,
+  "differing": []
+ },
+ "video_check": null,
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "noise_std_per_arm_dim": [
+   0.1000969335436821,
+   0.0998559445142746,
+   0.0999034196138382,
+   0.099920354783535
+  ],
+  "noise_rows_per_dim": [
+   171469,
+   165705,
+   161271,
+   171034
+  ],
+  "claw_exec_ne_label_rows": 0,
+  "mutant_action_exec_flagged_episodes": 500,
+  "episodes_checked": 500,
+  "state_dims_std_lt_1e-6": [],
+  "state_std": [
+   0.23352562065932372,
+   0.3425509907996651,
+   0.15030022604502652,
+   0.40872271811594135,
+   0.07833775250102454,
+   0.20500489823236234,
+   0.5731513098717265,
+   0.009110404980796693,
+   0.009001544903565766,
+   0.20155521320357467,
+   0.40941622466267624,
+   0.20924972614351348,
+   0.38858271655452853,
+   0.12409669710535792,
+   0.6370718625802337,
+   0.4519992145374367,
+   0.040484858025668875,
+   0.04054417130990504,
+   0.013173169711254868
+  ]
+ },
+ "sheet": {
+  "png": "0c_s1_pick_rl.png",
+  "episodes": [
+   {
+    "lerobot_episode": 0,
+    "episode_index": 0,
+    "instruction": "pick the cube up",
+    "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"large\"], \"dest\": null, \"cubes\": [[\"blue\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      102
+     ],
+     [
+      "carry",
+      184
+     ],
+     [
+      "hold",
+      266
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 250,
+    "episode_index": 255,
+    "instruction": "pick the cube up",
+    "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"large\"], \"dest\": null, \"cubes\": [[\"red\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      123
+     ],
+     [
+      "carry",
+      198
+     ],
+     [
+      "hold",
+      273
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 499,
+    "episode_index": 511,
+    "instruction": "pick up the cube",
+    "spec": "{\"task\": \"pick\", \"target\": [\"green\", \"small\"], \"dest\": null, \"cubes\": [[\"green\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      106
+     ],
+     [
+      "carry",
+      187
+     ],
+     [
+      "hold",
+      268
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   }
+  ]
+ },
+ "items": {
+  "1_episode_list_identical_to_attempt0": true,
+  "1_counts_eq_attempt0": true,
+  "1_rows_per_episode_eq_T": true,
+  "1_columns_exact_action_eq_r": true,
+  "1_images": true,
+  "4a_noise_std_in_band": true,
+  "4a_claw_identical": true
+ },
+ "pass_items_1_4a": true,
+ "git_sha": "a01c2db",
+ "wall_s": 5.5
+}

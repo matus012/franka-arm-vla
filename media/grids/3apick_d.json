@@ -1,0 +1,105 @@
+{
+ "stream": "d11_3apick_para_s51090",
+ "seed": 51090,
+ "ckpt": "/runs/s3a1p_VT/checkpoints/035508/pretrained_model",
+ "ckpt_sha": "f6adef8890138871f025994b9aeaa5714e67440c9601a272e001a998bc562f84",
+ "episodes": [
+  {
+   "index": 0,
+   "instruction": "can you grab the yellow cube",
+   "success": false,
+   "shown_verdict": "missed grasp"
+  },
+  {
+   "index": 1,
+   "instruction": "grab the red cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 2,
+   "instruction": "grab the blue cube",
+   "success": false,
+   "shown_verdict": "not lifted in time"
+  },
+  {
+   "index": 3,
+   "instruction": "get hold of the small blue cube",
+   "success": false,
+   "shown_verdict": "missed grasp"
+  },
+  {
+   "index": 4,
+   "instruction": "lift the small red cube off the table",
+   "success": false,
+   "shown_verdict": "missed grasp"
+  },
+  {
+   "index": 5,
+   "instruction": "can you grab the blue cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 6,
+   "instruction": "grab the green cube",
+   "success": false,
+   "shown_verdict": "not lifted in time"
+  },
+  {
+   "index": 7,
+   "instruction": "get hold of the green cube",
+   "success": false,
+   "shown_verdict": "not lifted in time"
+  },
+  {
+   "index": 8,
+   "instruction": "lift the blue cube off the table",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 9,
+   "instruction": "can you grab the large yellow cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 10,
+   "instruction": "can you grab the red cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 11,
+   "instruction": "get hold of the red cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 12,
+   "instruction": "get hold of the yellow cube",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 13,
+   "instruction": "can you grab the red cube",
+   "success": false,
+   "shown_verdict": "not lifted in time"
+  },
+  {
+   "index": 14,
+   "instruction": "grab the red cube",
+   "success": false,
+   "shown_verdict": "not lifted in time"
+  },
+  {
+   "index": 15,
+   "instruction": "grab the yellow cube",
+   "success": true,
+   "shown_verdict": "success"
+  }
+ ],
+ "full_size_episode": 0
+}

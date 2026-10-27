@@ -1,0 +1,17 @@
+# GATES 0C attempt 1 item 4 mutants (scripts/s1_relabel.py dscheck)
+s1 m-a (attempt-0 set, original labels): identity_ok=False rows_ne_relabel=174500 -> flagged=True
+s1 m-b (shift, shared function): identity_ok=True slope=[-1.985, -1.961, -1.948, -1.974] -> flagged by (c)=True
+s1 m-c (claw relabelled, as written): rows changed vs true relabel=0 claw_rows_ne_stored=0 -> flagged=False
+s1 m-c' (arm correction one dim right, dyaw onto the claw): claw_rows_ne_stored=115448 -> flagged=True
+s2 m-a (attempt-0 set, original labels): identity_ok=False rows_ne_relabel=698000 -> flagged=True
+s2 m-b (shift, shared function): identity_ok=True slope=[-1.978, -1.963, -1.94, -1.98] -> flagged by (c)=True
+s2 m-c (claw relabelled, as written): rows changed vs true relabel=0 claw_rows_ne_stored=0 -> flagged=False
+s2 m-c' (arm correction one dim right, dyaw onto the claw): claw_rows_ne_stored=461468 -> flagged=True
+s3a m-a (attempt-0 set, original labels): identity_ok=False rows_ne_relabel=1098000 -> flagged=True
+s3a m-b (shift, shared function): identity_ok=True slope=[-1.992, -1.973, -1.962, -1.986] -> flagged by (c)=True
+s3a m-c (claw relabelled, as written): rows changed vs true relabel=0 claw_rows_ne_stored=0 -> flagged=False
+s3a m-c' (arm correction one dim right, dyaw onto the claw): claw_rows_ne_stored=888184 -> flagged=True
+s3b m-a (attempt-0 set, original labels): identity_ok=False rows_ne_relabel=1098000 -> flagged=True
+s3b m-b (shift, shared function): identity_ok=True slope=[-1.986, -1.97, -1.964, -1.973] -> flagged by (c)=True
+s3b m-c (claw relabelled, as written): rows changed vs true relabel=0 claw_rows_ne_stored=0 -> flagged=False
+s3b m-c' (arm correction one dim right, dyaw onto the claw): claw_rows_ne_stored=903855 -> flagged=True

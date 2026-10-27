@@ -1,0 +1,81 @@
+{
+ "u_run": "/runs/s2_U",
+ "ref_run": "/runs/s1_frozen",
+ "final_ckpt": "034440",
+ "check_ii": {
+  "parts": {
+   "vision_model": {
+    "tensors": 197,
+    "moved": 197,
+    "bit_identical": 0
+   },
+   "connector": {
+    "tensors": 1,
+    "moved": 0,
+    "bit_identical": 1
+   },
+   "text_model": {
+    "tensors": 146,
+    "moved": 0,
+    "bit_identical": 146
+   },
+   "lm_head": {
+    "tensors": 1,
+    "moved": 0,
+    "bit_identical": 1
+   }
+  },
+  "frozen_parts_bit_identical": true,
+  "vision_moved_frac": 1.0,
+  "pass": true
+ },
+ "check_iii": {
+  "mode": "sampler = f(seed 1, epoch)",
+  "epochs_checked": 10,
+  "steps_per_epoch": 3444,
+  "steps_compared": 34440,
+  "steps_differing": 34440,
+  "first_diff": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "pass": false
+ },
+ "check_iv": {
+  "steps": {
+   "1": {
+    "rows": 64,
+    "rows_bad": 0
+   }
+  },
+  "rows_checked": 64,
+  "rows_bad": 0,
+  "pass": true
+ },
+ "run_key_action_override_null": {
+  "per_ckpt": {
+   "008610": {
+    "action_override": null,
+    "dataset": "/data/datasets/0c_s2_pick_rl224_y15"
+   },
+   "017220": {
+    "action_override": null,
+    "dataset": "/data/datasets/0c_s2_pick_rl224_y15"
+   },
+   "025830": {
+    "action_override": null,
+    "dataset": "/data/datasets/0c_s2_pick_rl224_y15"
+   },
+   "034440": {
+    "action_override": null,
+    "dataset": "/data/datasets/0c_s2_pick_rl224_y15"
+   }
+  },
+  "pass": true
+ },
+ "git_sha": "b1e12c8",
+ "pass": false
+}

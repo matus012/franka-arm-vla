@@ -1,0 +1,90 @@
+{
+ "gate": "0B.2",
+ "checks": {
+  "1_all_B_complete_shapes_finite_ranges": true,
+  "2_batch_invariance_1e-4": true,
+  "3_query_steps_and_delayed_frames": true
+ },
+ "pass": true,
+ "batch_invariance": [
+  {
+   "B_batched": 16,
+   "envs": 16,
+   "requests": 4,
+   "max_abs_diff": 2.2649765014648438e-06,
+   "max_abs_diff_per_request": [
+    3.5762786865234375e-07,
+    1.259148120880127e-06,
+    1.430511474609375e-06,
+    2.2649765014648438e-06
+   ],
+   "tol": 0.0001,
+   "pass": true
+  }
+ ],
+ "measured": {
+  "1": {
+   "B": 1,
+   "episodes": 2,
+   "server_s_p50": 0.7062300000106916,
+   "server_s_p95": 0.7686983499937924,
+   "rtt_s_p50": 0.707217800008948,
+   "rtt_s_p95": 0.7695172350169741,
+   "control_steps_per_s": 12.384107289633814,
+   "env_steps_per_s": 12.384107289633814,
+   "episodes_per_h": 127.37938926480494,
+   "rollout_wall_s": 56.5240581035614,
+   "peak_vram_torch_mib": 8.26123046875,
+   "success": 0
+  },
+  "16": {
+   "B": 16,
+   "episodes": 32,
+   "server_s_p50": 1.8941107999853557,
+   "server_s_p95": 1.904233670006215,
+   "rtt_s_p50": 1.898157200004789,
+   "rtt_s_p95": 1.9083253299977514,
+   "control_steps_per_s": 7.425551144335418,
+   "env_steps_per_s": 118.80881830936669,
+   "episodes_per_h": 1222.0335597534859,
+   "rollout_wall_s": 94.26909685134888,
+   "peak_vram_torch_mib": 8.986328125,
+   "success": 0
+  },
+  "64": {
+   "B": 64,
+   "episodes": 128,
+   "server_s_p50": 7.294247300000279,
+   "server_s_p95": 7.376013304994558,
+   "rtt_s_p50": 7.309235799999442,
+   "rtt_s_p95": 7.395443690003594,
+   "control_steps_per_s": 2.324972934198196,
+   "env_steps_per_s": 148.79826778868454,
+   "episodes_per_h": 1530.4964686836124,
+   "rollout_wall_s": 301.07877373695374,
+   "peak_vram_torch_mib": 11.36083984375,
+   "success": 0
+  }
+ },
+ "sources": [
+  "results\\0b2_bridge_b1.json",
+  "results\\0b2_bridge_b16.json",
+  "results\\0b2_bridge_b64.json"
+ ],
+ "git_sha": "34b980abfe6f63f92d4faedb6de871221a716516",
+ "config": {
+  "seed": 31500,
+  "stage": "s1",
+  "split": "train",
+  "N": 20,
+  "period": 3,
+  "latency": 1,
+  "H": 128,
+  "T": 350,
+  "ckpt": "lerobot/smolvla_base",
+  "dataset": "datasets/0b_smoke"
+ },
+ "ckpt_sha": "7cd549ac2351fb069c0ddb3c34ad2d09cfc92b56a15dccdfc2e41467aaca01eb",
+ "stats_sha": "dc21adcad25577e32f202c622fbb31e7347931122c5bfa5eea66a123f3e13d63",
+ "wall_s": 656.182009935379
+}

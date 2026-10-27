@@ -1,0 +1,30 @@
+# pytest tests/test_data_audit.py -v at repo f49cc94 (2026-10-04, Stage 4 lead)
+============================= test session starts =============================
+platform win32 -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0 -- <home>\A_MAIN\ws\113_vla_tabletop\.venv\Scripts\python.exe
+rootdir: <home>\A_MAIN\ws\113_vla_tabletop
+configfile: pyproject.toml
+plugins: anyio-4.14.2, flaky-3.8.1, hydra-core-1.4.0.dev10, mock-3.16.0
+collecting ... collected 20 items
+
+tests/test_data_audit.py::test_synthetic_clean PASSED                    [  5%]
+tests/test_data_audit.py::test_mutant_heldout_place_pair PASSED          [ 10%]
+tests/test_data_audit.py::test_mutant_heldout_target PASSED              [ 15%]
+tests/test_data_audit.py::test_mutant_paraphrase_instruction PASSED      [ 20%]
+tests/test_data_audit.py::test_mutant_heldout_band_visuals PASSED        [ 25%]
+tests/test_data_audit.py::test_s4r_visuals_audit PASSED                  [ 30%]
+tests/test_data_audit.py::test_mutant_split_rule_and_collision PASSED    [ 35%]
+tests/test_data_audit.py::test_redesign2_streams_and_sidecar_yaw PASSED  [ 40%]
+tests/test_data_audit.py::test_stage3_streams_assigned PASSED            [ 45%]
+tests/test_data_audit.py::test_stage4_streams_assigned PASSED            [ 50%]
+tests/test_data_audit.py::test_stage4_collision_flagged_at_m15 PASSED    [ 55%]
+tests/test_data_audit.py::test_s4r_train_palette_exact_and_mutants PASSED [ 60%]
+tests/test_data_audit.py::test_paired_streams_registered PASSED          [ 65%]
+tests/test_data_audit.py::test_stream_index_paired_has_scene_keys PASSED [ 70%]
+tests/test_data_audit.py::test_paired_synthetic_clean_and_group_split_rule PASSED [ 75%]
+tests/test_data_audit.py::test_mutant_paired_group_split_across_train_val PASSED [ 80%]
+tests/test_data_audit.py::test_mutant_paired_scene_collides_with_probe_under_any_target PASSED [ 85%]
+tests/test_data_audit.py::test_unpaired_audit_unchanged_by_paired_support PASSED [ 90%]
+tests/test_data_audit.py::test_split_rule_in_export_select PASSED        [ 95%]
+tests/test_data_audit.py::test_real_dataset[NOTSET] SKIPPED (set AUD...) [100%]
+
+======================= 19 passed, 1 skipped in 34.43s ========================

@@ -1,0 +1,30 @@
+{
+ "design": "009b precondition, s3a1 / train, m 15, seed 11840, B 128, paired off, 1,000 episodes",
+ "seed": 11840,
+ "n": 1000,
+ "fresh": {
+  "count": 1000,
+  "n": 1000,
+  "rate": 1.0,
+  "ci95": [
+   0.9961731014136095,
+   1.0
+  ]
+ },
+ "chunked_N10": {
+  "count": 1000,
+  "n": 1000,
+  "rate": 1.0,
+  "ci95": [
+   0.9961731014136095,
+   1.0
+  ]
+ },
+ "diff_points": 0.0,
+ "gate": {
+  "expert_fresh_ge_90": true,
+  "chunked_ge_80": true,
+  "chunked_within_3_points": true
+ },
+ "gate_pass": true
+}

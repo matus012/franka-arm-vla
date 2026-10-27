@@ -1,0 +1,2 @@
+# GATES 2b sizes round 2 (task 008): close-up replay of test 11552 round 0 (>= 10 failures looked at before the FAIL): 3 success sheets + the first episode of every failure type + videos of 12 round-0 failures (early close 4 / 13 / 57, wrong cube 7 / 104 / 102, slam 8 / 65 / 101, slam + early close 33, drop 32 / 35)
+sim scripts/eval_policy.py --replay /runs/e2bp2_test/s2bp2_test_s11552.json --sheets 3 --videos 4,7,8,13,32,33,35,57,65,101,102,104 --policy-python /opt/policy/bin/python

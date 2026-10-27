@@ -1,0 +1,7 @@
+# expert mutants (GATES.md), 2026-10-01T18:03:50
+# git HEAD 09e30817654f26add15ae1c9709a9efd8b8a0c81; tests/test_chunked_expert.py against vla_tabletop/expert.py, one mutation each
+unmutated: GREEN
+zero-latency snapshot (killed by ii): KILLED by ['test_commanded_target_from_frame_step', 'test_staleness_of_query_snapshot']
+closed loop between queries (killed by i): KILLED by ['test_commanded_target_from_frame_step', 'test_open_loop_within_chunk', 'test_staleness_of_query_snapshot']
+commanded target read fresh at t instead of the frame step (killed by iv): KILLED by ['test_commanded_target_from_frame_step']
+ALL_KILLED=True

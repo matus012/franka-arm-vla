@@ -1,0 +1,12 @@
+{
+ "steps_jsonl": "/runs/s2a1_VT/steps.jsonl",
+ "steps": 34440,
+ "last_step": 34440,
+ "i2": {
+  "mean_loss_steps_1_50": 0.2587703082885128,
+  "max": 0.1,
+  "pass": false
+ },
+ "contrastive_steps": 0,
+ "ok": true
+}

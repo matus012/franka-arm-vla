@@ -1,0 +1,281 @@
+{
+ "gate": "0B.6",
+ "date": "2026-10-01",
+ "kind": "measurements only (the GPU-h plan entry is written by a lead)",
+ "gpu": "NVIDIA H200 (<node>)",
+ "git_sha_jobs": "b1fa485 (collect 95669), 7e912e2 (bench + eval 95674)",
+ "dataset": {
+  "name": "0b6_s1",
+  "episodes": 501,
+  "rows": 175350,
+  "train_episodes": 476,
+  "val_episodes": 25,
+  "source": "s1 seed 31500 eps 1000-1255 (B 128) + 2000-2255 (B 256), sigma 0.1, H 128, export audit clean"
+ },
+ "training": {
+  "batch_size": 64,
+  "H": 128,
+  "row_option": "B (window sampler)",
+  "n_action_steps": 20,
+  "chunk": 50,
+  "warmup_steps": 50,
+  "timed_steps": 300,
+  "video_backend": "torchcodec",
+  "cpus": 32,
+  "headline_gpu_s_per_sample": {
+   "F_ours_bf16_autocast_fp32_trainable": 0.0036391303120277977,
+   "U_ours_vision_encoder_only": 0.00654006437510058,
+   "F_lerobot_default_no_autocast_bf16_weights": 0.0033470821920006224,
+   "pi05": {
+    "value": 0.3,
+    "status": "ESTIMATE (brief); tokenizer blocked (no HF token); re-measure before pi0.5 launches"
+   }
+  },
+  "workers": "8 / 16 / 24 all give GPU util >= 95.9 % with 0.0 % data wait (not CPU-bound; 8 suffice at bs 64)",
+  "runs": {
+   "frozen_w16": {
+    "config": "frozen",
+    "workers": 16,
+    "gpu_s_per_sample": 0.003649852760960736,
+    "e2e_s_per_sample": 0.003648410132979431,
+    "data_wait_frac_e2e": 0.00027950598768099,
+    "gpu_util_e2e_pct": 96.0,
+    "gpu_util_cached_pct": 96.1,
+    "params_trainable": 99880992,
+    "by_dtype": {
+     "frozen_bfloat16": 350165184,
+     "trainable_float32": 99880992
+    },
+    "bf16_autocast": true,
+    "trainable_fp32": true,
+    "peak_mem_allocated_gib": 13.812119483947754,
+    "freeze_vision_encoder": true,
+    "train_expert_only": true,
+    "refreeze_non_vision_vlm": false
+   },
+   "frozen_w24": {
+    "config": "frozen",
+    "workers": 24,
+    "gpu_s_per_sample": 0.003643059282039758,
+    "e2e_s_per_sample": 0.0036502782013849355,
+    "data_wait_frac_e2e": 0.0002688994030246758,
+    "gpu_util_e2e_pct": 95.9,
+    "gpu_util_cached_pct": 96.2,
+    "params_trainable": 99880992,
+    "by_dtype": {
+     "frozen_bfloat16": 350165184,
+     "trainable_float32": 99880992
+    },
+    "bf16_autocast": true,
+    "trainable_fp32": true,
+    "peak_mem_allocated_gib": 13.812119483947754,
+    "freeze_vision_encoder": true,
+    "train_expert_only": true,
+    "refreeze_non_vision_vlm": false
+   },
+   "frozen_w8": {
+    "config": "frozen",
+    "workers": 8,
+    "gpu_s_per_sample": 0.0036391303120277977,
+    "e2e_s_per_sample": 0.0036483881172413627,
+    "data_wait_frac_e2e": 0.000293128634150178,
+    "gpu_util_e2e_pct": 95.9,
+    "gpu_util_cached_pct": 96.6,
+    "params_trainable": 99880992,
+    "by_dtype": {
+     "frozen_bfloat16": 350165184,
+     "trainable_float32": 99880992
+    },
+    "bf16_autocast": true,
+    "trainable_fp32": true,
+    "peak_mem_allocated_gib": 13.812119483947754,
+    "freeze_vision_encoder": true,
+    "train_expert_only": true,
+    "refreeze_non_vision_vlm": false
+   },
+   "frozen_lerobot_w16": {
+    "config": "frozen_lerobot",
+    "workers": 16,
+    "gpu_s_per_sample": 0.0033470821920006224,
+    "e2e_s_per_sample": 0.0033538902730409366,
+    "data_wait_frac_e2e": 0.00029442828516158814,
+    "gpu_util_e2e_pct": 96.3,
+    "gpu_util_cached_pct": 96.2,
+    "params_trainable": 99880992,
+    "by_dtype": {
+     "frozen_bfloat16": 350165184,
+     "trainable_bfloat16": 96607440,
+     "trainable_float32": 3273552
+    },
+    "bf16_autocast": false,
+    "trainable_fp32": false,
+    "peak_mem_allocated_gib": 14.01626443862915,
+    "freeze_vision_encoder": true,
+    "train_expert_only": true,
+    "refreeze_non_vision_vlm": false
+   },
+   "unfrozen_w16": {
+    "config": "unfrozen",
+    "workers": 16,
+    "gpu_s_per_sample": 0.00654006437510058,
+    "e2e_s_per_sample": 0.0065384151804998205,
+    "data_wait_frac_e2e": 0.00017009533025266312,
+    "gpu_util_e2e_pct": 97.6,
+    "gpu_util_cached_pct": 97.7,
+    "params_trainable": 186314016,
+    "by_dtype": {
+     "trainable_float32": 186314016,
+     "frozen_bfloat16": 263732160
+    },
+    "bf16_autocast": true,
+    "trainable_fp32": true,
+    "peak_mem_allocated_gib": 60.477266788482666,
+    "freeze_vision_encoder": false,
+    "train_expert_only": false,
+    "refreeze_non_vision_vlm": true
+   },
+   "unfrozen_w24": {
+    "config": "unfrozen",
+    "workers": 24,
+    "gpu_s_per_sample": 0.006533218438271433,
+    "e2e_s_per_sample": 0.006547965818172088,
+    "data_wait_frac_e2e": 0.00015649074579487954,
+    "gpu_util_e2e_pct": 97.4,
+    "gpu_util_cached_pct": 97.6,
+    "params_trainable": 186314016,
+    "by_dtype": {
+     "trainable_float32": 186314016,
+     "frozen_bfloat16": 263732160
+    },
+    "bf16_autocast": true,
+    "trainable_fp32": true,
+    "peak_mem_allocated_gib": 60.47265386581421,
+    "freeze_vision_encoder": false,
+    "train_expert_only": false,
+    "refreeze_non_vision_vlm": true
+   }
+  }
+ },
+ "data_generation": {
+  "s1_b128": {
+   "task": "pick",
+   "B": 128,
+   "H": 128,
+   "sigma": 0.1,
+   "attempted": 256,
+   "kept": 251,
+   "chunk_walls_s": [
+    19.3,
+    16.8
+   ],
+   "steady_attempted_eps_per_gpu_h": 27428.571428571428,
+   "steady_kept_eps_per_gpu_h": 26892.85714285714,
+   "invocation_eps_per_gpu_h": 13254.961230031911,
+   "invocation_wall_s": 69.5
+  },
+  "s3a_b128": {
+   "task": "place",
+   "B": 128,
+   "H": 128,
+   "sigma": 0.1,
+   "attempted": 256,
+   "kept": 256,
+   "chunk_walls_s": [
+    27.0,
+    24.4
+   ],
+   "steady_attempted_eps_per_gpu_h": 18885.245901639348,
+   "steady_kept_eps_per_gpu_h": 18885.245901639348,
+   "invocation_eps_per_gpu_h": 10853.54806886744,
+   "invocation_wall_s": 84.9
+  },
+  "s3b_b128": {
+   "task": "stack",
+   "B": 128,
+   "H": 128,
+   "sigma": 0.1,
+   "attempted": 256,
+   "kept": 245,
+   "chunk_walls_s": [
+    26.7,
+    24.3
+   ],
+   "steady_attempted_eps_per_gpu_h": 18962.962962962964,
+   "steady_kept_eps_per_gpu_h": 18148.14814814815,
+   "invocation_eps_per_gpu_h": 10905.785605496465,
+   "invocation_wall_s": 84.5
+  },
+  "s1_b256": {
+   "task": "pick",
+   "B": 256,
+   "H": 128,
+   "sigma": 0.1,
+   "attempted": 256,
+   "kept": 250,
+   "chunk_walls_s": [
+    27.4
+   ],
+   "steady_attempted_eps_per_gpu_h": 33635.03649635037,
+   "steady_kept_eps_per_gpu_h": 32846.71532846716,
+   "invocation_eps_per_gpu_h": 14529.80656577395,
+   "invocation_wall_s": 63.4
+  }
+ },
+ "closed_loop_eval": {
+  "pick": {
+   "B": 128,
+   "N": 20,
+   "T_steps": 350,
+   "episodes": 256,
+   "rounds": 2,
+   "wall_s": 130.6,
+   "episodes_per_gpu_h": 7056.66156202144,
+   "s_per_round": 65.3,
+   "server_s_p50": 2.019415,
+   "policy": "smolvla_base (untrained; 0b6_s1 stats), strict fp32 server",
+   "seed": 21500
+  },
+  "place": {
+   "B": 128,
+   "N": 20,
+   "T_steps": 550,
+   "episodes": 128,
+   "rounds": 1,
+   "wall_s": 110.0,
+   "episodes_per_gpu_h": 4189.090909090909,
+   "s_per_round": 110.0,
+   "server_s_p50": 2.03501,
+   "policy": "smolvla_base (untrained; 0b6_s1 stats), strict fp32 server",
+   "seed": 21500
+  },
+  "stack": {
+   "B": 128,
+   "N": 20,
+   "T_steps": 550,
+   "episodes": 128,
+   "rounds": 1,
+   "wall_s": 109.5,
+   "episodes_per_gpu_h": 4208.219178082191,
+   "s_per_round": 109.5,
+   "server_s_p50": 2.01983,
+   "policy": "smolvla_base (untrained; 0b6_s1 stats), strict fp32 server",
+   "seed": 21500
+  }
+ },
+ "jobs": {
+  "95669": {
+   "what": "collect (4 invocations)",
+   "wall_s": 351
+  },
+  "95671": {
+   "what": "export 0b6_s1 (cpu_short)",
+   "wall_s": 270,
+   "gpu_h": 0
+  },
+  "95674": {
+   "what": "bench x6 + eval x3",
+   "wall_s": 1849
+  }
+ },
+ "gpu_h": 0.6111111111111112
+}

@@ -1,0 +1,50 @@
+{
+ "job": 98204,
+ "stopped_by": "overrun guard 8f15b76 (lead scancel 06:36:33)",
+ "total_steps": 57276,
+ "guard_s": 6336.0,
+ "seeds": {
+  "0": {
+   "last_step": 2352,
+   "start_to_step1_s": 618.3,
+   "s_per_step": {
+    "51_100": 0.15301,
+    "101_500": 0.10888,
+    "501_1000": 0.09683,
+    "1001_2352": 0.09721
+   },
+   "guard_projection_s": 8764,
+   "guard_trips": true,
+   "loss_mean_1_50": 1.5495868468284606,
+   "loss_mean_last_100": 0.25110614240169526
+  },
+  "1": {
+   "last_step": 2352,
+   "start_to_step1_s": 626.2,
+   "s_per_step": {
+    "51_100": 0.13121,
+    "101_500": 0.10406,
+    "501_1000": 0.09806,
+    "1001_2352": 0.09665
+   },
+   "guard_projection_s": 7515,
+   "guard_trips": true,
+   "loss_mean_1_50": 1.5867813229560852,
+   "loss_mean_last_100": 0.24572682805359364
+  },
+  "2": {
+   "last_step": 2352,
+   "start_to_step1_s": 616.6,
+   "s_per_step": {
+    "51_100": 0.16879,
+    "101_500": 0.11077,
+    "501_1000": 0.09809,
+    "1001_2352": 0.09872
+   },
+   "guard_projection_s": 9668,
+   "guard_trips": true,
+   "loss_mean_1_50": 1.493379852771759,
+   "loss_mean_last_100": 0.24744148559868337
+  }
+ }
+}

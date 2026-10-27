@@ -1,0 +1,4 @@
+=== t4b_train on <node> NVIDIA H200 start 2026-10-04T06:22:06+02:00 repo 8ce964f
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 3:00:00 cpus 48
+CUDA OK NVIDIA H200
+=== step 1 start 1791087731.104313237 sh R0=0; R1=0; R2=0; for k in 0 1 2; do pol_exec -m vla_policy.train_baseline --root /data/datasets/0c_s4_all_rl224_y15g --out /runs/s4_baseline_seed$k --epochs 6 --expect-windows 1221893 --n-action-steps 10 --batch-size 128 --lr 3e-4 --workers 15 --video-backend torchcodec --seed $k --save-fractions 0.25,0.5,0.75,1.0 > $RUNS/t4b_train/seed$k.log 2>&1 < /dev/null & eval "PID$k=\$!"; done; wait $PID0 || R0=$?; wait $PID1 || R1=$?; wait $PID2 || R2=$?; tail -n 3 $RUNS/t4b_train/seed?.log; echo train rc $R0 $R1 $R2; [ "$R0$R1$R2" = 000 ]

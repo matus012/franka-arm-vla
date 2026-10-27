@@ -1,0 +1,5 @@
+# 0B.3 diagnosis (substitute the suspect input): same final checkpoint, same 128-slot layout; the first k queries
+# (k = 1: t 0-19; k = 2: t 0-39) execute the demo's labels, the policy drives the rest. Does closed-loop success
+# recover when only the image-only approach chunk is replaced?
+sim scripts/s0b3_overfit.py eval --ckpt /runs/0b3_train/checkpoints/005000/pretrained_model --demo /runs/0b3_prereq/replay.json --actions /runs/0b3_prereq/actions.npz --demo-queries 1 --out /runs/0b3_diag/hybrid_k1.json --policy-python /opt/policy/bin/python
+sim scripts/s0b3_overfit.py eval --ckpt /runs/0b3_train/checkpoints/005000/pretrained_model --demo /runs/0b3_prereq/replay.json --actions /runs/0b3_prereq/actions.npz --demo-queries 2 --out /runs/0b3_diag/hybrid_k2.json --policy-python /opt/policy/bin/python

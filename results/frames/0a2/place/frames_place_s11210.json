@@ -1,0 +1,26 @@
+[
+ {
+  "episode": 0,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2\\place\\place_s11210_ep0_success.png",
+  "spec": "{\"task\": \"place\", \"target\": [\"blue\", \"large\"], \"dest\": \"green\", \"cubes\": [[\"red\", \"large\"], [\"blue\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 1,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2\\place\\place_s11210_ep1_success.png",
+  "spec": "{\"task\": \"place\", \"target\": [\"green\", \"small\"], \"dest\": \"yellow\", \"cubes\": [[\"green\", \"small\"], [\"red\", \"large\"], [\"red\", \"small\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ },
+ {
+  "episode": 2,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2\\place\\place_s11210_ep2_success.png",
+  "spec": "{\"task\": \"place\", \"target\": [\"red\", \"large\"], \"dest\": \"blue\", \"cubes\": [[\"green\", \"large\"], [\"red\", \"large\"], [\"yellow\", \"large\"], [\"blue\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ }
+]

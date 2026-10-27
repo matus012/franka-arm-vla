@@ -1,0 +1,15 @@
+# GATES 0B.6 training throughput: SmolVLA bs 64, H 128, row option B (window sampler), real exported data (0b6_s1:
+# 512 s1 expert episodes, seed 31500 eps 1000-1255 + 2000-2255, sigma 0.1), 50 warm-up + 300 timed steps per phase
+# (e2e with the DataLoader, then pure GPU on cached batches). Workers raised 8 -> 16 -> 24 (job has 32 cpus); GPU util
+# from /runs/<unit>/gpu_util.csv joined with each JSON's phase_epoch_s.
+pol scripts/bench_train.py --dataset /data/datasets/0b6_s1 --batch-size 64 --n-action-steps 20 --video-backend torchcodec --warmup 50 --steps 300 --configs frozen --workers 8 --out /runs/t6_bench/bench_F_w8.json
+pol scripts/bench_train.py --dataset /data/datasets/0b6_s1 --batch-size 64 --n-action-steps 20 --video-backend torchcodec --warmup 50 --steps 300 --configs frozen --workers 16 --out /runs/t6_bench/bench_F_w16.json
+pol scripts/bench_train.py --dataset /data/datasets/0b6_s1 --batch-size 64 --n-action-steps 20 --video-backend torchcodec --warmup 50 --steps 300 --configs frozen --workers 24 --out /runs/t6_bench/bench_F_w24.json
+pol scripts/bench_train.py --dataset /data/datasets/0b6_s1 --batch-size 64 --n-action-steps 20 --video-backend torchcodec --warmup 50 --steps 300 --configs unfrozen --workers 16 --out /runs/t6_bench/bench_U_w16.json
+pol scripts/bench_train.py --dataset /data/datasets/0b6_s1 --batch-size 64 --n-action-steps 20 --video-backend torchcodec --warmup 50 --steps 300 --configs unfrozen --workers 24 --out /runs/t6_bench/bench_U_w24.json
+pol scripts/bench_train.py --dataset /data/datasets/0b6_s1 --batch-size 64 --n-action-steps 20 --video-backend torchcodec --warmup 50 --steps 300 --configs frozen_lerobot --workers 16 --out /runs/t6_bench/bench_Flerobot_w16.json
+# closed-loop evaluation episodes per GPU-h, SmolVLA (base weights, 0b6_s1 stats) in the loop, B = 128, N = 20,
+# validation seed 21500 (0B pipeline / bridge / throughput), one stream per task (T 350 / 550 / 550 steps).
+sim scripts/eval_policy.py --policy smolvla --ckpt lerobot/smolvla_base --dataset /data/datasets/0b6_s1 --split train --visual nominal --seed 21500 --envs 128 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --stage s1 --episodes 256 --out /runs/t6_bench/eval_s1_b128.json
+sim scripts/eval_policy.py --policy smolvla --ckpt lerobot/smolvla_base --dataset /data/datasets/0b6_s1 --split train --visual nominal --seed 21500 --envs 128 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --stage s3a --episodes 128 --out /runs/t6_bench/eval_s3a_b128.json
+sim scripts/eval_policy.py --policy smolvla --ckpt lerobot/smolvla_base --dataset /data/datasets/0b6_s1 --split train --visual nominal --seed 21500 --envs 128 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --stage s3b --episodes 128 --out /runs/t6_bench/eval_s3b_b128.json

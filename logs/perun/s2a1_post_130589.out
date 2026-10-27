@@ -1,0 +1,10 @@
+=== s2a1_post on <node> cpu x16 start 2026-10-25T00:44:33+02:00
+=== step start 1792881874.2 /opt/policy/bin/python scripts/s1_tools.py a1post --u-run /runs/s2a1_VT --dataset /data/datasets/0c_s2a_pair_rl224_y15 --sampler-epochs 11 --check-steps 1 17220 34440 --expect-trainable vision+text --ref-init /runs/s1y15_U/checkpoints/041328/pretrained_model --out /runs/s2a1_post/arms_post.json --device cpu
+[s1_tools] a1post device=cpu
+A1POST={"u_run": "/runs/s2a1_VT", "ref_run": "/runs/s1_frozen", "final_ckpt": "034440", "check_ii": true, "check_iii": false, "check_iv": true, "run_key_action_override_null": true, "git_sha": "7f4f36d", "ref_init": "/runs/s1y15_U/checkpoints/041328/pretrained_model", "pass": false}
+=== step done 1792882037.1 rc 0
+=== step start 1792882037.1 /opt/policy/bin/python scripts/s1_tools.py a1post --u-run /runs/s2a1_VT --dataset /data/datasets/0c_s2a_pair_rl224_y15 --sampler-epochs 11 --sampler-seed 1 --check-steps 1 --expect-trainable vision+text --ref-init /runs/s1y15_U/checkpoints/041328/pretrained_model --out /runs/s2a1_post/iii_mutant_seed1.json --device cpu
+[s1_tools] a1post device=cpu
+A1POST={"u_run": "/runs/s2a1_VT", "ref_run": "/runs/s1_frozen", "final_ckpt": "034440", "check_ii": true, "check_iii": false, "check_iv": true, "run_key_action_override_null": true, "git_sha": "7f4f36d", "ref_init": "/runs/s1y15_U/checkpoints/041328/pretrained_model", "pass": false}
+=== step done 1792882113.2 rc 0
+=== s2a1_post done 2026-10-25T00:48:33+02:00

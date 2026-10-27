@@ -1,0 +1,80 @@
+{
+ "seed": 21610,
+ "episodes": [
+  0,
+  999
+ ],
+ "s_frozen": 0.301,
+ "s_unfrozen": 0.34,
+ "diff_points": 3.9000000000000035,
+ "rule": "U iff s_U > s_F + 3 points, else F",
+ "choice": "unfrozen",
+ "ckpts": {
+  "frozen": "/runs/s1_frozen/checkpoints/020664/pretrained_model",
+  "unfrozen": "/runs/s1_unfrozen/checkpoints/020664/pretrained_model"
+ },
+ "ckpt_sha": {
+  "frozen": "525eb20fc222c3a537038c2a8804e08ad068cb41a8816a2b0dab23db1668e90f",
+  "unfrozen": "7205dde3c1a5355cb435182ca207169195df21fdb0ae947e6ce575af3261bbff"
+ },
+ "aggregate": {
+  "frozen": {
+   "success": {
+    "count": 301,
+    "n": 1000,
+    "rate": 0.301,
+    "ci95": [
+     0.2733757183519434,
+     0.33014738728544
+    ]
+   },
+   "slam": {
+    "count": 4,
+    "n": 1000,
+    "rate": 0.004,
+    "ci95": [
+     0.0015565629678934295,
+     0.010239720429805971
+    ]
+   },
+   "jam": {
+    "count": 14,
+    "n": 1000,
+    "rate": 0.014,
+    "ci95": [
+     0.008357497449441328,
+     0.023362247976530262
+    ]
+   }
+  },
+  "unfrozen": {
+   "success": {
+    "count": 340,
+    "n": 1000,
+    "rate": 0.34,
+    "ci95": [
+     0.31130136795291313,
+     0.369923239594732
+    ]
+   },
+   "slam": {
+    "count": 4,
+    "n": 1000,
+    "rate": 0.004,
+    "ci95": [
+     0.0015565629678934295,
+     0.010239720429805971
+    ]
+   },
+   "jam": {
+    "count": 23,
+    "n": 1000,
+    "rate": 0.023,
+    "ci95": [
+     0.015374164302931469,
+     0.0342766969484851
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,39 @@
+=== k224_2k on <node> cpu x16 start 2026-10-02T17:01:16+02:00
+=== step start 1790953276.9 /opt/policy/bin/python scripts/s0c_rl_check.py --dataset /data/datasets/0c_s1_pick_rl224_2k --ref /data/datasets/0c_s1_pick_rl224 --out /runs/k224_2k --rerender 224
+RLCHECK={"name": "0c_s1_pick_rl224_2k", "items": {"1_count_eq_plan": true, "1_first_ref_episodes_identical": true, "1_rows_per_episode_eq_T": true, "1_columns_exact_action_eq_r": true, "1_image_size": true, "1_psnr_min_ge_35": true, "1_frame_identity": true, "1_shared_stream_specs_equal": true, "1_expert_pooled_ge_ceiling_minus_5": true, "1_expert_every_batch_ge_ceiling_minus_10": true, "1_expert_every_batch_n_ge_200": true, "4a_noise_std_in_band": true, "4a_claw_identical": true}, "noise_std": [0.10001984983682632, 0.0998661145567894, 0.09990277886390686, 0.10008105635643005], "overlap": {"kept_shared": 500, "only_here": 1500, "only_ref": 0, "shared_spec_or_instruction_diff": [], "prefix_episodes_differing_from_ref": [], "same_position_same_stream_index": 500}, "pooled": {"kept": 2195, "attempted": 2240, "rate_pct": 97.99107142857143, "ci95_pct": [97.3225777620048, 98.49523754189188]}, "psnr": [39.33850710711085, 43.22432162171181]}
+=== step done 1790953556.9 rc 0
+=== step start 1790953556.9 /opt/policy/bin/python scripts/s1_relabel.py dscheck --dataset /data/datasets/0c_s1_pick_rl224_2k --expect-original /data/datasets/0c_s1_pick_224a_2k --out /runs/k224_2k/dscheck.json
+/data/datasets/0c_s1_pick_rl224_2k {"episodes": 2000, "rows": 700000, "label": "relabel_setpoint", "relabel_fn": "relabel", "rows_ne_relabel": 0, "rows_ne_original": 698000, "claw_rows_ne_stored": 0, "episodes_first_row_ne_clean": 0, "identity_ok": true, "slope_ok_4c": true, "pass_4b_4c": true, "clip": {"rows": 698000, "frac_rows_clip_binds_r": 0.0022464183381088825, "frac_rows_clip_binds_a": 0.08822492836676218, "per_dim_r": [0.00047277936962750714, 0.0007621776504297994, 0.001184813753581662, 2.865329512893983e-06], "per_dim_a": [0.010512893982808023, 0.043883954154727796, 0.06627793696275072, 0.017769340974212035]}, "relabel": {"slope_diff_on_prev_noise": [0.012632427011683213, 0.0218979358847742, 0.03113883960955544, 0.013149486225013787], "std_label_diff": [0.022081262365030604, 0.03652651998281669, 0.0498272295786385, 0.04354479173438902]}}
+/data/datasets/0c_s1_pick_224a_2k {"episodes": 2000, "rows": 700000, "label": "action", "relabel_fn": "relabel", "rows_ne_relabel": 698000, "rows_ne_original": 0, "claw_rows_ne_stored": 0, "episodes_first_row_ne_clean": 0, "identity_ok": false, "slope_ok_4c": true, "pass_4b_4c": false, "clip": {"rows": 698000, "frac_rows_clip_binds_r": 0.0022464183381088825, "frac_rows_clip_binds_a": 0.08822492836676218, "per_dim_r": [0.00047277936962750714, 0.0007621776504297994, 0.001184813753581662, 2.865329512893983e-06], "per_dim_a": [0.010512893982808023, 0.043883954154727796, 0.06627793696275072, 0.017769340974212035]}, "relabel": {"slope_diff_on_prev_noise": [0.012632427011683213, 0.0218979358847742, 0.03113883960955544, 0.013149486225013787], "std_label_diff": [0.022081262365030604, 0.03652651998281669, 0.0498272295786385, 0.04354479173438902]}}
+DSCHECK_PASS
+=== step done 1790953571.0 rc 0
+=== step start 1790953571.0 /opt/policy/bin/python scripts/s1_relabel.py dscheck --mutant shift --dataset /data/datasets/0c_s1_pick_rl224_2k --out /runs/k224_2k/mutant_shift.json
+/data/datasets/0c_s1_pick_rl224_2k {"episodes": 2000, "rows": 700000, "label": "relabel_setpoint", "relabel_fn": "relabel_shift", "rows_ne_relabel": 0, "rows_ne_original": 698000, "claw_rows_ne_stored": 0, "episodes_first_row_ne_clean": 0, "identity_ok": true, "slope_ok_4c": false, "pass_4b_4c": false, "mutant_rows_changed_vs_true_relabel": 698000, "clip": {"rows": 698000, "frac_rows_clip_binds_r": 0.0022464183381088825, "frac_rows_clip_binds_a": 0.08822492836676218, "per_dim_r": [0.00047277936962750714, 0.0007621776504297994, 0.001184813753581662, 2.865329512893983e-06], "per_dim_a": [0.010512893982808023, 0.043883954154727796, 0.06627793696275072, 0.017769340974212035]}, "relabel": {"slope_diff_on_prev_noise": [-1.9800925373815288, -1.9604994966644058, -1.9444875291723225, -1.9770954064465096], "std_label_diff": [0.24301643244285917, 0.24100208180629196, 0.24093043018111182, 0.24616507201870014]}}
+DSCHECK_PASS
+=== step done 1790953578.2 rc 0
+=== step start 1790953578.2 /opt/policy/bin/python scripts/s1_relabel.py dscheck --mutant claw --dataset /data/datasets/0c_s1_pick_rl224_2k --out /runs/k224_2k/mutant_claw.json
+/data/datasets/0c_s1_pick_rl224_2k {"episodes": 2000, "rows": 700000, "label": "relabel_setpoint", "relabel_fn": "relabel_claw", "rows_ne_relabel": 0, "rows_ne_original": 698000, "claw_rows_ne_stored": 0, "episodes_first_row_ne_clean": 0, "identity_ok": true, "slope_ok_4c": true, "pass_4b_4c": true, "mutant_rows_changed_vs_true_relabel": 0, "clip": {"rows": 698000, "frac_rows_clip_binds_r": 0.0022464183381088825, "frac_rows_clip_binds_a": 0.08822492836676218, "per_dim_r": [0.00047277936962750714, 0.0007621776504297994, 0.001184813753581662, 2.865329512893983e-06], "per_dim_a": [0.010512893982808023, 0.043883954154727796, 0.06627793696275072, 0.017769340974212035]}, "relabel": {"slope_diff_on_prev_noise": [0.012632427011683213, 0.0218979358847742, 0.03113883960955544, 0.013149486225013787], "std_label_diff": [0.022081262365030604, 0.03652651998281669, 0.0498272295786385, 0.04354479173438902]}}
+DSCHECK_FAIL
+=== step done 1790953585.4 rc 1
+=== step start 1790953585.4 /opt/policy/bin/python scripts/s1_relabel.py dscheck --mutant claw_offset --dataset /data/datasets/0c_s1_pick_rl224_2k --out /runs/k224_2k/mutant_claw_offset.json
+/data/datasets/0c_s1_pick_rl224_2k {"episodes": 2000, "rows": 700000, "label": "relabel_setpoint", "relabel_fn": "relabel_claw_offset", "rows_ne_relabel": 0, "rows_ne_original": 698000, "claw_rows_ne_stored": 461455, "episodes_first_row_ne_clean": 0, "identity_ok": false, "slope_ok_4c": false, "pass_4b_4c": false, "mutant_rows_changed_vs_true_relabel": 698000, "clip": {"rows": 698000, "frac_rows_clip_binds_r": 0.0022464183381088825, "frac_rows_clip_binds_a": 0.08822492836676218, "per_dim_r": [0.00047277936962750714, 0.0007621776504297994, 0.001184813753581662, 2.865329512893983e-06], "per_dim_a": [0.010512893982808023, 0.043883954154727796, 0.06627793696275072, 0.017769340974212035]}, "relabel": {"slope_diff_on_prev_noise": [-0.98510016854174, -0.9707474934316712, -0.9546146025846983, -0.980149359227924], "std_label_diff": [0.1405826855758604, 0.1978928728826678, 0.19777078241054316, 0.20008215576528268]}}
+DSCHECK_PASS
+=== step done 1790953592.7 rc 0
+=== step start 1790953592.7 /opt/policy/bin/python tests/test_data_audit.py --root /data/datasets/0c_s1_pick_rl224_2k
+{
+ "dataset": "/data/datasets/0c_s1_pick_rl224_2k",
+ "violations": 0,
+ "first": []
+}
+=== step done 1790953644.7 rc 0
+=== step start 1790953644.7 /opt/policy/bin/python scripts/s1_tools.py arms --dataset /data/datasets/0c_s1_pick_rl224_2k --out /runs/k224_2k/arms_build.json --device cpu
+[s1_tools] arms device=cpu
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+ARMS={"check_i_U": true, "check_i_mutant_fve_only": false, "counts": {"F": 99880992, "U": 186314016, "mutant_fve_only": 99880992}, "pass": true}
+=== step done 1790953757.2 rc 0
+=== k224_2k done 2026-10-02T17:09:17+02:00

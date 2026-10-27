@@ -1,0 +1,182 @@
+{
+ "source": "/runs/s4b_overfit/eval_s32500.json",
+ "chosen": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  56
+ ],
+ "rounds": 1,
+ "wall_s": 58.1,
+ "git_sha": "2c0df0d",
+ "frames": [
+  {
+   "index": 0,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep0_pick_early_close.png",
+   "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep0.mp4"
+  },
+  {
+   "index": 1,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep1_pick_early_close.png",
+   "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep1.mp4"
+  },
+  {
+   "index": 2,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep2_pick_early_close.png",
+   "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep2.mp4"
+  },
+  {
+   "index": 3,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep3_pick_early_close.png",
+   "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep3.mp4"
+  },
+  {
+   "index": 4,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep4_pick_early_close.png",
+   "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep4.mp4"
+  },
+  {
+   "index": 5,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep5_pick_early_close.png",
+   "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep5.mp4"
+  },
+  {
+   "index": 6,
+   "types_recorded": [
+    "slam",
+    "early_close"
+   ],
+   "types_replay": [
+    "slam",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep6_pick_slam_early_close.png",
+   "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep6.mp4"
+  },
+  {
+   "index": 7,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep7_pick_early_close.png",
+   "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep7.mp4"
+  },
+  {
+   "index": 8,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep8_pick_early_close.png",
+   "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep8.mp4"
+  },
+  {
+   "index": 9,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep9_pick_early_close.png",
+   "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep9.mp4"
+  },
+  {
+   "index": 10,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep10_pick_early_close.png",
+   "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep10.mp4"
+  },
+  {
+   "index": 11,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep11_pick_early_close.png",
+   "video": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep11.mp4"
+  },
+  {
+   "index": 56,
+   "types_recorded": [
+    "wrong_object",
+    "early_close"
+   ],
+   "types_replay": [
+    "wrong_object",
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/s4b_overfit/frames/eval_s32500/eval_s32500_ep56_pick_wrong_object_early_close.png"
+  }
+ ]
+}

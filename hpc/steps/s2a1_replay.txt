@@ -1,0 +1,2 @@
+# GATES 2a attempt 1 (d33e371) item 3(b): executability replay of r on s2a validation 21640 eps 0-127 at m 15 (unpaired, as 2a; B >= 95 % of A's successes)
+sim scripts/s1_relabel.py replay --stages s2a:21640 --episodes 128 --envs 128 --cube-yaw-max-deg 15 --out /runs/rls2a1/replay_s2a_s21640.json

@@ -1,0 +1,45 @@
+{
+ "log": "results\\s2bp1\\t2bp1_VT_132924_trainlines.out",
+ "margin_recorded": 4.298872198843075,
+ "log_contrastive": [
+  [
+   "1.0",
+   "4.298872198843075",
+   "True"
+  ]
+ ],
+ "log_init_sha256": [
+  "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64"
+ ],
+ "log_ok": true,
+ "summary": {
+  "contrastive": {
+   "lambda": 1.0,
+   "margin": 4.298872198843075,
+   "share_vision": true,
+   "layouts": 1376,
+   "last50_mean": {
+    "hinge": 0.0024161984771490096,
+    "gap": 44.88839200973511,
+    "hinge_active": 0.0009375,
+    "l_other": 44.898694801330564,
+    "loss_total": 0.013572084172337781
+   },
+   "first50_mean": {
+    "hinge": 0.8903682002425194,
+    "gap": 19.74025249481201,
+    "hinge_active": 0.2078125,
+    "l_other": 19.761378402709962,
+    "loss_total": 0.9131842747508199
+   }
+  },
+  "init_sha256": "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64",
+  "lr": {
+   "argv_lr": 5e-05,
+   "optimizer_lr": 5e-05,
+   "scheduler_peak_lr": 5e-05
+  }
+ },
+ "summary_ok": true,
+ "ok": true
+}

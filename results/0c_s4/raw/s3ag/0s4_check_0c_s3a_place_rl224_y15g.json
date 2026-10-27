@@ -1,0 +1,733 @@
+{
+ "dataset": "/data/datasets/0c_s3a_place_rl224_y15g",
+ "name": "0c_s3a_place_rl224_y15g",
+ "kind": "grey",
+ "episodes": 2000,
+ "rows": 1100000,
+ "T_per_task": {
+  "place": 550
+ },
+ "image_size": 224,
+ "expect_yaw": 15.0,
+ "kept": 2000,
+ "expect_palette": "s4r",
+ "yaw": {
+  "expected_m": 15.0,
+  "n": 2000,
+  "spawn_fold": {
+   "min": -14.985191345214844,
+   "max": 14.982772827148438,
+   "mean": 0.057920991897583006,
+   "std": 8.713242905420984
+  },
+  "regenerated_fold": {
+   "min": -14.985192870153163,
+   "max": 14.982771023470221,
+   "mean": 0.05792100129607365,
+   "std": 8.713242870257108
+  }
+ },
+ "source_successful_episodes": 2304,
+ "kept_stream_indices": [
+  0,
+  1999
+ ],
+ "video_check": {
+  "episodes": [
+   0,
+   222,
+   444,
+   666,
+   888,
+   1111,
+   1333,
+   1555,
+   1777,
+   1999
+  ],
+  "rows": 5500,
+  "psnr_min": 39.40638611113119,
+  "psnr_mean": 43.23655829309852,
+  "identity_fail": 0,
+  "backend": "torchcodec"
+ },
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "noise_std_per_arm_dim": [
+   0.09996829926967621,
+   0.09986245632171631,
+   0.09984849393367767,
+   0.09997210651636124
+  ],
+  "noise_rows_per_dim": [
+   1085265,
+   1061567,
+   1045269,
+   1094910
+  ],
+  "claw_exec_ne_label_rows": 0,
+  "mutant_action_exec_flagged_episodes": 2000,
+  "episodes_checked": 2000,
+  "state_dims_std_lt_1e-6": [],
+  "state_std": [
+   0.20321827837365622,
+   0.2705232105255591,
+   0.12125131669030939,
+   0.31774907803774294,
+   0.06770667910468277,
+   0.17461526642345468,
+   0.3811541654497096,
+   0.008017191339415327,
+   0.00806507835779468,
+   0.2013245482932874,
+   0.38409118066254017,
+   0.20279380299781913,
+   0.37341613180899136,
+   0.10927349028323075,
+   0.5557402436564252,
+   0.4035976316770176,
+   0.043900837079107316,
+   0.0437612636166591,
+   0.012878703093235085
+  ]
+ },
+ "expert_success": {
+  "batches": [
+   {
+    "dir": "/data/0c/s3ay15g/b000",
+    "start": 0,
+    "episodes": 1152,
+    "envs": 128,
+    "kept": 1152,
+    "attempted": 1152,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     99.66763611899762,
+     100.0
+    ],
+    "per_task": {
+     "place": {
+      "attempted": 1152,
+      "kept": 1152,
+      "rate": 1.0,
+      "ci95": [
+       0.9966763611899763,
+       1.0
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 0,
+       "early_close": 0,
+       "release_failure": 0,
+       "invalid": 0
+      },
+      "failed_unflagged": 0
+     }
+    },
+    "nan_guard_events": 0,
+    "cmd_resync_max_m": 0.005593404173851013,
+    "episodes_per_h": 12014.396170312826,
+    "wall_s": 345.2,
+    "disk_bytes": 4902564145
+   },
+   {
+    "dir": "/data/0c/s3ay15g/b001",
+    "start": 1152,
+    "episodes": 1152,
+    "envs": 128,
+    "kept": 1152,
+    "attempted": 1152,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     99.66763611899762,
+     100.0
+    ],
+    "per_task": {
+     "place": {
+      "attempted": 1152,
+      "kept": 1152,
+      "rate": 1.0,
+      "ci95": [
+       0.9966763611899763,
+       1.0
+      ],
+      "failures": {
+       "wrong_object": 0,
+       "wrong_grasp": 0,
+       "wrong_dest": 0,
+       "slam": 0,
+       "jam": 0,
+       "drop": 0,
+       "early_close": 0,
+       "release_failure": 0,
+       "invalid": 0
+      },
+      "failed_unflagged": 0
+     }
+    },
+    "nan_guard_events": 0,
+    "cmd_resync_max_m": 0.005333632230758667,
+    "episodes_per_h": 12067.817866110137,
+    "wall_s": 343.7,
+    "disk_bytes": 4898609131
+   }
+  ],
+  "pooled": {
+   "kept": 2304,
+   "attempted": 2304,
+   "rate_pct": 100.0,
+   "ci95_pct": [
+    99.83354143542607,
+    100.0
+   ]
+  },
+  "per_target": {
+   "colour:blue": {
+    "kept": 785,
+    "attempted": 785,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     99.51300742760017,
+     100.0
+    ]
+   },
+   "colour:green": {
+    "kept": 425,
+    "attempted": 425,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     99.10419138441794,
+     100.0
+    ]
+   },
+   "colour:red": {
+    "kept": 667,
+    "attempted": 667,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     99.42734618723703,
+     99.99999999999997
+    ]
+   },
+   "colour:yellow": {
+    "kept": 427,
+    "attempted": 427,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     99.10834979723406,
+     99.99999999999999
+    ]
+   },
+   "cube:blue_large": {
+    "kept": 356,
+    "attempted": 356,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     98.93241915331635,
+     100.0
+    ]
+   },
+   "cube:blue_small": {
+    "kept": 429,
+    "attempted": 429,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     99.11246978109314,
+     100.0
+    ]
+   },
+   "cube:green_small": {
+    "kept": 425,
+    "attempted": 425,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     99.10419138441794,
+     100.0
+    ]
+   },
+   "cube:red_large": {
+    "kept": 343,
+    "attempted": 343,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     98.89240506329114,
+     100.0
+    ]
+   },
+   "cube:red_small": {
+    "kept": 324,
+    "attempted": 324,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     98.82821460119766,
+     100.0
+    ]
+   },
+   "cube:yellow_large": {
+    "kept": 427,
+    "attempted": 427,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     99.10834979723406,
+     99.99999999999999
+    ]
+   },
+   "size:large": {
+    "kept": 1126,
+    "attempted": 1126,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     99.65998773633402,
+     100.0
+    ]
+   },
+   "size:small": {
+    "kept": 1178,
+    "attempted": 1178,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     99.67494797949234,
+     100.0
+    ]
+   }
+  }
+ },
+ "expert": {
+  "place": {
+   "ceiling_pct": 100.0,
+   "pooled": {
+    "kept": 2304,
+    "attempted": 2304,
+    "rate_pct": 100.0,
+    "ci95_pct": [
+     99.83354143542607,
+     100.0
+    ]
+   },
+   "batches": [
+    {
+     "kept": 1152,
+     "attempted": 1152,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.66763611899762,
+      100.0
+     ]
+    },
+    {
+     "kept": 1152,
+     "attempted": 1152,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.66763611899762,
+      100.0
+     ]
+    }
+   ]
+  }
+ },
+ "palette": {
+  "visual_mode": [
+   "nominal"
+  ],
+  "visual_json_mode": [
+   "s4r_nominal"
+  ],
+  "table_palette": [
+   "s4r"
+  ],
+  "nonnominal_table": 0,
+  "nondefault_light": 0
+ },
+ "table": {
+  "box_u0_v0_u1_v1": [
+   0,
+   190,
+   64,
+   222
+  ],
+  "image_size": 224,
+  "episodes": [
+   0,
+   41,
+   82,
+   122,
+   163,
+   204,
+   245,
+   286,
+   326,
+   367,
+   408,
+   449,
+   490,
+   530,
+   571,
+   612,
+   653,
+   694,
+   734,
+   775,
+   816,
+   857,
+   898,
+   938,
+   979,
+   1020,
+   1061,
+   1101,
+   1142,
+   1183,
+   1224,
+   1265,
+   1305,
+   1346,
+   1387,
+   1428,
+   1469,
+   1509,
+   1550,
+   1591,
+   1632,
+   1673,
+   1713,
+   1754,
+   1795,
+   1836,
+   1877,
+   1917,
+   1958,
+   1999
+  ],
+  "reason": "lower-left corner, outside the object footprint x 0.33..0.67 / y +-0.30 projected through the side camera (eye 1.15, 0.45, 0.55 -> look 0.5, 0, 0.18) with object size and 12 px camera-jitter margin; see module docstring",
+  "per_episode_saturation": [
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733,
+   0.019801980198019733
+  ],
+  "per_episode_value": [
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549,
+   0.396078431372549
+  ],
+  "per_episode_recorded_table_value": [
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5,
+   0.5
+  ],
+  "numbers": {
+   "n": 50,
+   "saturation_max": 0.019801980198019733,
+   "saturation_median": 0.019801980198019733,
+   "value_min": 0.396078431372549,
+   "value_max": 0.396078431372549
+  },
+  "items": {
+   "6_table_region_median_saturation_le_0.10": true
+  }
+ },
+ "sheet": {
+  "png": "0c_s3a_place_rl224_y15g.png",
+  "episodes": [
+   {
+    "lerobot_episode": 0,
+    "episode_index": 0,
+    "instruction": "please put the small green cube on the blue pad",
+    "spec": "{\"task\": \"place\", \"target\": [\"green\", \"small\"], \"dest\": \"blue\", \"cubes\": [[\"yellow\", \"large\"], [\"green\", \"small\"], [\"yellow\", \"small\"], [\"red\", \"large\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      114
+     ],
+     [
+      "carry",
+      210
+     ],
+     [
+      "release",
+      306
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1000,
+    "episode_index": 1000,
+    "instruction": "please put the yellow cube on the red pad",
+    "spec": "{\"task\": \"place\", \"target\": [\"yellow\", \"large\"], \"dest\": \"red\", \"cubes\": [[\"green\", \"large\"], [\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      124
+     ],
+     [
+      "carry",
+      252
+     ],
+     [
+      "release",
+      381
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1999,
+    "episode_index": 1999,
+    "instruction": "place the small blue cube on the green pad",
+    "spec": "{\"task\": \"place\", \"target\": [\"blue\", \"small\"], \"dest\": \"green\", \"cubes\": [[\"yellow\", \"small\"], [\"blue\", \"small\"], [\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      119
+     ],
+     [
+      "carry",
+      209
+     ],
+     [
+      "release",
+      299
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   }
+  ],
+  "chosen_sidecar_indices": [
+   0,
+   1000,
+   1999
+  ],
+  "notes": [
+   "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg",
+   "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg",
+   "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg"
+  ]
+ },
+ "twin": {
+  "kept_shared": 2000,
+  "only_here": 0,
+  "only_twin": 0,
+  "overlap_frac_of_set": 1.0,
+  "spec_or_instruction_diff": [],
+  "name": "0c_s3a_place_rl224_y15",
+  "expert_pooled": {
+   "kept": 2304,
+   "attempted": 2304,
+   "rate_pct": 100.0,
+   "ci95_pct": [
+    99.83354143542607,
+    100.0
+   ]
+  },
+  "set_expert_pooled": {
+   "kept": 2304,
+   "attempted": 2304,
+   "rate_pct": 100.0,
+   "ci95_pct": [
+    99.83354143542607,
+    100.0
+   ]
+  }
+ },
+ "items": {
+  "1_count_eq_K": true,
+  "1_tasks_as_expected": true,
+  "1_T_per_task_eq_timing": true,
+  "1_rows_eq_sum_T": true,
+  "1_rows_per_episode_eq_T": true,
+  "1_columns_exact_action_eq_r": true,
+  "1_image_size": true,
+  "1_psnr_min_ge_35": true,
+  "1_frame_identity": true,
+  "1_kept_are_first_K_successful_in_order": true,
+  "1_split_rule": true,
+  "1_cube_yaw_max_deg_eq_expected": true,
+  "yaw_spawn_attrs_present": true,
+  "yaw_spawn_fold_in_range": true,
+  "yaw_regenerated_layout_fold_in_range": true,
+  "yaw_spawn_agrees_with_regenerated_layout": true,
+  "yaw_coverage": true,
+  "1_expert_pooled_place_ge_ceiling_minus_5": true,
+  "1_expert_every_batch_place_ge_ceiling_minus_10": true,
+  "1_expert_every_batch_n_ge_200": true,
+  "palette_table_palette_eq_expected_all": true,
+  "palette_visual_mode_nominal_all": true,
+  "palette_visual_json_s4r_nominal_all": true,
+  "5_sheet_three_episodes_first_middle_last": true,
+  "6_table_region_median_saturation_le_0.10": true,
+  "4a_noise_std_in_band": true,
+  "4a_claw_identical": true,
+  "1_twin_overlap_nonempty": true,
+  "1_twin_shared_specs_instructions_equal": true
+ },
+ "pass": true,
+ "wall_s": 657.2
+}

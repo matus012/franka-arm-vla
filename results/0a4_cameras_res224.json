@@ -1,0 +1,109 @@
+{
+ "res": 224,
+ "episodes_per_task": 300,
+ "smart_length": "decided at 300",
+ "gate_values": {
+  "a_min_cube_side": 0.980375581184711,
+  "b_wrist_target": 0.9920265780730897,
+  "c_min_pad_side": 0.9849701765782791
+ },
+ "bars": {
+  "a_min_cube_side": 0.9,
+  "b_wrist_target": 0.8,
+  "c_min_pad_side": 0.9
+ },
+ "first300": {
+  "a_min_cube_side": 0.980375581184711,
+  "b_wrist_target": 0.9920265780730897,
+  "c_min_pad_side": 0.9849701765782791
+ },
+ "a_per_cube_side": [
+  0.9846034028277019,
+  0.9880121667561281,
+  0.9860660660660661,
+  0.98209980273252,
+  0.980375581184711,
+  0.9884638737097754,
+  0.9817104026603051,
+  0.987635492129201
+ ],
+ "c_per_pad_side_place": [
+  0.9883363845744995,
+  0.9849701765782791,
+  0.9881887438729109,
+  0.987539124785921
+ ],
+ "c_per_pad_side_all_tasks": [
+  0.9881915093685971,
+  0.9878846667788457,
+  0.9860931019806194,
+  0.9879440556671847
+ ],
+ "wrist_dest_carry_release": 0.8560722056571843,
+ "per_task": {
+  "pick": {
+   "median_px": [
+    {
+     "side_cube_on_table": 242.0,
+     "wrist_target_approach": 2412.0
+    }
+   ],
+   "wall_s": [
+    207.5
+   ],
+   "sheet": [
+    "results\\frames\\0a4\\pick\\res224.png"
+   ]
+  },
+  "place": {
+   "median_px": [
+    {
+     "side_cube_on_table": 237.0,
+     "wrist_target_approach": 2401.0
+    }
+   ],
+   "wall_s": [
+    316.0
+   ],
+   "sheet": [
+    "results\\frames\\0a4\\place\\res224.png"
+   ]
+  },
+  "stack": {
+   "median_px": [
+    {
+     "side_cube_on_table": 227.0,
+     "wrist_target_approach": 2490.0
+    }
+   ],
+   "wall_s": [
+    337.9
+   ],
+   "sheet": [
+    "results\\frames\\0a4\\stack\\res224.png"
+   ]
+  }
+ },
+ "mounting_ok": true,
+ "mounting": [
+  {
+   "wrist_pos_err_max_m": 1.3500156228474225e-06,
+   "wrist_rot_err_max_deg": 0.0,
+   "foreign_pixels": 0,
+   "parked_pixels": 0
+  },
+  {
+   "wrist_pos_err_max_m": 1.349028366348648e-06,
+   "wrist_rot_err_max_deg": 0.0,
+   "foreign_pixels": 0,
+   "parked_pixels": 0
+  },
+  {
+   "wrist_pos_err_max_m": 1.349028366348648e-06,
+   "wrist_rot_err_max_deg": 0.0,
+   "foreign_pixels": 0,
+   "parked_pixels": 0
+  }
+ ],
+ "pass": true
+}

@@ -1,0 +1,4 @@
+# GATES baseline diagnosis (88f13be) (ii): closed loop + score of the overfit checkpoint. Re-run of steps 4-5 of s4b_diag_gpu.txt (98275), whose eval line expanded $(ls -d /runs/...) on the host shell (no /runs there) -> empty --ckpt, argparse exit before any episode. Step-file bug, nothing measured; ckpt path now explicit.
+# sbatch (lead): sbatch --time=00:30:00 --job-name=e4b_ovf hpc/slurm/seq.sbatch e4b_ovf hpc/steps/s4b_overfit_eval.txt
+sim scripts/eval_policy.py --policy baseline --envs 128 --image-size 224 --n 10 --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --log-instructions 20 --split train --visual nominal --table-palette s4r --stage s2 --episodes 128 --seed 32500 --ckpt /runs/s4b_overfit/ckpt_027000 --out /runs/s4b_overfit/eval_s32500.json
+pol scripts/s4b_overfit_score.py --eval /runs/s4b_overfit/eval_s32500.json --summary /runs/s4b_overfit/train_summary.json --out /runs/s4b_overfit/overfit_score.json

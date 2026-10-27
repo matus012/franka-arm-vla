@@ -1,0 +1,128 @@
+{
+ "note": "post-kill diagnosis - not a gate attempt, no decision",
+ "seed": 21600,
+ "episodes": "0-299",
+ "variants": {
+  "n20": {
+   "n": 300,
+   "success": 0.5666666666666667,
+   "slam": 0.0,
+   "jam": 0.0033333333333333335,
+   "drop": 0.37333333333333335,
+   "early_close": 0.75,
+   "wrong_object": 0.0,
+   "wrong_grasp": 0.0,
+   "no_flag_fail": 0.0,
+   "by_size": {
+    "large": {
+     "n": 153,
+     "success": 0.39215686274509803
+    },
+    "small": {
+     "n": 147,
+     "success": 0.7482993197278912
+    }
+   }
+  },
+  "n10": {
+   "n": 300,
+   "success": 0.58,
+   "slam": 0.0,
+   "jam": 0.006666666666666667,
+   "drop": 0.31333333333333335,
+   "early_close": 0.6966666666666667,
+   "wrong_object": 0.0,
+   "wrong_grasp": 0.0,
+   "no_flag_fail": 0.02,
+   "by_size": {
+    "large": {
+     "n": 153,
+     "success": 0.45098039215686275
+    },
+    "small": {
+     "n": 147,
+     "success": 0.7142857142857143
+    }
+   }
+  },
+  "n5": {
+   "n": 300,
+   "success": 0.5866666666666667,
+   "slam": 0.0,
+   "jam": 0.0033333333333333335,
+   "drop": 0.19666666666666666,
+   "early_close": 0.6033333333333334,
+   "wrong_object": 0.0,
+   "wrong_grasp": 0.0,
+   "no_flag_fail": 0.08666666666666667,
+   "by_size": {
+    "large": {
+     "n": 153,
+     "success": 0.43790849673202614
+    },
+    "small": {
+     "n": 147,
+     "success": 0.7414965986394558
+    }
+   }
+  },
+  "n20zero": {
+   "n": 300,
+   "success": 0.65,
+   "slam": 0.0,
+   "jam": 0.0033333333333333335,
+   "drop": 0.31,
+   "early_close": 0.67,
+   "wrong_object": 0.0,
+   "wrong_grasp": 0.0,
+   "no_flag_fail": 0.006666666666666667,
+   "by_size": {
+    "large": {
+     "n": 153,
+     "success": 0.5424836601307189
+    },
+    "small": {
+     "n": 147,
+     "success": 0.7619047619047619
+    }
+   }
+  }
+ },
+ "paired": {
+  "n10_vs_n20": {
+   "diff_points": 1.3333333333333335,
+   "gained": 29,
+   "lost": 25
+  },
+  "n5_vs_n20": {
+   "diff_points": 2.0,
+   "gained": 41,
+   "lost": 35
+  },
+  "n20zero_vs_n20": {
+   "diff_points": 8.333333333333332,
+   "gained": 54,
+   "lost": 29
+  }
+ },
+ "grasp_yaw_logged": false,
+ "gpu_h": 0.396,
+ "jobs": {
+  "96068": "4 variants, 1295 s",
+  "96071": "frames, 132 s"
+ },
+ "ckpt": "/runs/s1a1_unfrozen/checkpoints/020664/pretrained_model",
+ "best_variant": "n20zero",
+ "mcnemar_z": {
+  "n10": 0.54,
+  "n5": 0.69,
+  "n20zero": 2.74
+ },
+ "wall_s": {
+  "n20": 218,
+  "n10": 322,
+  "n5": 535,
+  "n20zero": 216
+ },
+ "sheets": "results/frames/s1a1_pk/ (9 sheets of N20 zero-noise, 8 failures + 1 success, all reproduced)"
+}

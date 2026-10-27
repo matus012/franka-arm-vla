@@ -1,0 +1,70 @@
+{
+ "prefix": "s1_train_s31700",
+ "config": {
+  "stage": "s1",
+  "split": "train",
+  "seed": 31700,
+  "envs": 128,
+  "noise_sigma": 0.1,
+  "image_size": 128,
+  "visual": "nominal",
+  "mix": "1,1,1",
+  "start": 320,
+  "episodes": 320,
+  "period": 3,
+  "latency": 1,
+  "n_action_steps": 20,
+  "part_bytes": 157286400,
+  "git_sha": "288e660",
+  "expert_version": "113-expert-v1",
+  "detector_version": "113-detectors-v1 (GATES.md conventions 2026-10-01)"
+ },
+ "chunks": 3,
+ "attempted": 320,
+ "kept": 313,
+ "expert_success": 0.978125,
+ "ci95": [
+  0.9555420481102652,
+  0.9893643505735357
+ ],
+ "per_task": {
+  "pick": {
+   "attempted": 320,
+   "kept": 313,
+   "rate": 0.978125,
+   "ci95": [
+    0.9555420481102652,
+    0.9893643505735357
+   ],
+   "failures": {
+    "wrong_object": 0,
+    "wrong_grasp": 0,
+    "wrong_dest": 0,
+    "slam": 0,
+    "jam": 0,
+    "drop": 0,
+    "early_close": 0,
+    "release_failure": 0,
+    "invalid": 0
+   },
+   "failed_unflagged": 7
+  }
+ },
+ "files": [
+  "s1_train_s31700_pick_e000320_p0.h5",
+  "s1_train_s31700_pick_e000448_p0.h5",
+  "s1_train_s31700_pick_e000576_p0.h5"
+ ],
+ "disk_bytes": 330275642,
+ "mb_per_kept_episode": 1.0551937444089456,
+ "cmd_resync_max_m": 0.004397645592689514,
+ "this_invocation": {
+  "episodes_run": 320,
+  "wall_s": 84.5,
+  "episodes_per_h": 13629.130595190494,
+  "torch_peak_vram_mib": 39.986328125,
+  "device": "cuda:0",
+  "gpu": "NVIDIA H200"
+ },
+ "nan_guard_events": 0
+}

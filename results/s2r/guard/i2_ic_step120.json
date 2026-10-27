@@ -1,0 +1,57 @@
+{
+ "steps_jsonl": "results\\s2r\\guard\\steps_head.jsonl",
+ "steps": 120,
+ "last_step": 120,
+ "i2": {
+  "mean_loss_steps_1_50": 0.012559261776332278,
+  "max": 0.1,
+  "pass": true
+ },
+ "loss_step1": 0.011070750304497778,
+ "contrastive_steps": 120,
+ "windows": [
+  {
+   "steps": [
+    1,
+    120
+   ],
+   "loss": 0.011621527557811836,
+   "l_other": 0.01105480071243316,
+   "gap": 0.00023514493054411408,
+   "hinge": 4.210033351182938,
+   "hinge_active": 1.0,
+   "loss_total": 4.2216548787407495
+  }
+ ],
+ "first50": {
+  "steps": [
+   1,
+   50
+  ],
+  "loss": 0.012559261776332278,
+  "l_other": 0.012011195779050467,
+  "gap": 0.0002803742132255138,
+  "hinge": 4.209988102912903,
+  "hinge_active": 1.0,
+  "loss_total": 4.222547364689235
+ },
+ "last50": {
+  "steps": [
+   71,
+   120
+  ],
+  "loss": 0.010837546315888175,
+  "l_other": 0.010254267583659384,
+  "gap": 0.0002048673518220312,
+  "hinge": 4.210063648223877,
+  "hinge_active": 1.0,
+  "loss_total": 4.220901194539765
+ },
+ "void": {
+  "steps": 120,
+  "gap_mean": 0.00023514493054411408,
+  "hinge_mean": 4.210033351182938,
+  "void_contrast_flag": false
+ },
+ "ok": true
+}

@@ -1,0 +1,45 @@
+{
+ "log": "results\\s3a1p\\train\\t3a1p_VT_134703.out",
+ "margin_recorded": 2.7950166951391058,
+ "log_contrastive": [
+  [
+   "1.0",
+   "2.7950166951391058",
+   "True"
+  ]
+ ],
+ "log_init_sha256": [
+  "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64"
+ ],
+ "log_ok": true,
+ "summary": {
+  "contrastive": {
+   "lambda": 1.0,
+   "margin": 2.7950166951391058,
+   "share_vision": true,
+   "layouts": 2930,
+   "last50_mean": {
+    "hinge": 0.21013762935996055,
+    "gap": 22.86563201904297,
+    "hinge_active": 0.0790625,
+    "l_other": 22.885743141174316,
+    "loss_total": 0.23155336074531077
+   },
+   "first50_mean": {
+    "hinge": 1.524483609199524,
+    "gap": 13.53862138748169,
+    "hinge_active": 0.33625,
+    "l_other": 16.450769596099853,
+    "loss_total": 4.516864144802094
+   }
+  },
+  "init_sha256": "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64",
+  "lr": {
+   "argv_lr": 5e-05,
+   "optimizer_lr": 5e-05,
+   "scheduler_peak_lr": 5e-05
+  }
+ },
+ "summary_ok": true,
+ "ok": true
+}

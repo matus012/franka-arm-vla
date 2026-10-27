@@ -1,0 +1,220 @@
+=== t3r1_overfit on <node> NVIDIA H200 start 2026-10-02T01:05:30+02:00 repo c4bade6
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 1:00:00 cpus 8
+CUDA OK NVIDIA H200
+=== step 1 start 1790895934.289757382 pol -m vla_policy.train_smolvla --dataset /data/datasets/0b3_overfit_r1 --out /runs/0b3r1_train --init lerobot/smolvla_base --n-action-steps 20 --epochs 100 --max-steps 5000 --batch-size 8 --lr 1e-4 --row-sampling window --freeze-vision-encoder true --train-expert-only true --video-backend torchcodec --workers 4 --seed 0 --save-every-steps 1000 --overfit-abort
+[train] device=cuda cuda_available=True NVIDIA H200
+[train] dataset /data/datasets/0b3_overfit_r1 episodes=10 (train 10, val 0 never sampled) rows=3500 samples/epoch=1160 steps/epoch=145 total_steps=5000
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+[train] policy on cuda:0; {'params_total': 450046176, 'params_trainable': 99880992, 'vision_params_trainable': 0, 'by_dtype': {'frozen_bfloat16': 350165184, 'trainable_float32': 99880992}}; freeze_vision_encoder=True train_expert_only=True
+[train] step 50/5000 epoch 0 loss 1.0227 lr 3.05e-05 gn 14.74 update 0.071s data 0.000s
+[train] step 100/5000 epoch 0 loss 0.4500 lr 6.05e-05 gn 4.87 update 0.071s data 0.000s
+[train] step 150/5000 epoch 1 loss 0.5385 lr 9.04e-05 gn 5.22 update 0.072s data 0.000s
+[train] step 200/5000 epoch 1 loss 0.1680 lr 9.96e-05 gn 4.73 update 0.072s data 0.000s
+[train] step 250/5000 epoch 1 loss 0.2499 lr 9.94e-05 gn 2.88 update 0.072s data 0.000s
+[train] step 300/5000 epoch 2 loss 0.3821 lr 9.91e-05 gn 5.98 update 0.072s data 0.000s
+[train] step 350/5000 epoch 2 loss 0.0961 lr 9.88e-05 gn 1.77 update 0.072s data 0.000s
+[train] step 400/5000 epoch 2 loss 0.0678 lr 9.85e-05 gn 3.69 update 0.072s data 0.000s
+[train] step 450/5000 epoch 3 loss 0.1059 lr 9.81e-05 gn 3.59 update 0.066s data 0.000s
+[train] step 500/5000 epoch 3 loss 0.0916 lr 9.76e-05 gn 2.76 update 0.066s data 0.000s
+[train] step 550/5000 epoch 3 loss 0.1859 lr 9.71e-05 gn 2.63 update 0.066s data 0.000s
+[train] step 600/5000 epoch 4 loss 0.1094 lr 9.66e-05 gn 3.34 update 0.066s data 0.000s
+[train] step 650/5000 epoch 4 loss 0.0985 lr 9.60e-05 gn 3.28 update 0.068s data 0.000s
+[train] step 700/5000 epoch 4 loss 0.0469 lr 9.54e-05 gn 1.36 update 0.066s data 0.000s
+[train] step 750/5000 epoch 5 loss 0.2153 lr 9.47e-05 gn 3.25 update 0.067s data 0.000s
+[train] step 800/5000 epoch 5 loss 0.0669 lr 9.40e-05 gn 2.37 update 0.067s data 0.000s
+[train] step 850/5000 epoch 5 loss 0.1688 lr 9.32e-05 gn 2.14 update 0.068s data 0.000s
+[train] step 900/5000 epoch 6 loss 0.0727 lr 9.24e-05 gn 1.10 update 0.066s data 0.000s
+[train] step 950/5000 epoch 6 loss 0.1454 lr 9.16e-05 gn 2.93 update 0.068s data 0.000s
+[train] step 1000/5000 epoch 6 loss 0.1134 lr 9.07e-05 gn 1.80 update 0.067s data 0.000s
+[train] overfit early-abort check: {'loss_mean_1_50': 0.5934998887777329, 'loss_mean_951_1000': 0.1305363032221794, 'abort': False}
+[train] step 1050/5000 epoch 7 loss 0.1279 lr 8.98e-05 gn 1.47 update 0.066s data 0.000s
+[train] step 1100/5000 epoch 7 loss 0.0804 lr 8.88e-05 gn 1.90 update 0.068s data 0.000s
+[train] step 1150/5000 epoch 7 loss 0.0435 lr 8.78e-05 gn 2.50 update 0.066s data 0.000s
+[train] step 1200/5000 epoch 8 loss 0.1214 lr 8.68e-05 gn 3.03 update 0.068s data 0.000s
+[train] step 1250/5000 epoch 8 loss 0.0732 lr 8.57e-05 gn 2.35 update 0.066s data 0.000s
+[train] step 1300/5000 epoch 8 loss 0.0568 lr 8.46e-05 gn 1.41 update 0.065s data 0.000s
+[train] step 1350/5000 epoch 9 loss 0.0665 lr 8.35e-05 gn 2.28 update 0.068s data 0.000s
+[train] step 1400/5000 epoch 9 loss 0.0590 lr 8.23e-05 gn 1.74 update 0.067s data 0.000s
+[train] step 1450/5000 epoch 9 loss 0.1049 lr 8.11e-05 gn 1.73 update 0.065s data 0.000s
+[train] step 1500/5000 epoch 10 loss 0.1183 lr 7.99e-05 gn 1.75 update 0.066s data 0.000s
+[train] step 1550/5000 epoch 10 loss 0.0596 lr 7.87e-05 gn 1.76 update 0.067s data 0.000s
+[train] step 1600/5000 epoch 11 loss 0.0851 lr 7.74e-05 gn 1.84 update 0.067s data 0.000s
+[train] step 1650/5000 epoch 11 loss 0.1947 lr 7.61e-05 gn 2.05 update 0.067s data 0.000s
+[train] step 1700/5000 epoch 11 loss 0.2634 lr 7.47e-05 gn 2.21 update 0.066s data 0.000s
+[train] step 1750/5000 epoch 12 loss 0.0215 lr 7.34e-05 gn 2.07 update 0.067s data 0.000s
+[train] step 1800/5000 epoch 12 loss 0.0349 lr 7.20e-05 gn 1.80 update 0.067s data 0.000s
+[train] step 1850/5000 epoch 12 loss 0.0779 lr 7.06e-05 gn 1.43 update 0.067s data 0.000s
+[train] step 1900/5000 epoch 13 loss 0.0186 lr 6.92e-05 gn 1.61 update 0.071s data 0.000s
+[train] step 1950/5000 epoch 13 loss 0.0809 lr 6.78e-05 gn 1.94 update 0.072s data 0.000s
+[train] step 2000/5000 epoch 13 loss 0.0745 lr 6.63e-05 gn 1.72 update 0.072s data 0.000s
+[train] step 2050/5000 epoch 14 loss 0.0790 lr 6.49e-05 gn 1.21 update 0.072s data 0.000s
+[train] step 2100/5000 epoch 14 loss 0.1068 lr 6.34e-05 gn 1.83 update 0.072s data 0.000s
+[train] step 2150/5000 epoch 14 loss 0.0346 lr 6.19e-05 gn 1.17 update 0.072s data 0.000s
+[train] step 2200/5000 epoch 15 loss 0.0549 lr 6.04e-05 gn 1.36 update 0.071s data 0.000s
+[train] step 2250/5000 epoch 15 loss 0.0150 lr 5.89e-05 gn 0.78 update 0.072s data 0.000s
+[train] step 2300/5000 epoch 15 loss 0.0451 lr 5.74e-05 gn 1.66 update 0.071s data 0.000s
+[train] step 2350/5000 epoch 16 loss 0.0411 lr 5.58e-05 gn 1.03 update 0.071s data 0.000s
+[train] step 2400/5000 epoch 16 loss 0.0452 lr 5.43e-05 gn 1.45 update 0.072s data 0.000s
+[train] step 2450/5000 epoch 16 loss 0.0266 lr 5.28e-05 gn 1.36 update 0.072s data 0.000s
+[train] step 2500/5000 epoch 17 loss 0.0330 lr 5.12e-05 gn 1.25 update 0.071s data 0.000s
+[train] step 2550/5000 epoch 17 loss 0.0283 lr 4.97e-05 gn 1.22 update 0.071s data 0.000s
+[train] step 2600/5000 epoch 17 loss 0.0114 lr 4.82e-05 gn 0.86 update 0.067s data 0.000s
+[train] step 2650/5000 epoch 18 loss 0.0067 lr 4.67e-05 gn 0.57 update 0.067s data 0.000s
+[train] step 2700/5000 epoch 18 loss 0.0308 lr 4.51e-05 gn 0.75 update 0.066s data 0.000s
+[train] step 2750/5000 epoch 18 loss 0.0261 lr 4.36e-05 gn 1.12 update 0.065s data 0.000s
+[train] step 2800/5000 epoch 19 loss 0.0759 lr 4.21e-05 gn 1.64 update 0.067s data 0.000s
+[train] step 2850/5000 epoch 19 loss 0.0457 lr 4.06e-05 gn 1.92 update 0.068s data 0.000s
+[train] step 2900/5000 epoch 19 loss 0.0163 lr 3.91e-05 gn 1.78 update 0.065s data 0.000s
+[train] step 2950/5000 epoch 20 loss 0.0328 lr 3.76e-05 gn 0.76 update 0.068s data 0.000s
+[train] step 3000/5000 epoch 20 loss 0.1048 lr 3.62e-05 gn 1.64 update 0.066s data 0.000s
+[train] step 3050/5000 epoch 21 loss 0.0319 lr 3.47e-05 gn 0.91 update 0.066s data 0.000s
+[train] step 3100/5000 epoch 21 loss 0.0262 lr 3.33e-05 gn 1.08 update 0.067s data 0.000s
+[train] step 3150/5000 epoch 21 loss 0.0097 lr 3.19e-05 gn 0.84 update 0.066s data 0.000s
+[train] step 3200/5000 epoch 22 loss 0.0421 lr 3.05e-05 gn 0.77 update 0.068s data 0.000s
+[train] step 3250/5000 epoch 22 loss 0.0260 lr 2.91e-05 gn 1.11 update 0.068s data 0.000s
+[train] step 3300/5000 epoch 22 loss 0.0762 lr 2.78e-05 gn 1.34 update 0.067s data 0.000s
+[train] step 3350/5000 epoch 23 loss 0.0076 lr 2.64e-05 gn 0.94 update 0.072s data 0.000s
+[train] step 3400/5000 epoch 23 loss 0.0161 lr 2.51e-05 gn 0.87 update 0.072s data 0.000s
+[train] step 3450/5000 epoch 23 loss 0.0253 lr 2.38e-05 gn 0.93 update 0.068s data 0.000s
+[train] step 3500/5000 epoch 24 loss 0.0331 lr 2.26e-05 gn 1.47 update 0.067s data 0.000s
+[train] step 3550/5000 epoch 24 loss 0.0474 lr 2.14e-05 gn 0.98 update 0.071s data 0.000s
+[train] step 3600/5000 epoch 24 loss 0.0186 lr 2.02e-05 gn 0.60 update 0.071s data 0.000s
+[train] step 3650/5000 epoch 25 loss 0.0087 lr 1.90e-05 gn 0.76 update 0.068s data 0.000s
+[train] step 3700/5000 epoch 25 loss 0.0177 lr 1.79e-05 gn 0.78 update 0.071s data 0.000s
+[train] step 3750/5000 epoch 25 loss 0.0507 lr 1.68e-05 gn 0.94 update 0.072s data 0.000s
+[train] step 3800/5000 epoch 26 loss 0.0040 lr 1.57e-05 gn 0.62 update 0.071s data 0.000s
+[train] step 3850/5000 epoch 26 loss 0.0083 lr 1.47e-05 gn 0.74 update 0.071s data 0.000s
+[train] step 3900/5000 epoch 26 loss 0.0218 lr 1.37e-05 gn 0.58 update 0.072s data 0.000s
+[train] step 3950/5000 epoch 27 loss 0.0268 lr 1.27e-05 gn 0.62 update 0.067s data 0.000s
+[train] step 4000/5000 epoch 27 loss 0.0370 lr 1.18e-05 gn 0.72 update 0.071s data 0.000s
+[train] step 4050/5000 epoch 27 loss 0.0457 lr 1.09e-05 gn 0.85 update 0.072s data 0.000s
+[train] step 4100/5000 epoch 28 loss 0.0134 lr 1.01e-05 gn 1.04 update 0.071s data 0.000s
+[train] step 4150/5000 epoch 28 loss 0.0148 lr 9.29e-06 gn 0.40 update 0.072s data 0.000s
+[train] step 4200/5000 epoch 28 loss 0.0377 lr 8.53e-06 gn 1.33 update 0.069s data 0.000s
+[train] step 4250/5000 epoch 29 loss 0.0054 lr 7.81e-06 gn 0.32 update 0.072s data 0.000s
+[train] step 4300/5000 epoch 29 loss 0.0177 lr 7.14e-06 gn 0.57 update 0.071s data 0.000s
+[train] step 4350/5000 epoch 29 loss 0.0225 lr 6.51e-06 gn 0.32 update 0.069s data 0.000s
+[train] step 4400/5000 epoch 30 loss 0.0176 lr 5.92e-06 gn 0.76 update 0.072s data 0.000s
+[train] step 4450/5000 epoch 30 loss 0.0311 lr 5.38e-06 gn 0.62 update 0.072s data 0.000s
+[train] step 4500/5000 epoch 31 loss 0.0089 lr 4.89e-06 gn 0.52 update 0.068s data 0.000s
+[train] step 4550/5000 epoch 31 loss 0.0033 lr 4.44e-06 gn 0.42 update 0.066s data 0.000s
+[train] step 4600/5000 epoch 31 loss 0.0116 lr 4.03e-06 gn 1.08 update 0.068s data 0.000s
+[train] step 4650/5000 epoch 32 loss 0.0139 lr 3.67e-06 gn 0.73 update 0.067s data 0.000s
+[train] step 4700/5000 epoch 32 loss 0.0111 lr 3.36e-06 gn 0.58 update 0.067s data 0.000s
+[train] step 4750/5000 epoch 32 loss 0.0064 lr 3.10e-06 gn 0.31 update 0.067s data 0.000s
+[train] step 4800/5000 epoch 33 loss 0.0170 lr 2.88e-06 gn 0.86 update 0.067s data 0.000s
+[train] step 4850/5000 epoch 33 loss 0.0031 lr 2.72e-06 gn 0.39 update 0.068s data 0.000s
+[train] step 4900/5000 epoch 33 loss 0.0114 lr 2.60e-06 gn 0.38 update 0.067s data 0.000s
+[train] step 4950/5000 epoch 34 loss 0.0125 lr 2.52e-06 gn 0.59 update 0.067s data 0.000s
+[train] step 5000/5000 epoch 34 loss 0.0039 lr 2.50e-06 gn 0.13 update 0.068s data 0.000s
+[train] done: {"final_step": 5000, "samples_seen_this_run": 40000, "wall_s": 377.30956387519836, "steady_state": {"warmup_steps_excluded": 50, "samples": 39600, "s": 343.31366208568215, "gpu_s_per_sample": 0.00866953692135561, "data_wait_frac": 0.005587860910904294}, "peak_mem_allocated_gib": 3.55580472946167, "final_ckpt": "/runs/0b3r1_train/checkpoints/005000/pretrained_model"}
+=== step 1 done 1790896316.949951460
+=== step 2 start 1790896316.951051568 pol scripts/s0b3_prep.py offline --dataset /data/datasets/0b3_overfit_r1 --ckpt /runs/0b3r1_train/checkpoints/005000/pretrained_model --out /runs/0b3r1_eval/offline.json
+[s0b3_prep] offline device=cuda
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+OFFLINE={"mae_arm_norm": 0.08137170150876046, "claw_acc": 0.9979999999999999, "mae_arm_norm_per_query": [0.6751732945442199, 0.17830612510442734, 0.09744013957679272, 0.038920302875339985, 0.02435273714363575, 0.03065172266215086, 0.03747299294918775, 0.04248876422643662, 0.03910034745931625, 0.03857374526560307, 0.03098963052034378, 0.027151019498705863, 0.03472881726920605, 0.031347226910293104, 0.025467291846871375, 0.024523953348398207, 0.03199154734611511, 0.030650324933230878]}
+=== step 2 done 1790896367.332678549
+=== step 3 start 1790896367.333828401 sim scripts/s0b3_overfit.py eval --ckpt /runs/0b3r1_train/checkpoints/005000/pretrained_model --demo /runs/0b3r1_prereq/replay.json --out /runs/0b3r1_eval/0b3_overfit.json --frames-dir /runs/0b3r1_eval/frames --policy-python /opt/policy/bin/python
+[0b3] server up after 20.0 s: {"policy": "smolvla", "n_action_steps": 20, "chunk_size": 50, "image_size": 128, "state_dim": 19, "action_dim": 5, "ckpt_sha": "4a5abf5540979327b1b9bc62674d27550db1a269b5eba96f0e47868cb76533e8", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 128, 128], "observation.images.camera2": [3, 128, 128], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": true, "train_expert_only": true, "dtype": "float32", "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 31600
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.507578 s, Mean: 2.507578 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.350100 s, Mean: 0.350100 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068037 s, Mean: 0.068037 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007149 s, Mean: 0.037593 s, Std: 0.043054 s, N: 2
+Contact sensor construction took: Last: 0.005855 s, Mean: 0.027013 s, Std: 0.035533 s, N: 3
+Contact sensor construction took: Last: 0.004241 s, Mean: 0.021320 s, Std: 0.031167 s, N: 4
+Initialize solver took: Last: 7.266565 s, Mean: 7.266565 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.654105 s, Mean: 11.654105 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.544526 s, Mean: 27.544526 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[0b3] eval: device=cuda:0 B=128 H=128 N=20 T=350
+S0B3={"mode": "eval", "n_scored": 100, "success": 65, "per_state_success": {"0": 9, "1": 9, "2": 10, "3": 0, "4": 10, "5": 7, "6": 4, "7": 9, "8": 0, "9": 7}, "n_slam": 1, "n_jam": 3, "n_early_close": 55, "pass": false, "wall_s": 84.6}
+NAN_GUARD_EVENTS=0
+=== step 3 done 1790896484.680644474
+=== t3r1_overfit done 2026-10-02T01:14:44+02:00

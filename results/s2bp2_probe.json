@@ -1,0 +1,3003 @@
+{
+ "groups": 88,
+ "episodes": 264,
+ "success": {
+  "count": 209,
+  "n": 264,
+  "rate": 0.7916666666666666,
+  "ci95": [
+   0.7386666806440013,
+   0.8363000160901878
+  ]
+ },
+ "success_by_member": {
+  "0": {
+   "count": 81,
+   "n": 88,
+   "rate": 0.9204545454545454,
+   "ci95": [
+    0.8447994519714657,
+    0.9609356397516751
+   ]
+  },
+  "1": {
+   "count": 63,
+   "n": 88,
+   "rate": 0.7159090909090909,
+   "ci95": [
+    0.614202221177759,
+    0.7995536367341242
+   ]
+  },
+  "2": {
+   "count": 42,
+   "n": 59,
+   "rate": 0.711864406779661,
+   "ci95": [
+    0.5861891170174913,
+    0.8116365271417918
+   ]
+  },
+  "3": {
+   "count": 21,
+   "n": 26,
+   "rate": 0.8076923076923077,
+   "ci95": [
+    0.6212336384535001,
+    0.9149306422821174
+   ]
+  },
+  "4": {
+   "count": 2,
+   "n": 3,
+   "rate": 0.6666666666666666,
+   "ci95": [
+    0.2076549551264879,
+    0.9385096847238394
+   ]
+  }
+ },
+ "success_and_wrong_grasp_episodes": 0,
+ "no_grasp_episodes": 44,
+ "went_for_named_cube_of_all_episodes": {
+  "count": 209,
+  "n": 264,
+  "rate": 0.7916666666666666,
+  "ci95": [
+   0.7386666806440013,
+   0.8363000160901878
+  ],
+  "chance": 0.27417929292929294
+ },
+ "went_for_named_cube_of_grasped_episodes": {
+  "count": 209,
+  "n": 220,
+  "rate": 0.95,
+  "ci95": [
+   0.9126992498978536,
+   0.971854827628397
+  ],
+  "chance": 0.2809848484848485
+ },
+ "same_cube_regardless_groups": {
+  "count": 1,
+  "n": 82,
+  "rate": 0.012195121951219513,
+  "ci95": [
+   0.0021559365709651473,
+   0.0658949851266733
+  ],
+  "chance": 0.505444783197832,
+  "note": "groups with >= 2 known grasps; a cube grasped by >= 2 members under different instructions"
+ },
+ "per_group": [
+  {
+   "group": 1,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "blue_small",
+     "instruction": "please pick up the small blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "pick the yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 2,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "please pick up the small red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick the small green cube up",
+     "success": false,
+     "wrong_grasp": true,
+     "grasped": "green_large",
+     "named": false
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "pick the blue cube up",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "please pick up the yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 3,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick the red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick the small green cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "please pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "pick up the large yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 4,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "blue_small",
+     "instruction": "pick up the small blue cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_large",
+     "instruction": "pick the large blue cube up",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "pick up the large yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 5,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick the small red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "pick up the large red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "green_small",
+     "instruction": "pick up the green cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 6,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_small",
+     "instruction": "pick up the small blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 7,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick the green cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 8,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick the small green cube up",
+     "success": false,
+     "wrong_grasp": true,
+     "grasped": "green_large",
+     "named": false
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "pick up the small blue cube from the table",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 3,
+     "target": "blue_large",
+     "instruction": "pick up the large blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 9,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "blue_large",
+     "instruction": "please pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "pick the large yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 10,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "please pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick up the green cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "pick up the blue cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 11,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick the red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick up the small green cube from the table",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "please pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "pick the large yellow cube up",
+     "success": false,
+     "wrong_grasp": true,
+     "grasped": "yellow_small",
+     "named": false
+    }
+   ]
+  },
+  {
+   "group": 13,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick the small green cube up",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "pick the blue cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 14,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "please pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick up the small green cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "pick the blue cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "pick up the yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 15,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "green_small",
+     "instruction": "pick the green cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "pick the yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 16,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_small",
+     "instruction": "pick up the small blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "pick up the large blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 18,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "please pick up the small green cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "please pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "pick up the yellow cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 19,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "blue_large",
+     "instruction": "please pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "pick up the large yellow cube",
+     "success": false,
+     "wrong_grasp": true,
+     "grasped": "yellow_small",
+     "named": false
+    }
+   ]
+  },
+  {
+   "group": 20,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "please pick up the large yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 22,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "please pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_large",
+     "instruction": "pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "please pick up the large yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 24,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_small",
+     "instruction": "please pick up the small blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "please pick up the large blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "pick up the yellow cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    }
+   ]
+  },
+  {
+   "group": 25,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "green_small",
+     "instruction": "please pick up the green cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "pick the yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 26,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_small",
+     "instruction": "pick the small blue cube up",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "please pick up the large blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "pick up the yellow cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 27,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "please pick up the large red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick up the small green cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "please pick up the large blue cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    }
+   ]
+  },
+  {
+   "group": 28,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick the large red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick up the small green cube from the table",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "pick up the blue cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "pick the yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 29,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick the small green cube up",
+     "success": false,
+     "wrong_grasp": true,
+     "grasped": "green_large",
+     "named": false
+    }
+   ]
+  },
+  {
+   "group": 30,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the large red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_small",
+     "instruction": "pick up the blue cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "pick the large yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 31,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "green_small",
+     "instruction": "please pick up the small green cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "please pick up the large yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 32,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the large red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "please pick up the green cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "pick the small blue cube up",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    }
+   ]
+  },
+  {
+   "group": 33,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "green_small",
+     "instruction": "pick the green cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "pick the yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 34,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_large",
+     "instruction": "pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 36,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "green_small",
+     "instruction": "pick the green cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "pick up the large yellow cube",
+     "success": false,
+     "wrong_grasp": true,
+     "grasped": "yellow_small",
+     "named": false
+    }
+   ]
+  },
+  {
+   "group": 37,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "please pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_small",
+     "instruction": "please pick up the small blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "pick up the large blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "pick the large yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 38,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the red cube from the table",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 1,
+     "target": "blue_small",
+     "instruction": "pick the blue cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "pick up the large yellow cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 39,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the large red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick up the green cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 40,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "pick the large red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 41,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick the small green cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 42,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "please pick up the small red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick up the small green cube from the table",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "pick up the blue cube from the table",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "pick the yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 43,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "please pick up the large red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "pick up the yellow cube from the table",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    }
+   ]
+  },
+  {
+   "group": 44,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick up the small green cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "please pick up the yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 45,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_small",
+     "instruction": "please pick up the small blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 46,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "please pick up the green cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "pick the blue cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "pick up the yellow cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 47,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "pick the large red cube up",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "please pick up the yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 48,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "please pick up the yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 49,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "please pick up the large red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 50,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube from the table",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "pick the large red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "pick up the small blue cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "blue_large",
+     "instruction": "pick the large blue cube up",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    }
+   ]
+  },
+  {
+   "group": 52,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick up the small green cube from the table",
+     "success": false,
+     "wrong_grasp": true,
+     "grasped": "green_large",
+     "named": false
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "pick the large blue cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 53,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "pick up the large red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "green_small",
+     "instruction": "pick up the small green cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "pick the yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 54,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "green_small",
+     "instruction": "pick the green cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "pick the yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 55,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "please pick up the green cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "pick up the large yellow cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 56,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick up the small green cube from the table",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "please pick up the small blue cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 3,
+     "target": "blue_large",
+     "instruction": "pick the large blue cube up",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    }
+   ]
+  },
+  {
+   "group": 57,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "green_small",
+     "instruction": "pick the small green cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "please pick up the yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 58,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_large",
+     "instruction": "please pick up the large blue cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "pick the large yellow cube up",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    }
+   ]
+  },
+  {
+   "group": 59,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick the green cube up",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "please pick up the small blue cube",
+     "success": false,
+     "wrong_grasp": true,
+     "grasped": "blue_large",
+     "named": false
+    },
+    {
+     "member": 3,
+     "target": "blue_large",
+     "instruction": "pick up the large blue cube from the table",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 4,
+     "target": "yellow_large",
+     "instruction": "pick up the yellow cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 60,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "please pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_small",
+     "instruction": "pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "pick the large yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 61,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick the small red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "pick the large red cube up",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "green_small",
+     "instruction": "pick up the small green cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 3,
+     "target": "blue_large",
+     "instruction": "pick the large blue cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 62,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_large",
+     "instruction": "pick the blue cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 63,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "green_small",
+     "instruction": "please pick up the small green cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_large",
+     "instruction": "pick the blue cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "pick up the yellow cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 64,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "green_small",
+     "instruction": "pick up the green cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_large",
+     "instruction": "pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 65,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "green_small",
+     "instruction": "pick the green cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_large",
+     "instruction": "please pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "pick up the large yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 66,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick the red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick the small green cube up",
+     "success": false,
+     "wrong_grasp": true,
+     "grasped": "green_large",
+     "named": false
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "please pick up the large blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "pick up the yellow cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 67,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "please pick up the large red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 69,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick the small green cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "please pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 70,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "please pick up the large red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "green_small",
+     "instruction": "pick up the small green cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 71,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "blue_small",
+     "instruction": "pick up the small blue cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_large",
+     "instruction": "pick up the large blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "pick the large yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 72,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_small",
+     "instruction": "please pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 73,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "pick the large red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "pick up the blue cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "pick up the large yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 74,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "green_small",
+     "instruction": "pick up the green cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_small",
+     "instruction": "please pick up the small blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "pick the large blue cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 75,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "please pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "please pick up the green cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "pick up the small blue cube from the table",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 3,
+     "target": "blue_large",
+     "instruction": "pick the large blue cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 4,
+     "target": "yellow_large",
+     "instruction": "pick the yellow cube up",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    }
+   ]
+  },
+  {
+   "group": 76,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "pick the large red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "green_small",
+     "instruction": "please pick up the small green cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 3,
+     "target": "blue_large",
+     "instruction": "please pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 78,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the large red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick up the green cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 79,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick the red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_large",
+     "instruction": "please pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 80,
+   "n_cubes": 2,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_large",
+     "instruction": "pick up the blue cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 81,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "pick up the large red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "pick the blue cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 83,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "please pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_small",
+     "instruction": "pick up the small blue cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "pick the large blue cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 84,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_small",
+     "instruction": "pick up the small blue cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "pick up the large blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 85,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "pick up the large red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "green_small",
+     "instruction": "pick up the small green cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 3,
+     "target": "blue_small",
+     "instruction": "pick up the small blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 86,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "please pick up the small red cube",
+     "success": false,
+     "wrong_grasp": true,
+     "grasped": "red_large",
+     "named": false
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "pick up the large red cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "pick up the blue cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "please pick up the large yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 87,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick up the red cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick up the small green cube from the table",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "please pick up the small blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "yellow_large",
+     "instruction": "please pick up the yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 89,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "please pick up the red cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick up the green cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "pick the large yellow cube up",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    }
+   ]
+  },
+  {
+   "group": 90,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick the red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick the green cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 92,
+   "n_cubes": 5,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick up the small red cube",
+     "success": false,
+     "wrong_grasp": true,
+     "grasped": "red_large",
+     "named": false
+    },
+    {
+     "member": 1,
+     "target": "red_large",
+     "instruction": "pick up the large red cube from the table",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "blue_small",
+     "instruction": "please pick up the small blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 3,
+     "target": "blue_large",
+     "instruction": "pick the large blue cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 4,
+     "target": "yellow_large",
+     "instruction": "pick the yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 93,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "blue_small",
+     "instruction": "please pick up the small blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_large",
+     "instruction": "please pick up the large blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "pick up the large yellow cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 94,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "green_small",
+     "instruction": "please pick up the green cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "pick the large yellow cube up",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    }
+   ]
+  },
+  {
+   "group": 95,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "blue_large",
+     "instruction": "pick up the blue cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "yellow_large",
+     "instruction": "please pick up the large yellow cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 96,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_large",
+     "instruction": "pick the red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_large",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_large",
+     "instruction": "please pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_large",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "pick up the yellow cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  },
+  {
+   "group": 97,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick the red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "pick up the small green cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "pick up the large yellow cube from the table",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    }
+   ]
+  },
+  {
+   "group": 98,
+   "n_cubes": 4,
+   "members": [
+    {
+     "member": 0,
+     "target": "red_small",
+     "instruction": "pick the red cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "red_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "green_small",
+     "instruction": "please pick up the green cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    },
+    {
+     "member": 2,
+     "target": "blue_large",
+     "instruction": "pick up the large blue cube",
+     "success": false,
+     "wrong_grasp": false,
+     "grasped": null,
+     "named": null
+    }
+   ]
+  },
+  {
+   "group": 99,
+   "n_cubes": 3,
+   "members": [
+    {
+     "member": 0,
+     "target": "green_small",
+     "instruction": "pick up the small green cube from the table",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "green_small",
+     "named": true
+    },
+    {
+     "member": 1,
+     "target": "blue_small",
+     "instruction": "pick up the blue cube",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "blue_small",
+     "named": true
+    },
+    {
+     "member": 2,
+     "target": "yellow_large",
+     "instruction": "pick the yellow cube up",
+     "success": true,
+     "wrong_grasp": false,
+     "grasped": "yellow_large",
+     "named": true
+    }
+   ]
+  }
+ ],
+ "eval": "results/s2bp2_probe_s21655.json",
+ "seed": 21655,
+ "ckpt": "/runs/s2bp2_VT/checkpoints/068880/pretrained_model",
+ "ckpt_sha": "ee011bf902f9a1d956ee4d6a47dcc2e3f2cfee681a9a79ea53b458a18c55cc12"
+}

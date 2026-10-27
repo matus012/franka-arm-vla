@@ -1,0 +1,76 @@
+{
+ "prefix": "s2_train_s31800",
+ "config": {
+  "stage": "s2",
+  "split": "train",
+  "seed": 31800,
+  "envs": 128,
+  "noise_sigma": 0.1,
+  "image_size": 128,
+  "visual": "nominal",
+  "mix": "1,1,1",
+  "start": 1152,
+  "episodes": 1152,
+  "period": 3,
+  "latency": 1,
+  "n_action_steps": 20,
+  "part_bytes": 157286400,
+  "git_sha": "2c4ff93",
+  "expert_version": "113-expert-v1",
+  "detector_version": "113-detectors-v1 (GATES.md conventions 2026-10-01)"
+ },
+ "chunks": 9,
+ "attempted": 1152,
+ "kept": 1126,
+ "expert_success": 0.9774305555555556,
+ "ci95": [
+  0.9671352677642974,
+  0.9845522298997426
+ ],
+ "per_task": {
+  "pick": {
+   "attempted": 1152,
+   "kept": 1126,
+   "rate": 0.9774305555555556,
+   "ci95": [
+    0.9671352677642974,
+    0.9845522298997426
+   ],
+   "failures": {
+    "wrong_object": 0,
+    "wrong_grasp": 0,
+    "wrong_dest": 0,
+    "slam": 0,
+    "jam": 0,
+    "drop": 0,
+    "early_close": 0,
+    "release_failure": 0,
+    "invalid": 0
+   },
+   "failed_unflagged": 26
+  }
+ },
+ "files": [
+  "s2_train_s31800_pick_e001152_p0.h5",
+  "s2_train_s31800_pick_e001280_p0.h5",
+  "s2_train_s31800_pick_e001408_p0.h5",
+  "s2_train_s31800_pick_e001536_p0.h5",
+  "s2_train_s31800_pick_e001664_p0.h5",
+  "s2_train_s31800_pick_e001792_p0.h5",
+  "s2_train_s31800_pick_e001920_p0.h5",
+  "s2_train_s31800_pick_e002048_p0.h5",
+  "s2_train_s31800_pick_e002176_p0.h5"
+ ],
+ "disk_bytes": 1237633243,
+ "mb_per_kept_episode": 1.0991414236234458,
+ "cmd_resync_max_m": 0.005751460790634155,
+ "this_invocation": {
+  "episodes_run": 1152,
+  "wall_s": 188.3,
+  "episodes_per_h": 22028.618377507486,
+  "torch_peak_vram_mib": 39.986328125,
+  "device": "cuda:0",
+  "gpu": "NVIDIA H200"
+ },
+ "nan_guard_events": 0
+}

@@ -1,0 +1,147 @@
+{
+ "stage": "0A.1 measure",
+ "seed": 21100,
+ "num_envs": 100,
+ "git_sha": "3963e5189ac098b5852f7dfc4baf4a6806a483ae",
+ "edge_m_catalog": {
+  "small": 0.048,
+  "large": 0.06
+ },
+ "edges_m_model": {
+  "cube_red_small": [
+   0.04800000041723251,
+   0.04800000041723251,
+   0.04800000041723251
+  ],
+  "cube_red_large": [
+   0.05999999865889549,
+   0.05999999865889549,
+   0.05999999865889549
+  ],
+  "cube_green_small": [
+   0.04800000041723251,
+   0.04800000041723251,
+   0.04800000041723251
+  ],
+  "cube_green_large": [
+   0.05999999865889549,
+   0.05999999865889549,
+   0.05999999865889549
+  ],
+  "cube_blue_small": [
+   0.04800000041723251,
+   0.04800000041723251,
+   0.04800000041723251
+  ],
+  "cube_blue_large": [
+   0.05999999865889549,
+   0.05999999865889549,
+   0.05999999865889549
+  ],
+  "cube_yellow_small": [
+   0.04800000041723251,
+   0.04800000041723251,
+   0.04800000041723251
+  ],
+  "cube_yellow_large": [
+   0.05999999865889549,
+   0.05999999865889549,
+   0.05999999865889549
+  ]
+ },
+ "small_edge_from_111_collision_box_m": 0.048,
+ "large_rule": {
+  "edge_le_0.060": true,
+  "edge_cos10_plus_sin10_m": 0.0695073558407483,
+  "le_0.070": true
+ },
+ "masses_kg": {
+  "cube_red_small": 0.2156544029712677,
+  "cube_red_large": 0.4212000072002411,
+  "cube_green_small": 0.2156544029712677,
+  "cube_green_large": 0.4212000072002411,
+  "cube_blue_small": 0.2156544029712677,
+  "cube_blue_large": 0.4212000072002411,
+  "cube_yellow_small": 0.2156544029712677,
+  "cube_yellow_large": 0.4212000072002411,
+  "pad_red": 0.5,
+  "pad_green": 0.5,
+  "pad_blue": 0.5,
+  "pad_yellow": 0.5
+ },
+ "mass_vs_density_rel_err": {
+  "cube_red_small": 1.3777913698831412e-08,
+  "cube_red_large": 1.709458974374911e-08,
+  "cube_green_small": 1.3777913698831412e-08,
+  "cube_green_large": 1.709458974374911e-08,
+  "cube_blue_small": 1.3777913698831412e-08,
+  "cube_blue_large": 1.709458974374911e-08,
+  "cube_yellow_small": 1.3777913698831412e-08,
+  "cube_yellow_large": 1.709458974374911e-08
+ },
+ "mass_ok_1pct": true,
+ "friction_mu": {
+  "cube_red_small": 1.0,
+  "cube_red_large": 1.0,
+  "cube_green_small": 1.0,
+  "cube_green_large": 1.0,
+  "cube_blue_small": 1.0,
+  "cube_blue_large": 1.0,
+  "cube_yellow_small": 1.0,
+  "cube_yellow_large": 1.0
+ },
+ "z_rest_m": {
+  "small": 0.020990340039134026,
+  "large": 0.02699313685297966
+ },
+ "z_tab_m": {
+  "small": -0.003009659960865975,
+  "large": -0.003006863147020339
+ },
+ "z_tab_agree_m": 2.7968138456360703e-06,
+ "z_tab_agree_ok_1mm": true,
+ "h_pad_m": {
+  "small": 0.0019883979111909866,
+  "large": 0.001979093998670578
+ },
+ "pad_dims_model_m": [
+  0.10000000149011612,
+  0.10000000149011612,
+  0.0020000000949949026
+ ],
+ "l_pad_m": 0.1,
+ "l_pad_ge_large_plus_2cm": true,
+ "max_cube_speed_after_settle_mps": 1.9993953173980117e-05,
+ "stack_settle_2s": {
+  "large_on_small": 1.0,
+  "small_on_large": 1.0,
+  "n": 100
+ },
+ "placement_sampler": {
+  "s1": {
+   "specs": 10000,
+   "per_object_rejection_rate": 0.5301988198594355,
+   "layout_restarts": 0,
+   "all_in_reach_box": true
+  },
+  "s2": {
+   "specs": 10000,
+   "per_object_rejection_rate": 0.6567605279410755,
+   "layout_restarts": 0,
+   "all_in_reach_box": true
+  },
+  "s3a": {
+   "specs": 10000,
+   "per_object_rejection_rate": 0.6587981757129253,
+   "layout_restarts": 0,
+   "all_in_reach_box": true
+  },
+  "s3b": {
+   "specs": 10000,
+   "per_object_rejection_rate": 0.658376069154605,
+   "layout_restarts": 0,
+   "all_in_reach_box": true
+  }
+ },
+ "wall_s": 87.1
+}

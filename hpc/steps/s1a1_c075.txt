@@ -1,0 +1,2 @@
+# GATES Stage 1 attempt 1 (U): checkpoint pick, 75 % checkpoint, episodes 0-299 of validation seed 21600 (default sampling)
+sim scripts/eval_policy.py --policy smolvla --episodes 300 --stage s1 --split train --visual nominal --seed 21600 --envs 128 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --ckpt /runs/s1a1_unfrozen/checkpoints/015498/pretrained_model --out /runs/e1a1_c075/s1a1_unfrozen_val_c075_s21600.json

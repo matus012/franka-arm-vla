@@ -1,0 +1,20 @@
+﻿# Stage 1 redesign #2 data (V15 / V0) audit mutants (0C item 2), tests/test_data_audit.py synthetic mutants at the yaw-aware audit code (4960b2c), git 2e2f556, 2026-10-02T23:59:21
+============================= test session starts =============================
+platform win32 -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0 -- <home>\A_MAIN\ws\113_vla_tabletop\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: <home>\A_MAIN\ws\113_vla_tabletop
+configfile: pyproject.toml
+plugins: anyio-4.14.2, flaky-3.8.1, hydra-core-1.4.0.dev10, mock-3.16.0
+collecting ... collected 9 items
+
+tests/test_data_audit.py::test_synthetic_clean PASSED                    [ 11%]
+tests/test_data_audit.py::test_mutant_heldout_place_pair PASSED          [ 22%]
+tests/test_data_audit.py::test_mutant_heldout_target PASSED              [ 33%]
+tests/test_data_audit.py::test_mutant_paraphrase_instruction PASSED      [ 44%]
+tests/test_data_audit.py::test_mutant_heldout_band_visuals PASSED        [ 55%]
+tests/test_data_audit.py::test_mutant_split_rule_and_collision PASSED    [ 66%]
+tests/test_data_audit.py::test_redesign2_streams_and_sidecar_yaw PASSED  [ 77%]
+tests/test_data_audit.py::test_split_rule_in_export_select PASSED        [ 88%]
+tests/test_data_audit.py::test_real_dataset[NOTSET] SKIPPED (set AUD...) [100%]
+
+======================== 8 passed, 1 skipped in 15.13s ========================

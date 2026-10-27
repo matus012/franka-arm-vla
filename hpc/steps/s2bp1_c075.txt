@@ -1,0 +1,2 @@
+# GATES 2b amended one fix (consultant 2026-10-26): checkpoint pick, 75 % checkpoint, validation 21650 eps 0-299
+sim scripts/eval_policy.py --policy smolvla --stage s2 --split train --visual nominal --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --episodes 300 --seed 21650 --ckpt /runs/s2bp1_VT/checkpoints/025830/pretrained_model --out /runs/e2bp1_c075/s2bp1_VT_val_c075_s21650.json

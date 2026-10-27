@@ -1,0 +1,5 @@
+# GATES "Post-kill grounding diagnosis (003)" (task 003, reported only): t = 0 dumps (S_p 21645 whole groups >= 1,000, S_u 21640 to 2,000), then features + step 2 divergence for 034440 and S1 V15 041328
+sim scripts/g3_dump_t0.py --stream paired --seed 21645 --envs 128 --image-size 224 --out /runs/g3_diag/t0_p21645.npz
+sim scripts/g3_dump_t0.py --stream unpaired --seed 21640 --paired-seed 21645 --envs 128 --image-size 224 --out /runs/g3_diag/t0_u21640.npz
+pol scripts/g3_probe.py extract --ckpt /runs/s2a1_VT/checkpoints/034440/pretrained_model --dumps /runs/g3_diag/t0_p21645.npz /runs/g3_diag/t0_u21640.npz --out /runs/g3_diag/c034440
+pol scripts/g3_probe.py extract --ckpt /runs/s1y15_U/checkpoints/041328/pretrained_model --dumps /runs/g3_diag/t0_p21645.npz /runs/g3_diag/t0_u21640.npz --out /runs/g3_diag/c041328

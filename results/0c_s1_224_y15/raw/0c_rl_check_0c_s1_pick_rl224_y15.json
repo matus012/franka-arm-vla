@@ -1,0 +1,205 @@
+{
+ "dataset": "/data/datasets/0c_s1_pick_rl224_y15",
+ "name": "0c_s1_pick_rl224_y15",
+ "label": "relabel_setpoint",
+ "episodes": 2000,
+ "rows": 700000,
+ "T": [
+  350
+ ],
+ "image_size": 224,
+ "expect_yaw": 15.0,
+ "kept": 2000,
+ "yaw": {
+  "expected_m": 15.0,
+  "n": 2000,
+  "spawn_fold": {
+   "min": -14.991125106811523,
+   "max": 14.989898681640625,
+   "mean": -0.15710670757293702,
+   "std": 8.629645503665369
+  },
+  "regenerated_fold": {
+   "min": -14.991126666776395,
+   "max": 14.989900463568482,
+   "mean": -0.1571067038682902,
+   "std": 8.629645445632349
+  }
+ },
+ "source_successful_episodes": 2270,
+ "kept_stream_indices": [
+  0,
+  2028
+ ],
+ "video_check": {
+  "episodes": [
+   0,
+   222,
+   444,
+   666,
+   888,
+   1111,
+   1333,
+   1555,
+   1777,
+   1999
+  ],
+  "rows": 3500,
+  "psnr_min": 39.24029645057434,
+  "psnr_mean": 43.07801324992615,
+  "identity_fail": 0,
+  "backend": "torchcodec"
+ },
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "noise_std_per_arm_dim": [
+   0.09999016672372818,
+   0.10022459924221039,
+   0.09988386183977127,
+   0.1000460758805275
+  ],
+  "noise_rows_per_dim": [
+   686072,
+   662333,
+   645385,
+   694909
+  ],
+  "claw_exec_ne_label_rows": 0,
+  "mutant_action_exec_flagged_episodes": 2000,
+  "episodes_checked": 2000,
+  "state_dims_std_lt_1e-6": [],
+  "state_std": [
+   0.23017361425145993,
+   0.335935725987124,
+   0.14847975854745762,
+   0.39982895770885774,
+   0.07656497905561024,
+   0.20488744080092872,
+   0.42428635567394074,
+   0.009113841623221118,
+   0.009123333151361351,
+   0.19242777028815614,
+   0.41334347266377863,
+   0.19982596746056164,
+   0.4093870986144761,
+   0.11987387755124569,
+   0.6744929834212818,
+   0.39761736000082415,
+   0.04096241602153112,
+   0.040808859103203914,
+   0.013151643969016299
+  ]
+ },
+ "sheet": {
+  "png": "0c_s1_pick_rl224_y15.png",
+  "episodes": [
+   {
+    "lerobot_episode": 0,
+    "episode_index": 0,
+    "instruction": "pick up the cube from the table",
+    "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"small\"], \"dest\": null, \"cubes\": [[\"red\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      104
+     ],
+     [
+      "carry",
+      185
+     ],
+     [
+      "hold",
+      267
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1000,
+    "episode_index": 1016,
+    "instruction": "pick up the cube",
+    "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"small\"], \"dest\": null, \"cubes\": [[\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      119
+     ],
+     [
+      "carry",
+      195
+     ],
+     [
+      "hold",
+      272
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1999,
+    "episode_index": 2028,
+    "instruction": "pick up the cube",
+    "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"small\"], \"dest\": null, \"cubes\": [[\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      118
+     ],
+     [
+      "carry",
+      195
+     ],
+     [
+      "hold",
+      272
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   }
+  ]
+ },
+ "items": {
+  "1_count_eq_K": true,
+  "1_rows_eq_K_T": true,
+  "1_rows_per_episode_eq_T": true,
+  "1_columns_exact_action_eq_r": true,
+  "1_image_size": true,
+  "1_psnr_min_ge_35": true,
+  "1_frame_identity": true,
+  "1_kept_are_first_K_successful_in_order": true,
+  "1_split_rule": true,
+  "1_cube_yaw_max_deg_eq_expected": true,
+  "yaw_spawn_attrs_present": true,
+  "yaw_spawn_fold_in_range": true,
+  "yaw_regenerated_layout_fold_in_range": true,
+  "yaw_spawn_agrees_with_regenerated_layout": true,
+  "yaw_coverage": true,
+  "4a_noise_std_in_band": true,
+  "4a_claw_identical": true
+ },
+ "pass_items_1_4a": true,
+ "git_sha": "60dea8a",
+ "wall_s": 280.1
+}

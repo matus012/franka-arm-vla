@@ -1,0 +1,3 @@
+# GATES Stage 2 re-plan (c691d00) instrument (ii)-(iv) + run_key on /runs/s2_U ((iii) sampler = f(seed 0, epoch), epochs 1-10) + the seed-1 mutant (must fail). NOTE (ii) compares frozen parts with smolvla_base; the init is the S1 V15 checkpoint whose frozen parts are bit-identical to smolvla_base (S1 instrument (ii))
+python scripts/s1_tools.py a1post --u-run /runs/s2_U --dataset /data/datasets/0c_s2_pick_rl224_y15 --sampler-epochs 10 --check-steps 1 17220 34440 --out /runs/s2_post/arms_post.json --device cpu
+-python scripts/s1_tools.py a1post --u-run /runs/s2_U --dataset /data/datasets/0c_s2_pick_rl224_y15 --sampler-epochs 10 --sampler-seed 1 --check-steps 1 --out /runs/s2_post/iii_mutant_seed1.json --device cpu

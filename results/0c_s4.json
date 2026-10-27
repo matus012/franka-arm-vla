@@ -1,0 +1,1618 @@
+{
+ "entry": "GATES Stage 4 re-plan, language-free part (e2cef02), 0C data re-gate",
+ "sets": {
+  "s2g": {
+   "set": "s2g",
+   "dataset": "0c_s2_pick_rl224_y15g",
+   "kind": "grey",
+   "items": {
+    "1_count_eq_K": true,
+    "1_tasks_as_expected": true,
+    "1_T_per_task_eq_timing": true,
+    "1_rows_eq_sum_T": true,
+    "1_rows_per_episode_eq_T": true,
+    "1_columns_exact_action_eq_r": true,
+    "1_image_size": true,
+    "1_psnr_min_ge_35": true,
+    "1_frame_identity": true,
+    "1_kept_are_first_K_successful_in_order": true,
+    "1_split_rule": true,
+    "1_cube_yaw_max_deg_eq_expected": true,
+    "yaw_spawn_attrs_present": true,
+    "yaw_spawn_fold_in_range": true,
+    "yaw_regenerated_layout_fold_in_range": true,
+    "yaw_spawn_agrees_with_regenerated_layout": true,
+    "yaw_coverage": true,
+    "1_expert_pooled_pick_ge_ceiling_minus_5": true,
+    "1_expert_every_batch_pick_ge_ceiling_minus_10": true,
+    "1_expert_every_batch_n_ge_200": true,
+    "palette_table_palette_eq_expected_all": true,
+    "palette_visual_mode_nominal_all": true,
+    "palette_visual_json_s4r_nominal_all": true,
+    "5_sheet_three_episodes_first_middle_last": true,
+    "6_table_region_median_saturation_le_0.10": true,
+    "4a_noise_std_in_band": true,
+    "4a_claw_identical": true,
+    "1_twin_overlap_nonempty": true,
+    "1_twin_shared_specs_instructions_equal": true,
+    "2_audit_0_violations": true,
+    "4b_identity_every_row": true,
+    "4c_abs_slope_lt_0.1": true,
+    "mutant_m_b_flagged": true,
+    "mutant_m_c_flagged_or_equivalent_with_m_c_prime_flagged": true
+   },
+   "pass": true,
+   "failed_items": [],
+   "counts": {
+    "episodes": 2000,
+    "rows": 700000,
+    "T_per_task": {
+     "pick": 350
+    },
+    "source_successful_episodes": 2258,
+    "kept_stream_indices": [
+     0,
+     2043
+    ]
+   },
+   "keep_rates": {
+    "pick": {
+     "pooled": {
+      "kept": 2258,
+      "attempted": 2304,
+      "rate_pct": 98.00347222222223,
+      "ci95_pct": [
+       97.3472948190189,
+       98.49983784381203
+      ]
+     },
+     "batches": [
+      {
+       "kept": 1133,
+       "attempted": 1152,
+       "rate_pct": 98.35069444444444,
+       "ci95_pct": [
+        97.43836053087368,
+        98.9416278689209
+       ]
+      },
+      {
+       "kept": 1125,
+       "attempted": 1152,
+       "rate_pct": 97.65625,
+       "ci95_pct": [
+        96.61139936187243,
+        98.38431631404717
+       ]
+      }
+     ],
+     "ceiling_pct": 100.0
+    }
+   },
+   "images": {
+    "psnr_min": 39.354367032972334,
+    "psnr_mean": 43.19120511719325,
+    "identity_fail": 0,
+    "episodes_checked": 10
+   },
+   "yaw": {
+    "expected_m": 15.0,
+    "n": 2000,
+    "spawn_fold": {
+     "min": -14.99905014038086,
+     "max": 14.98568344116211,
+     "mean": 0.15094094467163086,
+     "std": 8.734744019236071
+    },
+    "regenerated_fold": {
+     "min": -14.99905132529399,
+     "max": 14.985684759342902,
+     "mean": 0.15094097899709996,
+     "std": 8.734743941220525
+    }
+   },
+   "palette": {
+    "visual_mode": [
+     "nominal"
+    ],
+    "visual_json_mode": [
+     "s4r_nominal"
+    ],
+    "table_palette": [
+     "s4r"
+    ],
+    "nonnominal_table": 0,
+    "nondefault_light": 0
+   },
+   "mix": null,
+   "twin": {
+    "kept_shared": 1965,
+    "only_here": 35,
+    "only_twin": 35,
+    "overlap_frac_of_set": 0.9825,
+    "spec_or_instruction_diff": [],
+    "name": "0c_s2_pick_rl224_y15",
+    "expert_pooled": {
+     "kept": 2267,
+     "attempted": 2304,
+     "rate_pct": 98.39409722222223,
+     "ci95_pct": [
+      97.79439495731866,
+      98.83268724797654
+     ]
+    },
+    "set_expert_pooled": {
+     "kept": 2258,
+     "attempted": 2304,
+     "rate_pct": 98.00347222222223,
+     "ci95_pct": [
+      97.3472948190189,
+      98.49983784381203
+     ]
+    }
+   },
+   "noise": {
+    "std_per_arm_dim": [
+     0.10009405761957169,
+     0.1000198945403099,
+     0.10000970214605331,
+     0.10002736002206802
+    ],
+    "claw_exec_ne_label_rows": 0,
+    "column_mismatch_episodes": []
+   },
+   "slope_4c": [
+    0.012509076766307435,
+    0.021843582398096202,
+    0.030375650692164975,
+    0.007247861037505323
+   ],
+   "std_label_diff": [
+    0.022691660291964733,
+    0.03671463511088952,
+    0.04963983327602616,
+    0.04055847258780881
+   ],
+   "table": {
+    "box": [
+     0,
+     190,
+     64,
+     222
+    ],
+    "reason": "lower-left corner, outside the object footprint x 0.33..0.67 / y +-0.30 projected through the side camera (eye 1.15, 0.45, 0.55 -> look 0.5, 0, 0.18) with object size and 12 px camera-jitter margin; see module docstring",
+    "n": 50,
+    "saturation_max": 0.019801980198019733,
+    "saturation_median": 0.019801980198019733,
+    "value_min": 0.396078431372549,
+    "value_max": 0.396078431372549
+   },
+   "sheet": {
+    "png": "0c_s2_pick_rl224_y15g.png",
+    "episodes": [
+     {
+      "lerobot_episode": 0,
+      "episode_index": 0,
+      "instruction": "pick up the red cube",
+      "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"small\"], \"dest\": null, \"cubes\": [[\"red\", \"small\"], [\"blue\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        109
+       ],
+       [
+        "carry",
+        189
+       ],
+       [
+        "hold",
+        269
+       ],
+       [
+        "end",
+        349
+       ]
+      ]
+     },
+     {
+      "lerobot_episode": 1000,
+      "episode_index": 1013,
+      "instruction": "pick up the red cube",
+      "spec": "{\"task\": \"pick\", \"target\": [\"red\", \"small\"], \"dest\": null, \"cubes\": [[\"red\", \"small\"], [\"blue\", \"small\"], [\"blue\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        107
+       ],
+       [
+        "carry",
+        187
+       ],
+       [
+        "hold",
+        268
+       ],
+       [
+        "end",
+        349
+       ]
+      ]
+     },
+     {
+      "lerobot_episode": 1999,
+      "episode_index": 2043,
+      "instruction": "please pick up the large yellow cube",
+      "spec": "{\"task\": \"pick\", \"target\": [\"yellow\", \"large\"], \"dest\": null, \"cubes\": [[\"red\", \"large\"], [\"blue\", \"large\"], [\"yellow\", \"small\"], [\"red\", \"small\"], [\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        126
+       ],
+       [
+        "carry",
+        200
+       ],
+       [
+        "hold",
+        274
+       ],
+       [
+        "end",
+        349
+       ]
+      ]
+     }
+    ],
+    "chosen_sidecar_indices": [
+     0,
+     1000,
+     1999
+    ],
+    "notes": [
+     "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg",
+     "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg",
+     "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg"
+    ]
+   },
+   "audit_violations": [
+    0
+   ],
+   "mutants": {
+    "m_b": {
+     "relabel_fn": "relabel_shift",
+     "identity_ok": true,
+     "slope_ok_4c": false,
+     "claw_rows_ne_stored": 0,
+     "mutant_rows_changed_vs_true_relabel": 698000,
+     "slope": [
+      -1.979958376017373,
+      -1.9618298091918296,
+      -1.9405320998754594,
+      -1.9911845397563808
+     ]
+    },
+    "m_c": {
+     "relabel_fn": "relabel_claw",
+     "identity_ok": true,
+     "slope_ok_4c": true,
+     "claw_rows_ne_stored": 0,
+     "mutant_rows_changed_vs_true_relabel": 0,
+     "slope": [
+      0.012509076766307435,
+      0.021843582398096202,
+      0.030375650692164975,
+      0.007247861037505323
+     ]
+    },
+    "m_c_prime": {
+     "relabel_fn": "relabel_claw_offset",
+     "identity_ok": false,
+     "slope_ok_4c": false,
+     "claw_rows_ne_stored": 461824,
+     "mutant_rows_changed_vs_true_relabel": 698000,
+     "slope": [
+      -0.9849397286475412,
+      -0.9698175117642472,
+      -0.9576171415198447,
+      -0.9912486191884854
+     ]
+    }
+   },
+   "rc": {
+    "audit": 0,
+    "chk": 0,
+    "ds": 0,
+    "mut_claw": 1,
+    "mut_claw_offset": 0,
+    "mut_shift": 0
+   },
+   "wall_s": 306.7
+  },
+  "s3ag": {
+   "set": "s3ag",
+   "dataset": "0c_s3a_place_rl224_y15g",
+   "kind": "grey",
+   "items": {
+    "1_count_eq_K": true,
+    "1_tasks_as_expected": true,
+    "1_T_per_task_eq_timing": true,
+    "1_rows_eq_sum_T": true,
+    "1_rows_per_episode_eq_T": true,
+    "1_columns_exact_action_eq_r": true,
+    "1_image_size": true,
+    "1_psnr_min_ge_35": true,
+    "1_frame_identity": true,
+    "1_kept_are_first_K_successful_in_order": true,
+    "1_split_rule": true,
+    "1_cube_yaw_max_deg_eq_expected": true,
+    "yaw_spawn_attrs_present": true,
+    "yaw_spawn_fold_in_range": true,
+    "yaw_regenerated_layout_fold_in_range": true,
+    "yaw_spawn_agrees_with_regenerated_layout": true,
+    "yaw_coverage": true,
+    "1_expert_pooled_place_ge_ceiling_minus_5": true,
+    "1_expert_every_batch_place_ge_ceiling_minus_10": true,
+    "1_expert_every_batch_n_ge_200": true,
+    "palette_table_palette_eq_expected_all": true,
+    "palette_visual_mode_nominal_all": true,
+    "palette_visual_json_s4r_nominal_all": true,
+    "5_sheet_three_episodes_first_middle_last": true,
+    "6_table_region_median_saturation_le_0.10": true,
+    "4a_noise_std_in_band": true,
+    "4a_claw_identical": true,
+    "1_twin_overlap_nonempty": true,
+    "1_twin_shared_specs_instructions_equal": true,
+    "2_audit_0_violations": true,
+    "4b_identity_every_row": true,
+    "4c_abs_slope_lt_0.1": true,
+    "mutant_m_b_flagged": true,
+    "mutant_m_c_flagged_or_equivalent_with_m_c_prime_flagged": true
+   },
+   "pass": true,
+   "failed_items": [],
+   "counts": {
+    "episodes": 2000,
+    "rows": 1100000,
+    "T_per_task": {
+     "place": 550
+    },
+    "source_successful_episodes": 2304,
+    "kept_stream_indices": [
+     0,
+     1999
+    ]
+   },
+   "keep_rates": {
+    "place": {
+     "pooled": {
+      "kept": 2304,
+      "attempted": 2304,
+      "rate_pct": 100.0,
+      "ci95_pct": [
+       99.83354143542607,
+       100.0
+      ]
+     },
+     "batches": [
+      {
+       "kept": 1152,
+       "attempted": 1152,
+       "rate_pct": 100.0,
+       "ci95_pct": [
+        99.66763611899762,
+        100.0
+       ]
+      },
+      {
+       "kept": 1152,
+       "attempted": 1152,
+       "rate_pct": 100.0,
+       "ci95_pct": [
+        99.66763611899762,
+        100.0
+       ]
+      }
+     ],
+     "ceiling_pct": 100.0
+    }
+   },
+   "images": {
+    "psnr_min": 39.40638611113119,
+    "psnr_mean": 43.23655829309852,
+    "identity_fail": 0,
+    "episodes_checked": 10
+   },
+   "yaw": {
+    "expected_m": 15.0,
+    "n": 2000,
+    "spawn_fold": {
+     "min": -14.985191345214844,
+     "max": 14.982772827148438,
+     "mean": 0.057920991897583006,
+     "std": 8.713242905420984
+    },
+    "regenerated_fold": {
+     "min": -14.985192870153163,
+     "max": 14.982771023470221,
+     "mean": 0.05792100129607365,
+     "std": 8.713242870257108
+    }
+   },
+   "palette": {
+    "visual_mode": [
+     "nominal"
+    ],
+    "visual_json_mode": [
+     "s4r_nominal"
+    ],
+    "table_palette": [
+     "s4r"
+    ],
+    "nonnominal_table": 0,
+    "nondefault_light": 0
+   },
+   "mix": null,
+   "twin": {
+    "kept_shared": 2000,
+    "only_here": 0,
+    "only_twin": 0,
+    "overlap_frac_of_set": 1.0,
+    "spec_or_instruction_diff": [],
+    "name": "0c_s3a_place_rl224_y15",
+    "expert_pooled": {
+     "kept": 2304,
+     "attempted": 2304,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.83354143542607,
+      100.0
+     ]
+    },
+    "set_expert_pooled": {
+     "kept": 2304,
+     "attempted": 2304,
+     "rate_pct": 100.0,
+     "ci95_pct": [
+      99.83354143542607,
+      100.0
+     ]
+    }
+   },
+   "noise": {
+    "std_per_arm_dim": [
+     0.09996829926967621,
+     0.09986245632171631,
+     0.09984849393367767,
+     0.09997210651636124
+    ],
+    "claw_exec_ne_label_rows": 0,
+    "column_mismatch_episodes": []
+   },
+   "slope_4c": [
+    0.008231744469510747,
+    0.014101822261481826,
+    0.019611069427544696,
+    0.004313995825315522
+   ],
+   "std_label_diff": [
+    0.019894554761121466,
+    0.03165613675144508,
+    0.04183401346975883,
+    0.032536420539436346
+   ],
+   "table": {
+    "box": [
+     0,
+     190,
+     64,
+     222
+    ],
+    "reason": "lower-left corner, outside the object footprint x 0.33..0.67 / y +-0.30 projected through the side camera (eye 1.15, 0.45, 0.55 -> look 0.5, 0, 0.18) with object size and 12 px camera-jitter margin; see module docstring",
+    "n": 50,
+    "saturation_max": 0.019801980198019733,
+    "saturation_median": 0.019801980198019733,
+    "value_min": 0.396078431372549,
+    "value_max": 0.396078431372549
+   },
+   "sheet": {
+    "png": "0c_s3a_place_rl224_y15g.png",
+    "episodes": [
+     {
+      "lerobot_episode": 0,
+      "episode_index": 0,
+      "instruction": "please put the small green cube on the blue pad",
+      "spec": "{\"task\": \"place\", \"target\": [\"green\", \"small\"], \"dest\": \"blue\", \"cubes\": [[\"yellow\", \"large\"], [\"green\", \"small\"], [\"yellow\", \"small\"], [\"red\", \"large\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        114
+       ],
+       [
+        "carry",
+        210
+       ],
+       [
+        "release",
+        306
+       ],
+       [
+        "end",
+        549
+       ]
+      ]
+     },
+     {
+      "lerobot_episode": 1000,
+      "episode_index": 1000,
+      "instruction": "please put the yellow cube on the red pad",
+      "spec": "{\"task\": \"place\", \"target\": [\"yellow\", \"large\"], \"dest\": \"red\", \"cubes\": [[\"green\", \"large\"], [\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        124
+       ],
+       [
+        "carry",
+        252
+       ],
+       [
+        "release",
+        381
+       ],
+       [
+        "end",
+        549
+       ]
+      ]
+     },
+     {
+      "lerobot_episode": 1999,
+      "episode_index": 1999,
+      "instruction": "place the small blue cube on the green pad",
+      "spec": "{\"task\": \"place\", \"target\": [\"blue\", \"small\"], \"dest\": \"green\", \"cubes\": [[\"yellow\", \"small\"], [\"blue\", \"small\"], [\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        119
+       ],
+       [
+        "carry",
+        209
+       ],
+       [
+        "release",
+        299
+       ],
+       [
+        "end",
+        549
+       ]
+      ]
+     }
+    ],
+    "chosen_sidecar_indices": [
+     0,
+     1000,
+     1999
+    ],
+    "notes": [
+     "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg",
+     "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg",
+     "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg"
+    ]
+   },
+   "audit_violations": [
+    0
+   ],
+   "mutants": {
+    "m_b": {
+     "relabel_fn": "relabel_shift",
+     "identity_ok": true,
+     "slope_ok_4c": false,
+     "claw_rows_ne_stored": 0,
+     "mutant_rows_changed_vs_true_relabel": 1098000,
+     "slope": [
+      -1.9852483193662132,
+      -1.9730815623241589,
+      -1.9633068991364624,
+      -1.9944761864603935
+     ]
+    },
+    "m_c": {
+     "relabel_fn": "relabel_claw",
+     "identity_ok": true,
+     "slope_ok_4c": true,
+     "claw_rows_ne_stored": 0,
+     "mutant_rows_changed_vs_true_relabel": 0,
+     "slope": [
+      0.008231744469510747,
+      0.014101822261481826,
+      0.019611069427544696,
+      0.004313995825315522
+     ]
+    },
+    "m_c_prime": {
+     "relabel_fn": "relabel_claw_offset",
+     "identity_ok": false,
+     "slope_ok_4c": false,
+     "claw_rows_ne_stored": 895419,
+     "mutant_rows_changed_vs_true_relabel": 1098000,
+     "slope": [
+      -0.9893251582861032,
+      -0.9816762895533178,
+      -0.9718717314175187,
+      -0.9930487405747556
+     ]
+    }
+   },
+   "rc": {
+    "audit": 0,
+    "chk": 0,
+    "ds": 0,
+    "mut_claw": 1,
+    "mut_claw_offset": 0,
+    "mut_shift": 0
+   },
+   "wall_s": 657.2
+  },
+  "s3bg": {
+   "set": "s3bg",
+   "dataset": "0c_s3b_stack_rl224_y15g",
+   "kind": "grey",
+   "items": {
+    "1_count_eq_K": true,
+    "1_tasks_as_expected": true,
+    "1_T_per_task_eq_timing": true,
+    "1_rows_eq_sum_T": true,
+    "1_rows_per_episode_eq_T": true,
+    "1_columns_exact_action_eq_r": true,
+    "1_image_size": true,
+    "1_psnr_min_ge_35": true,
+    "1_frame_identity": true,
+    "1_kept_are_first_K_successful_in_order": true,
+    "1_split_rule": true,
+    "1_cube_yaw_max_deg_eq_expected": true,
+    "yaw_spawn_attrs_present": true,
+    "yaw_spawn_fold_in_range": true,
+    "yaw_regenerated_layout_fold_in_range": true,
+    "yaw_spawn_agrees_with_regenerated_layout": true,
+    "yaw_coverage": true,
+    "1_expert_pooled_stack_ge_ceiling_minus_5": true,
+    "1_expert_every_batch_stack_ge_ceiling_minus_10": true,
+    "1_expert_every_batch_n_ge_200": true,
+    "palette_table_palette_eq_expected_all": true,
+    "palette_visual_mode_nominal_all": true,
+    "palette_visual_json_s4r_nominal_all": true,
+    "5_sheet_three_episodes_first_middle_last": true,
+    "6_table_region_median_saturation_le_0.10": true,
+    "4a_noise_std_in_band": true,
+    "4a_claw_identical": true,
+    "1_twin_overlap_nonempty": true,
+    "1_twin_shared_specs_instructions_equal": true,
+    "2_audit_0_violations": true,
+    "4b_identity_every_row": true,
+    "4c_abs_slope_lt_0.1": true,
+    "mutant_m_b_flagged": true,
+    "mutant_m_c_flagged_or_equivalent_with_m_c_prime_flagged": true
+   },
+   "pass": true,
+   "failed_items": [],
+   "counts": {
+    "episodes": 2000,
+    "rows": 1100000,
+    "T_per_task": {
+     "stack": 550
+    },
+    "source_successful_episodes": 2238,
+    "kept_stream_indices": [
+     0,
+     2057
+    ]
+   },
+   "keep_rates": {
+    "stack": {
+     "pooled": {
+      "kept": 2238,
+      "attempted": 2304,
+      "rate_pct": 97.13541666666667,
+      "ci95_pct": [
+       96.3718781936812,
+       97.74203326367358
+      ]
+     },
+     "batches": [
+      {
+       "kept": 1120,
+       "attempted": 1152,
+       "rate_pct": 97.22222222222223,
+       "ci95_pct": [
+        96.10494932148478,
+        98.02559590201298
+       ]
+      },
+      {
+       "kept": 1118,
+       "attempted": 1152,
+       "rate_pct": 97.04861111111111,
+       "ci95_pct": [
+        95.90409063568028,
+        97.88038640684874
+       ]
+      }
+     ],
+     "ceiling_pct": 97.3
+    }
+   },
+   "images": {
+    "psnr_min": 39.13265061899817,
+    "psnr_mean": 43.206137401470635,
+    "identity_fail": 0,
+    "episodes_checked": 10
+   },
+   "yaw": {
+    "expected_m": 15.0,
+    "n": 2000,
+    "spawn_fold": {
+     "min": -14.994064331054688,
+     "max": 14.964210510253906,
+     "mean": 0.060187312126159666,
+     "std": 8.646872709647193
+    },
+    "regenerated_fold": {
+     "min": -14.994064722507279,
+     "max": 14.96420867998814,
+     "mean": 0.060187333450414694,
+     "std": 8.646872626738421
+    }
+   },
+   "palette": {
+    "visual_mode": [
+     "nominal"
+    ],
+    "visual_json_mode": [
+     "s4r_nominal"
+    ],
+    "table_palette": [
+     "s4r"
+    ],
+    "nonnominal_table": 0,
+    "nondefault_light": 0
+   },
+   "mix": null,
+   "twin": {
+    "kept_shared": 1962,
+    "only_here": 38,
+    "only_twin": 38,
+    "overlap_frac_of_set": 0.981,
+    "spec_or_instruction_diff": [],
+    "name": "0c_s3b_stack_rl224_y15",
+    "expert_pooled": {
+     "kept": 2243,
+     "attempted": 2304,
+     "rate_pct": 97.35243055555556,
+     "ci95_pct": [
+      96.61386947239883,
+      97.93334728632497
+     ]
+    },
+    "set_expert_pooled": {
+     "kept": 2238,
+     "attempted": 2304,
+     "rate_pct": 97.13541666666667,
+     "ci95_pct": [
+      96.3718781936812,
+      97.74203326367358
+     ]
+    }
+   },
+   "noise": {
+    "std_per_arm_dim": [
+     0.09997370094060898,
+     0.09991942346096039,
+     0.09989248961210251,
+     0.09997596591711044
+    ],
+    "claw_exec_ne_label_rows": 0,
+    "column_mismatch_episodes": []
+   },
+   "slope_4c": [
+    0.008663947741435701,
+    0.014308132075505705,
+    0.019473052775620846,
+    0.00985620866750312
+   ],
+   "std_label_diff": [
+    0.01998144608543639,
+    0.03194236360381088,
+    0.04177428623117848,
+    0.0602367804633833
+   ],
+   "table": {
+    "box": [
+     0,
+     190,
+     64,
+     222
+    ],
+    "reason": "lower-left corner, outside the object footprint x 0.33..0.67 / y +-0.30 projected through the side camera (eye 1.15, 0.45, 0.55 -> look 0.5, 0, 0.18) with object size and 12 px camera-jitter margin; see module docstring",
+    "n": 50,
+    "saturation_max": 0.019801980198019733,
+    "saturation_median": 0.019801980198019733,
+    "value_min": 0.396078431372549,
+    "value_max": 0.396078431372549
+   },
+   "sheet": {
+    "png": "0c_s3b_stack_rl224_y15g.png",
+    "episodes": [
+     {
+      "lerobot_episode": 0,
+      "episode_index": 0,
+      "instruction": "stack the red cube on the green cube",
+      "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"large\"], \"dest\": [\"green\", \"small\"], \"cubes\": [[\"green\", \"small\"], [\"blue\", \"large\"], [\"yellow\", \"large\"], [\"yellow\", \"small\"], [\"red\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        107
+       ],
+       [
+        "carry",
+        195
+       ],
+       [
+        "release",
+        284
+       ],
+       [
+        "end",
+        549
+       ]
+      ]
+     },
+     {
+      "lerobot_episode": 1000,
+      "episode_index": 1030,
+      "instruction": "stack the green cube on the yellow cube",
+      "spec": "{\"task\": \"stack\", \"target\": [\"green\", \"small\"], \"dest\": [\"yellow\", \"small\"], \"cubes\": [[\"red\", \"small\"], [\"green\", \"small\"], [\"blue\", \"large\"], [\"yellow\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        109
+       ],
+       [
+        "carry",
+        185
+       ],
+       [
+        "release",
+        261
+       ],
+       [
+        "end",
+        549
+       ]
+      ]
+     },
+     {
+      "lerobot_episode": 1999,
+      "episode_index": 2057,
+      "instruction": "please stack the small red cube on the yellow cube",
+      "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"small\"], \"dest\": [\"yellow\", \"small\"], \"cubes\": [[\"red\", \"small\"], [\"blue\", \"small\"], [\"red\", \"large\"], [\"yellow\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        116
+       ],
+       [
+        "carry",
+        204
+       ],
+       [
+        "release",
+        292
+       ],
+       [
+        "end",
+        549
+       ]
+      ]
+     }
+    ],
+    "chosen_sidecar_indices": [
+     0,
+     1000,
+     1999
+    ],
+    "notes": [
+     "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg",
+     "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg",
+     "table rgb (0.5, 0.5, 0.5) light elev 35.3 deg"
+    ]
+   },
+   "audit_violations": [
+    0
+   ],
+   "mutants": {
+    "m_b": {
+     "relabel_fn": "relabel_shift",
+     "identity_ok": true,
+     "slope_ok_4c": false,
+     "claw_rows_ne_stored": 0,
+     "mutant_rows_changed_vs_true_relabel": 1098000,
+     "slope": [
+      -1.982113467889976,
+      -1.9703164668435855,
+      -1.9587717255244816,
+      -1.9850619376046865
+     ]
+    },
+    "m_c": {
+     "relabel_fn": "relabel_claw",
+     "identity_ok": true,
+     "slope_ok_4c": true,
+     "claw_rows_ne_stored": 0,
+     "mutant_rows_changed_vs_true_relabel": 0,
+     "slope": [
+      0.008663947741435701,
+      0.014308132075505705,
+      0.019473052775620846,
+      0.00985620866750312
+     ]
+    },
+    "m_c_prime": {
+     "relabel_fn": "relabel_claw_offset",
+     "identity_ok": false,
+     "slope_ok_4c": false,
+     "claw_rows_ne_stored": 910638,
+     "mutant_rows_changed_vs_true_relabel": 1098000,
+     "slope": [
+      -0.9875516955667358,
+      -0.9773469314704756,
+      -0.9694091418072299,
+      -0.9876001885066904
+     ]
+    }
+   },
+   "rc": {
+    "audit": 0,
+    "chk": 0,
+    "ds": 0,
+    "mut_claw": 1,
+    "mut_claw_offset": 0,
+    "mut_shift": 0
+   },
+   "wall_s": 656.2
+  },
+  "s4r": {
+   "set": "s4r",
+   "dataset": "0c_s4r_mix_rl224_y15",
+   "kind": "s4r",
+   "items": {
+    "1_count_eq_K": true,
+    "1_tasks_as_expected": true,
+    "1_T_per_task_eq_timing": true,
+    "1_rows_eq_sum_T": true,
+    "1_rows_per_episode_eq_T": true,
+    "1_columns_exact_action_eq_r": true,
+    "1_image_size": true,
+    "1_psnr_min_ge_35": true,
+    "1_frame_identity": true,
+    "1_kept_are_first_K_successful_in_order": true,
+    "1_split_rule": true,
+    "1_cube_yaw_max_deg_eq_expected": true,
+    "yaw_spawn_attrs_present": true,
+    "yaw_spawn_fold_in_range": true,
+    "yaw_regenerated_layout_fold_in_range": true,
+    "yaw_spawn_agrees_with_regenerated_layout": true,
+    "yaw_coverage": true,
+    "1_expert_pooled_pick_ge_ceiling_minus_5": true,
+    "1_expert_every_batch_pick_ge_ceiling_minus_10": true,
+    "1_expert_pooled_place_ge_ceiling_minus_5": true,
+    "1_expert_every_batch_place_ge_ceiling_minus_10": true,
+    "1_expert_pooled_stack_ge_ceiling_minus_5": true,
+    "1_expert_every_batch_stack_ge_ceiling_minus_10": true,
+    "1_expert_every_batch_n_ge_200": true,
+    "palette_table_palette_eq_expected_all": true,
+    "palette_visual_mode_train_rand_all": true,
+    "palette_visual_json_s4r_train_all": true,
+    "palette_params_inside_train_outside_heldout_all": true,
+    "5_sheet_six_episodes_two_per_task": true,
+    "5_sheet_has_nonnominal_table": true,
+    "5_sheet_has_nondefault_light": true,
+    "6_table_region_median_saturation_le_0.10": true,
+    "6_table_value_spearman_ge_0.5": true,
+    "4a_noise_std_in_band": true,
+    "4a_claw_identical": true,
+    "1_mix_share_each_task_in_band": true,
+    "2_audit_0_violations": true,
+    "4b_identity_every_row": true,
+    "4c_abs_slope_lt_0.1": true,
+    "mutant_m_b_flagged": true,
+    "mutant_m_c_flagged_or_equivalent_with_m_c_prime_flagged": true,
+    "mutant_m_a_flagged": true
+   },
+   "pass": true,
+   "failed_items": [],
+   "counts": {
+    "episodes": 2000,
+    "rows": 969800,
+    "T_per_task": {
+     "pick": 350,
+     "place": 550,
+     "stack": 550
+    },
+    "source_successful_episodes": 2278,
+    "kept_stream_indices": [
+     2,
+     2023
+    ]
+   },
+   "keep_rates": {
+    "pick": {
+     "pooled": {
+      "kept": 738,
+      "attempted": 748,
+      "rate_pct": 98.66310160427807,
+      "ci95_pct": [
+       97.55666919099325,
+       99.27223732335763
+      ]
+     },
+     "batches": [
+      {
+       "kept": 381,
+       "attempted": 384,
+       "rate_pct": 99.21875,
+       "ci95_pct": [
+        97.72850850420458,
+        99.73396071003134
+       ]
+      },
+      {
+       "kept": 357,
+       "attempted": 364,
+       "rate_pct": 98.07692307692308,
+       "ci95_pct": [
+        96.08423235490162,
+        99.06541901677575
+       ]
+      }
+     ],
+     "ceiling_pct": 100.0
+    },
+    "place": {
+     "pooled": {
+      "kept": 792,
+      "attempted": 792,
+      "rate_pct": 100.0,
+      "ci95_pct": [
+       99.51729087798377,
+       100.0
+      ]
+     },
+     "batches": [
+      {
+       "kept": 376,
+       "attempted": 376,
+       "rate_pct": 100.0,
+       "ci95_pct": [
+        98.98863105041681,
+        100.0
+       ]
+      },
+      {
+       "kept": 416,
+       "attempted": 416,
+       "rate_pct": 100.0,
+       "ci95_pct": [
+        99.08498824318505,
+        99.99999999999999
+       ]
+      }
+     ],
+     "ceiling_pct": 100.0
+    },
+    "stack": {
+     "pooled": {
+      "kept": 748,
+      "attempted": 764,
+      "rate_pct": 97.90575916230367,
+      "ci95_pct": [
+       96.62527591432676,
+       98.70688634413905
+      ]
+     },
+     "batches": [
+      {
+       "kept": 384,
+       "attempted": 392,
+       "rate_pct": 97.95918367346938,
+       "ci95_pct": [
+        96.02513910609407,
+        98.96235083937906
+       ]
+      },
+      {
+       "kept": 364,
+       "attempted": 372,
+       "rate_pct": 97.84946236559139,
+       "ci95_pct": [
+        95.81439309011338,
+        98.90636161080319
+       ]
+      }
+     ],
+     "ceiling_pct": 97.3
+    }
+   },
+   "images": {
+    "psnr_min": 38.40744248202619,
+    "psnr_mean": 43.033249728928276,
+    "identity_fail": 0,
+    "episodes_checked": 10
+   },
+   "yaw": {
+    "expected_m": 15.0,
+    "n": 2000,
+    "spawn_fold": {
+     "min": -14.991167068481445,
+     "max": 14.991432189941406,
+     "mean": -0.20307181930541993,
+     "std": 8.65033497204143
+    },
+    "regenerated_fold": {
+     "min": -14.991167045020365,
+     "max": 14.991430197466912,
+     "mean": -0.20307179921133098,
+     "std": 8.650334908549693
+    }
+   },
+   "palette": {
+    "visual_mode": [
+     "train_rand"
+    ],
+    "visual_json_mode": [
+     "s4r_train"
+    ],
+    "table_palette": [
+     "s4r"
+    ],
+    "nonnominal_table": 1594,
+    "nondefault_light": 1663
+   },
+   "mix": {
+    "share": {
+     "pick": 0.3255,
+     "place": 0.3455,
+     "stack": 0.329
+    },
+    "counts": {
+     "pick": 651,
+     "place": 691,
+     "stack": 658
+    },
+    "band": [
+     0.3,
+     0.37
+    ]
+   },
+   "twin": null,
+   "noise": {
+    "std_per_arm_dim": [
+     0.09998129308223724,
+     0.09999177604913712,
+     0.09998716413974762,
+     0.10008658468723297
+    ],
+    "claw_exec_ne_label_rows": 0,
+    "column_mismatch_episodes": []
+   },
+   "slope_4c": [
+    0.009707922937311307,
+    0.01522204150726704,
+    0.02252879184280345,
+    0.00737541720526317
+   ],
+   "std_label_diff": [
+    0.020671961340261065,
+    0.03273627135053748,
+    0.04379560686037976,
+    0.04614431832250824
+   ],
+   "table": {
+    "box": [
+     0,
+     190,
+     64,
+     222
+    ],
+    "reason": "lower-left corner, outside the object footprint x 0.33..0.67 / y +-0.30 projected through the side camera (eye 1.15, 0.45, 0.55 -> look 0.5, 0, 0.18) with object size and 12 px camera-jitter margin; see module docstring",
+    "n": 50,
+    "saturation_max": 0.08403361344537821,
+    "saturation_median": 0.029492753623188442,
+    "value_min": 0.29411764705882354,
+    "value_max": 0.8588235294117647,
+    "spearman_value_vs_recorded_table_value": 0.7093772400373043
+   },
+   "sheet": {
+    "png": "0c_s4r_mix_rl224_y15.png",
+    "episodes": [
+     {
+      "lerobot_episode": 127,
+      "episode_index": 364,
+      "instruction": "pick up the large blue cube from the table",
+      "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"large\"], \"dest\": null, \"cubes\": [[\"blue\", \"large\"], [\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        121
+       ],
+       [
+        "carry",
+        197
+       ],
+       [
+        "hold",
+        273
+       ],
+       [
+        "end",
+        349
+       ]
+      ]
+     },
+     {
+      "lerobot_episode": 0,
+      "episode_index": 2,
+      "instruction": "pick the blue cube up",
+      "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"large\"], \"dest\": null, \"cubes\": [[\"red\", \"large\"], [\"blue\", \"large\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        108
+       ],
+       [
+        "carry",
+        188
+       ],
+       [
+        "hold",
+        268
+       ],
+       [
+        "end",
+        349
+       ]
+      ]
+     },
+     {
+      "lerobot_episode": 383,
+      "episode_index": 12,
+      "instruction": "put the blue cube on the yellow pad",
+      "spec": "{\"task\": \"place\", \"target\": [\"blue\", \"small\"], \"dest\": \"yellow\", \"cubes\": [[\"yellow\", \"large\"], [\"red\", \"large\"], [\"blue\", \"small\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        104
+       ],
+       [
+        "carry",
+        215
+       ],
+       [
+        "release",
+        326
+       ],
+       [
+        "end",
+        549
+       ]
+      ]
+     },
+     {
+      "lerobot_episode": 381,
+      "episode_index": 5,
+      "instruction": "put the red cube on the red pad",
+      "spec": "{\"task\": \"place\", \"target\": [\"red\", \"large\"], \"dest\": \"red\", \"cubes\": [[\"red\", \"large\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        117
+       ],
+       [
+        "carry",
+        241
+       ],
+       [
+        "release",
+        366
+       ],
+       [
+        "end",
+        549
+       ]
+      ]
+     },
+     {
+      "lerobot_episode": 757,
+      "episode_index": 0,
+      "instruction": "please stack the red cube on the large yellow cube",
+      "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"small\"], \"dest\": [\"yellow\", \"large\"], \"cubes\": [[\"blue\", \"small\"], [\"yellow\", \"large\"], [\"red\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        120
+       ],
+       [
+        "carry",
+        204
+       ],
+       [
+        "release",
+        288
+       ],
+       [
+        "end",
+        549
+       ]
+      ]
+     },
+     {
+      "lerobot_episode": 758,
+      "episode_index": 1,
+      "instruction": "stack the blue cube on the green cube",
+      "spec": "{\"task\": \"stack\", \"target\": [\"blue\", \"small\"], \"dest\": [\"green\", \"small\"], \"cubes\": [[\"yellow\", \"small\"], [\"red\", \"large\"], [\"blue\", \"small\"], [\"green\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+      "steps": [
+       [
+        "start",
+        0
+       ],
+       [
+        "grasp",
+        118
+       ],
+       [
+        "carry",
+        216
+       ],
+       [
+        "release",
+        314
+       ],
+       [
+        "end",
+        549
+       ]
+      ]
+     }
+    ],
+    "chosen_sidecar_indices": [
+     127,
+     0,
+     383,
+     381,
+     757,
+     758
+    ],
+    "notes": [
+     "table rgb (0.584, 0.569, 0.563) light elev 32.9 deg",
+     "table rgb (0.552, 0.538, 0.53) light elev 35.3 deg",
+     "table rgb (0.566, 0.55, 0.571) light elev 51.6 deg",
+     "table rgb (0.5, 0.5, 0.5) light elev 51.6 deg",
+     "table rgb (0.624, 0.628, 0.627) light elev 76.5 deg",
+     "table rgb (0.379, 0.376, 0.377) light elev 76.5 deg"
+    ]
+   },
+   "audit_violations": [
+    0
+   ],
+   "mutants": {
+    "m_a": {
+     "dataset": "0c_s4r_mix_224a_y15",
+     "identity_ok": false,
+     "rows_ne_relabel": 967800
+    },
+    "m_b": {
+     "relabel_fn": "relabel_shift",
+     "identity_ok": true,
+     "slope_ok_4c": false,
+     "claw_rows_ne_stored": 0,
+     "mutant_rows_changed_vs_true_relabel": 967800,
+     "slope": [
+      -1.9843398473408018,
+      -1.9716066622754962,
+      -1.9567156377672459,
+      -1.9885887292494546
+     ]
+    },
+    "m_c": {
+     "relabel_fn": "relabel_claw",
+     "identity_ok": true,
+     "slope_ok_4c": true,
+     "claw_rows_ne_stored": 0,
+     "mutant_rows_changed_vs_true_relabel": 0,
+     "slope": [
+      0.009707922937311307,
+      0.01522204150726704,
+      0.02252879184280345,
+      0.00737541720526317
+     ]
+    },
+    "m_c_prime": {
+     "relabel_fn": "relabel_claw_offset",
+     "identity_ok": false,
+     "slope_ok_4c": false,
+     "claw_rows_ne_stored": 759562,
+     "mutant_rows_changed_vs_true_relabel": 967800,
+     "slope": [
+      -0.9882702710942685,
+      -0.9775220886079925,
+      -0.9688032636652676,
+      -0.9893576676783336
+     ]
+    }
+   },
+   "rc": {
+    "audit": 0,
+    "chk": 0,
+    "ds": 0,
+    "mut_claw": 1,
+    "mut_claw_offset": 0,
+    "mut_shift": 0
+   },
+   "wall_s": 510.5
+  }
+ },
+ "union": {
+  "dataset": "0c_s4_all_rl224_y15g",
+  "items": {
+   "union_check_pass": true,
+   "2_audit_0_violations": true,
+   "instrument_i_arms_pass": true,
+   "union_set0_count": true,
+   "union_set1_count": true,
+   "union_set2_count": true,
+   "union_set3_count": true,
+   "union_union_count": true,
+   "union_sets_keys_pairwise_disjoint": true,
+   "union_union_keys_eq_sets": true,
+   "union_set0_episodes_identical": true,
+   "union_set1_episodes_identical": true,
+   "union_set2_episodes_identical": true,
+   "union_set3_episodes_identical": true,
+   "union_split_rule_per_stream": true,
+   "union_label_relabel_setpoint": true,
+   "union_columns_exact_action_eq_r": true,
+   "union_rows_per_episode_eq_T": true,
+   "union_export_counts_eq_sidecar": true,
+   "union_split_json_eq_sidecar": true
+  },
+  "pass": true,
+  "failed_items": [],
+  "S_option_B_train_windows_per_epoch": {
+   "total": 1221893,
+   "per_stream": {
+    "s2_32500": 220400,
+    "s3a_32600": 347700,
+    "s3b_32700": 347700,
+    "s4_32100": 306093
+   },
+   "per_task": {
+    "pick": 292436,
+    "place": 468480,
+    "stack": 460977
+   },
+   "train_episodes": 7600
+  },
+  "episodes": 8000,
+  "arms": {
+   "check_i_U": true,
+   "check_i_mutant_fve_only": false,
+   "counts": {
+    "F": 99880992,
+    "U": 186314016,
+    "mutant_fve_only": 99880992
+   }
+  },
+  "audit_violations": [
+   0
+  ],
+  "rc": {
+   "arms": 0,
+   "audit": 0,
+   "union_check": 0
+  }
+ },
+ "table_mutant": {
+  "dataset": "0c_s2_pick_rl224_y15",
+  "flagged": true,
+  "numbers": {
+   "n": 50,
+   "saturation_max": 0.6222222222222222,
+   "saturation_median": 0.6222222222222222,
+   "value_min": 0.5294117647058824,
+   "value_max": 0.5294117647058824
+  },
+  "items": {
+   "6_table_region_median_saturation_le_0.10": false
+  }
+ },
+ "audit_mutants": {
+  "log": "<home>\\A_MAIN\\ws\\113_vla_tabletop\\results\\0c_s4_audit_mutants.txt",
+  "tests": {
+   "test_mutant_heldout_place_pair": true,
+   "test_mutant_heldout_target": true,
+   "test_mutant_paraphrase_instruction": true,
+   "test_mutant_heldout_band_visuals": true,
+   "test_mutant_split_rule_and_collision": true,
+   "test_split_rule_in_export_select": true,
+   "test_s4r_visuals_audit": true,
+   "test_s4r_train_palette_exact_and_mutants": true,
+   "test_stage4_collision_flagged_at_m15": true
+  },
+  "all_flagged": true,
+  "failed_anywhere": false
+ },
+ "extra_items": {
+  "table_colour_mutant_flagged": true,
+  "audit_mutants_flagged": true
+ },
+ "item_3b": "carried over, not re-run (GATES Stage 4 re-plan item 3)",
+ "pass": true,
+ "audit_mutants_not_supplied": false
+}

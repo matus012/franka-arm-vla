@@ -1,0 +1,8 @@
+# 0B.4 mutants, group sim, 2026-10-01T20:09:01, git HEAD dec1d408ad265bbc3c3fe6b6c2b89565a980f73f
+# per mutant: unmutated test result, mutant result + failing tests, restore check (sha256 + git diff)
+1 banned inputs: a cube-pose term appended to the state
+  file vla_tabletop/scene.py; test tests/test_sim_113.py (sim venv)
+  unmutated: GREEN (1 passed in 20.04s)
+  mutant: KILLED by ['tests/test_sim_113.py::test_scene_loads_obs_whitelist_and_parking'] (1 failed in 19.61s)
+  restore: sha256 identical, git diff clean -> OK
+ALL_KILLED=True

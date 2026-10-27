@@ -1,0 +1,77 @@
+{
+ "chunks": "results\\g3_sup\\c034440_divchunks.npz",
+ "n_layouts": 100,
+ "normalized_dims_0_3": {
+  "n_layouts": 100,
+  "instruction_effect": 2.7642371454834938,
+  "noise_effect": 26.89062885761261,
+  "ratio": 0.10279555603256006,
+  "per_layout_ratio_median": 0.07047211093303377,
+  "ignores_language": true
+ },
+ "normalized_dims_0_2": {
+  "n_layouts": 100,
+  "instruction_effect": 1.9863955523073673,
+  "noise_effect": 19.310896050930022,
+  "ratio": 0.10286397622712601,
+  "per_layout_ratio_median": 0.0786095681440295,
+  "ignores_language": true
+ },
+ "normalized_per_dim": {
+  "0": {
+   "n_layouts": 100,
+   "instruction_effect": 0.9929666790366173,
+   "noise_effect": 11.257929238677026,
+   "ratio": 0.08820153848766824,
+   "per_layout_ratio_median": 0.08181582664941951,
+   "ignores_language": true
+  },
+  "1": {
+   "n_layouts": 100,
+   "instruction_effect": 1.3098166078329085,
+   "noise_effect": 13.013854605555535,
+   "ratio": 0.10064785934167082,
+   "per_layout_ratio_median": 0.07274793956454673,
+   "ignores_language": true
+  },
+  "2": {
+   "n_layouts": 100,
+   "instruction_effect": 0.6960368946939707,
+   "noise_effect": 4.496996456980705,
+   "ratio": 0.1547781727987599,
+   "per_layout_ratio_median": 0.1047832643835401,
+   "ignores_language": true
+  },
+  "3": {
+   "n_layouts": 100,
+   "instruction_effect": 1.2854546915739775,
+   "noise_effect": 15.43325097411871,
+   "ratio": 0.08329124522951531,
+   "per_layout_ratio_median": 0.055772674511283434,
+   "ignores_language": true
+  }
+ },
+ "raw_dims_0_3": {
+  "n_layouts": 100,
+  "instruction_effect": 0.4834975726529956,
+  "noise_effect": 4.39840661406517,
+  "ratio": 0.1099256196793796,
+  "per_layout_ratio_median": 0.07296134144221708,
+  "ignores_language": true
+ },
+ "raw_dims_0_2": {
+  "n_layouts": 100,
+  "instruction_effect": 0.4400967466086149,
+  "noise_effect": 4.029593074321747,
+  "ratio": 0.10921617604841925,
+  "per_layout_ratio_median": 0.07970063422630777,
+  "ignores_language": true
+ },
+ "heading_deg": {
+  "noise_median": 12.44906234741211,
+  "instr_max_pair_median": 0.9227542877197266,
+  "noise_gt45_frac": 0.31,
+  "instr_gt45_frac": 0.01
+ },
+ "raw_summed_xy_norm_median": 20.78594398498535
+}

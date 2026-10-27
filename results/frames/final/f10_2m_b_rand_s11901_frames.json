@@ -1,0 +1,131 @@
+{
+ "source": "/runs/e10_2m/f10_2m_b_rand_s11901.json",
+ "chosen": [
+  0,
+  1,
+  4,
+  5,
+  9,
+  20,
+  71,
+  158,
+  437
+ ],
+ "rounds": 3,
+ "wall_s": 308.9,
+ "git_sha": "290b3e0",
+ "frames": [
+  {
+   "index": 0,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep0_pick_success.png",
+   "video": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep0.mp4"
+  },
+  {
+   "index": 1,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep1_pick_early_close.png",
+   "video": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep1.mp4"
+  },
+  {
+   "index": 4,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep4_pick_early_close.png",
+   "video": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep4.mp4"
+  },
+  {
+   "index": 5,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep5_pick_early_close.png",
+   "video": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep5.mp4"
+  },
+  {
+   "index": 9,
+   "types_recorded": [
+    "slam",
+    "early_close"
+   ],
+   "types_replay": [
+    "slam",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep9_pick_slam_early_close.png"
+  },
+  {
+   "index": 20,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep20_pick_drop_early_close.png"
+  },
+  {
+   "index": 71,
+   "types_recorded": [
+    "wrong_object",
+    "early_close"
+   ],
+   "types_replay": [
+    "wrong_object",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep71_pick_wrong_object_early_close.png"
+  },
+  {
+   "index": 158,
+   "types_recorded": [
+    "jam",
+    "early_close"
+   ],
+   "types_replay": [
+    "slam",
+    "jam",
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep158_pick_jam_early_close.png"
+  },
+  {
+   "index": 437,
+   "types_recorded": [
+    "fail_other"
+   ],
+   "types_replay": [
+    "fail_other"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e10_2m/frames/f10_2m_b_rand_s11901/f10_2m_b_rand_s11901_ep437_pick_fail_other.png"
+  }
+ ]
+}

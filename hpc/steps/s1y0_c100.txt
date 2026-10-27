@@ -1,0 +1,4 @@
+# GATES Stage 1 redesign #2 (bdf1af2), V0: checkpoint pick, 100 % checkpoint, validation seed 21600 eps 0-299 at m 0 (N 10, H 224, default sampling); offline val loss + offline MAE / claw accuracy on the val episodes against r (reported)
+sim scripts/eval_policy.py --policy smolvla --stage s1 --split train --visual nominal --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 0 --policy-python /opt/policy/bin/python --episodes 300 --seed 21600 --ckpt /runs/s1y0_U/checkpoints/041328/pretrained_model --out /runs/e1y0_c100/s1y0_U_val_c100_s21600.json
+pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s1_pick_rl224_y0 --ckpt /runs/s1y0_U/checkpoints/041328/pretrained_model --out /runs/e1y0_c100/vloss_041328.json
+pol scripts/s0b3_prep.py offline --val-only --dataset /data/datasets/0c_s1_pick_rl224_y0 --ckpt /runs/s1y0_U/checkpoints/041328/pretrained_model --out /runs/e1y0_c100/offline_val_041328.json --n-action-steps 10

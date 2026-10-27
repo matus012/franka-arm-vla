@@ -1,0 +1,12 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:root:No accelerated backend detected. Using default cpu, this will be slow.
+WARNING:lerobot.configs.policies:Device 'cuda' is not available. Switching to 'cpu'.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:   0%|          | 1/489 [00:00<04:37,  1.76it/s]Loading weights:   8%|▊         | 38/489 [00:00<00:06, 73.89it/s]Loading weights:  13%|█▎        | 65/489 [00:00<00:03, 116.77it/s]Loading weights:  19%|█▉        | 95/489 [00:00<00:02, 153.21it/s]Loading weights:  29%|██▉       | 141/489 [00:01<00:01, 221.08it/s]Loading weights:  37%|███▋      | 181/489 [00:01<00:01, 261.59it/s]Loading weights:  45%|████▌     | 221/489 [00:01<00:00, 293.52it/s]Loading weights:  54%|█████▎    | 262/489 [00:01<00:00, 324.37it/s]Loading weights:  62%|██████▏   | 301/489 [00:01<00:00, 337.86it/s]Loading weights:  78%|███████▊  | 381/489 [00:01<00:00, 466.51it/s]Loading weights:  94%|█████████▍| 461/489 [00:01<00:00, 561.40it/s]Loading weights: 100%|██████████| 489/489 [00:01<00:00, 293.96it/s]
+WARNING:root:No accelerated backend detected. Using default cpu, this will be slow.
+WARNING:lerobot.configs.policies:Device 'cuda' is not available. Switching to 'cpu'.
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 7368.21it/s]
+WARNING:root:No accelerated backend detected. Using default cpu, this will be slow.
+WARNING:lerobot.configs.policies:Device 'cuda' is not available. Switching to 'cpu'.
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 7317.06it/s]

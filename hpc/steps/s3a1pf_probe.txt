@@ -1,0 +1,2 @@
+# 009 3A fix, reported: paired-target probe on the fix pick PICK, validation probe stream 21667 (s3a1, paired), 100 groups (skipped first after frames if it would cross 180)
+sim scripts/eval_policy.py --policy smolvla --ckpt /runs/s3a1pf_VT/checkpoints/PICK/pretrained_model --stage s3a1 --split train --visual nominal --paired-targets --groups 100 --seed 21667 --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --out /runs/es3a1pf_probe/s3a1pf_probe_s21667.json

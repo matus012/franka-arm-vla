@@ -1,0 +1,17 @@
+[probe] lang   L 4 true 1.000 shuffled 0.383 -> decodable
+[probe] lang   L 8 true 1.000 shuffled 0.399 -> decodable
+[probe] lang   L12 true 1.000 shuffled 0.405 -> decodable
+[probe] lang   L16 true 1.000 shuffled 0.410 -> decodable
+[probe] img    L 4 true 0.479 shuffled 0.423 -> not decodable
+[probe] img    L 8 true 0.683 shuffled 0.433 -> partial
+[probe] img    L12 true 0.846 shuffled 0.429 -> partial
+[probe] img    L16 true 0.921 shuffled 0.427 -> decodable
+[probe] kv     L 4 true 1.000 shuffled 0.427 -> decodable
+[probe] kv     L 8 true 1.000 shuffled 0.426 -> decodable
+[probe] kv     L12 true 1.000 shuffled 0.417 -> decodable
+[probe] kv     L16 true 1.000 shuffled 0.423 -> decodable
+[probe] kv_img L 4 true 0.422 shuffled 0.416 -> not decodable
+[probe] kv_img L 8 true 0.481 shuffled 0.404 -> not decodable
+[probe] kv_img L12 true 0.610 shuffled 0.407 -> partial
+[probe] kv_img L16 true 0.754 shuffled 0.421 -> partial
+G3_PROBE={"family": {"lang": "decodable", "img": "decodable", "kv": "decodable", "kv_img": "partial"}, "verdict": "R3 data/loss"}

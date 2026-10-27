@@ -1,0 +1,5 @@
+# GATES Stage 2R fix (more steps): checkpoint pick, 100 % checkpoint, validation 21640 eps 0-299; early signal step 2 ratio (21645, reported); offline val loss + MAE (reported)
+sim scripts/eval_policy.py --policy smolvla --stage s2a --split train --visual nominal --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --episodes 300 --seed 21640 --ckpt /runs/s2r1_VT/checkpoints/034440/pretrained_model --out /runs/e2r1_c100/s2r1_VT_val_c100_s21640.json
+pol scripts/g3_probe.py divonly --ckpt /runs/s2r1_VT/checkpoints/034440/pretrained_model --dumps /runs/g3_diag/t0_p21645.npz /runs/g3_diag/t0_u21640.npz --out /runs/e2r1_c100/div_034440
+pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s2a_pair_rl224_y15 --ckpt /runs/s2r1_VT/checkpoints/034440/pretrained_model --out /runs/e2r1_c100/vloss_034440.json
+pol scripts/s0b3_prep.py offline --val-only --dataset /data/datasets/0c_s2a_pair_rl224_y15 --ckpt /runs/s2r1_VT/checkpoints/034440/pretrained_model --out /runs/e2r1_c100/offline_val_034440.json --n-action-steps 10

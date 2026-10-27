@@ -1,0 +1,7 @@
+# GATES 0B.3 re-run prerequisites (fixed-expert demos) (instrument; failures are bugs, not attempts).
+# (b) normalization round trip + near-constant dims; dumps the exported action columns for (a).
+pol scripts/s0b3_prep.py prereq --dataset /data/datasets/0b3_overfit_r1 --out /runs/0b3r1_prereq
+# (a) replay ceiling: exported actions open loop through the ChunkExecutor, collection layout (B = 10), 10 / 10.
+sim scripts/s0b3_overfit.py replay --actions /runs/0b3r1_prereq/actions.npz --out /runs/0b3r1_prereq/replay.json
+# (c) 0B.4 alignment + banned-input tests (protocol / bridge level), policy venv.
+pol -m pytest -p no:cacheprovider -q tests/test_alignment.py tests/test_banned_inputs.py

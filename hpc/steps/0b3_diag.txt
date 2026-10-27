@@ -1,0 +1,5 @@
+# GATES 0B.3 attempt-0 FAIL diagnosis (no retraining, same final checkpoint, same 128-slot layout): re-run the
+# closed loop with per-step / per-query dumps for slots 0-19 (states 0-9 x noise seeds 0, 1) + close-up sheets, then
+# compare against the demos (runtime obs vs demo obs, chunks vs labels, re-served from runtime vs demo obs).
+sim scripts/s0b3_overfit.py eval --ckpt /runs/0b3_train/checkpoints/005000/pretrained_model --demo /runs/0b3_prereq/replay.json --out /runs/0b3_diag/0b3_diag.json --frames-dir /runs/0b3_diag/frames --show 20 --dump /runs/0b3_diag/dump.npz --policy-python /opt/policy/bin/python
+pol scripts/s0b3_prep.py compare --dataset /data/datasets/0b3_overfit --ckpt /runs/0b3_train/checkpoints/005000/pretrained_model --dump /runs/0b3_diag/dump.npz --out /runs/0b3_diag/compare.json

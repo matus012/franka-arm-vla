@@ -1,0 +1,112 @@
+{
+ "seed": 21790,
+ "variants": {
+  "V15": {
+   "cube_yaw_max_deg": 15.0,
+   "pick_step": "041328",
+   "ckpt": "/runs/s1y15_U/checkpoints/041328/pretrained_model",
+   "ckpt_sha": "c3dcef76f53e00e5954469970c25c38980a396723f7bbbf2b85919e6cc6688f5",
+   "success": {
+    "count": 943,
+    "n": 1000,
+    "rate": 0.943,
+    "ci95": [
+     0.9268626022720123,
+     0.9557467655804457
+    ]
+   },
+   "slam": {
+    "count": 0,
+    "n": 1000,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.003826898586390522
+    ]
+   },
+   "jam": {
+    "count": 0,
+    "n": 1000,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.003826898586390522
+    ]
+   },
+   "drop": {
+    "count": 51,
+    "n": 1000,
+    "rate": 0.051,
+    "ci95": [
+     0.03900075064262791,
+     0.06643580428795079
+    ]
+   },
+   "early_close": {
+    "count": 375,
+    "n": 1000,
+    "rate": 0.375,
+    "ci95": [
+     0.3455257633259225,
+     0.4054309613206752
+    ]
+   }
+  },
+  "V0": {
+   "cube_yaw_max_deg": 0.0,
+   "pick_step": "041328",
+   "ckpt": "/runs/s1y0_U/checkpoints/041328/pretrained_model",
+   "ckpt_sha": "8f50b5561212cf80e170340cf8c8fe351e81be9465c4da909960ba72c86d1c71",
+   "success": {
+    "count": 999,
+    "n": 1000,
+    "rate": 0.999,
+    "ci95": [
+     0.9943572970398398,
+     0.9998234581709429
+    ]
+   },
+   "slam": {
+    "count": 0,
+    "n": 1000,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.003826898586390522
+    ]
+   },
+   "jam": {
+    "count": 0,
+    "n": 1000,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.003826898586390522
+    ]
+   },
+   "drop": {
+    "count": 1,
+    "n": 1000,
+    "rate": 0.001,
+    "ci95": [
+     0.0001765418290572713,
+     0.0056427029601604705
+    ]
+   },
+   "early_close": {
+    "count": 1,
+    "n": 1000,
+    "rate": 0.001,
+    "ci95": [
+     0.0001765418290572713,
+     0.0056427029601604705
+    ]
+   }
+  }
+ },
+ "tested": "V15",
+ "branch": "v15>=90",
+ "tested_m": 15.0,
+ "tested_ckpt": "/runs/s1y15_U/checkpoints/041328/pretrained_model",
+ "rule": "test V15 if v15 >= 0.90; else V0 if v0 >= 0.90; else the higher of v15 / v0 (tie -> V15); a missing variant cannot be selected; a single present variant is tested"
+}

@@ -1,0 +1,161 @@
+NOW (2026-10-27 22:57 (CET), l2 113 idle, project ended): 011 DONE — demo video, figure set, public repo. Owner closes 113 at 08:00.
+Video media/113_demo.mp4 (4 min 52 s; per skill: instruction, success rule from the evaluator, gate rate, first 16 unselected episodes with verdicts, one full-size episode with the policy's own view); GIF hero; figures/fig1-3 + cards.
+Repo: README rewritten (summary, video, figures, results table, failures, reproduce, not released); LICENSE MIT; THIRD_PARTY complete; pre-push audit reports/2026-10-28-011-prepush.md.
+Push: redacted single-commit `public` branch (history holds cluster ids / home paths, no secrets) -> github.com/matus012/franka-arm-vla main; result in reports/2026-10-28-011-demo-ship.md.
+Final: Stage 1 PASS 96.8, 2M PASS 96.7; sizes 79.4, 3A place 72.7, 3B 40.7 FAIL; Stage 4 not run. PERUN: 113 = 179.35 / 200 (011 = 0.40).
+needs you: optional — confirm / reverse the "reversible by owner" rulings (0B.3 option A still open).
+---- log (append-only) ----
+2026-10-01 13:45 session start (orchestrator, orch force over a 3-min-old lock): repo skeleton, copies of 111/112 tools, sim venv.
+2026-10-01 13:59 vla_common catalog/tasks/instructions/held-out + 113 visual randomizer: 30 tests green (ea8f662); held-out targets green-large, yellow-small.
+2026-10-01 14:30 PERUN image built on login node (--fakeroot, 2 min); smoke jobs 95478/95479 OK (smolvla bf16 B=16 0.15 s on H200), 0.05 GPU-h.
+2026-10-01 16:20 0B part 1 built: policy venv (lerobot 0.6.1), exporter (h264 4:4:4), stateless fp32 server, bridge dev runs K=1/16/64 OK (dev, not gate); 188 tests green. SmolVLA trainer + baseline built. Waiting on 0A.
+2026-10-01 16:40 gate 0A.1 PASS: scripted grasp holds small 96.6 %, large 97.1 % (1,000 each); edges 4.8 / 6.0 cm.
+2026-10-01 17:24 gate 0A.2 PASS: expert pick 99.8 % (1,000), place 100 % (300), stack 98.0 % (300); T pick 7 s, place/stack 11 s.
+2026-10-01 17:56 gate 0A.3 STOPPED (no attempt counted): chunked-expert emulation undefined for the IK lead clamp.
+2026-10-01 18:00 GATES 0A.3 attempt 1 amendment: commanded target read in the snapshot (instrument definition, brief wording).
+2026-10-01 19:02 gate 0A.3 PASS (attempt 1, owner-confirmed emulation): N=20; diffs pick/place/stack 0.0/0.0/-0.5 points (1,000 paired). Upper bound disclosed.
+2026-10-01 19:40 gate 0A.4 PASS: H=128 (worst side cube 97.3 %, wrist target 98.9 %, worst pad 97.3 %).
+2026-10-01 20:20 gate 0B.1 PASS: export round trip exact, PSNR min 36.4 dB, synthetic frame identity 4/4, chunks exact.
+2026-10-01 20:45 gate 0B.2 PASS: bridge B=1/16/64, invariance 2.3e-6, 108/108 queries on t%20==0 with the delayed frame.
+2026-10-01 20:50 gate 0B.3 FAIL attempt 0: overfit 36/100 (bar 80); replay 10/10, norm 1.8e-7; diagnosed under-fit q0 chunk (demo-substituted q0: 69/100).
+2026-10-01 21:00 gate 0B.4 PASS: sim 320 / policy 339 tests green, 7/7 mutants killed.
+2026-10-01 20:17 gate 0B.5 PASS (job 95678): torchcodec decode bit-identical to pyav, B=64 on H200, 200-step fine-tune served. 0B.6 measured: F 0.0036 / U 0.0065 GPU-s/sample (bs64); eval 4.2-7.1k eps/GPU-h; PERUN 113 total 1.38 GPU-h.
+2026-10-01 21:35 0B.3 attempt 1 (batch 64) written by lead (2911ec3) and HELD: second cause = expert close timeout (hidden clock); escalated to owner via consultant.
+2026-10-01 20:37 expert close diag (653edc6, flag off): stillness gate fails under cube+finger sliding -> 56-58 % of grasps lift by timeout; width-rate trigger candidate 0 % timeouts, success >= current. Sent to owner via consultant.
+2026-10-01 22:50 gates 3A / 3B / 4 / pi0.5 written (bf026f2); demo command (7b3a3ed); randomizer verified in sim (295456c). Waiting for owner on 0B.3.
+2026-10-01 23:15 consultant decision (option A, under owner standing approval): GATES 18a2524 written — 0A.2 a1 (expert fix 1/2), 0A.3 a2, 0A.4 rule, 0B.3 a0 VOID + re-run, s4r deferred.
+2026-10-02 00:56 gate 0A.2 attempt 1 PASS (expert fix 1/2, width-rate stillness): pick 100 / place 100 / stack 97.3 %, timeouts 0 %.
+2026-10-02 00:56 gate 0A.3 attempt 2 PASS: N=20 unchanged (diffs +0.1/0.0/-0.3). 0A.4 not material (pre-close path diff < 0.5 um) -> not re-run.
+2026-10-02 01:46 gate 0B.3 re-run (fixed demos, batch 8) FAIL 65/100 (0 never-lifted); attempt 1 (batch 64) PASS 99/100. 0B overall PASS; row option B fixed (18c4aa7). PERUN 113 total 2.02 GPU-h.
+2026-10-02 02:03 full suite after expert default change: sim 320 passed / 4 skipped, policy 340 passed / 1 skipped (results/pytest_postfix.txt).
+2026-10-02 02:36 gate 0C PASS (nominal s1/s2/s3a/s3b; s4r deferred): expert 98.0/97.7/100/95.2 %, 6,500 demos kept, audit clean, 0.48 GPU-h. PERUN 113 total 2.50.
+2026-10-02 05:30 Stage 1 encoder choice (validation seed 21610, 1,000 eps each, 100 % checkpoints by the pick rule): F 30.1 %, U 34.0 % -> U wins by 3.9 points (> 3): UNFROZEN chosen (results/s1_choice.json). Committed before the test.
+2026-10-02 05:55 gate 1 FAIL attempt 0: U chosen (21610: 34.0 vs F 30.1); test U 35.9 % / slam 0.3 / jam 2.0 (F 30.4 / 0.5 / 1.3); diagnosis = demo-label jitter (sigma-0.1 deadbeat reaction); 5.20 H200-h. Attempt 1 not started.
+2026-10-02 05:48 gate 1 FAIL attempt 0: U chosen (val 34.0 vs F 30.1 %), test pick 35.9 % (bar 90), jam 2.0 %; diagnosed: deadbeat correction of sigma=0.1 demo noise puts ~0.1 white jitter in the clean labels (loss plateau 0.46). PERUN 113 total 7.70.
+2026-10-02 06:00 Stage 1 fix diagnostics launched (validation 21600 only; criteria pre-registered in the agent brief and the consultant message).
+2026-10-02 06:40 Stage 1 PARKED: D1 best 48.7 % (<80), D2 relabel 3/4 checks pass, z std 0.050 vs written 0.045 (sigma-0 expert 0.046). Owner asked (blockers.md).
+2026-10-02 07:45 GATES c6dc514 / bba2311 / 33b64cd committed; relabelled 0C datasets built (prep f994319); 0C a1 re-gate + Stage 1 a1 launched.
+2026-10-02 10:20 gate 0C attempt 1 PASS (s1, s2, s3a, s3b; 0.104 H200-h); gate 1 attempt 1 FAIL pick 57.7 % (2.914 H200-h) -> Stage 1 kill fired, branch stopped.
+2026-10-02 10:05 gate 1 attempt 1 FAIL: test pick 57.7 % (bar 90), slam 0.0, jam 0.9 -> kill fired; 0C attempt 1 (relabel) PASS all sets.
+2026-10-02 10:21 owner decision (via consultant): Stage 1 redesign; GATES b72947f written before any redesign run and before the diagnosis numbers were read.
+2026-10-02 10:42 post-kill N diagnosis (65e4dfd, not an attempt): N20 56.7 / N10 58.0 / N5 58.7 / N20-zero-noise 65.0 %; N rule -> N=10 (2f3160b). Stage 1 redesign runner launched (224 / N10 / 48 ep, test 11502).
+2026-10-02 12:00 gate 1 redesign data (s1-224) PASS (eb7acb4).
+2026-10-02 16:30 gate 1 redesign FAIL: test 11502 pick 68.3 % [65.4-71.1], slam 0.0, jam 0.4; val 54.7/65.0/68.7 %; overfit diagnosis.
+2026-10-02 16:38 GATES b820931: redesign attempt 1 = 2,000 demos (the one allowed fix); launched.
+2026-10-02 22:56 gate b820931 FAIL: test 11503 pick 78.5 % [75.8-80.9], slam 0.0, jam 0.2; val 56.0/63.0/78.3 %, pick = 100 % ckpt; attempt 6.443 H200-h (PERUN 113 total 24.70); GATES.md d42beb0.
+2026-10-03 05:45 gate 1 redesign #2 PASS for V15 (yaw +-15 deg): test 11504 pick 96.8 % [95.5-97.7], slam 0.0, jam 0.2 (selection: V15 94.3 % on val 21790 -> tested; V0 99.9 % never tested); redesign #2 13.358 H200-h (PERUN 113 total 38.06); GATES.md c707676.
+2026-10-03 12:15 gate 2 FAIL (RESULT c8c5b15, erratum 12dfc9d): test 11520 pick 22.8 % [20.3-25.5] vs >= 85, wrong-cube 39.8 % vs < 5, slam 0.0, jam 0.3; held-out 11530 pick 5.7 %. Language path intact but policy does not ground the instruction (closed loop true vs shuffled 28 vs 28). Parked; options memo 85092f2; 2a not started; 3A/3B data ready (b906c90), not launched. Stage 2 7.15 H200-h; PERUN 113 total 46.03 / 100.
+2026-10-04 00:10 lead (takeover after OAuth 401): t2base_U 97626 verified (34,440 steps, 4.146 H200-h); c050 / c075 never ran -> submitted.
+2026-10-04 00:50 Stage 2 (a) FAIL by early abort (d): s_50 / s_75 / s_100 1.3 / 4.3 / 6.7 % on 21620; I1-I4 pass; 11 failures looked at; tests 11521 / 11531 unused (bdb9e2e). Single-cube substitution: base init 23.7 % vs S1 init 87.7 % (0b42108). 5.748 H200-h.
+2026-10-04 02:00 consultant decision: Stage 2 redesign #2 = 2a -> 2b, VT trainable set, S1 V15 init (context.md 170ed82). 2a / 2b entries 3b6139e / c88a467.
+2026-10-04 03:00 2a data PASS (02575de); 4xH200 DDP (fix 3d247f9 after smoke 98121 failed) launched with a dated overrun re-plan (2a line 8.93).
+2026-10-04 05:25 gate 2a FAIL: test 11540 pick 36.8 % [33.9-39.8], wrong-cube 34.0 % (other colour); random-cube by count; 9.018 H200-h (b019458). 2a attempt 1 (paired scenes, d33e371) in force.
+2026-10-04 05:35-09:31 (logged 2026-10-24 by orch 002 from git; the session died after 2c0df0d):
+2026-10-04 05:48 2a attempt 1 item P amendment (c1c5988): t=0 sha identity unreachable (per-slot render noise) -> P1 layout identity + P2 state/slot independence; paired_check built (4c476df).
+2026-10-04 06:20 Stage 4 0C data PASS, four sets + union (01b6985; s4r kept/split checker finding fixed 0dd8a9d); S 1,221,893.
+2026-10-04 06:38 baseline training 98204 stopped by the overrun guard (f4656ad); re-plan 95d1e0d (line 1.85); 98216 ran to completion (1.961 H200-h), guard PASS, abort (b) not fired.
+2026-10-04 08:42 baseline early abort (d) at c050 FIRES on all 3 seeds (0 / 1.0 / 0 % pick; cc1edf2) after B-I2 PASS and D1 (inputs identical, 0 / 128 on training scenes); 11 sheets looked at.
+2026-10-04 08:46 baseline diagnosis entry 88f13be ((i) underfit read, (iii) c100, (ii) overfit check bar 80 %); PERUN block closed (12dfb63).
+2026-10-04 08:56 2a attempt 0 paired probe reference 21645: named cube 34.6 % of grasped vs chance 35.1; same cube regardless 68 % vs 44.6 (3f32f34).
+2026-10-04 09:21 2a attempt 1 replay 98286 B 125 / 125 of A; export 98273 done; data-gate checks 98302 submitted (results never read that day).
+2026-10-04 09:31 overfit closed loop re-run 98305 (step-file bug in 98275 step 4, 720fa40) + frames 98309 submitted; last commit 2c0df0d.
+2026-10-24 20:48 UTC orch 002 start (stale 001 LOCK from 2026-10-01 treated as free). Pulled 98302 / 98305 / 98309 (8efeed4); ledger rows owed 98273-98309 (113 total 65.20).
+2026-10-24 21:00 UTC 2a attempt 1 data gate PASS (3620bf4): every 0C item + item P true, mutants flagged; norm tails = 2a a0 / Stage 2 pattern, same closure. Training 130518 submitted 20:58 UTC (4xH200).
+2026-10-24 21:00 UTC baseline diagnosis RESULT (fa18efc): overfit 0 / 100 vs 80 % -> model / pipeline bug -> baseline stops; 13 overfit sheets looked at (same scene-independent reach + close on air).
+2026-10-24 21:02 UTC 130518 guard PASS (0.170 s/step -> 6.51 <= 7.48 GPU-h), I2 0.259 <= 0.5, start line 34,440 steps / 3,441 per epoch; S1 V15 demo-video replay 130520 submitted.
+2026-10-24 21:28 UTC 2a a1 early abort (b) at 25 % not fired (0.104).
+2026-10-24 22:13 UTC 2a a1 c050: s_50 20.7 %, (c) / (d) not fired; language check true 21 vs shuffled 19.
+2026-10-24 22:43 UTC 2a a1 training done (130518, 34,440 steps, 6.961 H200-h); c075 27.7 %; instruments IT / I4 pass (0 / 34,440 steps differ).
+2026-10-24 22:51 UTC 2a a1 checkpoint pick RESULT committed (e29bd96): s 20.7 / 27.7 / 28.0 %, pick 034440; test 11541 + probe submitted after it.
+2026-10-24 23:12 UTC gate 2a attempt 1 FAIL (df10928): pick 31.5 %, wrong-cube 33.8 %; 14 failures looked at -> Stage 2 stops for good, kill as written.
+2026-10-24 23:30 UTC c100 done (0.750): 2a attempt 1 = 8.750 H200-h (line 8.81); window 8.558; 113 total 73.76 / 130. Write-up: README / REPORT / context / plain; S1 V15 demo + 2a failure videos looked at.
+2026-10-24 23:40 UTC independent audit of the window's commits: core numbers hold; errata a400783 (named cube among grasps above 1/n, probe n.s.; README softened; ep 12; RESULT times; baseline ep 56); baseline RESULT erratum 2489d48 (0.085 was val loss; training loss 1.50 -> 0.03).
+2026-10-25 00:00 UTC tests green: policy 686 passed / 3 skipped, sim 586 passed / 15 skipped; demo command (expert, "pick up the red cube", seed 1) SUCCESS, video looked at (laptop 7.73 h). orch 002 closed: task to done/, LOCK removed.
+2026-10-25 00:55 UTC orch 003 (grounding diagnosis, reported only): GATES 18970e1 pre-registered; step 0 max 16 tokens / 48; jobs 130693 (0.094) + 130742 (0.026) GPU, 130743 CPU; probe R3 data/loss for 034440 and 041328 (lang / kv decodable, step 2 ratio 0.103 / 0.084); lead review ACCEPT, F1 verdict-rule fix a249552 before the probe read; hook proof exact; ceiling 43.8; RESULT 4388d0d; 113 total 73.88 / 130.
+2026-10-25 02:25 UTC orch 004 (inference-time guidance probe, validation only, reported only): GATES 8c9ad87 pre-registered; code 42b02b8 (guided sampler, server op guide, 229 tests green both venvs); lead ACCEPT w/ findings, F1/F4/F5/F7 applied 5f9c5dd; smoke 130745 0.103, probe 130747 0.890, frames 130797 0.088 = 1.081 H200-h; w 1 sanity 28.7 vs 28.0 PASS; pick w 2/4/8 29.7/29.0/26.7 -> no effect; 113 total 74.96 / 130; run_job.ps1 DST fix (durations UTC).
+2026-10-25 09:38 orch 005 (interactive, orch force over the stopped headless a98a7f76 at L1's request): inherited contrastive code reviewed + kept (bf16 test tolerance fix), 7fc7f4b.
+2026-10-25 10:05 GATES Stage 2R pre-registration 684251b; margin CPU job 131384 -> m 4.2103 (15ed486).
+2026-10-25 10:18 lead review ACCEPT w/ findings; consultant R1 / R2; pre-launch check holds; smoke 131405 factor 1.385; launch t2r_VT 131419 (dd5b044).
+2026-10-25 10:55 guard PASS; (b) at 25 % no fire (0.011); gap 19 vs m 4.21. Fix candidate code (consultant request) befdf66 / a371d24, not registered.
+2026-10-25 11:26 c050 job 131495 submitted at 017220. Standing owner autonomy recorded (relayed by consultant 113).
+2026-10-25 11:45 c050 read (131495): no abort; s_50 29.0 %, wrong-cube 4.0 %, step 2 ratio 1.75. 11:59 c075 131510 submitted (owner: keep going as the 005 L2).
+2026-10-25 12:30 training 131419 done (8.806 H200-h, runcheck pass); c075 52.7 %; c100 131567 + post 131569 submitted (131568 cancelled: wrong venv).
+2026-10-25 13:19 c100 62.3 % (wrong 4.7 %, slam 0.7 %), pick 034440 RESULT 65fa1de; instruments pass. 13:20 test 131581 + probe 131582 submitted.
+2026-10-25 13:50 Stage 2R test 11542 FAIL on pick 67.7 % (wrong-cube 3.5, slam 1.3, jam 0.1 met); probe named cube 93.6 %; frames 12 failures looked at; RESULT fa99e45; 10.415 H200-h.
+2026-10-25 13:48 consultant ruling: one fix = more steps; GATES 7906021; t2r1_VT 131633 submitted.
+2026-10-25 13:52 fix guard PASS; 15:17 fix c050 63.0 %, no guard fires.
+2026-10-25 16:02 fix training done (8.954); c075 69.7 %; c100 131962 + post 131963 submitted.
+2026-10-25 16:52 fix c100 78.0 %, pick 034440 RESULT d845470; 16:54 test 132059 + probe 132060 submitted.
+2026-10-25 17:20 fix test 11543 FAIL on pick 77.6 % (wrong-cube 3.9, slam 0.5, jam 0.7 met); probe named cube 95.5 %; 12 failures looked at; RESULT c782a7c -> Stage 2 closed for good (task 005 kill). Fix 10.522 H200-h; 113 95.90 / 160.
+2026-10-25 17:25 orch 005 end ritual: report, evidence, context, plain, README / REPORT, skill ~measure-the-design-not-the-code; task to done/, LOCK released.
+2026-10-25 17:43 orch 006 taken (L1: run 006; owner autonomy window to 10:00 CET). 17:51 GATES 2M f3c983b; 17:52 collects 132199-132202 + export 132203 + checks 132204 submitted.
+2026-10-25 20:31 export 132203 done (6,000 kept, 1 h 43 min); data gate 132204 running.
+2026-10-25 21:20 2M data gate PASS (union check 132482); training 132486 submitted.
+2026-10-25 21:27 2M guard PASS (0.227 s/step -> 17.37 GPU-h), I2 0.0157; waiter auto-submits c050 at 034440.
+2026-10-25 23:38 2M 50 % checkpoint; c050 132614 submitted.
+2026-10-26 00:10 2M c050: s_50 91.7 %, wrong-cube 1.3 %, guards no fire; step 2 ratio 2.71.
+2026-10-26 00:45 2M c075 132700 submitted. 2b amendment GATES 3862001 (paired s2, seed 32900).
+2026-10-26 01:50 2M training done (18.00 H200-h, runcheck pass); c075 97.0 %. 01:53 c100 132756, post 132757, 2b collects 132758-132761 + export 132762 submitted.
+2026-10-26 03:05 2M c100 98.3 %, pick 068880 RESULT 3b41e7e; test 132811 + probe 132812 submitted. 2b collect done, export done, gate 132813 submitted.
+2026-10-26 03:21 Stage 2M PASS (test 11544 96.7 %); RESULT d8c91a8. Frames 132814 submitted.
+2026-10-26 03:34 2b data gate PASS (m 4.2989); 2b training 132815 submitted.
+2026-10-26 04:46 2b c050 132864 submitted. 007 pre-reg 557813c; 007 code + probe committed locally.
+2026-10-26 05:13 2b guard (b1) fired (c050 60.7 %, slam 17.7 %); training cancelled; diag 132913; 007 collects + exports submitted.
+2026-10-26 05:25 2b one fix (consultant) registered 9fd1542; training 132924 submitted. 007 collects done (s3a 100 %, s3b 97.9 %).
+2026-10-26 07:03 2b fix c050: 57.3 %, slam 17.3 % (record); b2 ok. xs3ap failed by construction -> 3,999 fix.
+2026-10-26 07:17 2b fix c075: pick 66.3 %, slam 9.0 % -> guards b1' / b3 do not fire; training continues.
+2026-10-26 07:43 2b fix training done (9.13 H200-h, runcheck pass); c100 / post / offline submitted. State report for the 10:00 (CET) check-in written.
+2026-10-26 08:12 2b fix test 11551: pick 68.1 % FAIL (wrong-cube 4.4 %, slam 9.4 %); held-out 44.3 %. Frames 133236.
+2026-10-26 08:25 2b fix FAIL RESULT d3c3487 (12 failures looked at); 2b closed; Stage 2 = colours PASS, sizes FAIL.
+2026-10-26 08:30 orch 006 end ritual: report, evidence, context, plain, README / REPORT, ledger, skill ~measure-the-design-not-the-code; task 006 to done/, LOCK released.
+2026-10-26 09:48 s3b export 132923 done (rc 0); 2b offline MAE 133084 killed by its time limit (reported-only item not obtained). Nothing running.
+2026-10-26 11:23 orch 008 taken (L1: run 008; owner chose option 1). 11:25 GATES 008 b2980dd; collects + export + gate chained.
+2026-10-26 11:32 008 collects done (8,536 / 8,685 = 98.3 %); export running.
+2026-10-26 15:53 008 data gate PASS (m 4.2907); training 134009 submitted.
+2026-10-26 17:10 008 guard read PASS (134009 step 100): 18.52 <= 20.13 GPU-h, I2 0.0164, runcheck ok, 20,658 steps/epoch; c050 waiter armed (4f00931).
+2026-10-26 17:45 009b prep (local): s3a1 / s3b1 one-size samplers + tests (d35b36a; also eval_policy --paired-targets for s2/s3), collect/export/gate step files (09c25ab). Rulings asked of L1: retention stream size, size words, cube count.
+2026-10-26 17:50 009b prep: s3a1p / s3b1p report modes, expert gate (11840 / 11850), probes 21667 / 21697, eval / test / launch files (f73179b); L1 confirmed. Waiting on 008 c050.
+2026-10-26 19:25 008 c050 checkpoint 034440 written; eval 134174 auto-submitted (repo a0ba0dd).
+2026-10-26 20:22 008 c050 (134174): pick 69.3 %, wrong-cube 3.3 % (b2 no), slam 15.0 % (b3 at c075), (c)/(d) no; c075 waiter armed.
+2026-10-26 20:35 008 c075 checkpoint 051660 written; eval 134247 auto-submitted.
+2026-10-26 20:45 008 c075 (134247): pick 80.0 % (b1' no), slam 9.3 % (b3 no), wrong-cube 2.0 %; c100 + post waiter armed.
+2026-10-26 21:55 008 training 134009 done (68,880 steps, wall 4 h 52 min = 19.47 H200-h; full runcheck ok). c100 134315 submitted; post 134316 failed at once (PERUN repo a0ba0dd still had the EPOCHS placeholder) -> pushed cdbcbfb, post resubmitted 134318.
+2026-10-26 22:25 008 pick RESULT (990b791): 068880, val 69.3 / 80.0 / 81.0 %, instruments pass. Test 134324 + probe 134325 submitted (repo de91f59).
+2026-10-26 23:10 008 test 11552: pick 79.4 % [76.8, 81.8] (bar 85), wrong-cube 2.6 % (26 / 26 same colour other size), slam 9.1 %, jam 0.8 %; by cubes 91.3 / 84.3 / 71.5 / 70.4 %. Held-out 11562 45.3 %; probe 95.0 % of grasps named cube. Frames 134381 (12 failures) running before the FAIL.
+
+2026-10-26 22:47 008 done: test 11552 FAIL (79.4 %, slam 9.1 %), held-out 45.3 %, probe 95.0 %; frames 134381 (12 failures); RESULT e0d8fee; ledger 21.97 (113 = 157.25). Task moved to done/.2026-10-26 22:47 correction: the log lines stamped 22:25 / 23:10 for 008 were ~22:20 (pick) / ~22:35 (test) CET; job times are in GATES.
+
+2026-10-26 22:58 009 taken (LOCK). Deviation log 160 -> 180 (89a056c); GATES pre-registration (588b9f6); 008 errata (fe5951c); expert precondition 134383 / 134384 submitted.
+2026-10-26 23:10 009 precondition PASS (place 100 / 100 %, stack 99.1 / 98.0 %; 0.273 GPU-h); collects / exports / data gates submitted as one afterok chain (134390-134401).
+2026-10-26 23:20 009 collects done: s3a1 100 %, s3b1 96.0 % expert (1.006 GPU-h); exports running.
+2026-10-27 04:24 009 exports 134398 / 134399 done rc 0, audit clean (s3a1 3,999 / union 7,999; s3b1 4,000 / union 8,000; s2a 4k 4,000); data gates 134400 / 134401 running.
+
+2026-10-27 05:14 009 3B data gate PASS (11ab909, m 2.98284275502845); 3B training 134695 submitted. 3A gate 134400 stopped at the union paired_check: the checker applied the uniform kept 4,000 to the s3a1 stream exported at 3,999 (--kept-stream); fixed in paired_check.stream_kept + test (6595627), pushed, resumed from that step as 134694.
+
+2026-10-27 05:32 009 3B step-100 guard PASS (0.602 s/step -> 5.94 GPU-h). Union I2 4.468 vs inherited <= 0.10: decomposed by 50-step runs 134697 / 134698 (pick-only 0.0117, stack-only 1.513 / step 1 7.19) -> measures stack novelty, init applied; proposed pick-stream I2 to L1, training continues (no stop rule fires).
+
+2026-10-27 05:48 009 3A data gate PASS (fe0bb5d, m 2.7950166951391058; checker defect disclosed); 3A training 134703 submitted. I2 ruling (L1): read on the pick stream, 0.0117 PASS, mutant 0.3755 flagged (ba70144).
+2026-10-27 08:24 009 3B c050 (017754) on disk; eval 134867 submitted (s3b1p_c050.txt, repo 6595627 unchanged, no push).
+2026-10-27 09:00 009 3A c050 (017754) on disk; eval 134921 submitted (s3a1p_c050.txt, repo 6595627, no push).
+2026-10-27 09:16 009 3B c050 read (134867, 0.825 GPU-h): no guard fires - wrong-target 6.0 % (b2 bar 10 %); stack 34.0 %, slam 13.3 % (c075 bars 55 % / 10 %); pick 88.3 %; vloss 0.0561 -> 0.0477.
+2026-10-27 09:51 009 3A c050 read (134921, 0.817 GPU-h): no guard fires - wrong-target 4.7 %; place 33.7 %, slam 19.0 % (c075 bars 65 % / 10 %); pick 78.0 %; vloss 0.0372 -> 0.0444.
+2026-10-27 09:52 009 3B c075 (026631) on disk; eval 134946 submitted.
+2026-10-27 10:09 009 3B c075 read (134946): stack 40.7 % [35.3, 46.3] < 55 %, slam 12.3 % > 10 % -> both guards fire; 3B training 134695 cancelled 09:07:42 UTC (4.90 GPU-h). Frames replay 134957 submitted (steps via /runs scratch; no push).
+2026-10-27 10:09 009 consultant ruling: 3B FAIL, no fix (budget reserved for 3A), stack dropped from the final; deviation-log line added. 3B RESULT after the frames.
+2026-10-27 10:14 009 3B FAIL RESULT: frames 134957 (0.064 GPU-h) 10 / 18 reproduced, 10 failures looked at - release misaligned 4, wild reach 3, holding at timeout 2, wrong object 1; grasps on the named cube throughout (motor, not grounding).
+2026-10-27 10:27 009 3A c075 (026631) on disk; eval 135009 submitted.
+2026-10-27 10:41 009 3A c075 read (135009, 0.226 GPU-h): place 197/300 = 65.7 % (guard < 65 % fires at <= 194; no fire), slam 7.7 % (no fire); pick 87.3 %. 3A continues to c100.
+2026-10-27 12:00 009 3A training 134703 done (35,508 steps, 6.080 GPU-h); runcheck_full ok; pushed 00fc0d3; c100 135108 + post 135109 submitted.
+2026-10-27 12:14 009 3A pick RESULT: c100 035508 (place 33.7 / 65.7 / 75.0, pick 78.0 / 87.3 / 88.7; no collapse). IT pass, I4 0 / 35,508 differ, mutant 35,508; I3 one stats_sha. Validation below both test bars.
+2026-10-27 12:16 009 3A test 135110 (place 11580 + pick 11544, once) and probe 135111 submitted at 035508 (repo 5ce8b43).
+2026-10-27 13:03 009 3A FAIL (test) recorded; consultant 113 holds the close and grants 3A one diagnosed fix (+17,754 steps from 035508, guard place < 70 % at the first save, test 11581 + 11544).
+2026-10-27 13:14 009 owner raised the 113 PERUN cap 180 -> 200 ("up the limit to 200h", via consultant 113; recorded in tasks 009 / 001); 3A fix unchanged, frames + probe not skipped; deviation log.
+2026-10-27 13:17 009 3A fix 135143 start read ok: init f6adef88 (3A pick), 0.600 s/step -> 2.96 GPU-h <= 3.6, runcheck start ok. First save 008877 ~14:35 CET.
+2026-10-27 15:06 (CET) 009 3A fix guard FIRES at 008877 (eval 135295): place 192/300 = 64.0 % < 70 % (init 035508 read 75.0 % on the same seeds), pick 250/300 = 83.3 % -> scancel 135143 at step ~10,750; frames 135302 submitted (repo 4293dd2).
+2026-10-27 15:12 (CET) 009 DONE: 3A fix FAIL RESULT (frames 135302: 12 reproduced failures — holding at limit 3, transit drop 3, wide swing 2, closes on air 2, pad-edge release + swing 1, wrong object 1; all motor). 3A closed for good; 3B dropped; no stack fix (consultant). Report reports/2026-10-27-009-stage3.md. README / REPORT pass folded into 010 (consultant). 113 = 175.15 / 200.
+2026-10-27 15:14 (CET) 010 started: registered 4a7f7b6 (14 cells, seeds 119xx); evals 135312-135315 submitted (1xH200 each, parallel).
+2026-10-27 16:22 (CET) 010 evals read (GATES 010 evaluation read): table results/final_eval.json; videos job 135465 submitted.
+2026-10-27 17:02 (CET) 010 DONE: evals 135312-135315 (3.32) + videos 135465 (0.485) = 3.80 GPU-h; table results/final_eval.json; videos/final_010/; README / REPORT / plain final (auditor: no wrong numbers; 4 wording fixes + GATES erratum S1 (a)). Report reports/2026-10-27-final.md. 113 = 178.96 / 200. Project ended.
+2026-10-27 17:09 (CET) errata (consultant final audit): 113 total 178.95 / 200 (not 178.96); GATES erratum; README sizes held-out 45.3 % / wrong-cube 20.0 % added.
+2026-10-27 22:24 (CET) 011 start (l1 113 task 011-demo-figures-ship): demo seeds 51000-51099 declared in hpc/JOBS.md before any render; eval_policy --record (viewer only); figures + pre-push audit run in parallel.
+2026-10-27 22:57 (CET) 011 DONE: renders 135780-135782 (0.40 GPU-h; demo seeds 51000-51099 declared first), video + clips + GIF (G1-G4 PASS, watched as contact sheets), figures (looked at), README / REPORT / plain, LICENSE + THIRD_PARTY, pre-push audit (no secrets; cluster ids / home paths in history -> redacted orphan `public`). Report reports/2026-10-28-011-demo-ship.md. 113 = 179.35 / 200.

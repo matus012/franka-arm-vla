@@ -1,0 +1,4 @@
+# GATES Stage 1, arm frozen: checkpoint pick, 100 % checkpoint, episodes 0-299 of validation seed 21600; offline val loss + offline action MAE / claw accuracy on the val episodes (reported)
+sim scripts/eval_policy.py --policy smolvla --ckpt /runs/s1_frozen/checkpoints/020664/pretrained_model --episodes 300 --stage s1 --split train --visual nominal --seed 21600 --envs 128 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --out /runs/e1_frozen_c100/s1_frozen_val_c100_s21600.json
+pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s1_pick --ckpt /runs/s1_frozen/checkpoints/020664/pretrained_model --out /runs/e1_frozen_c100/vloss_020664.json
+pol scripts/s0b3_prep.py offline --val-only --dataset /data/datasets/0c_s1_pick --ckpt /runs/s1_frozen/checkpoints/020664/pretrained_model --out /runs/e1_frozen_c100/offline_val_020664.json

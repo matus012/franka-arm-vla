@@ -1,0 +1,199 @@
+{
+ "dataset": "/data/datasets/0c_s1_pick_rl224_2k",
+ "name": "0c_s1_pick_rl224_2k",
+ "label": "relabel_setpoint",
+ "episodes": 2000,
+ "rows": 700000,
+ "T": [
+  350
+ ],
+ "image_size": 224,
+ "expect_yaw": 15.0,
+ "kept": 2000,
+ "yaw": {
+  "expected_m": 15.0,
+  "n": 2000,
+  "regenerated_fold": {
+   "min": -44.9799599706334,
+   "max": 44.971629524036246,
+   "mean": -0.83023605943747,
+   "std": 25.530619090892145
+  }
+ },
+ "source_successful_episodes": 2195,
+ "kept_stream_indices": [
+  0,
+  2041
+ ],
+ "video_check": {
+  "episodes": [
+   0,
+   222,
+   444,
+   666,
+   888,
+   1111,
+   1333,
+   1555,
+   1777,
+   1999
+  ],
+  "rows": 3500,
+  "psnr_min": 39.33850710711085,
+  "psnr_mean": 43.22432162171181,
+  "identity_fail": 0,
+  "backend": "torchcodec"
+ },
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "noise_std_per_arm_dim": [
+   0.10001984983682632,
+   0.0998661145567894,
+   0.09990277886390686,
+   0.10008105635643005
+  ],
+  "noise_rows_per_dim": [
+   686486,
+   662421,
+   644996,
+   685107
+  ],
+  "claw_exec_ne_label_rows": 0,
+  "mutant_action_exec_flagged_episodes": 2000,
+  "episodes_checked": 2000,
+  "state_dims_std_lt_1e-6": [],
+  "state_std": [
+   0.233521272394188,
+   0.33953419843089544,
+   0.15494954080072174,
+   0.4022250673620111,
+   0.08074234150785024,
+   0.203700767646683,
+   0.594022963651848,
+   0.00919941716721878,
+   0.009050573711686096,
+   0.20350518649042434,
+   0.4085287025394325,
+   0.21301033199792982,
+   0.3879286697947743,
+   0.1268503813406257,
+   0.6408212132247724,
+   0.45202069541674833,
+   0.04070159175318838,
+   0.04066894967019424,
+   0.01327259788988287
+  ]
+ },
+ "sheet": {
+  "png": "0c_s1_pick_rl224_2k.png",
+  "episodes": [
+   {
+    "lerobot_episode": 0,
+    "episode_index": 0,
+    "instruction": "pick the cube up",
+    "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"large\"], \"dest\": null, \"cubes\": [[\"blue\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      102
+     ],
+     [
+      "carry",
+      184
+     ],
+     [
+      "hold",
+      266
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1000,
+    "episode_index": 1019,
+    "instruction": "pick the cube up",
+    "spec": "{\"task\": \"pick\", \"target\": [\"yellow\", \"large\"], \"dest\": null, \"cubes\": [[\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      140
+     ],
+     [
+      "carry",
+      209
+     ],
+     [
+      "hold",
+      279
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1999,
+    "episode_index": 2041,
+    "instruction": "pick the cube up",
+    "spec": "{\"task\": \"pick\", \"target\": [\"blue\", \"small\"], \"dest\": null, \"cubes\": [[\"blue\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      104
+     ],
+     [
+      "carry",
+      185
+     ],
+     [
+      "hold",
+      267
+     ],
+     [
+      "end",
+      349
+     ]
+    ]
+   }
+  ]
+ },
+ "items": {
+  "1_count_eq_K": true,
+  "1_rows_eq_K_T": true,
+  "1_rows_per_episode_eq_T": true,
+  "1_columns_exact_action_eq_r": true,
+  "1_image_size": true,
+  "1_psnr_min_ge_35": true,
+  "1_frame_identity": true,
+  "1_kept_are_first_K_successful_in_order": true,
+  "1_split_rule": true,
+  "1_cube_yaw_max_deg_eq_expected": false,
+  "yaw_spawn_attrs_present": false,
+  "yaw_spawn_fold_in_range": false,
+  "yaw_regenerated_layout_fold_in_range": false,
+  "yaw_spawn_agrees_with_regenerated_layout": false,
+  "yaw_coverage": false,
+  "4a_noise_std_in_band": true,
+  "4a_claw_identical": true
+ },
+ "pass_items_1_4a": false,
+ "git_sha": "60dea8a",
+ "wall_s": 252.3
+}

@@ -1,0 +1,160 @@
+{
+ "dataset": "/data/datasets/0c_s3a_place_rl",
+ "ref": "/data/datasets/0c_s3a_place",
+ "name": "0c_s3a_place_rl",
+ "label": "relabel_setpoint",
+ "episodes": 2000,
+ "rows": 1100000,
+ "T": [
+  550
+ ],
+ "episode_list_diff": [],
+ "videos": {
+  "files": 23,
+  "sha256_identical_to_ref": true,
+  "differing": []
+ },
+ "video_check": null,
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "noise_std_per_arm_dim": [
+   0.10004150122404099,
+   0.09982558339834213,
+   0.09991392493247986,
+   0.10004284232854843
+  ],
+  "noise_rows_per_dim": [
+   1085121,
+   1061102,
+   1044838,
+   1085011
+  ],
+  "claw_exec_ne_label_rows": 0,
+  "mutant_action_exec_flagged_episodes": 2000,
+  "episodes_checked": 2000,
+  "state_dims_std_lt_1e-6": [],
+  "state_std": [
+   0.20791836456599538,
+   0.27418849177254523,
+   0.12623349036604783,
+   0.3230885465882657,
+   0.07078921963359315,
+   0.17495144384208555,
+   0.5674690862944978,
+   0.008074678751191326,
+   0.008052401376291056,
+   0.206645634682812,
+   0.38088621710935605,
+   0.2099170339234249,
+   0.3597136564793079,
+   0.1136886907088576,
+   0.5297478883669433,
+   0.4381899377668342,
+   0.04322304250755415,
+   0.04328498081416138,
+   0.012912211377982107
+  ]
+ },
+ "sheet": {
+  "png": "0c_s3a_place_rl.png",
+  "episodes": [
+   {
+    "lerobot_episode": 0,
+    "episode_index": 0,
+    "instruction": "please put the red cube on the yellow pad",
+    "spec": "{\"task\": \"place\", \"target\": [\"red\", \"small\"], \"dest\": \"yellow\", \"cubes\": [[\"red\", \"small\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      107
+     ],
+     [
+      "carry",
+      208
+     ],
+     [
+      "release",
+      309
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1000,
+    "episode_index": 1000,
+    "instruction": "move the red cube onto the yellow pad",
+    "spec": "{\"task\": \"place\", \"target\": [\"red\", \"large\"], \"dest\": \"yellow\", \"cubes\": [[\"red\", \"large\"], [\"yellow\", \"small\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      122
+     ],
+     [
+      "carry",
+      210
+     ],
+     [
+      "release",
+      298
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1999,
+    "episode_index": 1999,
+    "instruction": "move the yellow cube onto the red pad",
+    "spec": "{\"task\": \"place\", \"target\": [\"yellow\", \"large\"], \"dest\": \"red\", \"cubes\": [[\"yellow\", \"large\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      123
+     ],
+     [
+      "carry",
+      229
+     ],
+     [
+      "release",
+      335
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   }
+  ]
+ },
+ "items": {
+  "1_episode_list_identical_to_attempt0": true,
+  "1_counts_eq_attempt0": true,
+  "1_rows_per_episode_eq_T": true,
+  "1_columns_exact_action_eq_r": true,
+  "1_images": true,
+  "4a_noise_std_in_band": true,
+  "4a_claw_identical": true
+ },
+ "pass_items_1_4a": true,
+ "git_sha": "86e9234",
+ "wall_s": 36.2
+}

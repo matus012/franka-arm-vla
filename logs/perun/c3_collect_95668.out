@@ -1,0 +1,105 @@
+=== c3_collect on <node> NVIDIA H200 start 2026-10-01T19:31:50+02:00 repo b1fa485
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 20:00 cpus 8
+CUDA OK NVIDIA H200
+=== step 1 start 1790875914.608185824 sim scripts/collect.py --stage s1 --split train --start 0 --episodes 10 --seed 31600 --envs 10 --noise-sigma 0 --image-size 128 --visual nominal --out /data/0b3/collect
+[collect] s1_train_s31600 episodes 0..9: 1 chunks, 0 finished, 1 to run
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 31600
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.540696 s, Mean: 2.540696 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 10
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.185701 s, Mean: 0.185701 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.063192 s, Mean: 0.063192 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.001191 s, Mean: 0.032192 s, Std: 0.043841 s, N: 2
+Contact sensor construction took: Last: 0.000688 s, Mean: 0.021690 s, Std: 0.035942 s, N: 3
+Contact sensor construction took: Last: 0.000554 s, Mean: 0.016406 s, Std: 0.031192 s, N: 4
+Initialize solver took: Last: 7.235170 s, Mean: 7.235170 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.283924 s, Mean: 11.283924 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 26.867914 s, Mean: 26.867914 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[collect] device=cuda:0 envs=10 H=128 visual=nominal sigma=0.0
+[collect] pick_e000000: 10/10 kept, 9.1 s, resync err 0.00e+00 m, files ['s1_train_s31600_pick_e000000_p0.h5']; 10 eps in 41 s = 869 eps/h
+COLLECT_SUMMARY={"prefix": "s1_train_s31600", "config": {"stage": "s1", "split": "train", "seed": 31600, "envs": 10, "noise_sigma": 0.0, "image_size": 128, "visual": "nominal", "mix": "1,1,1", "start": 0, "episodes": 10, "period": 3, "latency": 1, "n_action_steps": 20, "part_bytes": 157286400, "git_sha": "b1fa485", "expert_version": "113-expert-v1", "detector_version": "113-detectors-v1 (GATES.md conventions 2026-10-01)"}, "chunks": 1, "attempted": 10, "kept": 10, "expert_success": 1.0, "ci95": [0.7224598312333834, 1.0], "per_task": {"pick": {"attempted": 10, "kept": 10, "rate": 1.0, "ci95": [0.7224598312333834, 1.0], "failures": {"wrong_object": 0, "wrong_grasp": 0, "wrong_dest": 0, "slam": 0, "jam": 0, "drop": 0, "early_close": 0, "release_failure": 0, "invalid": 0}, "failed_unflagged": 0}}, "disk_bytes": 10411443, "mb_per_kept_episode": 1.0411443, "cmd_resync_max_m": 0.0, "this_invocation": {"episodes_run": 10, "wall_s": 41.4, "episodes_per_h": 869.3922373398217, "torch_peak_vram_mib": 32.80908203125, "device": "cuda:0", "gpu": "NVIDIA H200"}, "nan_guard_events": 0}
+NAN_GUARD_EVENTS=0
+=== step 1 done 1790875966.516853185
+=== c3_collect done 2026-10-01T19:32:46+02:00

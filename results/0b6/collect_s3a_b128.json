@@ -1,0 +1,71 @@
+{
+ "prefix": "s3a_train_s31500",
+ "config": {
+  "stage": "s3a",
+  "split": "train",
+  "seed": 31500,
+  "envs": 128,
+  "noise_sigma": 0.1,
+  "image_size": 128,
+  "visual": "nominal",
+  "mix": "1,1,1",
+  "start": 1000,
+  "episodes": 256,
+  "period": 3,
+  "latency": 1,
+  "n_action_steps": 20,
+  "part_bytes": 157286400,
+  "git_sha": "b1fa485",
+  "expert_version": "113-expert-v1",
+  "detector_version": "113-detectors-v1 (GATES.md conventions 2026-10-01)"
+ },
+ "chunks": 2,
+ "attempted": 256,
+ "kept": 256,
+ "expert_success": 1.0,
+ "ci95": [
+  0.9852156082782743,
+  1.0
+ ],
+ "per_task": {
+  "place": {
+   "attempted": 256,
+   "kept": 256,
+   "rate": 1.0,
+   "ci95": [
+    0.9852156082782743,
+    1.0
+   ],
+   "failures": {
+    "wrong_object": 0,
+    "wrong_grasp": 0,
+    "wrong_dest": 0,
+    "slam": 0,
+    "jam": 0,
+    "drop": 0,
+    "early_close": 0,
+    "release_failure": 0,
+    "invalid": 0
+   },
+   "failed_unflagged": 0
+  }
+ },
+ "files": [
+  "s3a_train_s31500_place_e001000_p0.h5",
+  "s3a_train_s31500_place_e001000_p1.h5",
+  "s3a_train_s31500_place_e001128_p0.h5",
+  "s3a_train_s31500_place_e001128_p1.h5"
+ ],
+ "disk_bytes": 449573088,
+ "mb_per_kept_episode": 1.756144875,
+ "cmd_resync_max_m": 0.004476636648178101,
+ "this_invocation": {
+  "episodes_run": 256,
+  "wall_s": 84.9,
+  "episodes_per_h": 10853.54806886744,
+  "torch_peak_vram_mib": 40.86669921875,
+  "device": "cuda:0",
+  "gpu": "NVIDIA H200"
+ },
+ "nan_guard_events": 0
+}

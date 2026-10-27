@@ -1,0 +1,9 @@
+{
+ "ckpt": "/runs/s1_frozen/checkpoints/005166/pretrained_model",
+ "ckpt_sha": "d1e495ca1a8df9673760ba7c5da067731cc0cf1899fba9f9a1e24903e09866b4",
+ "val_episodes": 25,
+ "samples": 2900,
+ "val_loss": 0.4929752780651224,
+ "dtype": "float32 (served)",
+ "git_sha": "9d91fe8"
+}

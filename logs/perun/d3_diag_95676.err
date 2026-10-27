@@ -1,0 +1,83 @@
+I: Initializing Version 2.71.1-release.7015+gl.fe6333da
+I: Client ID: 6LGI2601
+I: Not using Hub: Hub not found
+I: Successfully created S3 provider for https://omniverse-content-production.s3-us-west-2.amazonaws.com
+I: Using CloudFront http://dcb18d6mfegct.cloudfront.net/, List = No
+Skipping preview surface material at '/World/envs/env_0/cube_red_small/geometry/material' — Kit is not available.
+Could not perform 'bind_visual_material' on any prims under: '/World/envs/env_0/cube_red_small/geometry/mesh'. This might be because of the following reasons:
+	(1) The desired attribute does not exist on any of the prims.
+	(2) The desired attribute exists on an instanced prim.
+		Discovered list of instanced prim paths: []
+Skipping preview surface material at '/World/envs/env_0/cube_red_large/geometry/material' — Kit is not available.
+Could not perform 'bind_visual_material' on any prims under: '/World/envs/env_0/cube_red_large/geometry/mesh'. This might be because of the following reasons:
+	(1) The desired attribute does not exist on any of the prims.
+	(2) The desired attribute exists on an instanced prim.
+		Discovered list of instanced prim paths: []
+Skipping preview surface material at '/World/envs/env_0/cube_green_small/geometry/material' — Kit is not available.
+Could not perform 'bind_visual_material' on any prims under: '/World/envs/env_0/cube_green_small/geometry/mesh'. This might be because of the following reasons:
+	(1) The desired attribute does not exist on any of the prims.
+	(2) The desired attribute exists on an instanced prim.
+		Discovered list of instanced prim paths: []
+Skipping preview surface material at '/World/envs/env_0/cube_green_large/geometry/material' — Kit is not available.
+Could not perform 'bind_visual_material' on any prims under: '/World/envs/env_0/cube_green_large/geometry/mesh'. This might be because of the following reasons:
+	(1) The desired attribute does not exist on any of the prims.
+	(2) The desired attribute exists on an instanced prim.
+		Discovered list of instanced prim paths: []
+Skipping preview surface material at '/World/envs/env_0/cube_blue_small/geometry/material' — Kit is not available.
+Could not perform 'bind_visual_material' on any prims under: '/World/envs/env_0/cube_blue_small/geometry/mesh'. This might be because of the following reasons:
+	(1) The desired attribute does not exist on any of the prims.
+	(2) The desired attribute exists on an instanced prim.
+		Discovered list of instanced prim paths: []
+Skipping preview surface material at '/World/envs/env_0/cube_blue_large/geometry/material' — Kit is not available.
+Could not perform 'bind_visual_material' on any prims under: '/World/envs/env_0/cube_blue_large/geometry/mesh'. This might be because of the following reasons:
+	(1) The desired attribute does not exist on any of the prims.
+	(2) The desired attribute exists on an instanced prim.
+		Discovered list of instanced prim paths: []
+Skipping preview surface material at '/World/envs/env_0/cube_yellow_small/geometry/material' — Kit is not available.
+Could not perform 'bind_visual_material' on any prims under: '/World/envs/env_0/cube_yellow_small/geometry/mesh'. This might be because of the following reasons:
+	(1) The desired attribute does not exist on any of the prims.
+	(2) The desired attribute exists on an instanced prim.
+		Discovered list of instanced prim paths: []
+Skipping preview surface material at '/World/envs/env_0/cube_yellow_large/geometry/material' — Kit is not available.
+Could not perform 'bind_visual_material' on any prims under: '/World/envs/env_0/cube_yellow_large/geometry/mesh'. This might be because of the following reasons:
+	(1) The desired attribute does not exist on any of the prims.
+	(2) The desired attribute exists on an instanced prim.
+		Discovered list of instanced prim paths: []
+Skipping preview surface material at '/World/envs/env_0/pad_red/geometry/material' — Kit is not available.
+Could not perform 'bind_visual_material' on any prims under: '/World/envs/env_0/pad_red/geometry/mesh'. This might be because of the following reasons:
+	(1) The desired attribute does not exist on any of the prims.
+	(2) The desired attribute exists on an instanced prim.
+		Discovered list of instanced prim paths: []
+Skipping preview surface material at '/World/envs/env_0/pad_green/geometry/material' — Kit is not available.
+Could not perform 'bind_visual_material' on any prims under: '/World/envs/env_0/pad_green/geometry/mesh'. This might be because of the following reasons:
+	(1) The desired attribute does not exist on any of the prims.
+	(2) The desired attribute exists on an instanced prim.
+		Discovered list of instanced prim paths: []
+Skipping preview surface material at '/World/envs/env_0/pad_blue/geometry/material' — Kit is not available.
+Could not perform 'bind_visual_material' on any prims under: '/World/envs/env_0/pad_blue/geometry/mesh'. This might be because of the following reasons:
+	(1) The desired attribute does not exist on any of the prims.
+	(2) The desired attribute exists on an instanced prim.
+		Discovered list of instanced prim paths: []
+Skipping preview surface material at '/World/envs/env_0/pad_yellow/geometry/material' — Kit is not available.
+Could not perform 'bind_visual_material' on any prims under: '/World/envs/env_0/pad_yellow/geometry/mesh'. This might be because of the following reasons:
+	(1) The desired attribute does not exist on any of the prims.
+	(2) The desired attribute exists on an instanced prim.
+		Discovered list of instanced prim paths: []
+Warning: The rigid body at /World/envs/env_0/Robot/panda_link0 has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for. If you do not want the objects to collide, add colliders regardless then disable the 'enable collision' property. [python3.12]
+Warning: The rigid body at /World/envs/env_0/Robot/panda_link1 has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for. If you do not want the objects to collide, add colliders regardless then disable the 'enable collision' property. [python3.12]
+Warning: The rigid body at /World/envs/env_0/Robot/panda_link2 has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for. If you do not want the objects to collide, add colliders regardless then disable the 'enable collision' property. [python3.12]
+Warning: The rigid body at /World/envs/env_0/Robot/panda_link3 has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for. If you do not want the objects to collide, add colliders regardless then disable the 'enable collision' property. [python3.12]
+Warning: The rigid body at /World/envs/env_0/Robot/panda_link4 has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for. If you do not want the objects to collide, add colliders regardless then disable the 'enable collision' property. [python3.12]
+Warning: The rigid body at /World/envs/env_0/Robot/panda_link5 has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for. If you do not want the objects to collide, add colliders regardless then disable the 'enable collision' property. [python3.12]
+Warning: The rigid body at /World/envs/env_0/Robot/panda_link6 has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for. If you do not want the objects to collide, add colliders regardless then disable the 'enable collision' property. [python3.12]
+Warning: The rigid body at /World/envs/env_0/Robot/panda_link7 has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for. If you do not want the objects to collide, add colliders regardless then disable the 'enable collision' property. [python3.12]
+Warning: The rigid body at /World/envs/env_0/Robot/panda_hand has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for. If you do not want the objects to collide, add colliders regardless then disable the 'enable collision' property. [python3.12]
+Warning: The rigid body at /World/envs/env_0/Robot/panda_leftfinger has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for. If you do not want the objects to collide, add colliders regardless then disable the 'enable collision' property. [python3.12]
+Warning: The rigid body at /World/envs/env_0/Robot/panda_rightfinger has a possibly invalid inertia tensor of {1.0, 1.0, 1.0} and a negative mass. Either specify correct values in the mass properties, or add collider(s) to any shape(s) that you wish to automatically compute mass properties for. If you do not want the objects to collide, add colliders regardless then disable the 'enable collision' property. [python3.12]
+/opt/venv/lib/python3.12/site-packages/isaaclab_newton/physics/newton_manager.py:989: FutureWarning: Newton shape color replacement is enabled; this workaround will be deprecated in a future release.
+  replace_newton_shape_colors(cls._model)
+Failed to get root com velocity. If the articulation is fixed, this is expected. Setting root com velocity to zeros.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 5679.06it/s]

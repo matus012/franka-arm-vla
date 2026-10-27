@@ -1,0 +1,266 @@
+{
+ "task": "004 inference-time instruction-guidance probe (diagnosis on validation, not an attempt)",
+ "ckpt_sha": "07e87cc6f5b2533ab4b931e356e7cf944e6b53d49bbf2cc0109ab416290cb3ff",
+ "stream": "21640 eps 0-299 (s2a / train, m 15, H 224, N 10, B 128)",
+ "ref_s100": {
+  "n": 300,
+  "pick": 0.28,
+  "ceiling_pick_plus_wrong": 0.6533333333333333,
+  "pick_count": 84,
+  "pick_ci95": [
+   0.23221820291536688,
+   0.3333449062836369
+  ],
+  "wrong_cube": 0.37333333333333335,
+  "wrong_cube_count": 112,
+  "slam": 0.0,
+  "jam": 0.0033333333333333335,
+  "drop": 0.06,
+  "by_n_cubes": {
+   "2": 0.4270833333333333,
+   "3": 0.31,
+   "4": 0.11538461538461539
+  },
+  "by_n_cubes_n": {
+   "2": 96,
+   "3": 100,
+   "4": 104
+  },
+  "gpu_h": 0.0822393998834822,
+  "server_s_p50": 2.027165,
+  "paired_vs_w1": {
+   "gain": 2,
+   "loss": 4
+  }
+ },
+ "by_w": {
+  "1.0": {
+   "n": 300,
+   "pick": 0.2866666666666667,
+   "ceiling_pick_plus_wrong": 0.67,
+   "pick_count": 86,
+   "pick_ci95": [
+    0.238445210315098,
+    0.3402826531506026
+   ],
+   "wrong_cube": 0.38333333333333336,
+   "wrong_cube_count": 115,
+   "slam": 0.0,
+   "jam": 0.0,
+   "drop": 0.043333333333333335,
+   "by_n_cubes": {
+    "2": 0.4479166666666667,
+    "3": 0.3,
+    "4": 0.125
+   },
+   "by_n_cubes_n": {
+    "2": 96,
+    "3": 100,
+    "4": 104
+   },
+   "gpu_h": 0.19629880951510537,
+   "server_s_p50": 5.9117750000000004,
+   "file": "results\\s2a1_guidance\\s2a1_guid_w1_s21640.json",
+   "paired_vs_w1": {
+    "gain": 0,
+    "loss": 0
+   }
+  },
+  "2.0": {
+   "n": 300,
+   "pick": 0.2966666666666667,
+   "ceiling_pick_plus_wrong": 0.6433333333333333,
+   "pick_count": 89,
+   "pick_ci95": [
+    0.2478105484553788,
+    0.35066444641036704
+   ],
+   "wrong_cube": 0.3466666666666667,
+   "wrong_cube_count": 104,
+   "slam": 0.0,
+   "jam": 0.0,
+   "drop": 0.03,
+   "by_n_cubes": {
+    "2": 0.4479166666666667,
+    "3": 0.33,
+    "4": 0.125
+   },
+   "by_n_cubes_n": {
+    "2": 96,
+    "3": 100,
+    "4": 104
+   },
+   "gpu_h": 0.19628459162182277,
+   "server_s_p50": 5.912224999999999,
+   "file": "results\\s2a1_guidance\\s2a1_guid_w2_s21640.json",
+   "paired_vs_w1": {
+    "gain": 6,
+    "loss": 3
+   }
+  },
+  "4.0": {
+   "n": 300,
+   "pick": 0.29,
+   "ceiling_pick_plus_wrong": 0.6333333333333333,
+   "pick_count": 87,
+   "pick_ci95": [
+    0.2415637129951771,
+    0.3437465276038718
+   ],
+   "wrong_cube": 0.3433333333333333,
+   "wrong_cube_count": 103,
+   "slam": 0.0,
+   "jam": 0.0033333333333333335,
+   "drop": 0.04666666666666667,
+   "by_n_cubes": {
+    "2": 0.46875,
+    "3": 0.3,
+    "4": 0.11538461538461539
+   },
+   "by_n_cubes_n": {
+    "2": 96,
+    "3": 100,
+    "4": 104
+   },
+   "gpu_h": 0.19679686215188769,
+   "server_s_p50": 5.92107,
+   "file": "results\\s2a1_guidance\\s2a1_guid_w4_s21640.json",
+   "paired_vs_w1": {
+    "gain": 10,
+    "loss": 9
+   }
+  },
+  "8.0": {
+   "n": 300,
+   "pick": 0.26666666666666666,
+   "ceiling_pick_plus_wrong": 0.6033333333333334,
+   "pick_count": 80,
+   "pick_ci95": [
+    0.21980519258939787,
+    0.31942840807621214
+   ],
+   "wrong_cube": 0.33666666666666667,
+   "wrong_cube_count": 101,
+   "slam": 0.0,
+   "jam": 0.0,
+   "drop": 0.04,
+   "by_n_cubes": {
+    "2": 0.4375,
+    "3": 0.28,
+    "4": 0.09615384615384616
+   },
+   "by_n_cubes_n": {
+    "2": 96,
+    "3": 100,
+    "4": 104
+   },
+   "gpu_h": 0.19618775241904787,
+   "server_s_p50": 5.90856,
+   "file": "results\\s2a1_guidance\\s2a1_guid_w8_s21640.json",
+   "paired_vs_w1": {
+    "gain": 15,
+    "loss": 21
+   }
+  }
+ },
+ "step2_by_w": {
+  "1.0": {
+   "file": "results\\s2a1_guidance\\div_w1_div.json",
+   "full_chunk": {
+    "n_layouts": 100,
+    "instruction_effect": 2.764237888753414,
+    "noise_effect": 26.890627393722536,
+    "ratio": 0.1027955892690964,
+    "per_layout_ratio_median": 0.07047178043915828,
+    "ignores_language": true
+   },
+   "first_10": {
+    "n_layouts": 100,
+    "instruction_effect": 1.3827778872475027,
+    "noise_effect": 16.457488036751748,
+    "ratio": 0.08402119959981601,
+    "per_layout_ratio_median": 0.05057331080365471,
+    "ignores_language": true
+   }
+  },
+  "2.0": {
+   "file": "results\\s2a1_guidance\\div_w2_div.json",
+   "full_chunk": {
+    "n_layouts": 100,
+    "instruction_effect": 4.310556392669678,
+    "noise_effect": 26.88900586605072,
+    "ratio": 0.16030925107990182,
+    "per_layout_ratio_median": 0.1223297262882905,
+    "ignores_language": true
+   },
+   "first_10": {
+    "n_layouts": 100,
+    "instruction_effect": 1.9092851062119007,
+    "noise_effect": 16.489668910503386,
+    "ratio": 0.115786746027129,
+    "per_layout_ratio_median": 0.08439234698743463,
+    "ignores_language": true
+   }
+  },
+  "4.0": {
+   "file": "results\\s2a1_guidance\\div_w4_div.json",
+   "full_chunk": {
+    "n_layouts": 100,
+    "instruction_effect": 7.608954251408577,
+    "noise_effect": 26.796009058952333,
+    "ratio": 0.28395848929101947,
+    "per_layout_ratio_median": 0.23169468901725432,
+    "ignores_language": true
+   },
+   "first_10": {
+    "n_layouts": 100,
+    "instruction_effect": 3.1835822945833208,
+    "noise_effect": 16.459162020683287,
+    "ratio": 0.19342310930427048,
+    "per_layout_ratio_median": 0.14762676917679363,
+    "ignores_language": true
+   }
+  },
+  "8.0": {
+   "file": "results\\s2a1_guidance\\div_w8_div.json",
+   "full_chunk": {
+    "n_layouts": 100,
+    "instruction_effect": 13.26283240020275,
+    "noise_effect": 25.88480115890503,
+    "ratio": 0.5123791494005739,
+    "per_layout_ratio_median": 0.48773413869088345,
+    "ignores_language": true
+   },
+   "first_10": {
+    "n_layouts": 100,
+    "instruction_effect": 5.869468199014664,
+    "noise_effect": 16.075383710861207,
+    "ratio": 0.3651214990936113,
+    "per_layout_ratio_median": 0.3771527373462449,
+    "ignores_language": true
+   }
+  }
+ },
+ "gpu_h_evals": 0.7855680157078637,
+ "ceiling_note": "ceiling_pick_plus_wrong = (success + wrong-cube) / n: the pick rate if every wrong grasp became a success (reported only, lead F1)",
+ "selection_disclosure": "best w chosen on the same 300 validation episodes it is read on (optimistic by selection); not a gate",
+ "sanity_w1": {
+  "pick": 0.2866666666666667,
+  "ref": 0.28,
+  "pass": true
+ },
+ "best_w": 2.0,
+ "gain_vs_w1": {
+  "2.0": 0.010000000000000009,
+  "4.0": 0.0033333333333332993,
+  "8.0": -0.020000000000000018
+ },
+ "helping_w": [],
+ "best_clauses": {
+  "pick_ge_60": false,
+  "wrong_le_15": false,
+  "cube4_ge_2x_w1": false
+ },
+ "best_motor_over_5pct": false,
+ "reading": "no effect"
+}

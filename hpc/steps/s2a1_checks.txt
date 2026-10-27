@@ -1,0 +1,10 @@
+# GATES 2a attempt 1 (d33e371) data gate on 0c_s2a_pair_rl224_y15 (fresh seed 32800, m 15; cpu_short via hpc/cpu_steps.py, `-` = exit code reported, not fatal): items 1 (paired kept / split form) / 4(a) / 5 + yaw (--fresh), item P (paired_check, as amended before this run), 4(b)/(c) + mutants, 2 audit, instrument (i), normalization table vs the S1 V15 parent
+python scripts/s0c_rl_check.py --fresh --rerender 224 --expect-yaw 15 --kept 2000 --dataset /data/datasets/0c_s2a_pair_rl224_y15 --out /runs/ks2a1
+python scripts/paired_check.py --dataset /data/datasets/0c_s2a_pair_rl224_y15 --out /runs/ks2a1
+python scripts/s1_relabel.py dscheck --dataset /data/datasets/0c_s2a_pair_rl224_y15 --expect-original /data/datasets/0c_s2a_pair_224a_y15 --out /runs/ks2a1/dscheck.json
+-python scripts/s1_relabel.py dscheck --mutant shift --dataset /data/datasets/0c_s2a_pair_rl224_y15 --out /runs/ks2a1/mutant_shift.json
+-python scripts/s1_relabel.py dscheck --mutant claw --dataset /data/datasets/0c_s2a_pair_rl224_y15 --out /runs/ks2a1/mutant_claw.json
+-python scripts/s1_relabel.py dscheck --mutant claw_offset --dataset /data/datasets/0c_s2a_pair_rl224_y15 --out /runs/ks2a1/mutant_claw_offset.json
+python tests/test_data_audit.py --root /data/datasets/0c_s2a_pair_rl224_y15
+python scripts/s1_tools.py arms --dataset /data/datasets/0c_s2a_pair_rl224_y15 --out /runs/ks2a1/arms_build.json --device cpu
+python scripts/s2_norm.py --dataset /data/datasets/0c_s2a_pair_rl224_y15 --init /runs/s1y15_U/checkpoints/041328/pretrained_model --out /runs/ks2a1/s2a_pair_norm.json

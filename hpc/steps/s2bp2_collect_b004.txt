@@ -1,0 +1,2 @@
+# GATES 2b sizes round 2 (task 008): paired s2 collect, data seed 32900 groups 2000-2399 (new groups; 2b used 0-1999), H 224, sigma 0.1, m 15, B 128; batch b004
+sim scripts/collect.py --stage s2 --split train --paired-targets --start-group 2000 --groups 400 --seed 32900 --envs 128 --noise-sigma 0.1 --image-size 224 --visual nominal --cube-yaw-max-deg 15 --out /data/0c/s2py15/b004

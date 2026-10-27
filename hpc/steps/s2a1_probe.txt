@@ -1,0 +1,2 @@
+# GATES 2a attempt 1 (d33e371, reported): paired-target probe on the picked checkpoint 034440, validation probe stream 21645 (s2a, paired, m 15), 100 layouts; the attempt 0 reference is 98274 (results/s2a_probe_a0.json)
+sim scripts/eval_policy.py --policy smolvla --ckpt /runs/s2a1_VT/checkpoints/034440/pretrained_model --stage s2a --split train --visual nominal --paired-targets --groups 100 --seed 21645 --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --out /runs/e2a1_probe/s2a_probe_a1_s21645.json

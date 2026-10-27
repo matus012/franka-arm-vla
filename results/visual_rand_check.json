@@ -1,0 +1,838 @@
+{
+ "config": {
+  "envs": 8,
+  "seed": 5,
+  "res": 128
+ },
+ "modes": {
+  "nominal": {
+   "apply_info": {
+    "light": [
+     -0.5773502588272095,
+     0.5773502588272095,
+     -0.5773502588272095
+    ],
+    "mode": "nominal",
+    "nominal_envs": 8
+   },
+   "light_elev_deg": 35.2643928527832,
+   "colour": {
+    "n_checked": 126,
+    "n_skipped_small_mask": 0,
+    "nearest_lab_ok": 125,
+    "nearest_chroma_ok": 126,
+    "rows": [
+     {
+      "cam": "side",
+      "env": 0,
+      "object": "cube_red_small",
+      "px": 56,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "measured_rgb": [
+       0.369,
+       0.036,
+       0.037
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 1,
+      "object": "cube_red_small",
+      "px": 115,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "measured_rgb": [
+       0.468,
+       0.045,
+       0.046
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 3,
+      "object": "cube_red_small",
+      "px": 48,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "measured_rgb": [
+       0.34,
+       0.031,
+       0.035
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 4,
+      "object": "cube_red_small",
+      "px": 84,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "measured_rgb": [
+       0.448,
+       0.042,
+       0.046
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 5,
+      "object": "cube_red_small",
+      "px": 74,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "measured_rgb": [
+       0.523,
+       0.051,
+       0.052
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 6,
+      "object": "cube_red_small",
+      "px": 54,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "measured_rgb": [
+       0.426,
+       0.041,
+       0.042
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 2,
+      "object": "cube_yellow_large",
+      "px": 103,
+      "named_rgb": [
+       0.9,
+       0.8,
+       0.1
+      ],
+      "sampled_rgb": [
+       0.9,
+       0.8,
+       0.1
+      ],
+      "measured_rgb": [
+       0.339,
+       0.302,
+       0.037
+      ],
+      "nearest_lab": "green",
+      "nearest_chroma": "yellow"
+     }
+    ]
+   },
+   "table": [
+    {
+     "env": 0,
+     "measured_hue": 0.587,
+     "sampled_hue": 0.583,
+     "measured_value": 0.533,
+     "sampled_value": 0.667
+    },
+    {
+     "env": 1,
+     "measured_hue": 0.587,
+     "sampled_hue": 0.583,
+     "measured_value": 0.533,
+     "sampled_value": 0.667
+    },
+    {
+     "env": 2,
+     "measured_hue": 0.587,
+     "sampled_hue": 0.583,
+     "measured_value": 0.533,
+     "sampled_value": 0.667
+    },
+    {
+     "env": 3,
+     "measured_hue": 0.587,
+     "sampled_hue": 0.583,
+     "measured_value": 0.533,
+     "sampled_value": 0.667
+    },
+    {
+     "env": 4,
+     "measured_hue": 0.587,
+     "sampled_hue": 0.583,
+     "measured_value": 0.533,
+     "sampled_value": 0.667
+    },
+    {
+     "env": 5,
+     "measured_hue": 0.587,
+     "sampled_hue": 0.583,
+     "measured_value": 0.533,
+     "sampled_value": 0.667
+    },
+    {
+     "env": 6,
+     "measured_hue": 0.587,
+     "sampled_hue": 0.583,
+     "measured_value": 0.533,
+     "sampled_value": 0.667
+    },
+    {
+     "env": 7,
+     "measured_hue": 0.587,
+     "sampled_hue": 0.583,
+     "measured_value": 0.533,
+     "sampled_value": 0.667
+    }
+   ],
+   "mean_image_value": 0.389,
+   "side_centroid_shift_px": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max_shift_px": 0.0,
+   "nominal_env_flags": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "train": {
+   "apply_info": {
+    "light": [
+     -0.5779181122779846,
+     0.2779083251953125,
+     -0.7673184275627136
+    ],
+    "mode": "train",
+    "nominal_envs": 2
+   },
+   "light_elev_deg": 50.11370086669922,
+   "colour": {
+    "n_checked": 124,
+    "n_skipped_small_mask": 2,
+    "nearest_lab_ok": 124,
+    "nearest_chroma_ok": 124,
+    "rows": [
+     {
+      "cam": "side",
+      "env": 0,
+      "object": "cube_red_small",
+      "px": 56,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.793,
+       0.103,
+       0.103
+      ],
+      "measured_rgb": [
+       0.493,
+       0.062,
+       0.063
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 1,
+      "object": "cube_red_small",
+      "px": 114,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.792,
+       0.154,
+       0.154
+      ],
+      "measured_rgb": [
+       0.569,
+       0.107,
+       0.111
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 3,
+      "object": "cube_red_small",
+      "px": 48,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "measured_rgb": [
+       0.489,
+       0.046,
+       0.05
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 4,
+      "object": "cube_red_small",
+      "px": 83,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.783,
+       0.138,
+       0.138
+      ],
+      "measured_rgb": [
+       0.539,
+       0.093,
+       0.096
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 5,
+      "object": "cube_red_small",
+      "px": 75,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.76,
+       0.15,
+       0.15
+      ],
+      "measured_rgb": [
+       0.52,
+       0.099,
+       0.103
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 6,
+      "object": "cube_red_small",
+      "px": 48,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.738,
+       0.121,
+       0.121
+      ],
+      "measured_rgb": [
+       0.456,
+       0.072,
+       0.076
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     }
+    ]
+   },
+   "table": [
+    {
+     "env": 0,
+     "measured_hue": 0.652,
+     "sampled_hue": 0.651,
+     "measured_value": 0.965,
+     "sampled_value": 0.976
+    },
+    {
+     "env": 1,
+     "measured_hue": 0.679,
+     "sampled_hue": 0.68,
+     "measured_value": 0.936,
+     "sampled_value": 0.947
+    },
+    {
+     "env": 2,
+     "measured_hue": 0.586,
+     "sampled_hue": 0.583,
+     "measured_value": 0.659,
+     "sampled_value": 0.667
+    },
+    {
+     "env": 3,
+     "measured_hue": 0.586,
+     "sampled_hue": 0.583,
+     "measured_value": 0.659,
+     "sampled_value": 0.667
+    },
+    {
+     "env": 4,
+     "measured_hue": 0.347,
+     "sampled_hue": 0.339,
+     "measured_value": 0.937,
+     "sampled_value": 0.972
+    },
+    {
+     "env": 5,
+     "measured_hue": 0.338,
+     "sampled_hue": 0.336,
+     "measured_value": 0.631,
+     "sampled_value": 0.655
+    },
+    {
+     "env": 6,
+     "measured_hue": 0.284,
+     "sampled_hue": 0.282,
+     "measured_value": 0.67,
+     "sampled_value": 0.696
+    },
+    {
+     "env": 7,
+     "measured_hue": 0.771,
+     "sampled_hue": 0.774,
+     "measured_value": 0.561,
+     "sampled_value": 0.567
+    }
+   ],
+   "mean_image_value": 0.483,
+   "side_centroid_shift_px": [
+    3.77,
+    2.88,
+    0.0,
+    0.0,
+    2.44,
+    2.85,
+    1.24,
+    3.48
+   ],
+   "max_shift_px": 3.77,
+   "nominal_env_flags": [
+    false,
+    false,
+    true,
+    true,
+    false,
+    false,
+    false,
+    false
+   ]
+  },
+  "heldout": {
+   "apply_info": {
+    "light": [
+     -0.6710830330848694,
+     0.616703987121582,
+     -0.41148966550827026
+    ],
+    "mode": "heldout",
+    "nominal_envs": 0
+   },
+   "light_elev_deg": 24.29844856262207,
+   "colour": {
+    "n_checked": 120,
+    "n_skipped_small_mask": 6,
+    "nearest_lab_ok": 116,
+    "nearest_chroma_ok": 120,
+    "rows": [
+     {
+      "cam": "side",
+      "env": 0,
+      "object": "cube_red_small",
+      "px": 58,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.783,
+       0.092,
+       0.092
+      ],
+      "measured_rgb": [
+       0.365,
+       0.041,
+       0.041
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 1,
+      "object": "cube_red_small",
+      "px": 114,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.755,
+       0.083,
+       0.083
+      ],
+      "measured_rgb": [
+       0.39,
+       0.041,
+       0.043
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 3,
+      "object": "cube_red_small",
+      "px": 48,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.785,
+       0.105,
+       0.105
+      ],
+      "measured_rgb": [
+       0.297,
+       0.038,
+       0.038
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 4,
+      "object": "cube_red_small",
+      "px": 82,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.77,
+       0.11,
+       0.11
+      ],
+      "measured_rgb": [
+       0.377,
+       0.052,
+       0.054
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 5,
+      "object": "cube_red_small",
+      "px": 74,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.744,
+       0.156,
+       0.156
+      ],
+      "measured_rgb": [
+       0.48,
+       0.099,
+       0.103
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 6,
+      "object": "cube_red_small",
+      "px": 55,
+      "named_rgb": [
+       0.8,
+       0.08,
+       0.08
+      ],
+      "sampled_rgb": [
+       0.698,
+       0.101,
+       0.101
+      ],
+      "measured_rgb": [
+       0.371,
+       0.051,
+       0.054
+      ],
+      "nearest_lab": "red",
+      "nearest_chroma": "red"
+     },
+     {
+      "cam": "side",
+      "env": 2,
+      "object": "cube_yellow_large",
+      "px": 106,
+      "named_rgb": [
+       0.9,
+       0.8,
+       0.1
+      ],
+      "sampled_rgb": [
+       0.771,
+       0.691,
+       0.126
+      ],
+      "measured_rgb": [
+       0.276,
+       0.247,
+       0.046
+      ],
+      "nearest_lab": "green",
+      "nearest_chroma": "yellow"
+     },
+     {
+      "cam": "side",
+      "env": 3,
+      "object": "cube_yellow_large",
+      "px": 99,
+      "named_rgb": [
+       0.9,
+       0.8,
+       0.1
+      ],
+      "sampled_rgb": [
+       0.832,
+       0.747,
+       0.146
+      ],
+      "measured_rgb": [
+       0.301,
+       0.269,
+       0.055
+      ],
+      "nearest_lab": "green",
+      "nearest_chroma": "yellow"
+     },
+     {
+      "cam": "wrist",
+      "env": 2,
+      "object": "cube_yellow_large",
+      "px": 76,
+      "named_rgb": [
+       0.9,
+       0.8,
+       0.1
+      ],
+      "sampled_rgb": [
+       0.771,
+       0.691,
+       0.126
+      ],
+      "measured_rgb": [
+       0.322,
+       0.288,
+       0.054
+      ],
+      "nearest_lab": "green",
+      "nearest_chroma": "yellow"
+     },
+     {
+      "cam": "wrist",
+      "env": 3,
+      "object": "cube_yellow_large",
+      "px": 161,
+      "named_rgb": [
+       0.9,
+       0.8,
+       0.1
+      ],
+      "sampled_rgb": [
+       0.832,
+       0.747,
+       0.146
+      ],
+      "measured_rgb": [
+       0.288,
+       0.258,
+       0.052
+      ],
+      "nearest_lab": "green",
+      "nearest_chroma": "yellow"
+     }
+    ]
+   },
+   "table": [
+    {
+     "env": 0,
+     "measured_hue": 0.424,
+     "sampled_hue": 0.416,
+     "measured_value": 0.263,
+     "sampled_value": 0.431
+    },
+    {
+     "env": 1,
+     "measured_hue": 0.473,
+     "sampled_hue": 0.465,
+     "measured_value": 0.235,
+     "sampled_value": 0.386
+    },
+    {
+     "env": 2,
+     "measured_hue": 0.453,
+     "sampled_hue": 0.449,
+     "measured_value": 0.22,
+     "sampled_value": 0.362
+    },
+    {
+     "env": 3,
+     "measured_hue": 0.451,
+     "sampled_hue": 0.434,
+     "measured_value": 0.255,
+     "sampled_value": 0.418
+    },
+    {
+     "env": 4,
+     "measured_hue": 0.402,
+     "sampled_hue": 0.395,
+     "measured_value": 0.192,
+     "sampled_value": 0.32
+    },
+    {
+     "env": 5,
+     "measured_hue": 0.414,
+     "sampled_hue": 0.411,
+     "measured_value": 0.259,
+     "sampled_value": 0.424
+    },
+    {
+     "env": 6,
+     "measured_hue": 0.414,
+     "sampled_hue": 0.409,
+     "measured_value": 0.267,
+     "sampled_value": 0.439
+    },
+    {
+     "env": 7,
+     "measured_hue": 0.388,
+     "sampled_hue": 0.381,
+     "measured_value": 0.263,
+     "sampled_value": 0.432
+    }
+   ],
+   "mean_image_value": 0.268,
+   "side_centroid_shift_px": [
+    5.28,
+    4.35,
+    1.67,
+    3.59,
+    2.69,
+    1.41,
+    5.1,
+    2.62
+   ],
+   "max_shift_px": 5.28,
+   "nominal_env_flags": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ]
+  }
+ }
+}

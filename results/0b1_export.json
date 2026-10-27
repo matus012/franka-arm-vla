@@ -1,0 +1,44 @@
+{
+ "episodes": 20,
+ "rows": 7000,
+ "column_mismatch": [],
+ "rows_per_episode_mismatch": [],
+ "chunk_mismatch": 0,
+ "pad_mismatch": 0,
+ "identity_fail": 75,
+ "psnr_min": 36.44082321908875,
+ "psnr_mean": 41.43973415851337,
+ "dataset_episodes": 20,
+ "fps": 50,
+ "T_steps": [
+  350
+ ],
+ "psnr_bar_db": 35.0,
+ "sources": [
+  "data\\0b_smoke\\s1_train_s31500_pick_e000000_p0.h5"
+ ],
+ "git_sha": "7e912e2f51ad81a2088f9f40f3ec9baee9bbf988",
+ "wall_s": 912.8,
+ "checks": {
+  "1_columns_exact": true,
+  "2a_psnr_min_ge_35dB": true,
+  "3_rows_per_episode_eq_T": true,
+  "4_chunk_eq_labels_t_t49_padded": true,
+  "fps_50": true,
+  "2b_frame_identity_synthetic_index_frames": true
+ },
+ "frame_identity": {
+  "gate_check": "tests/test_alignment.py (synthetic index-encoding frames through recorder -> HDF5 -> export -> LeRobotDataset pyav -> bridge client), policy venv: 4 passed; output results/0b1_alignment_pytest.txt",
+  "supplementary_real_frames": {
+   "checks": 14000,
+   "fail": 75,
+   "side": 72,
+   "wrist": 3,
+   "all_nearest_is_adjacent_frame": true,
+   "max_source_source_mse_of_competing_frame": 0.8073933720588684,
+   "min_decoded_vs_own_source_mse": 3.4841105937957764,
+   "max_mse_own_minus_other": 0.44728612899780273,
+   "reading": "every miss is a tie with the adjacent captured frame of a near-static scene whose source-source MSE (<= 0.81) is below the codec's own error (>= 3.48): undecidable on real frames, which is why GATES checks identity with the synthetic index frames; per-miss list results/0b1_identity_diag.json"
+  }
+ }
+}

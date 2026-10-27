@@ -1,0 +1,2 @@
+# GATES Stage 1 attempt 1 close-up frames (protocol replay of the test rounds holding the chosen episodes): 3 successes + the first 10 failures (round 0) + the first jam failure (195) + the first failure with no flag (180)
+sim scripts/eval_policy.py --replay /runs/e1a1_test/s1_unfrozen_test_s11501_1.json --sheets 3 --videos 1,2,6,7,9,15,18,20,21,22,180,195 --policy-python /opt/policy/bin/python

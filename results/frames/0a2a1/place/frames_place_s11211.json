@@ -1,0 +1,10 @@
+[
+ {
+  "episode": 0,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a2a1\\place\\place_s11211_ep0_success.png",
+  "spec": "{\"task\": \"place\", \"target\": [\"red\", \"large\"], \"dest\": \"red\", \"cubes\": [[\"green\", \"large\"], [\"red\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ }
+]

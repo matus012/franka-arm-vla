@@ -1,0 +1,6 @@
+# GATES Stage 4 re-plan (e2cef02) instrument B-I2 (input parity) on seed 2 ckpt_028638 (c050), run BEFORE reading the c050 validation (98249: 0 / 300 on every task, early_close 300 / 300) as early abort (d): the baseline closed-loop path has never been proven. CPU only (cpu_short via hpc/cpu_steps.py, pol venv). Mutants are soft (-): they must report pass = false.
+# sbatch (lead): sbatch --time=00:40:00 --cpus-per-task=16 --mem=64G --job-name=k4b_par2 hpc/slurm/cpu.sbatch k4b_par2 pol hpc/cpu_steps.py hpc/steps/s4b_parity_s2c050.txt
+python scripts/s4b_parity.py --dataset /data/datasets/0c_s4_all_rl224_y15g --ckpt /runs/s4_baseline_seed2/ckpt_028638 --out /runs/k4b_par2/b_i2_parity.json --video-backend torchcodec
+-python scripts/s4b_parity.py --dataset /data/datasets/0c_s4_all_rl224_y15g --ckpt /runs/s4_baseline_seed2/ckpt_028638 --out /runs/k4b_par2/b_i2_parity_bgr.json --video-backend torchcodec --mutant bgr
+-python scripts/s4b_parity.py --dataset /data/datasets/0c_s4_all_rl224_y15g --ckpt /runs/s4_baseline_seed2/ckpt_028638 --out /runs/k4b_par2/b_i2_parity_unnormalised.json --video-backend torchcodec --mutant unnormalised
+-python scripts/s4b_parity.py --dataset /data/datasets/0c_s4_all_rl224_y15g --ckpt /runs/s4_baseline_seed2/ckpt_028638 --out /runs/k4b_par2/b_i2_parity_swapped_cams.json --video-backend torchcodec --mutant swapped_cams

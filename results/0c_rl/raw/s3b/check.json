@@ -1,0 +1,160 @@
+{
+ "dataset": "/data/datasets/0c_s3b_stack_rl",
+ "ref": "/data/datasets/0c_s3b_stack",
+ "name": "0c_s3b_stack_rl",
+ "label": "relabel_setpoint",
+ "episodes": 2000,
+ "rows": 1100000,
+ "T": [
+  550
+ ],
+ "episode_list_diff": [],
+ "videos": {
+  "files": 17,
+  "sha256_identical_to_ref": true,
+  "differing": []
+ },
+ "video_check": null,
+ "columns_noise": {
+  "column_mismatch_episodes": [],
+  "rows_per_episode_mismatch": [],
+  "noise_std_per_arm_dim": [
+   0.09996825456619263,
+   0.10005035251379013,
+   0.10002199560403824,
+   0.09998636692762375
+  ],
+  "noise_rows_per_dim": [
+   1085480,
+   1060791,
+   1044929,
+   1069146
+  ],
+  "claw_exec_ne_label_rows": 0,
+  "mutant_action_exec_flagged_episodes": 2000,
+  "episodes_checked": 2000,
+  "state_dims_std_lt_1e-6": [],
+  "state_std": [
+   0.23332166118873857,
+   0.33017458880152906,
+   0.15882194346636194,
+   0.4019332183806429,
+   0.07514891416124238,
+   0.197826209999202,
+   0.694052799286482,
+   0.00773227722854191,
+   0.007676066557675754,
+   0.20896884903959842,
+   0.3802099361797457,
+   0.2091503868819859,
+   0.36906792309455544,
+   0.11960697214053168,
+   0.5298043071275523,
+   0.5104557060481321,
+   0.04132125827372085,
+   0.041373965028106335,
+   0.012471594021289209
+  ]
+ },
+ "sheet": {
+  "png": "0c_s3b_stack_rl.png",
+  "episodes": [
+   {
+    "lerobot_episode": 0,
+    "episode_index": 0,
+    "instruction": "stack the red cube on the large yellow cube",
+    "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"large\"], \"dest\": [\"yellow\", \"large\"], \"cubes\": [[\"blue\", \"small\"], [\"green\", \"small\"], [\"red\", \"large\"], [\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      133
+     ],
+     [
+      "carry",
+      239
+     ],
+     [
+      "release",
+      345
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1000,
+    "episode_index": 1040,
+    "instruction": "stack the blue cube on top of the large green cube",
+    "spec": "{\"task\": \"stack\", \"target\": [\"blue\", \"large\"], \"dest\": [\"green\", \"large\"], \"cubes\": [[\"blue\", \"large\"], [\"green\", \"large\"], [\"yellow\", \"small\"], [\"red\", \"small\"], [\"red\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      106
+     ],
+     [
+      "carry",
+      185
+     ],
+     [
+      "release",
+      264
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   },
+   {
+    "lerobot_episode": 1999,
+    "episode_index": 2099,
+    "instruction": "stack the large yellow cube on top of the red cube",
+    "spec": "{\"task\": \"stack\", \"target\": [\"yellow\", \"large\"], \"dest\": [\"red\", \"large\"], \"cubes\": [[\"blue\", \"large\"], [\"yellow\", \"small\"], [\"yellow\", \"large\"], [\"red\", \"large\"], [\"green\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+    "steps": [
+     [
+      "start",
+      0
+     ],
+     [
+      "grasp",
+      134
+     ],
+     [
+      "carry",
+      225
+     ],
+     [
+      "release",
+      317
+     ],
+     [
+      "end",
+      549
+     ]
+    ]
+   }
+  ]
+ },
+ "items": {
+  "1_episode_list_identical_to_attempt0": true,
+  "1_counts_eq_attempt0": true,
+  "1_rows_per_episode_eq_T": true,
+  "1_columns_exact_action_eq_r": true,
+  "1_images": true,
+  "4a_noise_std_in_band": true,
+  "4a_claw_identical": true
+ },
+ "pass_items_1_4a": true,
+ "git_sha": "86e9234",
+ "wall_s": 34.2
+}

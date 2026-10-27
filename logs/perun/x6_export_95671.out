@@ -1,0 +1,4 @@
+=== x6_export on <node> cpu x16 start 2026-10-01T19:37:42+02:00
+[export] 501 episodes found, 501 selected, 175350 rows, manifest-verified 11 files; audit CLEAN
+EXPORT_SUMMARY={"name": "0b6_s1", "root": "/data/datasets/0b6_s1", "sources": ["/data/0b6/s1_b128", "/data/0b6/s1_b256"], "files": 4, "episodes": 501, "rows": 175350, "per_task": {"pick": 501}, "streams": ["s1_s31500"], "workers": 4, "manifest_verified_files": 11, "audit_clean": true, "train_episodes": 476, "val_episodes": 25, "disk_bytes": 434229231, "wall_s": 266.3}
+=== x6_export done 2026-10-01T19:42:12+02:00

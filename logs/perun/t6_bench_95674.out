@@ -1,0 +1,350 @@
+=== t6_bench on <node> NVIDIA H200 start 2026-10-01T19:42:12+02:00 repo 7e912e2
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 1:30:00 cpus 32
+CUDA OK NVIDIA H200
+=== step 1 start 1790876536.579517746 pol scripts/bench_train.py --dataset /data/datasets/0b6_s1 --batch-size 64 --n-action-steps 20 --video-backend torchcodec --warmup 50 --steps 300 --configs frozen --workers 8 --out /runs/t6_bench/bench_F_w8.json
+[bench] NVIDIA H200; dataset /data/datasets/0b6_s1 rows=175350; bs=64 workers=8
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+[bench] frozen: {"freeze_vision_encoder": true, "train_expert_only": true, "refreeze_non_vision_vlm": false, "trainable_fp32": true, "bf16_autocast": true, "workers": 8, "phase_epoch_s": {"e2e": [1790876588.7090244, 1790876658.7580907], "gpu_cached": [1790876658.7580907, 1790876728.6294022]}, "params_total": 450046176, "params_trainable": 99880992, "vision_params_trainable": 0, "by_dtype": {"frozen_bfloat16": 350165184, "trainable_float32": 99880992}, "warmup_steps": 50, "timed_steps": 300, "warmup_s": 13.696219191886485, "gpu_s_per_sample": 0.0036391303120277977, "e2e_s_per_sample": 0.0036483881172413627, "data_wait_frac_e2e": 0.000293128634150178, "samples_per_s_gpu": 274.79092922143246, "samples_per_s_e2e": 274.0936457045927, "peak_mem_allocated_gib": 13.812119483947754, "peak_mem_reserved_gib": 14.1015625}
+[bench] wrote /runs/t6_bench/bench_F_w8.json in 174 s
+=== step 1 done 1790876730.799471787
+=== step 2 start 1790876730.801060107 pol scripts/bench_train.py --dataset /data/datasets/0b6_s1 --batch-size 64 --n-action-steps 20 --video-backend torchcodec --warmup 50 --steps 300 --configs frozen --workers 16 --out /runs/t6_bench/bench_F_w16.json
+[bench] NVIDIA H200; dataset /data/datasets/0b6_s1 rows=175350; bs=64 workers=16
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+[bench] frozen: {"freeze_vision_encoder": true, "train_expert_only": true, "refreeze_non_vision_vlm": false, "trainable_fp32": true, "bf16_autocast": true, "workers": 16, "phase_epoch_s": {"e2e": [1790876782.831978, 1790876852.8814678], "gpu_cached": [1790876852.8814678, 1790876922.9586515]}, "params_total": 450046176, "params_trainable": 99880992, "vision_params_trainable": 0, "by_dtype": {"frozen_bfloat16": 350165184, "trainable_float32": 99880992}, "warmup_steps": 50, "timed_steps": 300, "warmup_s": 13.54100208170712, "gpu_s_per_sample": 0.003649852760960736, "e2e_s_per_sample": 0.003648410132979431, "data_wait_frac_e2e": 0.00027950598768099, "samples_per_s_gpu": 273.98365509319177, "samples_per_s_e2e": 274.0919917310288, "peak_mem_allocated_gib": 13.812119483947754, "peak_mem_reserved_gib": 14.1015625}
+[bench] wrote /runs/t6_bench/bench_F_w16.json in 174 s
+=== step 2 done 1790876925.149191295
+=== step 3 start 1790876925.150780325 pol scripts/bench_train.py --dataset /data/datasets/0b6_s1 --batch-size 64 --n-action-steps 20 --video-backend torchcodec --warmup 50 --steps 300 --configs frozen --workers 24 --out /runs/t6_bench/bench_F_w24.json
+[bench] NVIDIA H200; dataset /data/datasets/0b6_s1 rows=175350; bs=64 workers=24
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+[bench] frozen: {"freeze_vision_encoder": true, "train_expert_only": true, "refreeze_non_vision_vlm": false, "trainable_fp32": true, "bf16_autocast": true, "workers": 24, "phase_epoch_s": {"e2e": [1790876977.0338516, 1790877047.1192079], "gpu_cached": [1790877047.1192079, 1790877117.0659566]}, "params_total": 450046176, "params_trainable": 99880992, "vision_params_trainable": 0, "by_dtype": {"frozen_bfloat16": 350165184, "trainable_float32": 99880992}, "warmup_steps": 50, "timed_steps": 300, "warmup_s": 13.756985761225224, "gpu_s_per_sample": 0.003643059282039758, "e2e_s_per_sample": 0.0036502782013849355, "data_wait_frac_e2e": 0.0002688994030246758, "samples_per_s_gpu": 274.4945724408024, "samples_per_s_e2e": 273.9517222606744, "peak_mem_allocated_gib": 13.812119483947754, "peak_mem_reserved_gib": 14.1015625}
+[bench] wrote /runs/t6_bench/bench_F_w24.json in 174 s
+=== step 3 done 1790877119.348927194
+=== step 4 start 1790877119.350652388 pol scripts/bench_train.py --dataset /data/datasets/0b6_s1 --batch-size 64 --n-action-steps 20 --video-backend torchcodec --warmup 50 --steps 300 --configs unfrozen --workers 16 --out /runs/t6_bench/bench_U_w16.json
+[bench] NVIDIA H200; dataset /data/datasets/0b6_s1 rows=175350; bs=64 workers=16
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+[bench] unfrozen: {"freeze_vision_encoder": false, "train_expert_only": false, "refreeze_non_vision_vlm": true, "trainable_fp32": true, "bf16_autocast": true, "workers": 16, "phase_epoch_s": {"e2e": [1790877180.7442794, 1790877306.2818658], "gpu_cached": [1790877306.2818658, 1790877431.8511114]}, "params_total": 450046176, "params_trainable": 186314016, "vision_params_trainable": 86433024, "by_dtype": {"trainable_float32": 186314016, "frozen_bfloat16": 263732160}, "warmup_steps": 50, "timed_steps": 300, "warmup_s": 23.128001488745213, "gpu_s_per_sample": 0.00654006437510058, "e2e_s_per_sample": 0.0065384151804998205, "data_wait_frac_e2e": 0.00017009533025266312, "samples_per_s_gpu": 152.90369370173377, "samples_per_s_e2e": 152.9422608375194, "peak_mem_allocated_gib": 60.477266788482666, "peak_mem_reserved_gib": 60.7734375}
+[bench] wrote /runs/t6_bench/bench_U_w16.json in 294 s
+=== step 4 done 1790877434.121702251
+=== step 5 start 1790877434.123486343 pol scripts/bench_train.py --dataset /data/datasets/0b6_s1 --batch-size 64 --n-action-steps 20 --video-backend torchcodec --warmup 50 --steps 300 --configs unfrozen --workers 24 --out /runs/t6_bench/bench_U_w24.json
+[bench] NVIDIA H200; dataset /data/datasets/0b6_s1 rows=175350; bs=64 workers=24
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+[bench] unfrozen: {"freeze_vision_encoder": false, "train_expert_only": false, "refreeze_non_vision_vlm": true, "trainable_fp32": true, "bf16_autocast": true, "workers": 24, "phase_epoch_s": {"e2e": [1790877495.7291548, 1790877621.4501095], "gpu_cached": [1790877621.4501095, 1790877746.8879137]}, "params_total": 450046176, "params_trainable": 186314016, "vision_params_trainable": 86433024, "by_dtype": {"trainable_float32": 186314016, "frozen_bfloat16": 263732160}, "warmup_steps": 50, "timed_steps": 300, "warmup_s": 23.3626397754997, "gpu_s_per_sample": 0.006533218438271433, "e2e_s_per_sample": 0.006547965818172088, "data_wait_frac_e2e": 0.00015649074579487954, "samples_per_s_gpu": 153.06391626859198, "samples_per_s_e2e": 152.7191845175449, "peak_mem_allocated_gib": 60.47265386581421, "peak_mem_reserved_gib": 60.720703125}
+[bench] wrote /runs/t6_bench/bench_U_w24.json in 295 s
+=== step 5 done 1790877749.214425130
+=== step 6 start 1790877749.216129754 pol scripts/bench_train.py --dataset /data/datasets/0b6_s1 --batch-size 64 --n-action-steps 20 --video-backend torchcodec --warmup 50 --steps 300 --configs frozen_lerobot --workers 16 --out /runs/t6_bench/bench_Flerobot_w16.json
+[bench] NVIDIA H200; dataset /data/datasets/0b6_s1 rows=175350; bs=64 workers=16
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+[bench] frozen_lerobot: {"freeze_vision_encoder": true, "train_expert_only": true, "refreeze_non_vision_vlm": false, "trainable_fp32": false, "bf16_autocast": false, "workers": 16, "phase_epoch_s": {"e2e": [1790877799.8720672, 1790877864.2667727], "gpu_cached": [1790877864.2667727, 1790877928.5307612]}, "params_total": 450046176, "params_trainable": 99880992, "vision_params_trainable": 0, "by_dtype": {"frozen_bfloat16": 350165184, "trainable_bfloat16": 96607440, "trainable_float32": 3273552}, "warmup_steps": 50, "timed_steps": 300, "warmup_s": 12.603569994680583, "gpu_s_per_sample": 0.0033470821920006224, "e2e_s_per_sample": 0.0033538902730409366, "data_wait_frac_e2e": 0.00029442828516158814, "samples_per_s_gpu": 298.7676855949207, "samples_per_s_e2e": 298.16121536179855, "peak_mem_allocated_gib": 14.01626443862915, "peak_mem_reserved_gib": 14.3671875}
+[bench] wrote /runs/t6_bench/bench_Flerobot_w16.json in 161 s
+=== step 6 done 1790877930.770088833
+=== step 7 start 1790877930.771768619 sim scripts/eval_policy.py --policy smolvla --ckpt lerobot/smolvla_base --dataset /data/datasets/0b6_s1 --split train --visual nominal --seed 21500 --envs 128 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --stage s1 --episodes 256 --out /runs/t6_bench/eval_s1_b128.json
+[eval] server up after 21.0 s: {"policy": "smolvla", "n_action_steps": 20, "chunk_size": 50, "image_size": 128, "state_dim": 19, "action_dim": 5, "ckpt_sha": "7cd549ac2351fb069c0ddb3c34ad2d09cfc92b56a15dccdfc2e41467aaca01eb", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 128, 128], "observation.images.camera2": [3, 128, 128], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": true, "train_expert_only": true, "dtype": "float32", "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 21500
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.639999 s, Mean: 2.639999 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.369909 s, Mean: 0.369909 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.067492 s, Mean: 0.067492 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007062 s, Mean: 0.037277 s, Std: 0.042730 s, N: 2
+Contact sensor construction took: Last: 0.005979 s, Mean: 0.026844 s, Std: 0.035206 s, N: 3
+Contact sensor construction took: Last: 0.004277 s, Mean: 0.021202 s, Std: 0.030881 s, N: 4
+Initialize solver took: Last: 6.811132 s, Mean: 6.811132 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.722784 s, Mean: 11.722784 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.231791 s, Mean: 27.231791 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=128 policy=smolvla N=20 episodes 0..255 in 2 rounds
+[eval] pick round 0: 0/128 success (kept slots), 50 s; 128 eps, 5522 eps/h
+[eval] pick round 1: 0/128 success (kept slots), 47 s; 256 eps, 7057 eps/h
+EVAL_SUMMARY={"n": 256, "success": {"all": 0.0, "pick": 0.0}, "latency": {"server_s_p50": 2.019415, "server_s_p95": 2.057245, "rtt_s_p50": 2.02504, "rtt_s_p95": 2.0629455, "queries": 34}, "wall_s": 130.6, "episodes_per_gpu_h": 7057.411968481042, "slots_per_gpu_h": 7057.411968481042, "smart_length": null}
+NAN_GUARD_EVENTS=0
+=== step 7 done 1790878094.878828325
+=== step 8 start 1790878094.880534301 sim scripts/eval_policy.py --policy smolvla --ckpt lerobot/smolvla_base --dataset /data/datasets/0b6_s1 --split train --visual nominal --seed 21500 --envs 128 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --stage s3a --episodes 128 --out /runs/t6_bench/eval_s3a_b128.json
+[eval] server up after 21.0 s: {"policy": "smolvla", "n_action_steps": 20, "chunk_size": 50, "image_size": 128, "state_dim": 19, "action_dim": 5, "ckpt_sha": "7cd549ac2351fb069c0ddb3c34ad2d09cfc92b56a15dccdfc2e41467aaca01eb", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 128, 128], "observation.images.camera2": [3, 128, 128], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": true, "train_expert_only": true, "dtype": "float32", "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 21500
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.644243 s, Mean: 2.644243 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.357027 s, Mean: 0.357027 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068722 s, Mean: 0.068722 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007035 s, Mean: 0.037878 s, Std: 0.043620 s, N: 2
+Contact sensor construction took: Last: 0.005920 s, Mean: 0.027226 s, Std: 0.035942 s, N: 3
+Contact sensor construction took: Last: 0.004253 s, Mean: 0.021482 s, Std: 0.031514 s, N: 4
+Initialize solver took: Last: 6.863433 s, Mean: 6.863433 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.779448 s, Mean: 11.779448 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.427501 s, Mean: 27.427501 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=128 policy=smolvla N=20 episodes 0..127 in 1 rounds
+[eval] place round 0: 0/128 success (kept slots), 76 s; 128 eps, 4190 eps/h
+EVAL_SUMMARY={"n": 128, "success": {"all": 0.0, "place": 0.0}, "latency": {"server_s_p50": 2.03501, "server_s_p95": 2.072109, "rtt_s_p50": 2.0412, "rtt_s_p95": 2.078264, "queries": 27}, "wall_s": 110.0, "episodes_per_gpu_h": 4190.317760172063, "slots_per_gpu_h": 4190.317760172063, "smart_length": null}
+NAN_GUARD_EVENTS=0
+=== step 8 done 1790878238.334056207
+=== step 9 start 1790878238.335669473 sim scripts/eval_policy.py --policy smolvla --ckpt lerobot/smolvla_base --dataset /data/datasets/0b6_s1 --split train --visual nominal --seed 21500 --envs 128 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --stage s3b --episodes 128 --out /runs/t6_bench/eval_s3b_b128.json
+[eval] server up after 21.0 s: {"policy": "smolvla", "n_action_steps": 20, "chunk_size": 50, "image_size": 128, "state_dim": 19, "action_dim": 5, "ckpt_sha": "7cd549ac2351fb069c0ddb3c34ad2d09cfc92b56a15dccdfc2e41467aaca01eb", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 128, 128], "observation.images.camera2": [3, 128, 128], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": true, "train_expert_only": true, "dtype": "float32", "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 21500
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.599069 s, Mean: 2.599069 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.359385 s, Mean: 0.359385 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068378 s, Mean: 0.068378 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007028 s, Mean: 0.037703 s, Std: 0.043381 s, N: 2
+Contact sensor construction took: Last: 0.005918 s, Mean: 0.027108 s, Std: 0.035745 s, N: 3
+Contact sensor construction took: Last: 0.004233 s, Mean: 0.021389 s, Std: 0.031347 s, N: 4
+Initialize solver took: Last: 6.819783 s, Mean: 6.819783 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.736188 s, Mean: 11.736188 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.305823 s, Mean: 27.305823 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=128 policy=smolvla N=20 episodes 0..127 in 1 rounds
+[eval] stack round 0: 0/128 success (kept slots), 76 s; 128 eps, 4209 eps/h
+EVAL_SUMMARY={"n": 128, "success": {"all": 0.0, "stack": 0.0}, "latency": {"server_s_p50": 2.01983, "server_s_p95": 2.046228, "rtt_s_p50": 2.02661, "rtt_s_p95": 2.0527130000000002, "queries": 27}, "wall_s": 109.5, "episodes_per_gpu_h": 4209.050831589665, "slots_per_gpu_h": 4209.050831589665, "smart_length": null}
+NAN_GUARD_EVENTS=0
+=== step 9 done 1790878381.354784439
+=== t6_bench done 2026-10-01T20:13:01+02:00

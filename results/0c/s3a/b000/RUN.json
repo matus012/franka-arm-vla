@@ -1,0 +1,17 @@
+{
+ "stage": "s3a",
+ "split": "train",
+ "seed": 31900,
+ "envs": 128,
+ "noise_sigma": 0.1,
+ "image_size": 128,
+ "visual": "nominal",
+ "mix": "1,1,1",
+ "start": 0,
+ "episodes": 1152,
+ "period": 3,
+ "latency": 1,
+ "n_action_steps": 20,
+ "part_bytes": 157286400,
+ "git_sha": "2c4ff93"
+}

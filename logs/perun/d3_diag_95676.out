@@ -1,0 +1,130 @@
+=== d3_diag on <node> NVIDIA H200 start 2026-10-01T19:49:33+02:00 repo f23e458
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 30:00 cpus 8
+CUDA OK NVIDIA H200
+=== step 1 start 1790876978.006814667 sim scripts/s0b3_overfit.py eval --ckpt /runs/0b3_train/checkpoints/005000/pretrained_model --demo /runs/0b3_prereq/replay.json --out /runs/0b3_diag/0b3_diag.json --frames-dir /runs/0b3_diag/frames --show 20 --dump /runs/0b3_diag/dump.npz --policy-python /opt/policy/bin/python
+[0b3] server up after 20.0 s: {"policy": "smolvla", "n_action_steps": 20, "chunk_size": 50, "image_size": 128, "state_dim": 19, "action_dim": 5, "ckpt_sha": "783bce08adf8ed745a43be73667e78c7d53b568fc668630c9c744bf876c6c922", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 128, 128], "observation.images.camera2": [3, 128, 128], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": true, "train_expert_only": true, "dtype": "float32", "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 31600
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.646170 s, Mean: 2.646170 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.352782 s, Mean: 0.352782 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.068137 s, Mean: 0.068137 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007149 s, Mean: 0.037643 s, Std: 0.043125 s, N: 2
+Contact sensor construction took: Last: 0.006080 s, Mean: 0.027122 s, Std: 0.035524 s, N: 3
+Contact sensor construction took: Last: 0.004391 s, Mean: 0.021439 s, Std: 0.031153 s, N: 4
+Initialize solver took: Last: 7.215142 s, Mean: 7.215142 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.129693 s, Mean: 11.129693 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.036189 s, Mean: 27.036189 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[0b3] eval: device=cuda:0 B=128 H=128 N=20 T=350
+S0B3={"mode": "eval", "n_scored": 100, "success": 37, "per_state_success": {"0": 6, "1": 6, "2": 8, "3": 0, "4": 5, "5": 2, "6": 5, "7": 2, "8": 0, "9": 3}, "n_slam": 2, "n_jam": 1, "n_early_close": 63, "pass": false, "wall_s": 85.0}
+NAN_GUARD_EVENTS=0
+=== step 1 done 1790877096.215205262
+=== step 2 start 1790877096.216325661 pol scripts/s0b3_prep.py compare --dataset /data/datasets/0b3_overfit --ckpt /runs/0b3_train/checkpoints/005000/pretrained_model --dump /runs/0b3_diag/dump.npz --out /runs/0b3_diag/compare.json
+[s0b3_prep] compare device=cuda
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[compare] slot 0 state 0 seed 0: close rt 136 demo 126, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.75454657590211, "psnr_wrist": 39.77004541279792, "chunk_vs_label_mae_std": 0.39353418350219727, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 1.9073486328125e-06, "demo_obs_chunk_vs_label_mae_std": 0.3950147032737732, "demo_obs_claw_agree": 1.0}
+[compare] slot 1 state 1 seed 0: close rt 145 demo 140, dev>0.5std at 2; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.68893586103317, "psnr_wrist": 40.10192829410292, "chunk_vs_label_mae_std": 0.5429736375808716, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 4.678964614868164e-06, "demo_obs_chunk_vs_label_mae_std": 0.5445729494094849, "demo_obs_claw_agree": 1.0}
+[compare] slot 2 state 2 seed 0: close rt 149 demo 134, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.508910920077625, "psnr_wrist": 39.5285814844497, "chunk_vs_label_mae_std": 0.48491722345352173, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 9.5367431640625e-07, "demo_obs_chunk_vs_label_mae_std": 0.5077856183052063, "demo_obs_claw_agree": 1.0}
+[compare] slot 3 state 3 seed 0: close rt 113 demo 112, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.82378510821066, "psnr_wrist": 40.35325427108633, "chunk_vs_label_mae_std": 0.870257556438446, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 1.1086463928222656e-05, "demo_obs_chunk_vs_label_mae_std": 0.8048874735832214, "demo_obs_claw_agree": 1.0}
+[compare] slot 4 state 4 seed 0: close rt 159 demo 137, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.73415292177465, "psnr_wrist": 39.900751303427356, "chunk_vs_label_mae_std": 0.3794092535972595, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 4.76837158203125e-07, "demo_obs_chunk_vs_label_mae_std": 0.38656896352767944, "demo_obs_claw_agree": 1.0}
+[compare] slot 5 state 5 seed 0: close rt 136 demo 122, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.457700626311315, "psnr_wrist": 38.24044934437602, "chunk_vs_label_mae_std": 0.5814100503921509, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 1.4185905456542969e-05, "demo_obs_chunk_vs_label_mae_std": 0.5828021168708801, "demo_obs_claw_agree": 1.0}
+[compare] slot 6 state 6 seed 0: close rt 119 demo 119, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.667807291632734, "psnr_wrist": 39.818735519197304, "chunk_vs_label_mae_std": 0.7031955122947693, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 3.4421682357788086e-06, "demo_obs_chunk_vs_label_mae_std": 0.5885859727859497, "demo_obs_claw_agree": 1.0}
+[compare] slot 7 state 7 seed 0: close rt 119 demo 114, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.73767730991268, "psnr_wrist": 39.62138471938484, "chunk_vs_label_mae_std": 0.7148622274398804, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 3.21120023727417e-06, "demo_obs_chunk_vs_label_mae_std": 0.6933696866035461, "demo_obs_claw_agree": 1.0}
+[compare] slot 8 state 8 seed 0: close rt 136 demo 107, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.51109963468684, "psnr_wrist": 39.5443602170491, "chunk_vs_label_mae_std": 2.3567614555358887, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 1.3113021850585938e-05, "demo_obs_chunk_vs_label_mae_std": 2.301948070526123, "demo_obs_claw_agree": 1.0}
+[compare] slot 9 state 9 seed 0: close rt 104 demo 103, dev>0.5std at 4; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.47667113017557, "psnr_wrist": 39.30253405330883, "chunk_vs_label_mae_std": 0.4380541741847992, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 4.131346940994263e-06, "demo_obs_chunk_vs_label_mae_std": 0.532684326171875, "demo_obs_claw_agree": 1.0}
+[compare] slot 10 state 0 seed 1: close rt 125 demo 126, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.75454657590211, "psnr_wrist": 39.445355063858955, "chunk_vs_label_mae_std": 0.34501445293426514, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 4.76837158203125e-07, "demo_obs_chunk_vs_label_mae_std": 0.34458819031715393, "demo_obs_claw_agree": 1.0}
+[compare] slot 11 state 1 seed 1: close rt 165 demo 140, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.68893586103317, "psnr_wrist": 39.646464186633416, "chunk_vs_label_mae_std": 1.122807502746582, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 6.794929504394531e-06, "demo_obs_chunk_vs_label_mae_std": 1.1330405473709106, "demo_obs_claw_agree": 1.0}
+[compare] slot 12 state 2 seed 1: close rt 147 demo 134, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.47985850737808, "psnr_wrist": 39.88109978597418, "chunk_vs_label_mae_std": 0.4483200013637543, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 4.76837158203125e-07, "demo_obs_chunk_vs_label_mae_std": 0.4661238193511963, "demo_obs_claw_agree": 1.0}
+[compare] slot 13 state 3 seed 1: close rt 107 demo 112, dev>0.5std at 2; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.792555922586395, "psnr_wrist": 40.08360460096088, "chunk_vs_label_mae_std": 0.617286205291748, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 1.4901161193847656e-06, "demo_obs_chunk_vs_label_mae_std": 0.5796834826469421, "demo_obs_claw_agree": 1.0}
+[compare] slot 14 state 4 seed 1: close rt 133 demo 137, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.73415292177465, "psnr_wrist": 39.46631003264483, "chunk_vs_label_mae_std": 0.48878517746925354, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 8.940696716308594e-07, "demo_obs_chunk_vs_label_mae_std": 0.48606663942337036, "demo_obs_claw_agree": 1.0}
+[compare] slot 15 state 5 seed 1: close rt 133 demo 122, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.457700626311315, "psnr_wrist": 39.33085077869314, "chunk_vs_label_mae_std": 0.6192036867141724, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 1.1324882507324219e-06, "demo_obs_chunk_vs_label_mae_std": 0.6319020986557007, "demo_obs_claw_agree": 1.0}
+[compare] slot 16 state 6 seed 1: close rt 116 demo 119, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.667807291632734, "psnr_wrist": 39.87977786151855, "chunk_vs_label_mae_std": 0.45235776901245117, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 2.682209014892578e-06, "demo_obs_chunk_vs_label_mae_std": 0.44721466302871704, "demo_obs_claw_agree": 1.0}
+[compare] slot 17 state 7 seed 1: close rt 109 demo 114, dev>0.5std at 4; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.73767730991268, "psnr_wrist": 39.94217311069397, "chunk_vs_label_mae_std": 0.3129957616329193, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 7.748603820800781e-07, "demo_obs_chunk_vs_label_mae_std": 0.2991165518760681, "demo_obs_claw_agree": 1.0}
+[compare] slot 18 state 8 seed 1: close rt 133 demo 107, dev>0.5std at 2; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.256327174457006, "psnr_wrist": 39.176440106032956, "chunk_vs_label_mae_std": 1.1627895832061768, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 2.2530555725097656e-05, "demo_obs_chunk_vs_label_mae_std": 1.038130283355713, "demo_obs_claw_agree": 1.0}
+[compare] slot 19 state 9 seed 1: close rt 107 demo 103, dev>0.5std at 1; q0 {"t": 0, "state_dev_std_max": 0.0, "psnr_side": 38.47667113017557, "psnr_wrist": 39.70595448827174, "chunk_vs_label_mae_std": 0.805763840675354, "chunk_claw_agree": 1.0, "reserve_b1_eq_closed_loop_maxdiff": 1.430511474609375e-06, "demo_obs_chunk_vs_label_mae_std": 0.8610742688179016, "demo_obs_claw_agree": 1.0}
+=== step 2 done 1790877223.971144327
+=== d3_diag done 2026-10-01T19:53:43+02:00

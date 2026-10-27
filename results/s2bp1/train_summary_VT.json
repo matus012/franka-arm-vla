@@ -1,0 +1,247 @@
+{
+  "git_sha": "9fd1542",
+  "argv": {
+    "dataset": "/data/datasets/0c_s2_pair_rl224_y15",
+    "root": "None",
+    "out": "/runs/s2bp1_VT",
+    "init": "/runs/s2m_VT/checkpoints/068880/pretrained_model",
+    "freeze_vision_encoder": false,
+    "train_expert_only": false,
+    "refreeze_non_vision_vlm": false,
+    "trainable_fp32": true,
+    "n_action_steps": 10,
+    "epochs": 6,
+    "max_steps": 34440,
+    "row_sampling": "window",
+    "batch_size": 64,
+    "lr": 5e-05,
+    "seed": 0,
+    "save_every_steps": 8610,
+    "resume": false,
+    "video_backend": "torchcodec",
+    "workers": 6,
+    "distributed": "nccl",
+    "ddp_grad_weight": "valid",
+    "device": "cuda:0",
+    "action_override": null,
+    "cosine_to_total": true,
+    "contrastive_lambda": 1.0,
+    "contrastive_margin": 4.298872198843075,
+    "contrastive_share_vision": true,
+    "cross_lambda": null,
+    "cross_frame0_extra": 0,
+    "overfit_abort": false
+  },
+  "init": "/runs/s2m_VT/checkpoints/068880/pretrained_model",
+  "init_sha256": "e4741cf66cbbb57686df5a2ae7948e46a3a35ac65bc8c79bb48a598a32ca0f64",
+  "resumed_from_step": null,
+  "final_step": 34440,
+  "total_steps": 34440,
+  "samples_seen_this_run": 2204096,
+  "samples_per_epoch": 441264,
+  "steps_per_epoch": 6895,
+  "epochs_done": 4.99492385786802,
+  "dataset": "/data/datasets/0c_s2_pair_rl224_y15",
+  "episodes": 4000,
+  "rows": 1400000,
+  "n_train_episodes": 3804,
+  "n_val_episodes": 196,
+  "train_rows": 1331400,
+  "fps": 50,
+  "image_shape": [
+    224,
+    224,
+    3
+  ],
+  "wall_s": 8202.973807811737,
+  "loop_s": 8026.533394098282,
+  "steady_state": {
+    "warmup_steps_excluded": 50,
+    "samples": 2200896,
+    "s": 7976.5885094907135,
+    "gpu_s_per_sample": 0.014496983972874163,
+    "data_wait_frac": 0.0009254894856039097
+  },
+  "peak_mem_allocated_gib": 24.314719200134277,
+  "peak_mem_reserved_gib": 26.16015625,
+  "device": "cuda:0",
+  "gpu": "NVIDIA H200",
+  "dtype": "bf16 autocast",
+  "flags": {
+    "freeze_vision_encoder": false,
+    "train_expert_only": false,
+    "train_state_proj": true,
+    "chunk_size": 50,
+    "n_action_steps": 10,
+    "tokenizer_max_length": 48,
+    "normalization_mapping": {
+      "VISUAL": "IDENTITY",
+      "STATE": "MEAN_STD",
+      "ACTION": "MEAN_STD"
+    },
+    "rename_map": {
+      "observation.images.side": "observation.images.camera1",
+      "observation.images.wrist": "observation.images.camera2"
+    },
+    "row_sampling": "window",
+    "refreeze_non_vision_vlm": false,
+    "trainable_fp32": true
+  },
+  "deviations_from_lerobot_default": [
+    "bf16 autocast (lerobot-train: fp32 for SmolVLA)",
+    "trainable params cast to fp32 master weights (LeRobot trains bf16 weights directly)",
+    "task 005 instruction-contrastive hinge added to the flow loss (steps.jsonl `loss` = the flow loss L_true)"
+  ],
+  "params": {
+    "params_total": 450046176,
+    "params_trainable": 392904096,
+    "vision_params_trainable": 86433024,
+    "by_dtype": {
+      "trainable_float32": 392904096,
+      "frozen_bfloat16": 57142080
+    }
+  },
+  "trainable_parts": {
+    "vision": 86433024,
+    "text_model": 194793600,
+    "connector": 11796480,
+    "expert": 98245840,
+    "other": 1635152,
+    "frozen_names_prefixes": {
+      "model.vlm_with_expert.vlm.model.text_model.layers.15": 9832320,
+      "model.vlm_with_expert.vlm.model.text_model.norm": 960,
+      "model.vlm_with_expert.vlm.lm_head": 47308800
+    }
+  },
+  "optimizer": {
+    "lr": 5e-05,
+    "weight_decay": 1e-10,
+    "grad_clip_norm": 10.0,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08
+  },
+  "scheduler": {
+    "num_warmup_steps": 1148,
+    "num_decay_steps": 34440,
+    "peak_lr": 5e-05,
+    "decay_lr": 2.5e-06
+  },
+  "norm_stats": {
+    "observation.state": {
+      "mean": [
+        -0.0005486033041961491,
+        0.7974702715873718,
+        0.0021878534462302923,
+        0.5684783458709717,
+        -0.0003986178489867598,
+        -0.5490384101867676,
+        0.047014880925416946,
+        -0.008596519008278847,
+        -0.008610023185610771,
+        0.0005058144452050328,
+        0.1094450056552887,
+        -8.696616714587435e-05,
+        0.08354518562555313,
+        0.0017364274244755507,
+        -0.08189179003238678,
+        0.005598345305770636,
+        -0.001190030132420361,
+        -0.0011814296012744308,
+        0.06279345601797104
+      ],
+      "std": [
+        0.23253801465034485,
+        0.34223613142967224,
+        0.1497008204460144,
+        0.4111517667770386,
+        0.07741948217153549,
+        0.20785152912139893,
+        0.424575537443161,
+        0.009115343913435936,
+        0.009123607538640499,
+        0.1953130066394806,
+        0.41417196393013,
+        0.20196734368801117,
+        0.41156038641929626,
+        0.12173156440258026,
+        0.6754332780838013,
+        0.39749884605407715,
+        0.04051551595330238,
+        0.04037277400493622,
+        0.013181985355913639
+      ]
+    },
+    "action": {
+      "mean": [
+        0.012510658241808414,
+        0.0013100741198286414,
+        -0.07942277193069458,
+        -0.003548878012225032,
+        0.6679765582084656
+      ],
+      "std": [
+        0.15854598581790924,
+        0.23217731714248657,
+        0.29739055037498474,
+        0.08329837024211884,
+        0.4709393382072449
+      ]
+    }
+  },
+  "norm_report": {
+    "observation.state": {
+      "near_constant_dims": [],
+      "std_floor": 1e-06,
+      "stats_rows": 1331400
+    },
+    "action": {
+      "near_constant_dims": [],
+      "std_floor": 1e-06,
+      "stats_rows": 1331400
+    }
+  },
+  "stats_rows": 1331400,
+  "stats_split": "train",
+  "loss_first": [
+    0.022950556594878435
+  ],
+  "loss_last50_mean": 0.011155885695188772,
+  "overfit_abort_check": null,
+  "final_ckpt": "/runs/s2bp1_VT/checkpoints/034440/pretrained_model",
+  "torch": "2.10.0+cu130",
+  "lerobot": "0.6.1",
+  "contrastive": {
+    "lambda": 1.0,
+    "margin": 4.298872198843075,
+    "share_vision": true,
+    "layouts": 1376,
+    "last50_mean": {
+      "hinge": 0.0024161984771490096,
+      "gap": 44.88839200973511,
+      "hinge_active": 0.0009375,
+      "l_other": 44.898694801330564,
+      "loss_total": 0.013572084172337781
+    },
+    "first50_mean": {
+      "hinge": 0.8903682002425194,
+      "gap": 19.74025249481201,
+      "hinge_active": 0.2078125,
+      "l_other": 19.761378402709962,
+      "loss_total": 0.9131842747508199
+    }
+  },
+  "world_size": 4,
+  "per_rank_batch": 16,
+  "backend": "nccl",
+  "rank_seeds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "global_batch": 64,
+  "ddp_grad_weight": "valid"
+}

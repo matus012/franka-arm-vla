@@ -1,0 +1,5 @@
+# GATES 3A / 3B re-plan (86640ee), s3b instrument: a1post (ii)-(iv) + run_key ((iii) sampler = f(seed 0, epoch), epochs 1-4 over the union) + seed-1 mutant (must fail); mix instrument (347,700 + 220,400 windows per epoch, no val row) + first-dataset-only mutant (must fail)
+python scripts/s1_tools.py a1post --u-run /runs/s3b_U --dataset /data/datasets/0c_s3b_s2_rl224_y15 --sampler-epochs 4 --check-steps 1 17754 35508 --out /runs/s3b_post/arms_post.json --device cpu
+-python scripts/s1_tools.py a1post --u-run /runs/s3b_U --dataset /data/datasets/0c_s3b_s2_rl224_y15 --sampler-epochs 4 --sampler-seed 1 --check-steps 1 --out /runs/s3b_post/iii_mutant_seed1.json --device cpu
+python scripts/s1_tools.py mix --dataset /data/datasets/0c_s3b_s2_rl224_y15 --u-run /runs/s3b_U --epochs 4 --out /runs/s3b_post/s3b_mix.json
+-python scripts/s1_tools.py mix --dataset /data/datasets/0c_s3b_s2_rl224_y15 --u-run /runs/s3b_U --epochs 4 --mutant first-dataset-only --out /runs/s3b_post/s3b_mix_mutant.json

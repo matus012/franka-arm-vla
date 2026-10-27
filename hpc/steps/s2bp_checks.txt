@@ -1,0 +1,11 @@
+# GATES 2b amended (task 006) data gate on 0c_s2_pair_rl224_y15 (cpu_short via hpc/cpu_steps.py): items 1 / 4(a) / 5 + yaw (--kept 4000), item P (s2 targets), 4(b)/(c) + mutants, 2 audit, instrument (i), norm table vs the 2M picked init (PICK2M), margin by the 005 rule
+python scripts/s0c_rl_check.py --fresh --rerender 224 --expect-yaw 15 --kept 4000 --dataset /data/datasets/0c_s2_pair_rl224_y15 --out /runs/ks2bp
+python scripts/paired_check.py --dataset /data/datasets/0c_s2_pair_rl224_y15 --out /runs/ks2bp
+python scripts/s1_relabel.py dscheck --dataset /data/datasets/0c_s2_pair_rl224_y15 --expect-original /data/datasets/0c_s2_pair_224a_y15 --out /runs/ks2bp/dscheck.json
+-python scripts/s1_relabel.py dscheck --mutant shift --dataset /data/datasets/0c_s2_pair_rl224_y15 --out /runs/ks2bp/mutant_shift.json
+-python scripts/s1_relabel.py dscheck --mutant claw --dataset /data/datasets/0c_s2_pair_rl224_y15 --out /runs/ks2bp/mutant_claw.json
+-python scripts/s1_relabel.py dscheck --mutant claw_offset --dataset /data/datasets/0c_s2_pair_rl224_y15 --out /runs/ks2bp/mutant_claw_offset.json
+python tests/test_data_audit.py --root /data/datasets/0c_s2_pair_rl224_y15
+python scripts/s1_tools.py arms --dataset /data/datasets/0c_s2_pair_rl224_y15 --out /runs/ks2bp/arms_build.json --device cpu
+-python scripts/s2_norm.py --dataset /data/datasets/0c_s2_pair_rl224_y15 --init /runs/s2m_VT/checkpoints/068880/pretrained_model --out /runs/ks2bp/s2bp_norm.json
+python scripts/s2r_tools.py margin --dataset /data/datasets/0c_s2_pair_rl224_y15 --out /runs/ks2bp/margin.json

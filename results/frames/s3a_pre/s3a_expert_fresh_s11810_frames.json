@@ -1,0 +1,46 @@
+{
+ "source": "/runs/s3a_pre/s3a_expert_fresh_s11810.json",
+ "chosen": [
+  0,
+  1,
+  2
+ ],
+ "rounds": 1,
+ "wall_s": 59.2,
+ "git_sha": "00c3065",
+ "frames": [
+  {
+   "index": 0,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s3a_pre/frames/s3a_expert_fresh_s11810/s3a_expert_fresh_s11810_ep0_place_success.png"
+  },
+  {
+   "index": 1,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s3a_pre/frames/s3a_expert_fresh_s11810/s3a_expert_fresh_s11810_ep1_place_success.png"
+  },
+  {
+   "index": 2,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/s3a_pre/frames/s3a_expert_fresh_s11810/s3a_expert_fresh_s11810_ep2_place_success.png"
+  }
+ ]
+}

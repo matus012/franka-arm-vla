@@ -1,0 +1,3 @@
+# GATES 2b sizes round 2 (task 008) instruments IT / I4 on /runs/s2bp2_VT vs the 2M picked init (PICK2M); seed-1 mutant must differ
+python scripts/s1_tools.py a1post --u-run /runs/s2bp2_VT --dataset /data/datasets/0c_s2_pair12k_rl224_y15 --sampler-epochs 4 --check-steps 1 34440 68880 --expect-trainable vision+text --ref-init /runs/s2bp1_VT/checkpoints/034440/pretrained_model --out /runs/s2bp2_post/arms_post.json --device cpu
+-python scripts/s1_tools.py a1post --u-run /runs/s2bp2_VT --dataset /data/datasets/0c_s2_pair12k_rl224_y15 --sampler-epochs 4 --sampler-seed 1 --check-steps 1 --expect-trainable vision+text --ref-init /runs/s2bp1_VT/checkpoints/034440/pretrained_model --out /runs/s2bp2_post/iii_mutant_seed1.json --device cpu

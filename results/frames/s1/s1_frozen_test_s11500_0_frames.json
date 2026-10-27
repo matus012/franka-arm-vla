@@ -1,0 +1,131 @@
+{
+ "source": "/runs/e1_frozen_test/s1_frozen_test_s11500_0.json",
+ "chosen": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  6,
+  60,
+  348,
+  925
+ ],
+ "rounds": 3,
+ "wall_s": 189.6,
+ "git_sha": "7990945",
+ "frames": [
+  {
+   "index": 0,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1_frozen_test/frames/s1_frozen_test_s11500_0/s1_frozen_test_s11500_0_ep0_pick_success.png"
+  },
+  {
+   "index": 1,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1_frozen_test/frames/s1_frozen_test_s11500_0/s1_frozen_test_s11500_0_ep1_pick_success.png"
+  },
+  {
+   "index": 2,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1_frozen_test/frames/s1_frozen_test_s11500_0/s1_frozen_test_s11500_0_ep2_pick_early_close.png",
+   "video": "/runs/e1_frozen_test/frames/s1_frozen_test_s11500_0/s1_frozen_test_s11500_0_ep2.mp4"
+  },
+  {
+   "index": 3,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e1_frozen_test/frames/s1_frozen_test_s11500_0/s1_frozen_test_s11500_0_ep3_pick_drop_early_close.png",
+   "video": "/runs/e1_frozen_test/frames/s1_frozen_test_s11500_0/s1_frozen_test_s11500_0_ep3.mp4"
+  },
+  {
+   "index": 4,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1_frozen_test/frames/s1_frozen_test_s11500_0/s1_frozen_test_s11500_0_ep4_pick_early_close.png",
+   "video": "/runs/e1_frozen_test/frames/s1_frozen_test_s11500_0/s1_frozen_test_s11500_0_ep4.mp4"
+  },
+  {
+   "index": 6,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1_frozen_test/frames/s1_frozen_test_s11500_0/s1_frozen_test_s11500_0_ep6_pick_success.png"
+  },
+  {
+   "index": 60,
+   "types_recorded": [
+    "slam",
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e1_frozen_test/frames/s1_frozen_test_s11500_0/s1_frozen_test_s11500_0_ep60_pick_slam_drop_early_close.png"
+  },
+  {
+   "index": 348,
+   "types_recorded": [
+    "jam",
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "jam",
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/e1_frozen_test/frames/s1_frozen_test_s11500_0/s1_frozen_test_s11500_0_ep348_pick_jam_drop_early_close.png"
+  },
+  {
+   "index": 925,
+   "types_recorded": [
+    "fail_other"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/e1_frozen_test/frames/s1_frozen_test_s11500_0/s1_frozen_test_s11500_0_ep925_pick_fail_other.png"
+  }
+ ]
+}

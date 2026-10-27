@@ -1,0 +1,28 @@
+{
+ "rule": "material if median TCP path difference before the close > 1 cm or median |close-entry step change| > 5",
+ "git_sha": "9e0d0affaceaab29dcfb0e31ddf7c1aba52f1c56",
+ "tasks": {
+  "pick_s21200": {
+   "n": 100,
+   "path_diff_median_m": 4.263248598590508e-07,
+   "path_diff_max_m": 9.98766608972801e-07,
+   "close_entry_change_median_steps": 0.0,
+   "close_entry_change_max_steps": 0.0
+  },
+  "place_s21210": {
+   "n": 100,
+   "path_diff_median_m": 4.5607622212173737e-07,
+   "path_diff_max_m": 1.5161484725467744e-06,
+   "close_entry_change_median_steps": 0.0,
+   "close_entry_change_max_steps": 0.0
+  },
+  "stack_s21220": {
+   "n": 100,
+   "path_diff_median_m": 4.444080445864529e-07,
+   "path_diff_max_m": 7.063395059958566e-07,
+   "close_entry_change_median_steps": 0.0,
+   "close_entry_change_max_steps": 0.0
+  }
+ },
+ "material": false
+}

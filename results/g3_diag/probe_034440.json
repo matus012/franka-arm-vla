@@ -1,0 +1,234 @@
+{
+ "feats": "results\\g3_diag\\c034440_feats.npz",
+ "ckpt_sha": "07e87cc6f5b2533ab4b931e356e7cf944e6b53d49bbf2cc0109ab416290cb3ff",
+ "n": 2000,
+ "class_counts": [
+  661,
+  359,
+  686,
+  294
+ ],
+ "majority_rate": 0.343,
+ "n_groups": 1404,
+ "table": [
+  {
+   "feature": "lang",
+   "layer": 4,
+   "true": 1.0,
+   "true_p": 1.0,
+   "true_u": 1.0,
+   "shuffled": 0.3825,
+   "shuffled_p": 0.37662337662337664,
+   "shuffled_u": 0.3883883883883884,
+   "gap": 0.6174999999999999,
+   "reading": "decodable"
+  },
+  {
+   "feature": "lang",
+   "layer": 8,
+   "true": 1.0,
+   "true_p": 1.0,
+   "true_u": 1.0,
+   "shuffled": 0.3985,
+   "shuffled_p": 0.40559440559440557,
+   "shuffled_u": 0.3913913913913914,
+   "gap": 0.6014999999999999,
+   "reading": "decodable"
+  },
+  {
+   "feature": "lang",
+   "layer": 12,
+   "true": 1.0,
+   "true_p": 1.0,
+   "true_u": 1.0,
+   "shuffled": 0.4045,
+   "shuffled_p": 0.4065934065934066,
+   "shuffled_u": 0.4024024024024024,
+   "gap": 0.5954999999999999,
+   "reading": "decodable"
+  },
+  {
+   "feature": "lang",
+   "layer": 16,
+   "true": 1.0,
+   "true_p": 1.0,
+   "true_u": 1.0,
+   "shuffled": 0.41,
+   "shuffled_p": 0.4085914085914086,
+   "shuffled_u": 0.4114114114114114,
+   "gap": 0.5900000000000001,
+   "reading": "decodable"
+  },
+  {
+   "feature": "img",
+   "layer": 4,
+   "true": 0.4795,
+   "true_p": 0.45054945054945056,
+   "true_u": 0.5085085085085085,
+   "shuffled": 0.4235,
+   "shuffled_p": 0.3856143856143856,
+   "shuffled_u": 0.46146146146146144,
+   "gap": 0.055999999999999994,
+   "reading": "not decodable"
+  },
+  {
+   "feature": "img",
+   "layer": 8,
+   "true": 0.683,
+   "true_p": 0.6683316683316683,
+   "true_u": 0.6976976976976977,
+   "shuffled": 0.4335,
+   "shuffled_p": 0.3966033966033966,
+   "shuffled_u": 0.47047047047047047,
+   "gap": 0.24950000000000006,
+   "reading": "partial"
+  },
+  {
+   "feature": "img",
+   "layer": 12,
+   "true": 0.8455,
+   "true_p": 0.8451548451548452,
+   "true_u": 0.8458458458458459,
+   "shuffled": 0.4295,
+   "shuffled_p": 0.3936063936063936,
+   "shuffled_u": 0.46546546546546547,
+   "gap": 0.41600000000000004,
+   "reading": "partial"
+  },
+  {
+   "feature": "img",
+   "layer": 16,
+   "true": 0.9215,
+   "true_p": 0.9280719280719281,
+   "true_u": 0.914914914914915,
+   "shuffled": 0.427,
+   "shuffled_p": 0.3906093906093906,
+   "shuffled_u": 0.46346346346346345,
+   "gap": 0.4945,
+   "reading": "decodable"
+  },
+  {
+   "feature": "kv",
+   "layer": 4,
+   "true": 0.9995,
+   "true_p": 1.0,
+   "true_u": 0.998998998998999,
+   "shuffled": 0.427,
+   "shuffled_p": 0.4065934065934066,
+   "shuffled_u": 0.44744744744744747,
+   "gap": 0.5725,
+   "reading": "decodable"
+  },
+  {
+   "feature": "kv",
+   "layer": 8,
+   "true": 0.9995,
+   "true_p": 1.0,
+   "true_u": 0.998998998998999,
+   "shuffled": 0.426,
+   "shuffled_p": 0.4025974025974026,
+   "shuffled_u": 0.4494494494494494,
+   "gap": 0.5735000000000001,
+   "reading": "decodable"
+  },
+  {
+   "feature": "kv",
+   "layer": 12,
+   "true": 0.9995,
+   "true_p": 1.0,
+   "true_u": 0.998998998998999,
+   "shuffled": 0.4175,
+   "shuffled_p": 0.3966033966033966,
+   "shuffled_u": 0.43843843843843844,
+   "gap": 0.5820000000000001,
+   "reading": "decodable"
+  },
+  {
+   "feature": "kv",
+   "layer": 16,
+   "true": 1.0,
+   "true_p": 1.0,
+   "true_u": 1.0,
+   "shuffled": 0.423,
+   "shuffled_p": 0.4065934065934066,
+   "shuffled_u": 0.4394394394394394,
+   "gap": 0.577,
+   "reading": "decodable"
+  },
+  {
+   "feature": "kv_img",
+   "layer": 4,
+   "true": 0.422,
+   "true_p": 0.3986013986013986,
+   "true_u": 0.44544544544544545,
+   "shuffled": 0.416,
+   "shuffled_p": 0.3916083916083916,
+   "shuffled_u": 0.44044044044044045,
+   "gap": 0.006000000000000005,
+   "reading": "not decodable"
+  },
+  {
+   "feature": "kv_img",
+   "layer": 8,
+   "true": 0.4815,
+   "true_p": 0.4805194805194805,
+   "true_u": 0.4824824824824825,
+   "shuffled": 0.404,
+   "shuffled_p": 0.38961038961038963,
+   "shuffled_u": 0.4184184184184184,
+   "gap": 0.07749999999999996,
+   "reading": "not decodable"
+  },
+  {
+   "feature": "kv_img",
+   "layer": 12,
+   "true": 0.6095,
+   "true_p": 0.5964035964035964,
+   "true_u": 0.6226226226226226,
+   "shuffled": 0.4075,
+   "shuffled_p": 0.3946053946053946,
+   "shuffled_u": 0.42042042042042044,
+   "gap": 0.20200000000000007,
+   "reading": "partial"
+  },
+  {
+   "feature": "kv_img",
+   "layer": 16,
+   "true": 0.7545,
+   "true_p": 0.7632367632367633,
+   "true_u": 0.7457457457457457,
+   "shuffled": 0.4215,
+   "shuffled_p": 0.3936063936063936,
+   "shuffled_u": 0.4494494494494494,
+   "gap": 0.33299999999999996,
+   "reading": "partial"
+  }
+ ],
+ "family": {
+  "lang": "decodable",
+  "img": "decodable",
+  "kv": "decodable",
+  "kv_img": "partial"
+ },
+ "divergence": {
+  "full_chunk": {
+   "n_layouts": 100,
+   "instruction_effect": 2.76423714697361,
+   "noise_effect": 26.890628881454468,
+   "ratio": 0.10279555599683309,
+   "per_layout_ratio_median": 0.07047210813932678,
+   "ignores_language": true
+  },
+  "first_10": {
+   "n_layouts": 100,
+   "instruction_effect": 1.382777721658349,
+   "noise_effect": 16.457488180994986,
+   "ratio": 0.08402118880177431,
+   "per_layout_ratio_median": 0.0505730895233365,
+   "ignores_language": true
+  }
+ },
+ "verdict": "R3 data/loss",
+ "verdict_first_code_3d1f570": "R3 data/loss",
+ "verdict_rule": "GATES 003 clarification a249552 (any partial lang / kv -> mixed)"
+}

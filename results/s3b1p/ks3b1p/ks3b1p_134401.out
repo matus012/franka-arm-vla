@@ -1,0 +1,132 @@
+=== ks3b1p on <node> cpu x16 start 2026-10-27T04:16:10+01:00
+=== step start 1793070971.2 /opt/policy/bin/python scripts/s0c_rl_check.py --fresh --rerender 224 --expect-yaw 15 --kept 4000 --dataset /data/datasets/0c_s3b1_pair_rl224_y15 --out /runs/ks3b1p
+RLCHECK={"name": "0c_s3b1_pair_rl224_y15", "items": {"1_count_eq_K": true, "1_rows_eq_K_T": true, "1_rows_per_episode_eq_T": true, "1_columns_exact_action_eq_r": true, "1_image_size": true, "1_psnr_min_ge_35": true, "1_frame_identity": true, "1_kept_are_first_K_successful_in_order": true, "1_split_rule": true, "1_cube_yaw_max_deg_eq_expected": true, "yaw_spawn_attrs_present": true, "yaw_spawn_fold_in_range": true, "yaw_regenerated_layout_fold_in_range": true, "yaw_spawn_agrees_with_regenerated_layout": true, "yaw_coverage": true, "4a_noise_std_in_band": true, "4a_claw_identical": true}, "yaw": {"expected_m": 15.0, "n": 4000, "spawn_fold": {"min": -14.98068618774414, "max": 14.996627807617188, "mean": 0.03169571352005005, "std": 8.673165835167376}, "regenerated_fold": {"min": -14.98068657935422, "max": 14.99662881209057, "mean": 0.03169570253978709, "std": 8.673165819067252}}, "noise_std": [0.09993389993906021, 0.09993291646242142, 0.10007734596729279, 0.09992470592260361], "psnr": [38.81530986124555, 42.84749599447838]}
+=== step done 1793071649.8 rc 0
+=== step start 1793071649.8 /opt/policy/bin/python scripts/s1_relabel.py dscheck --dataset /data/datasets/0c_s3b1_pair_rl224_y15 --expect-original /data/datasets/0c_s3b1_pair_224a_y15 --out /runs/ks3b1p/dscheck.json
+/data/datasets/0c_s3b1_pair_rl224_y15 {"episodes": 4000, "rows": 2200000, "label": "relabel_setpoint", "relabel_fn": "relabel", "rows_ne_relabel": 0, "rows_ne_original": 2196000, "claw_rows_ne_stored": 0, "episodes_first_row_ne_clean": 0, "identity_ok": true, "slope_ok_4c": true, "pass_4b_4c": true, "clip": {"rows": 2196000, "frac_rows_clip_binds_r": 0.002132969034608379, "frac_rows_clip_binds_a": 0.052932604735883425, "per_dim_r": [0.00030100182149362477, 0.0004904371584699453, 0.0007586520947176685, 0.0007222222222222222], "per_dim_a": [0.006782331511839709, 0.02900455373406193, 0.04202413479052823, 0.008013661202185792]}, "relabel": {"slope_diff_on_prev_noise": [0.008468332630857825, 0.01394175157869398, 0.01865532141374802, 0.009232339160875808], "std_label_diff": [0.019824133888701856, 0.031811544660403104, 0.04176782883894441, 0.0597574963790038]}}
+/data/datasets/0c_s3b1_pair_224a_y15 {"episodes": 4000, "rows": 2200000, "label": "action", "relabel_fn": "relabel", "rows_ne_relabel": 2196000, "rows_ne_original": 0, "claw_rows_ne_stored": 0, "episodes_first_row_ne_clean": 0, "identity_ok": false, "slope_ok_4c": true, "pass_4b_4c": false, "clip": {"rows": 2196000, "frac_rows_clip_binds_r": 0.002132969034608379, "frac_rows_clip_binds_a": 0.052932604735883425, "per_dim_r": [0.00030100182149362477, 0.0004904371584699453, 0.0007586520947176685, 0.0007222222222222222], "per_dim_a": [0.006782331511839709, 0.02900455373406193, 0.04202413479052823, 0.008013661202185792]}, "relabel": {"slope_diff_on_prev_noise": [0.008468332630857825, 0.01394175157869398, 0.01865532141374802, 0.009232339160875808], "std_label_diff": [0.019824133888701856, 0.031811544660403104, 0.04176782883894441, 0.0597574963790038]}}
+DSCHECK_PASS
+=== step done 1793071685.3 rc 0
+=== step start 1793071685.3 /opt/policy/bin/python scripts/s1_relabel.py dscheck --mutant shift --dataset /data/datasets/0c_s3b1_pair_rl224_y15 --out /runs/ks3b1p/mutant_shift.json
+/data/datasets/0c_s3b1_pair_rl224_y15 {"episodes": 4000, "rows": 2200000, "label": "relabel_setpoint", "relabel_fn": "relabel_shift", "rows_ne_relabel": 0, "rows_ne_original": 2196000, "claw_rows_ne_stored": 0, "episodes_first_row_ne_clean": 0, "identity_ok": true, "slope_ok_4c": false, "pass_4b_4c": false, "mutant_rows_changed_vs_true_relabel": 2196000, "clip": {"rows": 2196000, "frac_rows_clip_binds_r": 0.002132969034608379, "frac_rows_clip_binds_a": 0.052932604735883425, "per_dim_r": [0.00030100182149362477, 0.0004904371584699453, 0.0007586520947176685, 0.0007222222222222222], "per_dim_a": [0.006782331511839709, 0.02900455373406193, 0.04202413479052823, 0.008013661202185792]}, "relabel": {"slope_diff_on_prev_noise": [-1.986017523889026, -1.9754552012490472, -1.9639181685096563, -1.9827590688519148], "std_label_diff": [0.2435860069713762, 0.24273175544429743, 0.24288830380604057, 0.2503247039113469]}}
+DSCHECK_PASS
+=== step done 1793071702.3 rc 0
+=== step start 1793071702.3 /opt/policy/bin/python scripts/s1_relabel.py dscheck --mutant claw --dataset /data/datasets/0c_s3b1_pair_rl224_y15 --out /runs/ks3b1p/mutant_claw.json
+/data/datasets/0c_s3b1_pair_rl224_y15 {"episodes": 4000, "rows": 2200000, "label": "relabel_setpoint", "relabel_fn": "relabel_claw", "rows_ne_relabel": 0, "rows_ne_original": 2196000, "claw_rows_ne_stored": 0, "episodes_first_row_ne_clean": 0, "identity_ok": true, "slope_ok_4c": true, "pass_4b_4c": true, "mutant_rows_changed_vs_true_relabel": 0, "clip": {"rows": 2196000, "frac_rows_clip_binds_r": 0.002132969034608379, "frac_rows_clip_binds_a": 0.052932604735883425, "per_dim_r": [0.00030100182149362477, 0.0004904371584699453, 0.0007586520947176685, 0.0007222222222222222], "per_dim_a": [0.006782331511839709, 0.02900455373406193, 0.04202413479052823, 0.008013661202185792]}, "relabel": {"slope_diff_on_prev_noise": [0.008468332630857825, 0.01394175157869398, 0.01865532141374802, 0.009232339160875808], "std_label_diff": [0.019824133888701856, 0.031811544660403104, 0.04176782883894441, 0.0597574963790038]}}
+DSCHECK_FAIL
+=== step done 1793071718.4 rc 1
+=== step start 1793071718.4 /opt/policy/bin/python scripts/s1_relabel.py dscheck --mutant claw_offset --dataset /data/datasets/0c_s3b1_pair_rl224_y15 --out /runs/ks3b1p/mutant_claw_offset.json
+/data/datasets/0c_s3b1_pair_rl224_y15 {"episodes": 4000, "rows": 2200000, "label": "relabel_setpoint", "relabel_fn": "relabel_claw_offset", "rows_ne_relabel": 0, "rows_ne_original": 2196000, "claw_rows_ne_stored": 1825342, "episodes_first_row_ne_clean": 0, "identity_ok": false, "slope_ok_4c": false, "pass_4b_4c": false, "mutant_rows_changed_vs_true_relabel": 2196000, "clip": {"rows": 2196000, "frac_rows_clip_binds_r": 0.002132969034608379, "frac_rows_clip_binds_a": 0.052932604735883425, "per_dim_r": [0.00030100182149362477, 0.0004904371584699453, 0.0007586520947176685, 0.0007222222222222222], "per_dim_a": [0.006782331511839709, 0.02900455373406193, 0.04202413479052823, 0.008013661202185792]}, "relabel": {"slope_diff_on_prev_noise": [-0.9896550287548735, -0.9824814731409307, -0.9737637909995298, -0.9862756235472128], "std_label_diff": [0.1409801801905743, 0.19894628747199936, 0.19952540950706144, 0.20603578985452292]}}
+DSCHECK_PASS
+=== step done 1793071734.8 rc 0
+=== step start 1793071734.8 /opt/policy/bin/python tests/test_data_audit.py --root /data/datasets/0c_s3b1_pair_rl224_y15
+{
+ "dataset": "/data/datasets/0c_s3b1_pair_rl224_y15",
+ "violations": 0,
+ "first": []
+}
+=== step done 1793071836.5 rc 0
+=== step start 1793071836.5 /opt/policy/bin/python scripts/s3_union_check.py --union /data/datasets/0c_s3b1_pair_s2a_rl224_y15 --task-set /data/datasets/0c_s3b1_pair_rl224_y15 --pick-set /data/datasets/0c_s2a_pair4k_rl224_y15 --kept 4000 --out /runs/ks3b1p/union_check.json
+UNION_CHECK={"items": {"task_set_count": true, "pick_set_count": true, "union_count": true, "task_and_pick_keys_disjoint": true, "union_keys_eq_task_plus_pick": true, "task_episodes_identical": true, "pick_episodes_identical": true, "split_rule_per_stream": true, "label_relabel_setpoint": true, "columns_exact_action_eq_r": true, "rows_per_episode_eq_T": true, "export_counts_eq_sidecar": true, "split_json_eq_sidecar": true}, "pass": true}
+=== step done 1793071890.0 rc 0
+=== step start 1793071890.0 /opt/policy/bin/python scripts/paired_check.py --dataset /data/datasets/0c_s3b1_pair_s2a_rl224_y15 --out /runs/ks3b1p
+PAIRED_CHECK={"name": "0c_s3b1_pair_s2a_rl224_y15", "pass": true, "items": {"s2a_paired_s32800/P_i_distinct_targets": true, "s2a_paired_s32800/P1_layout_identical": true, "s2a_paired_s32800/P2a_state_delta_vs_target": true, "s2a_paired_s32800/P2b_state_classifier": true, "s2a_paired_s32800/P2c_slot_independent": true, "s2a_paired_s32800/P_iii_labels_instr_differ": true, "s2a_paired_s32800/P_iv_group_in_one_split": true, "s2a_paired_s32800/P_same_scene_spec": true, "s2a_paired_s32800/P_regenerates": true, "s2a_paired_s32800/P_kept_groups_rule": true, "s2a_paired_s32800/P_split_rule": true, "s3b1_paired_s33300/P_i_distinct_targets": true, "s3b1_paired_s33300/P1_layout_identical": true, "s3b1_paired_s33300/P2a_state_delta_vs_target": true, "s3b1_paired_s33300/P2b_state_classifier": true, "s3b1_paired_s33300/P2c_slot_independent": true, "s3b1_paired_s33300/P_iii_labels_instr_differ": true, "s3b1_paired_s33300/P_iv_group_in_one_split": true, "s3b1_paired_s33300/P_same_scene_spec": true, "s3b1_paired_s33300/P_regenerates": true, "s3b1_paired_s33300/P_kept_groups_rule": true, "s3b1_paired_s33300/P_split_rule": true}, "s2a_paired_s32800": {"groups": 1597, "episodes": 4000, "group_sizes": {"2": 791, "3": 806}, "P2b": {"accuracy": 0.3305, "majority_rate": 0.33525, "se": 0.007464205207187166, "abs_diff_in_se": 0.6363705000267512, "classes": [0, 1, 2, 3]}, "P2c_p": 0.9729469571000444}, "s3b1_paired_s33300": {"groups": 1455, "episodes": 4000, "group_sizes": {"2": 365, "3": 1090}, "P2b": {"accuracy": 0.06625, "majority_rate": 0.07, "se": 0.004034228550788862, "abs_diff_in_se": 0.9295457490296923, "classes": [6, 8, 10, 20, 22, 24, 30, 34, 36, 56, 58, 62, 70, 72, 76, 96, 98, 100]}, "P2c_p": 0.6650243910797436, "relation_split": {"pairs": 3635, "counts": {"same_target": 1090, "same_dest": 992, "both_differ": 1553, "duplicate": 0}, "fractions": {"same_target": 0.2998624484181568, "same_dest": 0.2729023383768913, "both_differ": 0.42723521320495184, "duplicate": 0.0}, "recorded_relation_mismatch_episodes": [], "n_recorded_relation_mismatch": 0}}}
+=== step done 1793072062.5 rc 0
+=== step start 1793072062.5 /opt/policy/bin/python tests/test_data_audit.py --root /data/datasets/0c_s3b1_pair_s2a_rl224_y15
+{
+ "dataset": "/data/datasets/0c_s3b1_pair_s2a_rl224_y15",
+ "violations": 0,
+ "first": []
+}
+=== step done 1793072188.1 rc 0
+=== step start 1793072188.1 /opt/policy/bin/python scripts/s1_tools.py arms --dataset /data/datasets/0c_s3b1_pair_s2a_rl224_y15 --out /runs/ks3b1p/arms_build.json --device cpu
+[s1_tools] arms device=cpu
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+ARMS={"check_i_U": true, "check_i_mutant_fve_only": false, "counts": {"F": 99880992, "U": 186314016, "mutant_fve_only": 99880992}, "pass": true}
+=== step done 1793072551.3 rc 0
+=== step start 1793072551.3 /opt/policy/bin/python scripts/s2_norm.py --dataset /data/datasets/0c_s3b1_pair_s2a_rl224_y15 --init /runs/s2m_VT/checkpoints/068880/pretrained_model --out /runs/ks3b1p/s3b1p_norm.json
+[s2_norm] instrument_finding=True ratio_outside_band={'observation.state': [], 'action': []} -> /runs/ks3b1p/s3b1p_norm.json
+=== step done 1793073075.6 rc 1
+=== step start 1793073075.6 /opt/policy/bin/python scripts/s2r_tools.py margin --dataset /data/datasets/0c_s3b1_pair_s2a_rl224_y15 --stage s3b1 --out /runs/ks3b1p/margin.json
+{
+ "rule": "m = 0.5 x mean over train episodes of mean over other members of mean_{50 x 5}((a_e - a_o)^2), first chunk, action normalized MEAN_STD (train rows), LeRobot eps 1e-8",
+ "dataset": "/data/datasets/0c_s3b1_pair_s2a_rl224_y15",
+ "stage": "s3b1",
+ "train_episodes": 3798,
+ "val_episodes": 402,
+ "train_layouts": 1383,
+ "ordered_pairs": 6894,
+ "action_dims": 5,
+ "chunk": 50,
+ "expected_sq_diff": 5.9656855100569,
+ "margin": 2.98284275502845,
+ "per_episode_quantiles": {
+  "10": 1.7637626633737886,
+  "25": 3.052476255071203,
+  "50": 5.130897228135388,
+  "75": 7.921020780970544,
+  "90": 11.525402436145946
+ },
+ "frac_episodes_below_margin": 0.2401263823064771,
+ "action_mean": [
+  0.009904122911393642,
+  7.015143637545407e-05,
+  -0.058188583701848984,
+  -0.0026885042898356915,
+  0.4614057242870331
+ ],
+ "action_std": [
+  0.15614384412765503,
+  0.23156897723674774,
+  0.2761794626712799,
+  0.09335905313491821,
+  0.4985082447528839
+ ],
+ "task_column_checked": true,
+ "ok": true
+}
+=== step done 1793073678.3 rc 0
+=== step start 1793073678.3 /opt/policy/bin/python scripts/s2r_tools.py margin --dataset /data/datasets/0c_s3b1_pair_rl224_y15 --out /runs/ks3b1p/margin_task_only.json
+{
+ "rule": "m = 0.5 x mean over train episodes of mean over other members of mean_{50 x 5}((a_e - a_o)^2), first chunk, action normalized MEAN_STD (train rows), LeRobot eps 1e-8",
+ "dataset": "/data/datasets/0c_s3b1_pair_rl224_y15",
+ "train_episodes": 3798,
+ "val_episodes": 202,
+ "train_layouts": 1383,
+ "ordered_pairs": 6894,
+ "action_dims": 5,
+ "chunk": 50,
+ "expected_sq_diff": 5.819571383387406,
+ "margin": 2.909785691693703,
+ "per_episode_quantiles": {
+  "10": 1.7193131989592079,
+  "25": 2.9787066600432777,
+  "50": 5.0115145480390915,
+  "75": 7.759455052558452,
+  "90": 11.30871237325525
+ },
+ "frac_episodes_below_margin": 0.24038967877830436,
+ "action_mean": [
+  0.008495108224451542,
+  0.0002962220460176468,
+  -0.04476434364914894,
+  -0.0022588029969483614,
+  0.3298664391040802
+ ],
+ "action_std": [
+  0.15607428550720215,
+  0.23166745901107788,
+  0.26101168990135193,
+  0.09953521937131882,
+  0.47016441822052
+ ],
+ "task_column_checked": true,
+ "ok": true
+}
+=== step done 1793074057.8 rc 0
+=== ks3b1p done 2026-10-27T05:07:37+01:00

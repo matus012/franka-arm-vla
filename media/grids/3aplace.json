@@ -1,0 +1,105 @@
+{
+ "stream": "d11_3aplace_s51040",
+ "seed": 51040,
+ "ckpt": "/runs/s3a1p_VT/checkpoints/035508/pretrained_model",
+ "ckpt_sha": "f6adef8890138871f025994b9aeaa5714e67440c9601a272e001a998bc562f84",
+ "episodes": [
+  {
+   "index": 0,
+   "instruction": "please put the blue cube on the blue pad",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 1,
+   "instruction": "please put the blue cube on the red pad",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 2,
+   "instruction": "put the large blue cube on the blue pad",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 3,
+   "instruction": "move the large yellow cube onto the red pad",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 4,
+   "instruction": "put the red cube on the red pad",
+   "success": false,
+   "shown_verdict": "dropped"
+  },
+  {
+   "index": 5,
+   "instruction": "move the red cube onto the green pad",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 6,
+   "instruction": "place the small blue cube on the red pad",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 7,
+   "instruction": "put the red cube on the red pad",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 8,
+   "instruction": "move the small red cube onto the green pad",
+   "success": false,
+   "shown_verdict": "bad release"
+  },
+  {
+   "index": 9,
+   "instruction": "move the yellow cube onto the blue pad",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 10,
+   "instruction": "put the small blue cube on the blue pad",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 11,
+   "instruction": "place the blue cube on the blue pad",
+   "success": false,
+   "shown_verdict": "missed grasp"
+  },
+  {
+   "index": 12,
+   "instruction": "put the green cube on the blue pad",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 13,
+   "instruction": "place the blue cube on the blue pad",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 14,
+   "instruction": "put the green cube on the red pad",
+   "success": true,
+   "shown_verdict": "success"
+  },
+  {
+   "index": 15,
+   "instruction": "put the blue cube on the green pad",
+   "success": true,
+   "shown_verdict": "success"
+  }
+ ],
+ "full_size_episode": 3
+}

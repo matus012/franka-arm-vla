@@ -1,0 +1,4 @@
+# GATES 2a attempt 1 (d33e371): checkpoint pick, 100 % checkpoint, validation 21640 eps 0-299; offline val loss + MAE (reported)
+sim scripts/eval_policy.py --policy smolvla --stage s2a --split train --visual nominal --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --episodes 300 --seed 21640 --ckpt /runs/s2a1_VT/checkpoints/034440/pretrained_model --out /runs/e2a1_c100/s2a1_VT_val_c100_s21640.json
+pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s2a_pair_rl224_y15 --ckpt /runs/s2a1_VT/checkpoints/034440/pretrained_model --out /runs/e2a1_c100/vloss_034440.json
+pol scripts/s0b3_prep.py offline --val-only --dataset /data/datasets/0c_s2a_pair_rl224_y15 --ckpt /runs/s2a1_VT/checkpoints/034440/pretrained_model --out /runs/e2a1_c100/offline_val_034440.json --n-action-steps 10

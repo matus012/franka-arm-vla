@@ -1,0 +1,4 @@
+# GATES Stage 1 redesign #2 (bdf1af2), V15 (U, H 224, N 10, 41,328 steps = 12 epochs, m 15): early abort (c) offline val loss (against r) at 25 % / 50 % + checkpoint pick / early abort (d) closed loop at 50 % (validation seed 21600 eps 0-299 at m 15, default sampling)
+pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s1_pick_rl224_y15 --ckpt /runs/s1y15_U/checkpoints/010332/pretrained_model --out /runs/e1y15_c050/vloss_010332.json
+pol scripts/s1_tools.py vloss --dataset /data/datasets/0c_s1_pick_rl224_y15 --ckpt /runs/s1y15_U/checkpoints/020664/pretrained_model --out /runs/e1y15_c050/vloss_020664.json
+sim scripts/eval_policy.py --policy smolvla --stage s1 --split train --visual nominal --envs 128 --image-size 224 --n 10 --sampling default --cube-yaw-max-deg 15 --policy-python /opt/policy/bin/python --episodes 300 --seed 21600 --ckpt /runs/s1y15_U/checkpoints/020664/pretrained_model --out /runs/e1y15_c050/s1y15_U_val_c050_s21600.json

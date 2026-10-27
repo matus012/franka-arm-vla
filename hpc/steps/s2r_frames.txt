@@ -1,0 +1,2 @@
+# GATES Stage 2R (65fa1de): close-up replay of test 11542 round 0 (the rounds holding the chosen episodes), 3 success sheets + the first episode of every failure type + videos of 12 failures; >= 10 failures looked at before the FAIL RESULT
+sim scripts/eval_policy.py --replay /runs/e2r_test/s2r_test_s11542.json --sheets 3 --videos 1,6,7,8,9,14,17,19,23,28,30,41 --policy-python /opt/policy/bin/python

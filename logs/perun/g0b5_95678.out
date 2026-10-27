@@ -1,0 +1,229 @@
+=== g0b5 on <node> NVIDIA H200 start 2026-10-01T19:56:16+02:00 repo b8632a5
+PARTITION gpu_short MaxTime=2-00:00:00 job TimeLimit 1:30:00 cpus 8
+CUDA OK NVIDIA H200
+=== step 1 start 1790877380.472940474 pol scripts/s0b5_decode.py perun --dataset /data/datasets/0b_smoke --src /data/0b5/src --ref /data/0b5/ref --out /runs/g0b5/decode.json
+DECODE={"gate": "0B.5 (1)", "backend": "torchcodec", "dataset": "/data/datasets/0b_smoke", "rows": 7000, "laptop_ref_rows": 7000, "psnr_torchcodec_vs_pyav_min_db": Infinity, "psnr_torchcodec_vs_pyav_mean_finite_db": Infinity, "identical_images_frac": 1.0, "pyav_perun_vs_laptop_sha_mismatch": 0, "psnr_torchcodec_vs_laptop_pyav_ep0_min_db": Infinity, "ep0_rows": 350, "bar_db": 40.0, "wall_s": 343.2, "checks": {"1_columns_exact": true, "frame_identity": false, "rows_per_episode_eq_T": true, "chunks_padded": true, "same_row_count_as_laptop": true, "pyav_perun_eq_laptop": true, "psnr_vs_laptop_pyav_ge_40dB": true}, "pass": false}
+=== step 1 done 1790877735.646074627
+=== step 2 start 1790877735.647160354 sim scripts/eval_policy.py --policy smolvla --ckpt lerobot/smolvla_base --dataset /data/datasets/0b_smoke --stage s1 --split train --visual nominal --episodes 128 --seed 21500 --envs 64 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --out /runs/g0b5/bridge_b64_base.json
+[eval] server up after 21.0 s: {"policy": "smolvla", "n_action_steps": 20, "chunk_size": 50, "image_size": 128, "state_dim": 19, "action_dim": 5, "ckpt_sha": "7cd549ac2351fb069c0ddb3c34ad2d09cfc92b56a15dccdfc2e41467aaca01eb", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 128, 128], "observation.images.camera2": [3, 128, 128], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": true, "train_expert_only": true, "dtype": "float32", "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 21500
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.494552 s, Mean: 2.494552 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 64
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.271730 s, Mean: 0.271730 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.066042 s, Mean: 0.066042 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.003792 s, Mean: 0.034917 s, Std: 0.044017 s, N: 2
+Contact sensor construction took: Last: 0.003087 s, Mean: 0.024307 s, Std: 0.036145 s, N: 3
+Contact sensor construction took: Last: 0.002305 s, Mean: 0.018807 s, Std: 0.031496 s, N: 4
+Initialize solver took: Last: 7.295852 s, Mean: 7.295852 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.341873 s, Mean: 11.341873 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.175992 s, Mean: 27.175992 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=64 H=128 policy=smolvla N=20 episodes 0..127 in 2 rounds
+[eval] pick round 0: 0/64 success (kept slots), 29 s; 64 eps, 3713 eps/h
+[eval] pick round 1: 0/64 success (kept slots), 27 s; 128 eps, 5196 eps/h
+EVAL_SUMMARY={"n": 128, "success": {"all": 0.0, "pick": 0.0}, "latency": {"server_s_p50": 1.01623, "server_s_p95": 1.046094, "rtt_s_p50": 1.018605, "rtt_s_p95": 1.0484915, "queries": 34}, "wall_s": 88.7, "episodes_per_gpu_h": 5196.09810401479, "slots_per_gpu_h": 5196.09810401479, "smart_length": null}
+NAN_GUARD_EVENTS=0
+=== step 2 done 1790877857.688728077
+=== step 3 start 1790877857.690302946 pol -m vla_policy.train_smolvla --dataset /data/datasets/0b_smoke --out /runs/g0b5/train200 --init lerobot/smolvla_base --n-action-steps 20 --epochs 100 --max-steps 200 --batch-size 8 --row-sampling window --video-backend torchcodec --workers 4 --seed 0
+[train] device=cuda cuda_available=True NVIDIA H200
+[train] dataset /data/datasets/0b_smoke episodes=20 (train 20, val 0 never sampled) rows=7000 samples/epoch=2320 steps/epoch=290 total_steps=200
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+[train] policy on cuda:0; {'params_total': 450046176, 'params_trainable': 99880992, 'vision_params_trainable': 0, 'by_dtype': {'frozen_bfloat16': 350165184, 'trainable_float32': 99880992}}; freeze_vision_encoder=True train_expert_only=True
+[train] step 50/200 epoch 0 loss 1.5299 lr 8.57e-05 gn 7.13 update 0.072s data 0.000s
+[train] step 100/200 epoch 0 loss 0.3344 lr 5.12e-05 gn 2.47 update 0.072s data 0.000s
+[train] step 150/200 epoch 0 loss 0.1797 lr 1.68e-05 gn 2.30 update 0.072s data 0.000s
+[train] step 200/200 epoch 0 loss 0.0980 lr 2.50e-06 gn 1.37 update 0.072s data 0.000s
+[train] done: {"final_step": 200, "samples_seen_this_run": 1600, "wall_s": 33.08522653579712, "steady_state": {"warmup_steps_excluded": 50, "samples": 1200, "s": 10.800184780731797, "gpu_s_per_sample": 0.009000153983943165, "data_wait_frac": 0.0015815345891909216}, "peak_mem_allocated_gib": 3.55580472946167, "final_ckpt": "/runs/g0b5/train200/checkpoints/000200/pretrained_model"}
+=== step 3 done 1790877896.122989387
+=== step 4 start 1790877896.124510195 sim scripts/eval_policy.py --policy smolvla --ckpt /runs/g0b5/train200/checkpoints/000200/pretrained_model --stage s1 --split train --visual nominal --episodes 64 --seed 21500 --envs 64 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --out /runs/g0b5/bridge_b64_ft200.json
+[eval] server up after 22.0 s: {"policy": "smolvla", "n_action_steps": 20, "chunk_size": 50, "image_size": 128, "state_dim": 19, "action_dim": 5, "ckpt_sha": "818600caed14ac9ac3a1818b32f1e82cb632782b7202eef94132d4381277d270", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 128, 128], "observation.images.camera2": [3, 128, 128], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": true, "train_expert_only": true, "dtype": "float32", "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 21500
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 2.516997 s, Mean: 2.516997 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 64
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.252370 s, Mean: 0.252370 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.066075 s, Mean: 0.066075 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.003769 s, Mean: 0.034922 s, Std: 0.044057 s, N: 2
+Contact sensor construction took: Last: 0.003064 s, Mean: 0.024303 s, Std: 0.036178 s, N: 3
+Contact sensor construction took: Last: 0.002315 s, Mean: 0.018806 s, Std: 0.031519 s, N: 4
+Initialize solver took: Last: 7.349831 s, Mean: 7.349831 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 11.501902 s, Mean: 11.501902 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 27.398477 s, Mean: 27.398477 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=64 H=128 policy=smolvla N=20 episodes 0..63 in 1 rounds
+[eval] pick round 0: 0/64 success (kept slots), 28 s; 64 eps, 3772 eps/h
+EVAL_SUMMARY={"n": 64, "success": {"all": 0.0, "pick": 0.0}, "latency": {"server_s_p50": 1.01659, "server_s_p95": 1.021398, "rtt_s_p50": 1.01921, "rtt_s_p95": 1.024648, "queries": 17}, "wall_s": 61.1, "episodes_per_gpu_h": 3771.6790909418223, "slots_per_gpu_h": 3771.6790909418223, "smart_length": null}
+NAN_GUARD_EVENTS=0
+=== step 4 done 1790877991.304873347
+=== step 5 start 1790877991.306001847 pol scripts/s0b5_server_latency.py --dataset /data/datasets/0b_smoke --batches 64 128 256 --out /runs/g0b5/server_latency.json
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Reducing the number of VLM layers to 16 ...
+[latency] B=64: {"server_s_p50": 1.0432023121975362, "server_s_p95": 1.045677280286327, "server_s_mean": 1.0436069649644195, "per_env_ms_p50": 16.300036128086504, "reps": 10, "peak_mem_allocated_gib": 4.3960137367248535}
+[latency] B=128: {"server_s_p50": 2.0734261400066316, "server_s_p95": 2.074140482256189, "server_s_mean": 2.0734918389469383, "per_env_ms_p50": 16.19864171880181, "reps": 10, "peak_mem_allocated_gib": 7.059518814086914}
+[latency] B=256: {"server_s_p50": 4.026168897282332, "server_s_p95": 4.027474737400189, "server_s_mean": 4.026209485344589, "per_env_ms_p50": 15.72722225500911, "reps": 10, "peak_mem_allocated_gib": 12.386956691741943}
+=== step 5 done 1790878101.107755128
+=== g0b5 done 2026-10-01T20:08:21+02:00

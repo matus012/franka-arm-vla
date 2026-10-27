@@ -1,0 +1,157 @@
+{
+ "source": "/runs/d1fix/s1_fixdiag_zero_s21600.json",
+ "chosen": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  6,
+  8,
+  10,
+  11,
+  39,
+  101
+ ],
+ "rounds": 1,
+ "wall_s": 90.6,
+ "git_sha": "f06dfa5",
+ "frames": [
+  {
+   "index": 0,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep0_pick_success.png"
+  },
+  {
+   "index": 1,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep1_pick_success.png"
+  },
+  {
+   "index": 2,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep2_pick_drop_early_close.png",
+   "video": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep2.mp4"
+  },
+  {
+   "index": 3,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep3_pick_drop_early_close.png",
+   "video": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep3.mp4"
+  },
+  {
+   "index": 4,
+   "types_recorded": [
+    "success"
+   ],
+   "types_replay": [
+    "success"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep4_pick_success.png"
+  },
+  {
+   "index": 6,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep6_pick_drop_early_close.png",
+   "video": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep6.mp4"
+  },
+  {
+   "index": 8,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep8_pick_early_close.png",
+   "video": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep8.mp4"
+  },
+  {
+   "index": 10,
+   "types_recorded": [
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep10_pick_early_close.png",
+   "video": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep10.mp4"
+  },
+  {
+   "index": 11,
+   "types_recorded": [
+    "drop",
+    "early_close"
+   ],
+   "types_replay": [
+    "drop",
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep11_pick_drop_early_close.png",
+   "video": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep11.mp4"
+  },
+  {
+   "index": 39,
+   "types_recorded": [
+    "jam",
+    "early_close"
+   ],
+   "types_replay": [
+    "early_close"
+   ],
+   "reproduced": false,
+   "sheet": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep39_pick_jam_early_close.png"
+  },
+  {
+   "index": 101,
+   "types_recorded": [
+    "fail_other"
+   ],
+   "types_replay": [
+    "fail_other"
+   ],
+   "reproduced": true,
+   "sheet": "/runs/d1fix/frames/s1_fixdiag_zero_s21600/s1_fixdiag_zero_s21600_ep101_pick_fail_other.png"
+  }
+ ]
+}

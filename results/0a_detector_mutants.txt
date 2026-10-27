@@ -1,0 +1,9 @@
+# detectors mutants (GATES.md), 2026-10-01T16:26:38
+# git HEAD 157c924715372d930568648b07eb2668d0426261; tests/test_detectors.py against vla_tabletop/detectors.py, one mutation each
+unmutated: GREEN
+m1 one rest height for both sizes (large judged with the small cube's rest z): KILLED by ['test_pick_uses_per_size_rest_height', 'test_place_large_cube_rest_height', 'test_stack_stability_and_release_failure', 'test_stack_success_and_negatives', 'test_stack_window_is_50_steps']
+m2 released checks only the left pad: KILLED by ['test_place_requires_both_fingers_released']
+m3 stack stability window 1 step instead of 50: KILLED by ['test_pick_hold_last50_negative', 'test_stack_stability_and_release_failure', 'test_stack_window_is_50_steps', 'test_thresholds_are_the_111_ones']
+m4 slam read from the cube-table force: KILLED by ['test_slam_reads_hand_table_force_only']
+m5 pad-region test in the world frame instead of the pad frame: KILLED by ['test_in_pad_uses_pad_frame', 'test_place_on_rotated_pad']
+ALL_KILLED=True

@@ -1,0 +1,8 @@
+# GATES Stage 1 redesign, data re-gate on 0c_s1_pick_rl224 (cpu_short; run by `pol -c` over this file, `-` = exit code reported, not fatal)
+python scripts/s0c_rl_check.py --dataset /data/datasets/0c_s1_pick_rl224 --ref /data/datasets/0c_s1_pick --out /runs/k224_s1 --rerender 224
+python scripts/s1_relabel.py dscheck --dataset /data/datasets/0c_s1_pick_rl224 --expect-original /data/datasets/0c_s1_pick_224a --out /runs/k224_s1/dscheck.json
+-python scripts/s1_relabel.py dscheck --mutant shift --dataset /data/datasets/0c_s1_pick_rl224 --out /runs/k224_s1/mutant_shift.json
+-python scripts/s1_relabel.py dscheck --mutant claw --dataset /data/datasets/0c_s1_pick_rl224 --out /runs/k224_s1/mutant_claw.json
+-python scripts/s1_relabel.py dscheck --mutant claw_offset --dataset /data/datasets/0c_s1_pick_rl224 --out /runs/k224_s1/mutant_claw_offset.json
+python tests/test_data_audit.py --root /data/datasets/0c_s1_pick_rl224
+python scripts/s1_tools.py arms --dataset /data/datasets/0c_s1_pick_rl224 --out /runs/k224_s1/arms_build.json --device cpu

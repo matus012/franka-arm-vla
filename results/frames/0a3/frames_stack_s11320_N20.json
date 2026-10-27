@@ -1,0 +1,10 @@
+[
+ {
+  "episode": 0,
+  "success": true,
+  "drop": false,
+  "release_failure": false,
+  "sheet": "results\\frames\\0a3\\stack_s11320_ep0_success_N20.png",
+  "spec": "{\"task\": \"stack\", \"target\": [\"red\", \"small\"], \"dest\": [\"yellow\", \"large\"], \"cubes\": [[\"red\", \"small\"], [\"green\", \"large\"], [\"blue\", \"large\"], [\"yellow\", \"large\"], [\"red\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}"
+ }
+]

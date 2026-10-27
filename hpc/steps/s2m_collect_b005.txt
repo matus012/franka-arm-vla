@@ -1,0 +1,2 @@
+# GATES Stage 2M (task 006): new paired data stream = seed 32800 groups 2750-3299 (never collected; 2a attempt 1 used 0-1099), H 224, sigma 0.1, m 15, B 128; batch b005
+sim scripts/collect.py --stage s2a --split train --paired-targets --start-group 2750 --groups 550 --seed 32800 --envs 128 --noise-sigma 0.1 --image-size 224 --visual nominal --cube-yaw-max-deg 15 --out /data/0c/s2apy15/b005

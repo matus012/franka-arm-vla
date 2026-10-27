@@ -1,0 +1,8 @@
+# GATES Stage 1 redesign #2 (bdf1af2), V0 data re-gate on 0c_s1_pick_rl224_y0 (fresh seed, m 0; cpu_short via hpc/cpu_steps.py, `-` = exit code reported, not fatal): item 1 + 4(a) + 5 + yaw faithfulness (--fresh), 4(b)/(c) + mutants, 2 audit, instrument (i)
+python scripts/s0c_rl_check.py --fresh --rerender 224 --expect-yaw 0 --kept 2000 --dataset /data/datasets/0c_s1_pick_rl224_y0 --out /runs/ky0
+python scripts/s1_relabel.py dscheck --dataset /data/datasets/0c_s1_pick_rl224_y0 --expect-original /data/datasets/0c_s1_pick_224a_y0 --out /runs/ky0/dscheck.json
+-python scripts/s1_relabel.py dscheck --mutant shift --dataset /data/datasets/0c_s1_pick_rl224_y0 --out /runs/ky0/mutant_shift.json
+-python scripts/s1_relabel.py dscheck --mutant claw --dataset /data/datasets/0c_s1_pick_rl224_y0 --out /runs/ky0/mutant_claw.json
+-python scripts/s1_relabel.py dscheck --mutant claw_offset --dataset /data/datasets/0c_s1_pick_rl224_y0 --out /runs/ky0/mutant_claw_offset.json
+python tests/test_data_audit.py --root /data/datasets/0c_s1_pick_rl224_y0
+python scripts/s1_tools.py arms --dataset /data/datasets/0c_s1_pick_rl224_y0 --out /runs/ky0/arms_build.json --device cpu

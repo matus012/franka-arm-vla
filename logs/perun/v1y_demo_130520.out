@@ -1,0 +1,104 @@
+=== v1y_demo on <node> NVIDIA H200 start 2026-10-24T23:02:21+02:00
+NET_PROBE huggingface.co http_code=200
+CUDA OK NVIDIA H200
+[eval] server up after 21.0 s: {"policy": "smolvla", "n_action_steps": 10, "chunk_size": 50, "image_size": 224, "state_dim": 19, "action_dim": 5, "ckpt_sha": "c3dcef76f53e00e5954469970c25c38980a396723f7bbbf2b85919e6cc6688f5", "rename_map": {"observation.images.side": "observation.images.camera1", "observation.images.wrist": "observation.images.camera2"}, "input_features": {"observation.images.camera1": [3, 224, 224], "observation.images.camera2": [3, 224, 224], "observation.state": [19]}, "max_state_dim": 32, "max_action_dim": 32, "tokenizer_max_length": 48, "freeze_vision_encoder": false, "train_expert_only": false, "dtype": "float32", "sampling": "default", "k": 1, "device": "cuda:0", "period": 3, "latency": 1}
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 11504
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation Last: 3.919656 s, Mean: 3.919656 s, Std: 0.000000 s, N: 1
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 128
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+Finalize builder took: Last: 0.562643 s, Mean: 0.562643 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.129072 s, Mean: 0.129072 s, Std: 0.000000 s, N: 1
+Contact sensor construction took: Last: 0.007083 s, Mean: 0.068078 s, Std: 0.086260 s, N: 2
+Contact sensor construction took: Last: 0.005908 s, Mean: 0.047354 s, Std: 0.070772 s, N: 3
+Contact sensor construction took: Last: 0.004255 s, Mean: 0.036580 s, Std: 0.061673 s, N: 4
+Initialize solver took: Last: 8.168962 s, Mean: 8.168962 s, Std: 0.000000 s, N: 1
+CUDA graph took: Last: 13.510786 s, Mean: 13.510786 s, Std: 0.000000 s, N: 1
+[INFO]: Time taken for simulation start Last: 31.522041 s, Mean: 31.522041 s, Std: 0.000000 s, N: 1
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++---------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+--------------------+
+|   Index    | Name               |
++------------+--------------------+
+|     0      | reset_all          |
+|     1      | layout             |
++------------+--------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 5)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         4 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (19,)) |
++------------+----------------------------+------------+
+|   Index    | Name                       |   Shape    |
++------------+----------------------------+------------+
+|     0      | joint_pos                  |    (9,)    |
+|     1      | joint_vel                  |    (9,)    |
+|     2      | gripper_width              |    (1,)    |
++------------+----------------------------+------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 1 active terms.
++-----------------------------+
+|   Active Termination Terms  |
++-------+----------+----------+
+| Index | Name     | Time Out |
++-------+----------+----------+
+|   0   | time_out |   True   |
++-------+----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[eval] device=cuda:0 B=128 H=224 policy=smolvla N=10 episodes 0..999 in 2 rounds (replay)
+[eval] pick round 0: 3/4 success (kept slots), 95 s; 4 eps, 106 eps/h
+[eval] pick round 4: 0/1 success (kept slots), 86 s; 5 eps, 81 eps/h
+REPLAY_SUMMARY=[{"index": 0, "types_recorded": ["success"], "types_replay": ["success"], "reproduced": true, "sheet": "/runs/v1y_demo/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep0_pick_success.png", "video": "/runs/v1y_demo/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep0.mp4"}, {"index": 1, "types_recorded": ["success"], "types_replay": ["success"], "reproduced": true, "sheet": "/runs/v1y_demo/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep1_pick_success.png", "video": "/runs/v1y_demo/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep1.mp4"}, {"index": 2, "types_recorded": ["success"], "types_replay": ["success"], "reproduced": true, "sheet": "/runs/v1y_demo/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep2_pick_success.png", "video": "/runs/v1y_demo/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep2.mp4"}, {"index": 20, "types_recorded": ["drop", "early_close"], "types_replay": ["drop", "early_close"], "reproduced": true, "sheet": "/runs/v1y_demo/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep20_pick_drop_early_close.png"}, {"index": 520, "types_recorded": ["fail_other"], "types_replay": ["fail_other"], "reproduced": true, "sheet": "/runs/v1y_demo/frames/s1y_U_test_s11504/s1y_U_test_s11504_ep520_pick_fail_other.png"}]
+NAN_GUARD_EVENTS=0
+=== v1y_demo done 2026-10-24T23:06:45+02:00

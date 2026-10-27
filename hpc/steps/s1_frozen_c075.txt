@@ -1,0 +1,2 @@
+# GATES Stage 1, arm frozen: checkpoint pick, 75 % checkpoint, episodes 0-299 of validation seed 21600
+sim scripts/eval_policy.py --policy smolvla --ckpt /runs/s1_frozen/checkpoints/015498/pretrained_model --episodes 300 --stage s1 --split train --visual nominal --seed 21600 --envs 128 --image-size 128 --n 20 --policy-python /opt/policy/bin/python --out /runs/e1_frozen_c075/s1_frozen_val_c075_s21600.json

@@ -1,0 +1,47 @@
+{
+ "stage": "0A.1 cams",
+ "seed": 21100,
+ "res": 128,
+ "num_envs": 8,
+ "git_sha": "157c924715372d930568648b07eb2668d0426261",
+ "distinct_seg_ids_all_envs": true,
+ "checks": {
+  "wrist_pos_err_max_m": 3.424026147058612e-07,
+  "wrist_rot_err_max_deg": 0.0,
+  "foreign_pixels": 0,
+  "parked_pixels": 0,
+  "parked_max_move_m": 6.9141387939453125e-06,
+  "parked_outside_reach_box": true,
+  "frames": 368
+ },
+ "pass": true,
+ "all_objects_env0_spec": "{\"task\": \"pick\", \"target\": [\"red\", \"small\"], \"dest\": null, \"cubes\": [[\"red\", \"small\"], [\"red\", \"large\"], [\"green\", \"small\"], [\"green\", \"large\"], [\"blue\", \"small\"], [\"blue\", \"large\"], [\"yellow\", \"small\"], [\"yellow\", \"large\"]], \"pads\": [\"red\", \"green\", \"blue\", \"yellow\"]}",
+ "sheets": [
+  "results\\frames\\0a1\\grasp_small_side_wrist_closeup.png",
+  "results\\frames\\0a1\\grasp_large_side_wrist_closeup.png",
+  "results\\frames\\0a1\\scenes_side_wrist_closeup.png"
+ ],
+ "grasp_frames_holds": {
+  "grasp_small_holds": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "grasp_large_holds": [
+   true,
+   true,
+   true,
+   true,
+   false,
+   true,
+   true,
+   true
+  ]
+ },
+ "wall_s": 188.4
+}
