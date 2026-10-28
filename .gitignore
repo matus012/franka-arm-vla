@@ -32,3 +32,5 @@ results/demo/smoke/
 media/compose.log
 media/clips/list.txt
 ops/private_scan_patterns.txt
+# 012: the 6 final models (weights + config) stay on the laptop only
+models_final/

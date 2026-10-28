@@ -206,19 +206,40 @@ def scan_history() -> None:
             print("   values:", vals[name].most_common(6))
 
 
-def commit_orphan(out: Path) -> str:
-    """Single-commit orphan branch `public` from `out`, without touching this working tree."""
+def commit_tree(out: Path, branch: str, msg: str, parent: str | None = None) -> str:
+    """Commit `out` as branch `branch` (orphan, or on top of `parent`), without touching this working tree."""
     import tempfile
-    sha = git("rev-parse", "--short", "HEAD").stdout.strip()
     idx = Path(tempfile.mkdtemp()) / "index"
     env = {"GIT_INDEX_FILE": str(idx)}
     git("-c", "core.autocrlf=false", f"--work-tree={out}", "add", "-A", "--force", env=env)
     tree = git("write-tree", env=env).stdout.strip()
-    msg = f"franka-arm-vla: public snapshot of 113_vla_tabletop ({sha})\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n"
-    c = git("commit-tree", tree, "-m", msg).stdout.strip()
-    git("update-ref", "refs/heads/public", c)
+    c = git("commit-tree", tree, *(["-p", parent] if parent else []), "-m", msg).stdout.strip()
+    git("update-ref", f"refs/heads/{branch}", c)
     shutil.rmtree(idx.parent, ignore_errors=True)
     return c
+
+
+def commit_orphan(out: Path, parent: str | None = None) -> str:
+    """Branch `public` from `out`: a single orphan commit, or (with `parent`) the next snapshot on top of it."""
+    sha = git("rev-parse", "--short", "HEAD").stdout.strip()
+    msg = f"franka-arm-vla: public snapshot of 113_vla_tabletop ({sha})\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n"
+    return commit_tree(out, "public", msg, parent)
+
+
+# GitHub Pages site (branch gh-pages): the page, the demo video and the figures only, no code
+PAGES = {"index.html": "docs/pages/index.html", "113_demo.mp4": "media/113_demo.mp4", "fig1.png": "figures/fig1.png",
+         "fig2.png": "figures/fig2.png", "fig3.png": "figures/fig3.png", "cards.png": "figures/cards.png"}
+
+
+def build_pages(out: Path) -> dict[str, dict[str, int]]:
+    """Copy the PAGES files (as committed at HEAD) into `out` plus .nojekyll; return scan hits (empty = clean)."""
+    if out.exists():
+        shutil.rmtree(out)
+    out.mkdir(parents=True)
+    for dst, src in PAGES.items():
+        (out / dst).write_bytes(git("show", f"HEAD:{src}", text=False).stdout)
+    (out / ".nojekyll").write_bytes(b"")
+    return scan_dir(out)
 
 
 def main() -> int:
@@ -226,9 +247,25 @@ def main() -> int:
     ap.add_argument("--out", type=Path)
     ap.add_argument("--commit", action="store_true")
     ap.add_argument("--scan-history", action="store_true")
+    ap.add_argument("--parent", help="commit `public` on top of this rev (the current public main) instead of orphan")
+    ap.add_argument("--pages", action="store_true", help="build the gh-pages site into --out (with --commit: branch gh-pages)")
     a = ap.parse_args()
     if a.scan_history:
         scan_history()
+        return 0
+    if a.pages:
+        if a.out is None:
+            ap.error("--out required")
+        left = build_pages(a.out)
+        for name, f in left.items():
+            print(f"REMAINS {name}: {sum(f.values())} in {len(f)} files, e.g. {list(f.items())[:5]}")
+        if left:
+            return 1
+        print(f"pages clean: {a.out} ({', '.join(sorted(p.name for p in a.out.iterdir()))})")
+        if a.commit:
+            sha = git("rev-parse", "--short", "HEAD").stdout.strip()
+            msg = f"franka-arm-vla: demo page (from 113_vla_tabletop {sha})\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n"
+            print("gh-pages ->", commit_tree(a.out, "gh-pages", msg))
         return 0
     if a.out is None:
         ap.error("--out required")
@@ -241,7 +278,7 @@ def main() -> int:
         return 1
     print(f"export clean: {a.out}")
     if a.commit:
-        print("public ->", commit_orphan(a.out))
+        print("public ->", commit_orphan(a.out, a.parent))
     return 0
 
 

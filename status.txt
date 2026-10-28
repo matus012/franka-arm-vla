@@ -1,7 +1,7 @@
 NOW (2026-10-27 22:57 (CET), l2 113 idle, project ended): 011 DONE — demo video, figure set, public repo. Owner closes 113 at 08:00.
 Video media/113_demo.mp4 (4 min 52 s; per skill: instruction, success rule from the evaluator, gate rate, first 16 unselected episodes with verdicts, one full-size episode with the policy's own view); GIF hero; figures/fig1-3 + cards.
 Repo: README rewritten (summary, video, figures, results table, failures, reproduce, not released); LICENSE MIT; THIRD_PARTY complete; pre-push audit reports/2026-10-28-011-prepush.md.
-Push: redacted single-commit `public` branch (history holds cluster ids / home paths, no secrets) -> github.com/matus012/franka-arm-vla main; result in reports/2026-10-28-011-demo-ship.md.
+Pushed: github.com/matus012/franka-arm-vla main = 573c596, one redacted parentless commit (snapshot of private 95e4195; history holds cluster ids / home paths, no secrets, so main was not pushed).
 Final: Stage 1 PASS 96.8, 2M PASS 96.7; sizes 79.4, 3A place 72.7, 3B 40.7 FAIL; Stage 4 not run. PERUN: 113 = 179.35 / 200 (011 = 0.40).
 needs you: optional — confirm / reverse the "reversible by owner" rulings (0B.3 option A still open).
 ---- log (append-only) ----
@@ -159,3 +159,4 @@ needs you: optional — confirm / reverse the "reversible by owner" rulings (0B.
 2026-10-27 17:09 (CET) errata (consultant final audit): 113 total 178.95 / 200 (not 178.96); GATES erratum; README sizes held-out 45.3 % / wrong-cube 20.0 % added.
 2026-10-27 22:24 (CET) 011 start (l1 113 task 011-demo-figures-ship): demo seeds 51000-51099 declared in hpc/JOBS.md before any render; eval_policy --record (viewer only); figures + pre-push audit run in parallel.
 2026-10-27 22:57 (CET) 011 DONE: renders 135780-135782 (0.40 GPU-h; demo seeds 51000-51099 declared first), video + clips + GIF (G1-G4 PASS, watched as contact sheets), figures (looked at), README / REPORT / plain, LICENSE + THIRD_PARTY, pre-push audit (no secrets; cluster ids / home paths in history -> redacted orphan `public`). Report reports/2026-10-28-011-demo-ship.md. 113 = 179.35 / 200.
+2026-10-27 23:11 (CET) 011 pushed: github.com/matus012/franka-arm-vla main = 573c596 (redacted snapshot of 95e4195; no force). LOCK released.

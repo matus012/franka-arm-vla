@@ -29,3 +29,13 @@ def test_scan_flags_leaks_and_ignores_owner_email() -> None:
     assert set(hits) == {"hf_token", "project_id", "node", "private_ip", "email"}
     assert hits["email"] == ["a" + "@b.org"]
     assert "private_ip" not in M.scan_text('version = "10.4.0.' + '35"', "uv.lock")
+
+
+def test_pages_site_holds_only_the_page_video_and_figures(tmp_path: Path) -> None:
+    left = M.build_pages(tmp_path / "site")
+    names = sorted(p.name for p in (tmp_path / "site").iterdir())
+    assert names == sorted([*M.PAGES, ".nojekyll"]), names
+    assert not left, left
+    html = (tmp_path / "site" / "index.html").read_text(encoding="utf-8")
+    for name in M.PAGES:
+        assert name == "index.html" or f'"{name}"' in html, name  # every asset is referenced by the page

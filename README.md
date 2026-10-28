@@ -12,6 +12,9 @@ only; no real robot. Compute: 178.95 H200 GPU-hours (+0.40 for the demo video's 
 
 ![The same scene, three instructions: plain fine-tune vs the final colour model](media/113_demo_short.gif)
 
+**[▶ Watch the full demo (4:52)](https://matus012.github.io/franka-arm-vla/)** (plays in the browser; GitHub cannot
+show the mp4 in the file view)
+
 **Demo video (4 min 52 s): [`media/113_demo.mp4`](media/113_demo.mp4)** — for each skill: what the robot was told,
 the success rule quoted from the evaluator, the headline rate, the first 16 episodes from unseen demo scenes (not
 selected, real time, the evaluator's verdict on each), and one episode full size with what the policy itself sees.
