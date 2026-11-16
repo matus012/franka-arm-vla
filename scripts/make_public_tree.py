@@ -227,7 +227,9 @@ def commit_orphan(out: Path, parent: str | None = None) -> str:
 
 
 # GitHub Pages site (branch gh-pages): the page, the demo video and the figures only, no code
-PAGES = {"index.html": "docs/pages/index.html", "113_demo.mp4": "media/113_demo.mp4", "fig1.png": "figures/fig1.png",
+PAGES = {"index.html": "docs/pages/index.html", "113_story.mp4": "media/113_story.mp4",
+         "113_story_poster.png": "media/113_story_poster.png", "113_grids.mp4": "media/113_grids.mp4",
+         "113_grids_poster.png": "media/113_grids_poster.png", "113_demo.mp4": "media/113_demo.mp4", "fig1.png": "figures/fig1.png",
          "fig2.png": "figures/fig2.png", "fig3.png": "figures/fig3.png", "cards.png": "figures/cards.png"}
 
 
@@ -247,7 +249,7 @@ def main() -> int:
     ap.add_argument("--out", type=Path)
     ap.add_argument("--commit", action="store_true")
     ap.add_argument("--scan-history", action="store_true")
-    ap.add_argument("--parent", help="commit `public` on top of this rev (the current public main) instead of orphan")
+    ap.add_argument("--parent", help="commit `public` (or with --pages: `gh-pages`) on top of this rev instead of orphan")
     ap.add_argument("--pages", action="store_true", help="build the gh-pages site into --out (with --commit: branch gh-pages)")
     a = ap.parse_args()
     if a.scan_history:
@@ -265,7 +267,7 @@ def main() -> int:
         if a.commit:
             sha = git("rev-parse", "--short", "HEAD").stdout.strip()
             msg = f"franka-arm-vla: demo page (from 113_vla_tabletop {sha})\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n"
-            print("gh-pages ->", commit_tree(a.out, "gh-pages", msg))
+            print("gh-pages ->", commit_tree(a.out, "gh-pages", msg, a.parent))
         return 0
     if a.out is None:
         ap.error("--out required")

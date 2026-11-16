@@ -44,7 +44,9 @@ not language.
 
 **See it:** a 5-minute video (`media/113_demo.mp4`) shows, for each skill, what the robot was told, how success
 was judged, and the first 16 episodes on new scenes, unselected, with the simulator's verdict on each; the figures in
-`figures/` explain the method. The code is public; the model weights and datasets are not.
+`figures/` explain the method. The code is public; the model weights and datasets are not. The video also plays in the browser at
+https://matus012.github.io/franka-arm-vla/. The six final models are kept on the laptop only; the cluster copies, the
+datasets and intermediate checkpoints were deleted on 2026-10-28 to free 916 GB.
 
 **Cost:** 178.95 of 200 H200 GPU-hours (+0.40 for the demo video) on PERUN (the owner raised the cap from 100 in steps
 to 200), 8.07 of 20 laptop GPU-hours.

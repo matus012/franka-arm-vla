@@ -229,3 +229,15 @@ Gates: `GATES.md` (each committed before its run). Interfaces: `docs/CONTRACT.md
 - Public push: history holds the PERUN project id, cluster hostnames / node names and a Windows home path (no
   secrets); `main` is never rewritten; `scripts/make_public_tree.py --commit` builds a redacted single-commit orphan
   branch `public` (no checkout) which is pushed as the remote's main.
+
+## Facts verified (2026-10-28, task 012: Pages + storage cleanup)
+- Demo page: https://matus012.github.io/franka-arm-vla/ from branch `gh-pages` (built by `scripts/make_public_tree.py --pages`
+  from `docs/pages/index.html`, `media/113_demo.mp4`, `figures/{fig1,fig2,fig3,cards}.png`). Public `main` snapshots now
+  stack with `--parent <public main>` (2a261f6 on 573c596).
+- The only copies of the trained weights are `models_final/` on lpc (6 models, weights + config, no optimizer state;
+  `models_final/README.md`). sha256(model.safetensors) = each result JSON's `ckpt_sha`. Load: `scripts/load_final_model.py`.
+- PERUN `/mnt/project/<project-id>/113_vla_tabletop` is deleted (data, runs, cache, repos, image). `hpc/JOBS.md` log paths
+  under `runs/logs/` no longer exist. Datasets would have to be regenerated from the 0C steps.
+- lpc venvs deleted: recreate with `uv sync` (root, Python 3.12 / Isaac Lab pins in `robotics_base/VERSIONS.md`) and in
+  `policy/` (`policy/uv.lock`, `policy/VERSIONS.md`).
+

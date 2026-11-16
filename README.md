@@ -1,5 +1,13 @@
 # franka-arm-vla — fine-tuning a small VLA to follow typed instructions (simulation)
 
+[![Demo preview: one cube, the plain fine-tune that ignored the colour word, the fix, place and stack. Click to play the full video.](media/113_story_preview.gif)](https://matus012.github.io/franka-arm-vla/#story)
+
+**[▶ Play the demo (1:44)](https://matus012.github.io/franka-arm-vla/#story)** ·
+**[▶ Episode grids (1:38)](https://matus012.github.io/franka-arm-vla/#grids)** (both play in the browser; files:
+[`media/113_story.mp4`](media/113_story.mp4), [`media/113_grids.mp4`](media/113_grids.mp4))
+
+![The same scene, three instructions: plain fine-tune vs the final colour model](media/113_demo_short.gif)
+
 A simulated Franka arm in Isaac Lab is told, in plain English, which cube to pick, where to put it, or what to stack it
 on. The policy is **SmolVLA** (a ~450 M-parameter pretrained vision-language-action model, `lerobot/smolvla_base`),
 fine-tuned here on demonstrations from a scripted expert, one stage at a time, each stage judged once against a pass bar
@@ -10,9 +18,7 @@ was training data in which every scene is shown once per nameable cube plus an i
 remaining failures are motor precision (grasp centring, releases, drops), not choosing the wrong cube. Simulation
 only; no real robot. Compute: 178.95 H200 GPU-hours (+0.40 for the demo video's renders).
 
-![The same scene, three instructions: plain fine-tune vs the final colour model](media/113_demo_short.gif)
-
-**[▶ Watch the full demo (4:52)](https://matus012.github.io/franka-arm-vla/)** (plays in the browser; GitHub cannot
+**[▶ Watch the full demo (4:52)](https://matus012.github.io/franka-arm-vla/#full)** (plays in the browser; GitHub cannot
 show the mp4 in the file view)
 
 **Demo video (4 min 52 s): [`media/113_demo.mp4`](media/113_demo.mp4)** — for each skill: what the robot was told,
